@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical" alt="GitHub Stats" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tiagovilasboas&layout=compact&theme=radical" alt="Top Langs" height="160"/>
+  <br>
+  <img src="https://github-profile-trophy.vercel.app/?username=tiagovilasboas&theme=onedark&margin-w=15&no-frame=true" alt="Trophies" />
+</p>
+
 <h1 align="center">Tiago Vilas Boas (Montanha) 🏍️</h1>
 <p align="center">
   <b>Front-end Staff Engineer • 18 anos de experiência</b><br>
@@ -32,36 +39,19 @@
 
 ### 👀 Projetos em Destaque
 
-- 🕒&nbsp; [**Ponto PJ**](https://github.com/tiagovilasboas/ponto-pj) – Ponto eletrônico PWA para devs  
-- ⚛️&nbsp; [**React Layered Boilerplate**](https://github.com/tiagovilasboas/react-layered-boilerplate) – Clean architecture para React  
-- 🧰&nbsp; [**DataForge Tools**](https://github.com/tiagovilasboas/dataforge-tools) – Caixa de utilidades para devs
-
----
-
-### 📊 Estatísticas & Contribuições
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical" alt="GitHub Stats" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tiagovilasboas&layout=compact&theme=radical" alt="Top Langs" height="150"/>
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=tiagovilasboas&theme=onedark&margin-w=15&no-frame=true" alt="Trophies" />
-</p>
-
-<p align="center">
-  <img src="https://github.com/tiagovilasboas/tiagovilasboas/blob/output/github-contribution-grid-snake.svg" alt="snake gif" />
-</p>
+- 🕒 [**Ponto PJ**](https://github.com/tiagovilasboas/ponto-pj) – Controle de ponto PWA para devs
+- ⚛️ [**React Layered Boilerplate**](https://github.com/tiagovilasboas/react-layered-boilerplate) – Clean architecture para React
+- 🧰 [**DataForge Tools**](https://github.com/tiagovilasboas/dataforge-tools) – Ferramentas para desenvolvedores
 
 ---
 
 <details>
   <summary>💡 Sobre mim</summary>
 
-- Foco em valor de produto, não só código bonito
-- Curto resolver problemas reais e ensinar o que aprendo
-- Sempre buscando experiência de usuário acima da média
-- Pronto para trocar ideias, mentorias e desafios!
+- Foco em entregar valor de produto, não só código bonito
+- Gosto de resolver problemas reais e compartilhar conhecimento
+- Busco sempre a melhor experiência para o usuário
+- Aberto a ideias, mentorias e novos desafios!
 
 </details>
 
@@ -75,4 +65,10 @@
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:38B2AC,100:3ECF8E&height=100&section=footer"/>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://github.com/tiagovilasboas/tiagovilasboas/blob/output/github-contribution-grid-snake.svg" alt="snake gif" />
 </p>
