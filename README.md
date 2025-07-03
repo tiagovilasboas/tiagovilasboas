@@ -23,11 +23,12 @@
 ---
 
 <div align="center">
-  <samp>
-    <b>🚀 Transformo ideias em produtos digitais de impacto</b><br>
-    <b>🛠️ Paixão por clean code, UX e performance</b><br>
-    <b>🤝 Consultor, mentor e Tech Lead</b>
-  </samp>
+  <h3>💫 Sobre Mim</h3>
+  <p>
+    🚀 <strong>Transformo ideias em produtos digitais de impacto</strong><br>
+    🛠️ <strong>Paixão por clean code, UX e performance</strong><br>
+    🤝 <strong>Consultor, mentor e Tech Lead</strong>
+  </p>
 </div>
 
 ---
