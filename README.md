@@ -75,7 +75,8 @@
             <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="Ponto PJ"/>
           </a>
         </p>
-        <p align="center">Controle de ponto PWA para devs</p>
+        <p align="center"><strong>Sistema de Ponto Eletrônico PJ (PWA)</strong><br>
+        Sistema de ponto eletrônico pessoal feito de dev pra dev. PWA com interface intuitiva para PJs que precisam controlar horas trabalhadas. Demo disponível!</p>
       </td>
       <td width="50%">
         <h4 align="center">⚛️ React Layered Boilerplate</h4>
@@ -84,18 +85,30 @@
             <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-layered-boilerplate&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="React Layered Boilerplate"/>
           </a>
         </p>
-        <p align="center">Clean architecture para React</p>
+        <p align="center"><strong>React Layered Architecture Boilerplate</strong><br>
+        Arquitetura client-side escalável distribuída em camadas. Promove reusabilidade, coesão, independência de tecnologia e testabilidade com React 17.x e Webpack 5.x.</p>
       </td>
     </tr>
     <tr>
-      <td colspan="2">
+      <td width="50%">
         <h4 align="center">🧰 DataForge Tools</h4>
         <p align="center">
           <a href="https://github.com/tiagovilasboas/dataforge-tools" target="_blank">
             <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=dataforge-tools&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="DataForge Tools"/>
           </a>
         </p>
-        <p align="center">Ferramentas para desenvolvedores</p>
+        <p align="center"><strong>DataForge Tools - Suite de Ferramentas</strong><br>
+        Suite completa de ferramentas para desenvolvedores com validador de JSON, CSV, APIs e mais. Interface unificada para otimizar o fluxo de trabalho diário.</p>
+      </td>
+      <td width="50%">
+        <h4 align="center">🚀 Mais Projetos</h4>
+        <p align="center">
+          <a href="https://github.com/tiagovilasboas?tab=repositories" target="_blank">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=tiagovilasboas&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="Mais Projetos"/>
+          </a>
+        </p>
+        <p align="center"><strong>Explore outros projetos</strong><br>
+        Confira todos os repositórios e contribuições no GitHub.</p>
       </td>
     </tr>
   </table>
