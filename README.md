@@ -63,56 +63,54 @@
 
 ---
 
-<div align="center">
-  <h3>👀 Projetos em Destaque</h3>
-  
-  <table>
-    <tr>
-      <td width="50%">
-        <h4 align="center">🧰 DataForge Tools</h4>
-        <p align="center">
-          <a href="https://github.com/tiagovilasboas/dataforge-tools" target="_blank">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=dataforge-tools&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="DataForge Tools"/>
-          </a>
-        </p>
-        <p align="center"><strong>DataForge Tools - Suite de Ferramentas</strong><br>
-        Suite completa de ferramentas para desenvolvedores com validador de JSON, CSV, APIs e mais.</p>
-      </td>
-      <td width="50%">
-        <h4 align="center">🕒 Ponto PJ</h4>
-        <p align="center">
-          <a href="https://github.com/tiagovilasboas/ponto-pj" target="_blank">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="Ponto PJ"/>
-          </a>
-        </p>
-        <p align="center"><strong>Sistema de Ponto Eletrônico PJ (PWA)</strong><br>
-        Sistema de ponto eletrônico pessoal feito para desenvolvedores PJ.</p>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%">
-        <h4 align="center">💪 Health Calc</h4>
-        <p align="center">
-          <a href="https://github.com/tiagovilasboas/health-calc" target="_blank">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=health-calc&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="Health Calc"/>
-          </a>
-        </p>
-        <p align="center"><strong>Health Calc - Calculadora de Saúde</strong><br>
-        Calculadora completa para métricas de saúde e fitness.</p>
-      </td>
-      <td width="50%">
-        <h4 align="center">⚛️ React Layered Boilerplate</h4>
-        <p align="center">
-          <a href="https://github.com/tiagovilasboas/react-layered-boilerplate" target="_blank">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-layered-boilerplate&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="React Layered Boilerplate"/>
-          </a>
-        </p>
-        <p align="center"><strong>React Layered Architecture Boilerplate</strong><br>
-        Boilerplate para arquitetura React escalável e distribuída em camadas.</p>
-      </td>
-    </tr>
-  </table>
-</div>
+### 👀 Projetos em Destaque
+
+<table>
+  <tr>
+    <td width="50%">
+      <h4 align="center">🧰 DataForge Tools</h4>
+      <p align="center">
+        <a href="https://github.com/tiagovilasboas/dataforge-tools" target="_blank">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=dataforge-tools&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="DataForge Tools"/>
+        </a>
+      </p>
+      <p align="center"><strong>Suite de Ferramentas para Desenvolvedores</strong><br>
+      Validador de JSON, CSV, APIs e mais. Interface unificada para otimizar o fluxo de trabalho.</p>
+    </td>
+    <td width="50%">
+      <h4 align="center">🕒 Ponto PJ</h4>
+      <p align="center">
+        <a href="https://github.com/tiagovilasboas/ponto-pj" target="_blank">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="Ponto PJ"/>
+        </a>
+      </p>
+      <p align="center"><strong>Sistema de Ponto Eletrônico PJ</strong><br>
+      PWA para desenvolvedores PJ controlarem horas trabalhadas de forma simples e intuitiva.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4 align="center">💪 Health Calc</h4>
+      <p align="center">
+        <a href="https://github.com/tiagovilasboas/health-calc" target="_blank">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=health-calc&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="Health Calc"/>
+        </a>
+      </p>
+      <p align="center"><strong>Calculadora de Saúde e Fitness</strong><br>
+      Calcule IMC, TMB, necessidades calóricas e outras métricas importantes.</p>
+    </td>
+    <td width="50%">
+      <h4 align="center">⚛️ React Layered Boilerplate</h4>
+      <p align="center">
+        <a href="https://github.com/tiagovilasboas/react-layered-boilerplate" target="_blank">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-layered-boilerplate&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="React Layered Boilerplate"/>
+        </a>
+      </p>
+      <p align="center"><strong>Arquitetura React Escalável</strong><br>
+      Boilerplate para projetos React com arquitetura em camadas e foco em reusabilidade.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
