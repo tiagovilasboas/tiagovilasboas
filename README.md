@@ -69,6 +69,16 @@
   <table>
     <tr>
       <td width="50%">
+        <h4 align="center">🧰 DataForge Tools</h4>
+        <p align="center">
+          <a href="https://github.com/tiagovilasboas/dataforge-tools" target="_blank">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=dataforge-tools&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="DataForge Tools"/>
+          </a>
+        </p>
+        <p align="center"><strong>DataForge Tools - Suite de Ferramentas</strong><br>
+        Suite de ferramentas para desenvolvedores, incluindo validador de JSON, CSV, APIs e mais. Interface unificada para otimizar o fluxo de trabalho diário. Facilita tarefas comuns do dia a dia de desenvolvimento.</p>
+      </td>
+      <td width="50%">
         <h4 align="center">🕒 Ponto PJ</h4>
         <p align="center">
           <a href="https://github.com/tiagovilasboas/ponto-pj" target="_blank">
@@ -76,7 +86,19 @@
           </a>
         </p>
         <p align="center"><strong>Sistema de Ponto Eletrônico PJ (PWA)</strong><br>
-        Sistema de ponto eletrônico pessoal feito de dev pra dev. PWA com interface intuitiva para PJs que precisam controlar horas trabalhadas. Demo disponível!</p>
+        Sistema de ponto eletrônico pessoal feito para desenvolvedores PJ. Permite controlar horas trabalhadas de forma simples e intuitiva. Aplicação PWA com interface moderna e demo disponível.</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <h4 align="center">💪 Health Calc</h4>
+        <p align="center">
+          <a href="https://github.com/tiagovilasboas/health-calc" target="_blank">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=health-calc&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="Health Calc"/>
+          </a>
+        </p>
+        <p align="center"><strong>Health Calc - Calculadora de Saúde</strong><br>
+        Calculadora completa para métricas de saúde e fitness. Permite calcular IMC, TMB, necessidades calóricas e outras métricas importantes. Interface responsiva e moderna para facilitar o acompanhamento da saúde.</p>
       </td>
       <td width="50%">
         <h4 align="center">⚛️ React Layered Boilerplate</h4>
@@ -86,29 +108,7 @@
           </a>
         </p>
         <p align="center"><strong>React Layered Architecture Boilerplate</strong><br>
-        Arquitetura client-side escalável distribuída em camadas. Promove reusabilidade, coesão, independência de tecnologia e testabilidade com React 17.x e Webpack 5.x.</p>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%">
-        <h4 align="center">🧰 DataForge Tools</h4>
-        <p align="center">
-          <a href="https://github.com/tiagovilasboas/dataforge-tools" target="_blank">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=dataforge-tools&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="DataForge Tools"/>
-          </a>
-        </p>
-        <p align="center"><strong>DataForge Tools - Suite de Ferramentas</strong><br>
-        Suite completa de ferramentas para desenvolvedores com validador de JSON, CSV, APIs e mais. Interface unificada para otimizar o fluxo de trabalho diário.</p>
-      </td>
-      <td width="50%">
-        <h4 align="center">🚀 Mais Projetos</h4>
-        <p align="center">
-          <a href="https://github.com/tiagovilasboas?tab=repositories" target="_blank">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=tiagovilasboas&theme=radical&hide_border=true&bg_color=0d1117&title_color=38B2AC&text_color=ffffff" width="100%" alt="Mais Projetos"/>
-          </a>
-        </p>
-        <p align="center"><strong>Explore outros projetos</strong><br>
-        Confira todos os repositórios e contribuições no GitHub.</p>
+        Boilerplate para arquitetura React escalável e distribuída em camadas. Focado em reusabilidade, coesão, independência tecnológica e testabilidade. Baseado em React 17.x e Webpack 5.x.</p>
       </td>
     </tr>
   </table>
@@ -147,4 +147,19 @@
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:38B2AC,100:3ECF8E&height=120&section=footer"/>
+</div>
+
+---
+
+<div align="center">
+  <h3>✨ Curiosidades Profissionais</h3>
+  <ul style="list-style: none; padding: 0;">
+    <li>📝 Atualmente escrevendo o livro <strong>"Código Bonito Não Paga Boleto"</strong>, focado em experiências reais do universo tech e lições práticas para devs.</li>
+    <li>💡 Especialista em desenvolver soluções de impacto para projetos reais, sempre com foco em resultados concretos para o negócio e o usuário.</li>
+    <li>Já liderei times multidisciplinares em projetos nacionais e internacionais, sempre com foco em entregar valor de produto.</li>
+    <li>🚀 Atuei como mentor e tech lead, ajudando outros profissionais a evoluir em carreira, arquitetura e visão de negócio.</li>
+    <li>🔍 Tenho paixão por resolver problemas complexos, transformar requisitos de negócio em soluções simples e escaláveis.</li>
+    <li>🛠️ Participo ativamente de comunidades de tecnologia, compartilhando conhecimento sobre front-end, arquitetura e boas práticas.</li>
+    <li>📈 Acredito que tecnologia é meio, não fim: o que importa é gerar impacto real para o usuário e para o negócio.</li>
+  </ul>
 </div>
