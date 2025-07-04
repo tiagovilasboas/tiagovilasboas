@@ -29,13 +29,14 @@
 
 ## 🌟 Projetos em Destaque
 
-### ⚛️ React Layered Boilerplate
-[![React Layered Boilerplate](https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-layered-boilerplate&theme=radical&hide_border=true)](https://github.com/tiagovilasboas/react-layered-boilerplate)
-Arquitetura React escalável com foco em reusabilidade.
-
-### 🕒 Ponto PJ
-[![Ponto PJ](https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true)](https://github.com/tiagovilasboas/ponto-pj)
-PWA para controle de horas trabalhadas de forma simples.
+<p align="center">
+  <a href="https://github.com/tiagovilasboas/react-layered-boilerplate">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-layered-boilerplate&theme=radical&hide_border=true" alt="React Layered Boilerplate"/>
+  </a>
+  <a href="https://github.com/tiagovilasboas/ponto-pj">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true" alt="Ponto PJ"/>
+  </a>
+</p>
 
 ---
 
