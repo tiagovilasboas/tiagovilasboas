@@ -156,9 +156,7 @@
   <img src="https://img.shields.io/badge/-Mentor-FFD93D?style=for-the-badge&logo=linkedin&logoColor=black" alt="Mentor">
 </p>
 
-**📝 Em desenvolvimento: "Código Bonito Não Paga Boleto"**  
-Livro focado em experiências reais do universo tech e lições práticas para desenvolvedores.
-
+* 📝 **Em desenvolvimento: "Código Bonito Não Paga Boleto"** - Livro focado em experiências reais do universo tech e lições práticas para desenvolvedores
 * 💡 **Especialista em Soluções de Impacto** - Desenvolvo soluções focadas em resultados concretos para negócios e usuários
 * 🚀 **Liderança de Times** - Experiência em projetos nacionais e internacionais com foco em valor de produto
 * 🔍 **Resolução de Problemas** - Transformo requisitos complexos em soluções simples e escaláveis
