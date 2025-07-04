@@ -22,7 +22,7 @@
 
 ## ⚙️ Tech Stack
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwindcss,vite,supabase,github,vercel,flutter,nodejs,graphql,storybook,cypress,docker,aws,githubactions,jest,sentry&perline=10"/>
+  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwindcss,nodejs,graphql,vite,docker,aws,githubactions&perline=10"/>
 </p>
 
 ---
