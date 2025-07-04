@@ -157,40 +157,18 @@
     <img src="https://img.shields.io/badge/-Mentor-FFD93D?style=for-the-badge&logo=linkedin&logoColor=black" alt="Mentor">
   </p>
   
-  <table>
-    <tr>
-      <td width="50%">
-        <h4 align="center">📝 Em desenvolvimento</h4>
-        <p align="center"><strong>"Código Bonito Não Paga Boleto"</strong><br>
-        Livro focado em experiências reais do universo tech e lições práticas para desenvolvedores.</p>
-      </td>
-      <td width="50%">
-        <h4 align="center">💡 Especialista em Soluções de Impacto</h4>
-        <p align="center">Desenvolvo soluções focadas em resultados concretos para negócios e usuários.</p>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%">
-        <h4 align="center">🚀 Liderança de Times</h4>
-        <p align="center">Experiência em projetos nacionais e internacionais com foco em valor de produto.</p>
-      </td>
-      <td width="50%">
-        <h4 align="center">🔍 Resolução de Problemas</h4>
-        <p align="center">Transformo requisitos complexos em soluções simples e escaláveis.</p>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%">
-        <h4 align="center">🛠️ Comunidade Tech</h4>
-        <p align="center">Ativo em comunidades, compartilhando conhecimento sobre front-end e arquitetura.</p>
-      </td>
-      <td width="50%">
-        <h4 align="center">🎯 Filosofia</h4>
-        <p align="center"><strong>Tecnologia é meio, não fim</strong><br>
-        O que importa é gerar impacto real para o usuário e para o negócio.</p>
-      </td>
-    </tr>
-  </table>
+  <p align="center">
+    <strong>📝 Em desenvolvimento: "Código Bonito Não Paga Boleto"</strong><br>
+    Livro focado em experiências reais do universo tech e lições práticas para desenvolvedores.
+  </p>
+  
+  <ul style="list-style: none; padding: 0;">
+    <li>💡 <strong>Especialista em Soluções de Impacto</strong> - Desenvolvo soluções focadas em resultados concretos para negócios e usuários</li>
+    <li>🚀 <strong>Liderança de Times</strong> - Experiência em projetos nacionais e internacionais com foco em valor de produto</li>
+    <li>🔍 <strong>Resolução de Problemas</strong> - Transformo requisitos complexos em soluções simples e escaláveis</li>
+    <li>🛠️ <strong>Comunidade Tech</strong> - Ativo em comunidades, compartilhando conhecimento sobre front-end e arquitetura</li>
+    <li>🎯 <strong>Filosofia</strong> - Tecnologia é meio, não fim. O que importa é gerar impacto real para o usuário e para o negócio</li>
+  </ul>
 </div>
 
 <div align="center">
