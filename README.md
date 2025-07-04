@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:38B2AC,100:3ECF8E&height=120&section=header"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:F5F5F5,50:E8E8E8,100:D3D3D3&height=120&section=header"/>
 
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
   <strong>Front-end Staff Engineer • 18 anos de experiência</strong>
@@ -61,5 +61,5 @@
 </div>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:38B2AC,100:3ECF8E&height=120&section=footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:F5F5F5,50:E8E8E8,100:D3D3D3&height=120&section=footer"/>
 </div>
