@@ -150,46 +150,47 @@
 <div align="center">
   <h3>✨ Curiosidades Profissionais</h3>
   
-  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
+  <p align="center">
     <img src="https://img.shields.io/badge/-Autor%20Publicado-38B2AC?style=for-the-badge&logo=bookstack&logoColor=white" alt="Autor Publicado">
     <img src="https://img.shields.io/badge/-Staff%20Engineer-3ECF8E?style=for-the-badge&logo=react&logoColor=white" alt="Staff Engineer">
     <img src="https://img.shields.io/badge/-Tech%20Lead-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Tech Lead">
     <img src="https://img.shields.io/badge/-Mentor-FFD93D?style=for-the-badge&logo=linkedin&logoColor=black" alt="Mentor">
-  </div>
+  </p>
   
-  <div style="max-width: 800px; margin: 0 auto;">
-    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 15px; margin: 20px 0; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
-      <h4 style="color: white; margin: 0 0 15px 0;">📝 Em desenvolvimento: "Código Bonito Não Paga Boleto"</h4>
-      <p style="color: white; margin: 0; font-size: 14px;">Livro focado em experiências reais do universo tech e lições práticas para desenvolvedores.</p>
-    </div>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 20px 0;">
-      <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; border-left: 4px solid #38B2AC;">
-        <h5 style="margin: 0 0 10px 0; color: #38B2AC;">💡 Especialista em Soluções de Impacto</h5>
-        <p style="margin: 0; font-size: 14px;">Desenvolvo soluções focadas em resultados concretos para negócios e usuários.</p>
-      </div>
-      
-      <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; border-left: 4px solid #3ECF8E;">
-        <h5 style="margin: 0 0 10px 0; color: #3ECF8E;">🚀 Liderança de Times</h5>
-        <p style="margin: 0; font-size: 14px;">Experiência em projetos nacionais e internacionais com foco em valor de produto.</p>
-      </div>
-      
-      <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; border-left: 4px solid #FF6B6B;">
-        <h5 style="margin: 0 0 10px 0; color: #FF6B6B;">🔍 Resolução de Problemas</h5>
-        <p style="margin: 0; font-size: 14px;">Transformo requisitos complexos em soluções simples e escaláveis.</p>
-      </div>
-      
-      <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; border-left: 4px solid #FFD93D;">
-        <h5 style="margin: 0 0 10px 0; color: #FFD93D;">🛠️ Comunidade Tech</h5>
-        <p style="margin: 0; font-size: 14px;">Ativo em comunidades, compartilhando conhecimento sobre front-end e arquitetura.</p>
-      </div>
-    </div>
-    
-    <div style="background: linear-gradient(135deg, #3ECF8E 0%, #38B2AC 100%); padding: 20px; border-radius: 15px; margin: 20px 0; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
-      <h4 style="color: white; margin: 0; text-align: center;">🎯 Filosofia: Tecnologia é meio, não fim</h4>
-      <p style="color: white; margin: 10px 0 0 0; text-align: center; font-size: 14px;">O que importa é gerar impacto real para o usuário e para o negócio.</p>
-    </div>
-  </div>
+  <table>
+    <tr>
+      <td width="50%">
+        <h4 align="center">📝 Em desenvolvimento</h4>
+        <p align="center"><strong>"Código Bonito Não Paga Boleto"</strong><br>
+        Livro focado em experiências reais do universo tech e lições práticas para desenvolvedores.</p>
+      </td>
+      <td width="50%">
+        <h4 align="center">💡 Especialista em Soluções de Impacto</h4>
+        <p align="center">Desenvolvo soluções focadas em resultados concretos para negócios e usuários.</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <h4 align="center">🚀 Liderança de Times</h4>
+        <p align="center">Experiência em projetos nacionais e internacionais com foco em valor de produto.</p>
+      </td>
+      <td width="50%">
+        <h4 align="center">🔍 Resolução de Problemas</h4>
+        <p align="center">Transformo requisitos complexos em soluções simples e escaláveis.</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <h4 align="center">🛠️ Comunidade Tech</h4>
+        <p align="center">Ativo em comunidades, compartilhando conhecimento sobre front-end e arquitetura.</p>
+      </td>
+      <td width="50%">
+        <h4 align="center">🎯 Filosofia</h4>
+        <p align="center"><strong>Tecnologia é meio, não fim</strong><br>
+        O que importa é gerar impacto real para o usuário e para o negócio.</p>
+      </td>
+    </tr>
+  </table>
 </div>
 
 <div align="center">
