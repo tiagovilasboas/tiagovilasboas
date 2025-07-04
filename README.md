@@ -149,19 +149,19 @@
 
 ### ✨ Curiosidades Profissionais
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-Autor%20Publicado-38B2AC?style=for-the-badge&logo=bookstack&logoColor=white" alt="Autor Publicado">
-  <img src="https://img.shields.io/badge/-Staff%20Engineer-3ECF8E?style=for-the-badge&logo=react&logoColor=white" alt="Staff Engineer">
-  <img src="https://img.shields.io/badge/-Tech%20Lead-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Tech Lead">
-  <img src="https://img.shields.io/badge/-Mentor-FFD93D?style=for-the-badge&logo=linkedin&logoColor=black" alt="Mentor">
-</p>
-
 * 📝 **Em desenvolvimento: "Código Bonito Não Paga Boleto"** - Livro focado em experiências reais do universo tech e lições práticas para desenvolvedores
 * 💡 **Especialista em Soluções de Impacto** - Desenvolvo soluções focadas em resultados concretos para negócios e usuários
 * 🚀 **Liderança de Times** - Experiência em projetos nacionais e internacionais com foco em valor de produto
 * 🔍 **Resolução de Problemas** - Transformo requisitos complexos em soluções simples e escaláveis
 * 🛠️ **Comunidade Tech** - Ativo em comunidades, compartilhando conhecimento sobre front-end e arquitetura
 * 🎯 **Filosofia** - Tecnologia é meio, não fim. O que importa é gerar impacto real para o usuário e para o negócio
+
+<p align="center">
+  <img src="https://img.shields.io/badge/-Autor%20Publicado-38B2AC?style=for-the-badge&logo=bookstack&logoColor=white" alt="Autor Publicado">
+  <img src="https://img.shields.io/badge/-Staff%20Engineer-3ECF8E?style=for-the-badge&logo=react&logoColor=white" alt="Staff Engineer">
+  <img src="https://img.shields.io/badge/-Tech%20Lead-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Tech Lead">
+  <img src="https://img.shields.io/badge/-Mentor-FFD93D?style=for-the-badge&logo=linkedin&logoColor=black" alt="Mentor">
+</p>
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:38B2AC,100:3ECF8E&height=120&section=footer"/>
