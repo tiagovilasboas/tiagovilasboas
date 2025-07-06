@@ -5,12 +5,16 @@ on:
 jobs:
   metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: read
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           user: tiagovilasboas
           template: classic
           base: header, activity, community, repositories, metadata
-          plugins: lines, habits, people, achievements
           config_timezone: America/Sao_Paulo 
