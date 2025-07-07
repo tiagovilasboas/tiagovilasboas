@@ -4,6 +4,9 @@
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
   <strong>Front-end Staff Engineer • 18 anos de experiência</strong>
 
+  > 🚀 **Open to Work** — vagas full-remote (Staff / Tech Lead).  
+  > 📧 tcarvalhovb@gmail.com • 🗓️ [30 min chat](https://calendly.com/tcarvalhovb/)
+
   <p>🚀 Transformo ideias em produtos digitais de impacto<br/>
      🛠️ Clean code • UX • Performance<br/>
      🤝 Consultor • Mentor • Tech Lead
@@ -22,7 +25,15 @@
 
 ## ⚙️ Tech Stack
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwindcss,nodejs,graphql,vite,docker,aws,githubactions&perline=10"/>
+  <a href="#"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Shadcn%20UI-000000?style=for-the-badge&logo=none&logoColor=white" alt="Shadcn UI"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest"/></a>
 </p>
 
 ---
