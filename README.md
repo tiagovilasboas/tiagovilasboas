@@ -32,7 +32,7 @@
   <a href="#"><img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" alt="GraphQL"/></a>
   <a href="#"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/></a>
   <a href="#"><img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white" alt="Cypress"/></a>
 </p>
 
 ---
@@ -47,22 +47,6 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true" alt="Ponto PJ"/>
   </a>
 </p>
-
----
-
-<details>
-<summary>📊 Detalhes GitHub</summary>
-<br/>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical&hide_border=true" alt="Stats"/>
-  <br/>
-  <img src="https://streak-stats.demolab.com?user=tiagovilasboas&theme=radical&hide_border=true" alt="Streak"/>
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tiagovilasboas&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Langs"/>
-  <br/>
-  <img src="https://github-profile-trophy.vercel.app/?username=tiagovilasboas&theme=radical&no-frame=true&margin-w=15" alt="Trophies"/>
-</p>
-</details>
 
 ---
 
