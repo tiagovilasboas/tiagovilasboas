@@ -48,6 +48,9 @@
 ## 🌟 Projetos em Destaque
 
 <p align="center">
+  <a href="https://github.com/tiagovilasboas/frontend-architecture-playbook">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=frontend-architecture-playbook&theme=radical&hide_border=true" alt="Frontend Architecture Playbook"/>
+  </a>
   <a href="https://github.com/tiagovilasboas/react-layered-boilerplate">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-layered-boilerplate&theme=radical&hide_border=true" alt="React Layered Boilerplate"/>
   </a>
@@ -55,6 +58,18 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true" alt="Ponto PJ"/>
   </a>
 </p>
+
+### 🚀 **Frontend Architecture Playbook** - *Bem apreciado no LinkedIn*
+> **Decision wizard interativo + casos reais que provam ROI de arquitetura.** Dev para dev, sem enrolação. Combina 18 anos de experiência com casos reais de Netflix, Spotify, Airbnb e outras empresas que geraram milhões com decisões técnicas certas.
+
+**Destaques:**
+- 🧙‍♂️ **Decision Wizard v3.0** - 6 perguntas contextuais → recomendação personalizada
+- 💼 **16 casos reais** - Pinterest, Tinder, Slack, Uber, WhatsApp, Zoom, Figma, Discord
+- 📚 **15 arquiteturas** - Clean Architecture, Micro-frontends, SSR/SSG, PWA, Islands
+- ⚡ **Tom dev-to-dev** - Direto, sem academicismo. Foco em resultado
+- 🎯 **Prova de ROI** - Métricas concretas como "+103% engagement", "-84% time to interactive"
+
+**Tecnologias:** React 19, TypeScript, Vite, Mantine, Cypress, Jest
 
 ---
 
