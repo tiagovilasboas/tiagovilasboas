@@ -21,6 +21,12 @@
 
 ---
 
+## 💼 Experiência
+- **Staff Engineer** - 18 anos de experiência em front-end
+- **Tech Lead** - Liderança técnica e arquitetura
+- **Consultor** - Otimização de performance e UX
+- **Mentor** - Desenvolvimento de equipes
+
 ## ⚙️ Tech Stack
 <p align="center">
   <!-- Front-end -->
@@ -56,12 +62,36 @@
   </a>
 </p>
 
-### 🚀 **Frontend Architecture Playbook** - *Bem apreciado no LinkedIn*
-> **Decision wizard interativo + casos reais que provam ROI de arquitetura.** Ferramenta de grande valor para desenvolvedores que precisam escolher a arquitetura certa para seus projetos.
+### 🏗️ **Frontend Architecture Playbook**
+> Ferramenta interativa para escolha de arquiteturas front-end com casos reais e ROI comprovado.
 
 **Tecnologias:** React 19, TypeScript, Vite, Mantine, Cypress, Jest
 
+### ⏰ **Ponto PJ**
+> Sistema de controle de ponto para PJs com relatórios e integração bancária.
+
+**Tecnologias:** React, TypeScript, Node.js, MongoDB
+
 ---
+
+## 📊 GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=tiagovilasboas&theme=radical&hide_border=true" alt="GitHub Streak"/>
+</p>
+
+## 🤝 Contribuições
+<p align="center">
+  <img src="https://github-contribution-grid-snake.vercel.app/?username=tiagovilasboas&theme=radical" alt="Contribution Graph"/>
+</p>
+
+---
+
+## 💬 Vamos Conversar?
+- 🎯 **Vagas:** Staff Engineer / Tech Lead (full-remote)
+- 💡 **Consultoria:** Arquitetura front-end e performance
+- 🚀 **Mentoria:** Desenvolvimento de carreira tech
+- 📧 **Contato:** [30 min chat](https://calendly.com/tcarvalhovb/)
 
 <div align="center">
   <img src="https://github.com/tiagovilasboas/tiagovilasboas/blob/output/github-contribution-grid-snake.svg" alt="snake gif" />
