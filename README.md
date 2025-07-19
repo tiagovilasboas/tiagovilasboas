@@ -71,6 +71,11 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=tiagovilasboas&theme=radical&hide_border=true" alt="GitHub Streak"/>
 </p>
 
+## 🤝 Contribuições
+<p align="center">
+  <img src="https://github-contribution-grid-snake.vercel.app/?username=tiagovilasboas&theme=radical" alt="Contribution Graph"/>
+</p>
+
 ---
 
 ## 💬 Vamos Conversar?
@@ -80,6 +85,4 @@
 - 🚀 **Mentoria:** Desenvolvimento de carreira tech
 - 📧 **Contato:** [30 min chat](https://calendly.com/tcarvalhovb/)
 
-<div align="center">
-  <img src="https://github.com/tiagovilasboas/tiagovilasboas/blob/output/github-contribution-grid-snake.svg" alt="snake gif" />
-</div>
+
