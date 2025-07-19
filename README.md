@@ -2,9 +2,6 @@
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
   <strong>Front-end Staff Engineer • 18 anos de experiência</strong>
 
-  > 🚀 **Open to Work** — vagas full-remote (Staff / Tech Lead).  
-  > 📧 tcarvalhovb@gmail.com • 🗓️ [30 min chat](https://calendly.com/tcarvalhovb/)
-
   <p>🚀 Transformo ideias em produtos digitais de impacto<br/>
      🛠️ Clean code • UX • Performance<br/>
      🤝 Consultor • Mentor • Tech Lead
@@ -20,12 +17,6 @@
 </div>
 
 ---
-
-## 💼 Experiência
-- **Staff Engineer** - 18 anos de experiência em front-end
-- **Tech Lead** - Liderança técnica e arquitetura
-- **Consultor** - Otimização de performance e UX
-- **Mentor** - Desenvolvimento de equipes
 
 ## ⚙️ Tech Stack
 <p align="center">
@@ -80,15 +71,11 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=tiagovilasboas&theme=radical&hide_border=true" alt="GitHub Streak"/>
 </p>
 
-## 🤝 Contribuições
-<p align="center">
-  <img src="https://github-contribution-grid-snake.vercel.app/?username=tiagovilasboas&theme=radical" alt="Contribution Graph"/>
-</p>
-
 ---
 
 ## 💬 Vamos Conversar?
-- 🎯 **Vagas:** Staff Engineer / Tech Lead (full-remote)
+> 🚀 **Open to Work** — Staff Engineer / Tech Lead (full-remote)
+
 - 💡 **Consultoria:** Arquitetura front-end e performance
 - 🚀 **Mentoria:** Desenvolvimento de carreira tech
 - 📧 **Contato:** [30 min chat](https://calendly.com/tcarvalhovb/)
