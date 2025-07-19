@@ -53,15 +53,7 @@
   </a>
 </p>
 
-### 🏗️ **Frontend Architecture Playbook**
-> Ferramenta interativa para escolha de arquiteturas front-end com casos reais e ROI comprovado.
 
-**Tecnologias:** React 19, TypeScript, Vite, Mantine, Cypress, Jest
-
-### ⏰ **Ponto PJ**
-> Sistema de controle de ponto para PJs com relatórios e integração bancária.
-
-**Tecnologias:** React, TypeScript, Node.js, MongoDB
 
 ---
 
