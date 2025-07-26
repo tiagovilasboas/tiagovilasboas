@@ -20,9 +20,9 @@
 
 ## 🎯 Sobre Mim
 
-**Staff Engineer** com 18 anos transformando complexidade em simplicidade. Especializado em arquiteturas que escalam, performance que impressiona e decisões que geram ROI real. 
+**Staff Engineer** com 18 anos. Resolvo problemas que outros não conseguem ver, com soluções que outros não conseguem implementar.
 
-> 💡 **Por que Staff Engineer?** Porque resolvo problemas que outros não conseguem ver, com soluções que outros não conseguem implementar.
+> 💡 **Por que Staff Engineer?** Porque quando a empresa tem um problema complexo, eles me chamam. E eu resolvo.
 
 ---
 
@@ -50,9 +50,9 @@
 
 ---
 
-## 🌟 Projetos que Resolvem Problemas Reais
+## 🌟 Projetos que Funcionam
 
-### 🚀 Ferramentas Inovadoras
+### 🚀 Ferramentas que Resolvem Problemas Reais
 <p align="center">
   <a href="https://github.com/tiagovilasboas/frontend-cursor-rules">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=frontend-cursor-rules&theme=radical&hide_border=true" alt="Frontend Cursor Rules"/>
@@ -68,9 +68,9 @@
   </a>
 </p>
 
-**💡 Impacto Real:** 500-1900% ROI, +46% performance, baseado em 7.4k+ cases reais (Netflix, Airbnb, Uber, Spotify). Regras práticas para IAs de código com padrões testados em produção.
+**💡 Resultados Reais:** 500-1900% ROI, +46% performance. Baseado em 7.4k+ cases (Netflix, Airbnb, Uber, Spotify). Não é teoria, é prática.
 
-### 🏗️ Boilerplates & Arquitetura
+### 🏗️ Boilerplates que Funcionam em Produção
 <p align="center">
   <a href="https://github.com/tiagovilasboas/react-layered-boilerplate">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-layered-boilerplate&theme=radical&hide_border=true" alt="React Layered Boilerplate"/>
@@ -80,9 +80,9 @@
   </a>
 </p>
 
-**🏆 Mais Popular:** 8 estrelas, usado por equipes enterprise. Arquitetura em camadas, injeção de dependências, TypeScript strict, testes automatizados, CI/CD configurado.
+**🏆 8 estrelas, usado por equipes enterprise.** Arquitetura em camadas, injeção de dependências, TypeScript strict, testes automatizados, CI/CD configurado. Não é brincadeira.
 
-### 🚀 Aplicações Completas
+### 🚀 Aplicações que Resolvem Problemas Reais
 <p align="center">
   <a href="https://github.com/tiagovilasboas/ponto-pj">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true" alt="Ponto PJ"/>
@@ -92,7 +92,7 @@
   </a>
 </p>
 
-**💼 Compliance & Produtividade:** Sistema fiscal completo (7⭐) com compliance brasileira + Plataforma de vagas remotas com filtros inteligentes e matching de skills.
+**💼 Sistema fiscal completo (7⭐) com compliance brasileira + Plataforma de vagas remotas com filtros inteligentes.** Problemas reais, soluções reais.
 
 ---
 
@@ -109,7 +109,7 @@
 
 ---
 
-## 💼 Serviços Profissionais
+## 💼 O que eu faço
 
 ### 🎯 Consultoria & Arquitetura
 - **Arquitetura Front-end**: Micro-frontends, Design Systems, Performance
