@@ -1,10 +1,10 @@
 <div align="center">
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
-  <strong>Front-end Staff Engineer • 18 anos de experiência</strong>
+  <strong>Staff Engineer Front-end • 18 anos de experiência</strong>
 
   <p>🚀 Transformo ideias em produtos digitais de impacto<br/>
-     🛠️ Clean code • UX • Performance<br/>
-     🤝 Consultor • Mentor • Tech Lead
+     🛠️ Clean code • UX • Performance • Arquitetura<br/>
+     🤝 Consultor • Mentor • Tech Lead • Open Source
   </p>
 
   <!-- Contatos -->
@@ -15,6 +15,19 @@
     <img alt="Visitors" src="https://komarev.com/ghpvc/?username=tiagovilasboas&style=for-the-badge&color=3ECF8E"/>
   </p>
 </div>
+
+---
+
+## 🎯 Sobre Mim
+
+**Staff Engineer** com 18 anos de experiência em desenvolvimento front-end, especializado em arquiteturas escaláveis, performance e decisões estratégicas baseadas em evidências. Atuo como consultor técnico, mentor de desenvolvedores e contribuidor open source.
+
+### 🏆 Especialidades
+- **Arquitetura Front-end**: Micro-frontends, Design Systems, Performance
+- **Liderança Técnica**: Code reviews, mentoring, arquitetura de equipes
+- **Consultoria**: ROI em arquitetura, migrações, otimizações
+- **Open Source**: Boilerplates, templates, ferramentas para comunidade
+- **IA & Produtividade**: Regras para IAs de código, prompt engineering
 
 ---
 
@@ -44,24 +57,58 @@
 
 ## 🌟 Projetos em Destaque
 
+### 🚀 Ferramentas Inovadoras
 <p align="center">
+  <a href="https://github.com/tiagovilasboas/frontend-cursor-rules">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=frontend-cursor-rules&theme=radical&hide_border=true" alt="Frontend Cursor Rules"/>
+  </a>
   <a href="https://github.com/tiagovilasboas/frontend-architecture-playbook">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=frontend-architecture-playbook&theme=radical&hide_border=true" alt="Frontend Architecture Playbook"/>
   </a>
-  <a href="https://github.com/tiagovilasboas/ponto-pj">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true" alt="Ponto PJ"/>
+</p>
+
+### 🎯 Ferramentas Estratégicas
+<p align="center">
+  <a href="https://frontend-architecture-playbook-eight.vercel.app">
+    <img src="https://img.shields.io/badge/Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/>
+  </a>
+  <a href="https://github.com/tiagovilasboas/frontend-architecture-playbook">
+    <img src="https://img.shields.io/badge/Decision_Wizard-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="Decision Wizard"/>
   </a>
 </p>
 
+### 🏗️ Boilerplates & Arquitetura
+<p align="center">
+  <a href="https://github.com/tiagovilasboas/react-layered-boilerplate">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-layered-boilerplate&theme=radical&hide_border=true" alt="React Layered Boilerplate"/>
+  </a>
+  <a href="https://github.com/tiagovilasboas/react-vite-boilerplate">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=react-vite-boilerplate&theme=radical&hide_border=true" alt="React Vite Boilerplate"/>
+  </a>
+</p>
 
+### 🚀 Aplicações Completas
+<p align="center">
+  <a href="https://github.com/tiagovilasboas/ponto-pj">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=ponto-pj&theme=radical&hide_border=true" alt="Ponto PJ"/>
+  </a>
+  <a href="https://github.com/tiagovilasboas/remote-dev-jobs">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tiagovilasboas&repo=remote-dev-jobs&theme=radical&hide_border=true" alt="Remote Dev Jobs"/>
+  </a>
+</p>
 
 ---
 
-## 📊 GitHub Stats
+## 📊 Estatísticas GitHub
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=tiagovilasboas&theme=radical&hide_border=true" alt="GitHub Streak"/>
 </p>
+
+### 🚀 Projetos Mais Ativos
+- **frontend-architecture-playbook**: 350+ commits, decision wizard estratégico
+- **frontend-cursor-rules**: 30+ commits, 2 estrelas
+- **react-layered-boilerplate**: 8 estrelas, boilerplate enterprise
 
 ## 🤝 Contribuições
 <p align="center">
@@ -70,11 +117,59 @@
 
 ---
 
+## 💼 Serviços Profissionais
+
+### 🎯 Consultoria Técnica
+- **Arquitetura Front-end**: Micro-frontends, Design Systems, Performance
+- **Migrações**: Legacy → Modern, Framework migrations
+- **Code Reviews**: Análise de qualidade e boas práticas
+- **ROI em Tecnologia**: Decisões baseadas em métricas de negócio
+
+### 🚀 Mentoria & Liderança
+- **Desenvolvimento de Carreira**: Roadmap personalizado
+- **Liderança Técnica**: Formação de Tech Leads
+- **Code Reviews**: Práticas de qualidade e performance
+- **Arquitetura de Equipes**: Estruturação de times escaláveis
+
+### 🛠️ Desenvolvimento
+- **Aplicações Enterprise**: React, TypeScript, Node.js
+- **Mobile**: Flutter, React Native
+- **Performance**: Otimizações, métricas, monitoramento
+- **DevOps**: CI/CD, Cloud (AWS/Azure), Docker
+
+### 🤖 IA & Produtividade
+- **Regras para IAs**: .cursorrules baseadas em 7.4k+ cases reais
+- **Prompt Engineering**: Templates para React, Vue, Angular, Svelte
+- **ROI Comprovado**: 500-1900% de retorno no primeiro mês
+- **Performance**: +46% performance, -61% bundle size (cases Netflix, Airbnb)
+
+### 🎯 Arquitetura Estratégica
+- **Decision Wizard**: Escolha de arquitetura baseada em evidências
+- **ROI em Arquitetura**: Métricas de negócio para decisões técnicas
+- **Cases Reais**: Netflix, Airbnb, Uber, Spotify
+- **Live Demo**: [frontend-architecture-playbook-eight.vercel.app](https://frontend-architecture-playbook-eight.vercel.app)
+
+---
+
 ## 💬 Vamos Conversar?
+
 > 🚀 **Open to Work** — Staff Engineer / Tech Lead (full-remote)
 
-- 💡 **Consultoria:** Arquitetura front-end e performance
-- 🚀 **Mentoria:** Desenvolvimento de carreira tech
-- 📧 **Contato:** [30 min chat](https://calendly.com/tcarvalhovb/)
+### 📞 Contato Direto
+- 📧 **E-mail**: [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
+- 💼 **LinkedIn**: [tiagovilasboas](https://www.linkedin.com/in/tiagovilasboas/)
+- 📅 **Agendamento**: [30 min chat](https://calendly.com/tcarvalhovb/)
+
+### 🎯 Interesses
+- **Posições**: Staff Engineer, Tech Lead, Senior Front-end
+- **Modalidade**: Full-remote, híbrido
+- **Projetos**: Arquitetura, liderança técnica, consultoria
+- **Tecnologias**: React, TypeScript, Node.js, Cloud
+
+---
+
+<div align="center">
+  <sub>⭐ Se algum projeto te ajudou, considere dar uma estrela!</sub>
+</div>
 
 
