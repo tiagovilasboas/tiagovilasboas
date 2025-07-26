@@ -68,7 +68,7 @@
   </a>
 </p>
 
-**💡 Impacto Real:** 500-1900% ROI, +46% performance, baseado em 7.4k+ cases (Netflix, Airbnb, Uber, Spotify)
+**💡 Impacto Real:** 500-1900% ROI, +46% performance, baseado em 7.4k+ cases reais (Netflix, Airbnb, Uber, Spotify). Regras práticas para IAs de código com padrões testados em produção.
 
 ### 🏗️ Boilerplates & Arquitetura
 <p align="center">
@@ -80,7 +80,7 @@
   </a>
 </p>
 
-**🏆 Mais Popular:** 8 estrelas, usado por equipes enterprise
+**🏆 Mais Popular:** 8 estrelas, usado por equipes enterprise. Arquitetura em camadas, injeção de dependências, TypeScript strict, testes automatizados, CI/CD configurado.
 
 ### 🚀 Aplicações Completas
 <p align="center">
@@ -92,7 +92,7 @@
   </a>
 </p>
 
-**💼 Compliance & Produtividade:** Sistema fiscal completo + Plataforma de vagas remotas
+**💼 Compliance & Produtividade:** Sistema fiscal completo (7⭐) com compliance brasileira + Plataforma de vagas remotas com filtros inteligentes e matching de skills.
 
 ---
 
@@ -125,9 +125,10 @@
 
 ### 🛠️ Desenvolvimento & DevOps
 - **Aplicações Enterprise**: React, TypeScript, Node.js
-- **Mobile**: Flutter, React Native
+- **Mobile**: Flutter, React Native (IoT, Saúde Digital)
 - **Performance**: Otimizações, métricas, monitoramento
 - **DevOps**: CI/CD, Cloud (AWS/Azure), Docker
+- **CSS Framework**: Sistema de design tokens e componentes reutilizáveis
 
 ### 🤖 IA & Produtividade
 - **Regras para IAs**: .cursorrules baseadas em 7.4k+ cases reais
