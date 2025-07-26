@@ -22,13 +22,6 @@
 
 **Staff Engineer** com 18 anos de experiência em desenvolvimento front-end, especializado em arquiteturas escaláveis, performance e decisões estratégicas baseadas em evidências. Atuo como consultor técnico, mentor de desenvolvedores e contribuidor open source.
 
-### 🏆 Especialidades
-- **Arquitetura Front-end**: Micro-frontends, Design Systems, Performance
-- **Liderança Técnica**: Code reviews, mentoring, arquitetura de equipes
-- **Consultoria**: ROI em arquitetura, migrações, otimizações
-- **Open Source**: Boilerplates, templates, ferramentas para comunidade
-- **IA & Produtividade**: Regras para IAs de código, prompt engineering
-
 ---
 
 ## ⚙️ Tech Stack
