@@ -112,7 +112,7 @@
 
 ## 🤝 Contribuições
 <p align="center">
-  <img src="https://github-contribution-grid-snake.vercel.app/?username=tiagovilasboas&theme=radical" alt="Contribution Graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tiagovilasboas&theme=radical&hide_border=true" alt="Contribution Graph"/>
 </p>
 
 ---
