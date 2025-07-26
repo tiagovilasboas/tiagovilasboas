@@ -60,15 +60,13 @@
   </a>
 </p>
 
-### 🎯 Ferramentas Estratégicas
 <p align="center">
   <a href="https://frontend-architecture-playbook-eight.vercel.app">
     <img src="https://img.shields.io/badge/Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/>
   </a>
-  <a href="https://github.com/tiagovilasboas/frontend-architecture-playbook">
-    <img src="https://img.shields.io/badge/Decision_Wizard-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="Decision Wizard"/>
-  </a>
 </p>
+
+
 
 ### 🏗️ Boilerplates & Arquitetura
 <p align="center">
