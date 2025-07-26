@@ -119,11 +119,11 @@
 
 ## 💼 Serviços Profissionais
 
-### 🎯 Consultoria Técnica
+### 🎯 Consultoria & Arquitetura
 - **Arquitetura Front-end**: Micro-frontends, Design Systems, Performance
 - **Migrações**: Legacy → Modern, Framework migrations
-- **Code Reviews**: Análise de qualidade e boas práticas
 - **ROI em Tecnologia**: Decisões baseadas em métricas de negócio
+- **Decision Wizard**: Escolha de arquitetura baseada em evidências
 
 ### 🚀 Mentoria & Liderança
 - **Desenvolvimento de Carreira**: Roadmap personalizado
@@ -131,7 +131,7 @@
 - **Code Reviews**: Práticas de qualidade e performance
 - **Arquitetura de Equipes**: Estruturação de times escaláveis
 
-### 🛠️ Desenvolvimento
+### 🛠️ Desenvolvimento & DevOps
 - **Aplicações Enterprise**: React, TypeScript, Node.js
 - **Mobile**: Flutter, React Native
 - **Performance**: Otimizações, métricas, monitoramento
@@ -141,13 +141,7 @@
 - **Regras para IAs**: .cursorrules baseadas em 7.4k+ cases reais
 - **Prompt Engineering**: Templates para React, Vue, Angular, Svelte
 - **ROI Comprovado**: 500-1900% de retorno no primeiro mês
-- **Performance**: +46% performance, -61% bundle size (cases Netflix, Airbnb)
-
-### 🎯 Arquitetura Estratégica
-- **Decision Wizard**: Escolha de arquitetura baseada em evidências
-- **ROI em Arquitetura**: Métricas de negócio para decisões técnicas
-- **Cases Reais**: Netflix, Airbnb, Uber, Spotify
-- **Live Demo**: [frontend-architecture-playbook-eight.vercel.app](https://frontend-architecture-playbook-eight.vercel.app)
+- **Performance**: +46% performance, -61% bundle size (Netflix, Airbnb, Uber, Spotify)
 
 ---
 
