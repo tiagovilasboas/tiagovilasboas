@@ -140,18 +140,10 @@
 
 ## 💬 Vamos Conversar?
 
-> 🚀 **Open to Work** — Staff Engineer / Tech Lead (full-remote)
-
 ### 📞 Contato Direto
 - 📧 **E-mail**: [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
 - 💼 **LinkedIn**: [tiagovilasboas](https://www.linkedin.com/in/tiagovilasboas/)
 - 📅 **Agendamento**: [30 min chat](https://calendly.com/tcarvalhovb/)
-
-### 🎯 Interesses
-- **Posições**: Staff Engineer, Tech Lead, Senior Front-end
-- **Modalidade**: Full-remote, híbrido
-- **Projetos**: Arquitetura, liderança técnica, consultoria
-- **Tecnologias**: React, TypeScript, Node.js, Cloud
 
 ---
 
