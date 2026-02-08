@@ -1,14 +1,21 @@
 <div align="center">
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
-  <strong>Staff Engineer Front-end • 18 anos de experiência</strong>
+  <strong>Principal Engineer • Montanha Tech • 20 anos de experiência</strong>
 
   <p>🚀 Transformo ideias em produtos digitais de impacto<br/>
      🛠️ Clean code • UX • Performance • Arquitetura<br/>
      🤝 Consultor • Mentor • Tech Lead • Open Source
   </p>
 
+  <p>
+    <strong>22+ estrelas</strong> em projetos open source •
+    <strong>500–1900% ROI</strong> em implementações IA •
+    <strong>+46% performance</strong> em otimizações
+  </p>
+
   <!-- Contatos -->
   <p>
+    <a href="https://calendly.com/tcarvalhovb/"><img alt="Agendar 30 min" src="https://img.shields.io/badge/Agendar_30_min-00C853?style=for-the-badge&logo=calendar&logoColor=white"/></a>
     <a href="mailto:tcarvalhovb@gmail.com"><img alt="E-mail" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
     <a href="https://www.linkedin.com/in/tiagovilasboas/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
     <a href="https://github.com/tiagovilasboas"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/></a>
@@ -20,33 +27,57 @@
 
 ## 🎯 Sobre Mim
 
-**Staff Engineer** com 18 anos. Resolvo problemas que outros não conseguem ver, com soluções que outros não conseguem implementar.
+**Principal Engineer** com 20 anos. Especializado em React, TypeScript e arquitetura escalável. Resolvo problemas que outros não conseguem ver, com soluções que outros não conseguem implementar.
 
-> 💡 **Por que Staff Engineer?** Porque quando a empresa tem um problema complexo, eles me chamam. E eu resolvo.
+> 💡 **Por que Principal Engineer?** Porque quando a empresa tem um problema complexo, eles me chamam. E eu resolvo.
+
+**Idiomas:** Português (nativo) • Inglês (professional working)
 
 ---
 
 ## ⚙️ Tech Stack
+
+<details>
+<summary><b>Core</b> — React • Vue • TypeScript • Next.js • Nuxt</summary>
 <p align="center">
-  <!-- Front-end -->
-  <a href="#"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white" alt="Cypress"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest"/></a>
-  <!-- Back-end -->
-  <a href="#"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" alt="GraphQL"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white" alt="RabbitMQ"/></a>
-  <!-- Cloud -->
-  <a href="#"><img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/></a>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&color=3ECF8E" alt="React"/>
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white&color=3ECF8E" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&color=3ECF8E" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white&color=3ECF8E" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/Nuxt-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white&color=3ECF8E" alt="Nuxt"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white&color=3ECF8E" alt="Node.js"/>
 </p>
+</details>
+
+<details>
+<summary><b>Testing & Mobile</b> — Cypress • Jest • Flutter</summary>
+<p align="center">
+  <img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white&color=3ECF8E" alt="Cypress"/>
+  <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white&color=3ECF8E" alt="Jest"/>
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white&color=3ECF8E" alt="Flutter"/>
+</p>
+</details>
+
+<details>
+<summary><b>Back-end & Data</b> — Go • GraphQL • Supabase • Redis • MongoDB</summary>
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white&color=3ECF8E" alt="Go"/>
+  <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white&color=3ECF8E" alt="GraphQL"/>
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white&color=3ECF8E" alt="Supabase"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white&color=3ECF8E" alt="Redis"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white&color=3ECF8E" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white&color=3ECF8E" alt="RabbitMQ"/>
+</p>
+</details>
+
+<details>
+<summary><b>Cloud & Infra</b> — AWS • Azure • Vercel</summary>
+<p align="center">
+  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white&color=3ECF8E" alt="AWS"/>
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white&color=3ECF8E" alt="Azure"/>
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white&color=3ECF8E" alt="Vercel"/>
+</p>
+</details>
 
 ---
 
@@ -107,6 +138,29 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=tiagovilasboas&theme=github-dark&hide_border=true" alt="Contribution Graph"/>
 </p>
 
+<img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-contribution-grid-snake.svg" alt="Contribution Snake" width="100%"/>
+
+<details>
+<summary>📈 Métricas detalhadas</summary>
+<br/>
+<img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-metrics.svg" alt="GitHub Metrics" width="100%"/>
+</details>
+
+---
+
+## 🎤 Thought Leadership
+
+Consultorias, mentorias e conteúdo baseado em 20 anos de experiência:
+
+| Área | O que faço |
+|------|------------|
+| **Palestras & Talks** | Arquitetura front-end, migrações legacy, IA em dev |
+| **Mentoria** | Carreira, Tech Lead, decisões arquiteturais |
+| **Conteúdo** | .cursorrules, playbooks, boilerplates em produção |
+| **Open Source** | Frontend Architecture Playbook, Cursor Rules, React boilerplates |
+
+> 📅 **Quer uma conversa técnica?** [Agende 30 min no Calendly](https://calendly.com/tcarvalhovb/)
+
 ---
 
 ## 💼 O que eu faço
@@ -140,10 +194,16 @@
 
 ## 💬 Vamos Conversar?
 
-### 📞 Contato Direto
-- 📧 **E-mail**: [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
-- 💼 **LinkedIn**: [tiagovilasboas](https://www.linkedin.com/in/tiagovilasboas/)
-- 📅 **Agendamento**: [30 min chat](https://calendly.com/tcarvalhovb/)
+<p align="center">
+  <strong>Arquitetura • Migrações • Mentorias • Consultoria</strong><br/>
+  <a href="https://calendly.com/tcarvalhovb/"><img src="https://img.shields.io/badge/Agendar_30_min_grátis-00C853?style=for-the-badge&logo=googlecalendar&logoColor=white" alt="Agendar no Calendly"/></a>
+</p>
+
+| | |
+|---|---|
+| 📧 **E-mail** | [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com) |
+| 💼 **LinkedIn** | [tiagovilasboas](https://www.linkedin.com/in/tiagovilasboas/) |
+| 📅 **Calendly** | [30 min — conversa técnica](https://calendly.com/tcarvalhovb/) |
 
 ---
 

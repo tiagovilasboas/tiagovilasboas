@@ -1,7 +1,8 @@
 name: Metrics
 on:
-  schedule: [cron: "0 0 * * 0"]      # semanal
+  schedule: [cron: "0 0 * * 0"]      # weekly
   workflow_dispatch:
+
 jobs:
   metrics:
     runs-on: ubuntu-latest
@@ -11,10 +12,23 @@ jobs:
       issues: write
       actions: read
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: tiagovilasboas
+          filename: github-metrics.svg
           template: classic
           base: header, activity, community, repositories, metadata
-          config_timezone: America/Sao_Paulo 
+          config_timezone: America/Sao_Paulo
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add github-metrics.svg
+          git diff --staged --quiet || git commit -m "chore: update metrics"
+          git push
