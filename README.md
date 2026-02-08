@@ -4,20 +4,17 @@
 
   <p>🚀 Transformo ideias em produtos digitais de impacto<br/>
      🛠️ Clean code • UX • Performance • Arquitetura<br/>
-     🔒 Perito em Cibersegurança — front-end & APIs<br/>
+     🔒 Perito em Cibersegurança, front-end e APIs<br/>
      🤝 Consultor • Mentor • Tech Lead • Open Source
   </p>
 
   <p>
     <strong>22+ estrelas</strong> em projetos open source •
-    <strong>500–1900% ROI</strong> em implementações IA •
+    <strong>500 a 1900% ROI</strong> em implementações IA •
     <strong>+46% performance</strong> em otimizações
   </p>
 
-  <!-- Contatos -->
   <p>
-    <a href="https://calendly.com/tcarvalhovb/"><img alt="Agendar 30 min" src="https://img.shields.io/badge/Agendar_30_min-00C853?style=for-the-badge&logo=calendar&logoColor=white"/></a>
-    <a href="mailto:tcarvalhovb@gmail.com"><img alt="E-mail" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
     <a href="https://www.linkedin.com/in/tiagovilasboas/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
     <a href="https://github.com/tiagovilasboas"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/></a>
     <img alt="Visitors" src="https://komarev.com/ghpvc/?username=tiagovilasboas&style=for-the-badge&color=3ECF8E"/>
@@ -28,9 +25,9 @@
 
 ## 🎯 Sobre Mim
 
-**Principal Engineer** com 20 anos. Especializado em React, TypeScript e arquitetura escalável. Perito em **cibersegurança** com foco em front-end e APIs. Resolvo problemas que outros não conseguem ver, com soluções que outros não conseguem implementar.
+**Principal Engineer** com 20 anos. React, TypeScript, arquitetura escalável, cibersegurança (front-end & APIs). Resolvo problemas que outros não conseguem ver.
 
-> 💡 **Por que Principal Engineer?** Porque quando a empresa tem um problema complexo, eles me chamam. E eu resolvo.
+Primeiro Dev Master com foco em Front-end na Dextra, me destaquei como Staff em um grande e-commerce de creator economy. O que me move? **Pessoas**, **problemas complexos** e **resultado**.
 
 **Idiomas:** Português (nativo) • Inglês (professional working)
 
@@ -39,7 +36,7 @@
 ## ⚙️ Tech Stack
 
 <details>
-<summary><b>Core</b> — React • Vue • TypeScript • Next.js • Nuxt</summary>
+<summary><b>Core</b> React • Vue • TypeScript • Next.js • Nuxt</summary>
 <p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
   <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js"/>
@@ -51,7 +48,7 @@
 </details>
 
 <details>
-<summary><b>Testing & Mobile</b> — Cypress • Jest • Flutter</summary>
+<summary><b>Testing & Mobile</b> Cypress • Jest • Flutter</summary>
 <p align="center">
   <img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white" alt="Cypress"/>
   <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest"/>
@@ -60,7 +57,7 @@
 </details>
 
 <details>
-<summary><b>Back-end & Data</b> — Go • GraphQL • Supabase • Redis • MongoDB</summary>
+<summary><b>Back-end & Data</b> Go • GraphQL • Supabase • Redis • MongoDB</summary>
 <p align="center">
   <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/>
   <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" alt="GraphQL"/>
@@ -72,7 +69,7 @@
 </details>
 
 <details>
-<summary><b>Cloud & Infra</b> — AWS • Azure • Vercel</summary>
+<summary><b>Cloud & Infra</b> AWS • Azure • Vercel</summary>
 <p align="center">
   <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/>
   <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure"/>
@@ -86,7 +83,7 @@
 
 | Tipo | Projetos |
 |------|----------|
-| **Ferramentas** | [Frontend Cursor Rules](https://github.com/tiagovilasboas/frontend-cursor-rules) · [Frontend Architecture Playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook) · [Live Demo](https://frontend-architecture-playbook-eight.vercel.app) |
+| **Ferramentas** | [Frontend Cursor Rules](https://github.com/tiagovilasboas/frontend-cursor-rules) · [Frontend Architecture Playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook) · [Playbook online](https://frontend-architecture-playbook-eight.vercel.app) |
 | **Boilerplates** | [React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate) · [React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate) |
 | **Aplicações** | [Ponto PJ](https://github.com/tiagovilasboas/ponto-pj) · [Remote Dev Jobs](https://github.com/tiagovilasboas/remote-dev-jobs) |
 
@@ -113,68 +110,21 @@
 
 ---
 
-## 🎤 Thought Leadership
-
-Consultorias, mentorias e conteúdo baseado em 20 anos de experiência:
-
-| Área | O que faço |
-|------|------------|
-| **Palestras & Talks** | Arquitetura front-end, cibersegurança, migrações legacy, IA em dev |
-| **Mentoria** | Carreira, Tech Lead, decisões arquiteturais |
-| **Conteúdo** | .cursorrules, playbooks, boilerplates em produção |
-| **Open Source** | Frontend Architecture Playbook, Cursor Rules, React boilerplates |
-
-> 📅 **Quer uma conversa técnica?** [Agende 30 min no Calendly](https://calendly.com/tcarvalhovb/)
-
----
-
 ## 💼 O que eu faço
 
-### 🎯 Consultoria & Arquitetura
-- **Arquitetura Front-end**: Micro-frontends, Design Systems, Performance
-- **Migrações**: Legacy → Modern, Framework migrations
-- **ROI em Tecnologia**: Decisões baseadas em métricas de negócio
-- **Decision Wizard**: Escolha de arquitetura baseada em evidências
-
-### 🚀 Mentoria & Liderança
-- **Desenvolvimento de Carreira**: Roadmap personalizado
-- **Liderança Técnica**: Formação de Tech Leads
-- **Code Reviews**: Práticas de qualidade e performance
-- **Arquitetura de Equipes**: Estruturação de times escaláveis
-
-### 🛠️ Desenvolvimento & DevOps
-- **Aplicações Enterprise**: React, TypeScript, Node.js
-- **Mobile**: Flutter, React Native (IoT, Saúde Digital)
-- **Performance**: Otimizações, métricas, monitoramento
-- **DevOps**: CI/CD, Cloud (AWS/Azure), Docker
-- **CSS Framework**: Sistema de design tokens e componentes reutilizáveis
-
-### 🔒 Cibersegurança (Front-end & APIs)
-- **Segurança em Front-end**: XSS, CSRF, CSP, validação de inputs, dependências
-- **APIs**: Hardening, OWASP, autenticação, rate limiting, sanitização
-- **Compliance**: LGPD, boas práticas de segurança em nuvem
-- **Code Review**: Auditoria de vulnerabilidades em aplicações web
-
-### 🤖 IA & Produtividade
-- **Regras para IAs**: .cursorrules baseadas em 7.4k+ cases reais
-- **Prompt Engineering**: Templates para React, Vue, Angular, Svelte
-- **ROI Comprovado**: 500-1900% de retorno no primeiro mês
-- **Performance**: +46% performance, -61% bundle size (Netflix, Airbnb, Uber, Spotify)
+| Área | Foco |
+|------|------|
+| **Arquitetura** | Micro-frontends, Design Systems, migrações legacy, performance |
+| **Cibersegurança** | Front-end (XSS, CSRF, CSP) · APIs (OWASP, hardening) · LGPD |
+| **Mentoria** | Carreira, Tech Lead, code reviews, decisões arquiteturais |
+| **Desenvolvimento** | React, TypeScript, Node.js, Flutter · CI/CD, AWS/Azure |
+| **IA & Produtividade** | .cursorrules, playbooks, prompt engineering, ROI comprovado |
 
 ---
 
-## 💬 Vamos Conversar?
+## 💬 Contato
 
-<p align="center">
-  <strong>Arquitetura • Cibersegurança • Migrações • Mentorias • Consultoria</strong><br/>
-  <a href="https://calendly.com/tcarvalhovb/"><img src="https://img.shields.io/badge/Agendar_30_min_grátis-00C853?style=for-the-badge&logo=googlecalendar&logoColor=white" alt="Agendar no Calendly"/></a>
-</p>
-
-| | |
-|---|---|
-| 📧 **E-mail** | [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com) |
-| 💼 **LinkedIn** | [tiagovilasboas](https://www.linkedin.com/in/tiagovilasboas/) |
-| 📅 **Calendly** | [30 min — conversa técnica](https://calendly.com/tcarvalhovb/) |
+📧 [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · 📅 [Agendar 30 min](https://calendly.com/tcarvalhovb/)
 
 ---
 
