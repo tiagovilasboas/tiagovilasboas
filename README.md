@@ -2,17 +2,10 @@
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
   <strong>Principal Engineer • Montanha Tech • 20 anos de experiência</strong>
 
-  <p>🚀 Transformo ideias em produtos digitais de impacto<br/>
-     🛠️ Clean code • UX • Performance • Arquitetura<br/>
-     🔒 Perito em Cibersegurança, front-end e APIs<br/>
-     🤖 Perito em IA, Supabase, projetos de grande escalabilidade, diversos modelos<br/>
-     🤝 Consultor • Mentor • Tech Lead • Open Source
-  </p>
-
-  <p>
-    <strong>22+ estrelas</strong> em projetos open source •
-    <strong>500 a 1900% ROI</strong> em implementações IA •
-    <strong>+46% performance</strong> em otimizações
+  <p>🚀 Gosto de transformar ideias em produtos que fazem diferença<br/>
+     🛠️ Clean code, UX, performance, arquitetura<br/>
+     🔒 Trabalho com cibersegurança (front-end e APIs) e IA (Supabase, projetos em escala)<br/>
+     🤝 Consultoria, mentoria, Tech Lead, open source
   </p>
 
   <p>
@@ -26,11 +19,13 @@
 
 ## 🎯 Sobre Mim
 
-**Principal Engineer** com 20 anos. React, TypeScript, arquitetura escalável. Perito em cibersegurança (front-end e APIs) e em IA (Supabase, projetos de grande escalabilidade, diversos modelos). Resolvo problemas que outros não conseguem ver.
+Há 20 anos trabalho com desenvolvimento, hoje como Principal Engineer na Montanha Tech. Minha base é React, TypeScript e arquitetura escalável; ao longo do tempo fui me aprofundando em cibersegurança (front-end e APIs) e em IA, com Supabase e projetos de grande escala.
 
-Primeiro Dev Master com foco em Front-end na Dextra, me destaquei como Staff em um grande e-commerce de creator economy. Reconhecido como Arquiteto Master em streaming e esportes (Cartola, Globo.com). O projeto que mais amei e onde mais gerei impacto foi o **Cartola**. O que me move? **Pessoas**, **problemas complexos** e **resultado**.
+Passei pela Dextra como primeiro Dev Master com foco em Front-end, atuei como Staff em um grande e-commerce de creator economy e como Arquiteto Master em streaming e esportes (Cartola, Globo.com). O projeto que mais amei e onde senti que mais gerei impacto foi o **Cartola**.
 
-**Idiomas:** Português (nativo) • Inglês (professional working)
+O que me move: **pessoas**, **problemas complexos** e **entregar resultado**.
+
+**Idiomas:** Português (nativo) · Inglês (professional working)
 
 ---
 
@@ -70,6 +65,16 @@ Primeiro Dev Master com foco em Front-end na Dextra, me destaquei como Staff em 
 </details>
 
 <details>
+<summary><b>Observabilidade</b> Sentry • Grafana • Grafana Faro • New Relic</summary>
+<p align="center">
+  <img src="https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=white" alt="Sentry"/>
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana"/>
+  <img src="https://img.shields.io/badge/Grafana_Faro-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana Faro"/>
+  <img src="https://img.shields.io/badge/New_Relic-008C99?style=for-the-badge&logo=newrelic&logoColor=white" alt="New Relic"/>
+</p>
+</details>
+
+<details>
 <summary><b>Cloud & Infra</b> AWS • Azure • Vercel</summary>
 <p align="center">
   <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/>
@@ -92,13 +97,13 @@ Primeiro Dev Master com foco em Front-end na Dextra, me destaquei como Staff em 
 
 ## 📊 Estatísticas GitHub
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=tiagovilasboas&theme=radical&hide_border=true" alt="GitHub Streak"/>
+  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-stats.svg" alt="GitHub Stats"/>
+  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-streak.svg" alt="GitHub Streak"/>
 </p>
 
 ## 🤝 Contribuições
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tiagovilasboas&theme=github-dark&hide_border=true" alt="Contribution Graph"/>
+  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-activity-graph.svg" alt="Contribution Graph"/>
 </p>
 
 <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-contribution-grid-snake.svg" alt="Contribution Snake" width="100%"/>
@@ -119,6 +124,7 @@ Primeiro Dev Master com foco em Front-end na Dextra, me destaquei como Staff em 
 | **Cibersegurança** | Front-end (XSS, CSRF, CSP) · APIs (OWASP, hardening) · LGPD |
 | **Mentoria** | Carreira, Tech Lead, code reviews, decisões arquiteturais |
 | **Desenvolvimento** | React, TypeScript, Node.js, Flutter · CI/CD, AWS/Azure |
+| **Observabilidade** | Sentry, Grafana, Grafana Faro, New Relic, dashboards |
 | **IA & Produtividade** | Supabase, projetos em escala, diversos modelos, .cursorrules, playbooks, ROI comprovado |
 
 ---
