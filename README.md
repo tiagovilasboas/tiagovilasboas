@@ -5,6 +5,7 @@
   <p>🚀 Transformo ideias em produtos digitais de impacto<br/>
      🛠️ Clean code • UX • Performance • Arquitetura<br/>
      🔒 Perito em Cibersegurança, front-end e APIs<br/>
+     🤖 Perito em IA, Supabase, projetos de grande escalabilidade, diversos modelos<br/>
      🤝 Consultor • Mentor • Tech Lead • Open Source
   </p>
 
@@ -25,9 +26,9 @@
 
 ## 🎯 Sobre Mim
 
-**Principal Engineer** com 20 anos. React, TypeScript, arquitetura escalável, cibersegurança (front-end & APIs). Resolvo problemas que outros não conseguem ver.
+**Principal Engineer** com 20 anos. React, TypeScript, arquitetura escalável. Perito em cibersegurança (front-end e APIs) e em IA (Supabase, projetos de grande escalabilidade, diversos modelos). Resolvo problemas que outros não conseguem ver.
 
-Primeiro Dev Master com foco em Front-end na Dextra, me destaquei como Staff em um grande e-commerce de creator economy. O que me move? **Pessoas**, **problemas complexos** e **resultado**.
+Primeiro Dev Master com foco em Front-end na Dextra, me destaquei como Staff em um grande e-commerce de creator economy. Reconhecido como Arquiteto Master em streaming e esportes (Cartola, Globo.com). O projeto que mais amei e onde mais gerei impacto foi o **Cartola**. O que me move? **Pessoas**, **problemas complexos** e **resultado**.
 
 **Idiomas:** Português (nativo) • Inglês (professional working)
 
@@ -118,7 +119,7 @@ Primeiro Dev Master com foco em Front-end na Dextra, me destaquei como Staff em 
 | **Cibersegurança** | Front-end (XSS, CSRF, CSP) · APIs (OWASP, hardening) · LGPD |
 | **Mentoria** | Carreira, Tech Lead, code reviews, decisões arquiteturais |
 | **Desenvolvimento** | React, TypeScript, Node.js, Flutter · CI/CD, AWS/Azure |
-| **IA & Produtividade** | .cursorrules, playbooks, prompt engineering, ROI comprovado |
+| **IA & Produtividade** | Supabase, projetos em escala, diversos modelos, .cursorrules, playbooks, ROI comprovado |
 
 ---
 
