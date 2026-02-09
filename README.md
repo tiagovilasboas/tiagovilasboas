@@ -24,8 +24,6 @@ Há 20 anos trabalho com desenvolvimento. Hoje lidero a Montanha Tech, consultor
 
 O que me move: **pessoas**, **problemas complexos** e **entregar resultado**.
 
-**Idiomas:** Português (nativo) · Inglês (professional working)
-
 ---
 
 ## ⚙️ Tech Stack
