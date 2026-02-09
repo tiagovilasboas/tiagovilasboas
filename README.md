@@ -22,8 +22,6 @@
 
 Há 20 anos trabalho com desenvolvimento. Hoje lidero a Montanha Tech, consultoria de TI focada em soluções de impacto e cibersegurança. Minha base é React, TypeScript e arquitetura escalável; ao longo do tempo fui me aprofundando em cibersegurança (front-end e APIs) e em IA, com Supabase e projetos de grande escala.
 
-Passei pela Dextra como primeiro Dev Master com foco em Front-end, atuei como Staff em um grande e-commerce de creator economy e como Arquiteto Master em streaming e esportes (Cartola, Globo.com). O projeto que mais amei e onde senti que mais gerei impacto foi o **Cartola**.
-
 O que me move: **pessoas**, **problemas complexos** e **entregar resultado**.
 
 **Idiomas:** Português (nativo) · Inglês (professional working)
