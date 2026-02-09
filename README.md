@@ -1,6 +1,7 @@
 <div align="center">
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
-  <strong>Principal Engineer • Montanha Tech • 20 anos de experiência</strong>
+  <strong>Principal Engineer • Montanha Tech • 20 anos</strong><br/>
+<sub>Consultoria de TI (CEO) · soluções de impacto e cibersegurança</sub>
 
   <p>🚀 Gosto de transformar ideias em produtos que fazem diferença<br/>
      🛠️ Clean code, UX, performance, arquitetura<br/>
@@ -19,7 +20,7 @@
 
 ## 🎯 Sobre Mim
 
-Há 20 anos trabalho com desenvolvimento, hoje como Principal Engineer na Montanha Tech. Minha base é React, TypeScript e arquitetura escalável; ao longo do tempo fui me aprofundando em cibersegurança (front-end e APIs) e em IA, com Supabase e projetos de grande escala.
+Há 20 anos trabalho com desenvolvimento. Hoje lidero a Montanha Tech, consultoria de TI focada em soluções de impacto e cibersegurança. Minha base é React, TypeScript e arquitetura escalável; ao longo do tempo fui me aprofundando em cibersegurança (front-end e APIs) e em IA, com Supabase e projetos de grande escala.
 
 Passei pela Dextra como primeiro Dev Master com foco em Front-end, atuei como Staff em um grande e-commerce de creator economy e como Arquiteto Master em streaming e esportes (Cartola, Globo.com). O projeto que mais amei e onde senti que mais gerei impacto foi o **Cartola**.
 
@@ -93,18 +94,11 @@ O que me move: **pessoas**, **problemas complexos** e **entregar resultado**.
 | **Boilerplates** | [React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate) · [React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate) |
 | **Aplicações** | [Ponto PJ](https://github.com/tiagovilasboas/ponto-pj) · [Remote Dev Jobs](https://github.com/tiagovilasboas/remote-dev-jobs) |
 
+**Cases recentes (Nuxt + IA + Supabase):** sistema de pricing para varejo em grande marca · sistema de gestão financeira pós-venda para empresa de móveis de luxo
+
 ---
 
-## 📊 Estatísticas GitHub
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-stats.svg" alt="GitHub Stats"/>
-  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-streak.svg" alt="GitHub Streak"/>
-</p>
-
-## 🤝 Contribuições
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-activity-graph.svg" alt="Contribution Graph"/>
-</p>
+## 📊 Contribuições
 
 <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-contribution-grid-snake.svg" alt="Contribution Snake" width="100%"/>
 

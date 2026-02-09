@@ -13,28 +13,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate stats card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: stats
-          options: username=tiagovilasboas&show_icons=true&theme=radical&hide_border=true
-          path: github-stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Fetch streak card
+      - name: Fetch stats and graphs
         run: |
-          curl -sfL "https://streak-stats.demolab.com/?user=tiagovilasboas&theme=radical&hide_border=true&locale=pt_BR" -o github-streak.svg || true
-
-      - name: Fetch activity graph
-        run: |
-          curl -sfL "https://github-readme-activity-graph.vercel.app/graph?username=tiagovilasboas&theme=github-dark&hide_border=true" -o github-activity-graph.svg || true
+          curl -sfL "https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical&hide_border=true" -o github-stats.svg
+          curl -sfL "https://streak-stats.demolab.com/?user=tiagovilasboas&theme=radical&hide_border=true&locale=pt_BR" -o github-streak.svg
+          curl -sfL "https://github-readme-activity-graph.vercel.app/graph?username=tiagovilasboas&theme=github-dark&hide_border=true" -o github-activity-graph.svg
 
       - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add github-stats.svg
-          [ -f github-streak.svg ] && git add github-streak.svg
-          [ -f github-activity-graph.svg ] && git add github-activity-graph.svg
+          git add github-stats.svg github-streak.svg github-activity-graph.svg
           git diff --staged --quiet || git commit -m "chore: update readme stats"
           git push
