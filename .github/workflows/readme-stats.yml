@@ -14,10 +14,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Fetch stats and graphs
+        env:
+          CURL_UA: "Mozilla/5.0 (compatible; GitHub-Readme-Stats/1.0)"
         run: |
-          curl -sfL "https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical&hide_border=true" -o github-stats.svg
-          curl -sfL "https://streak-stats.demolab.com/?user=tiagovilasboas&theme=radical&hide_border=true&locale=pt_BR" -o github-streak.svg
-          curl -sfL "https://github-readme-activity-graph.vercel.app/graph?username=tiagovilasboas&theme=github-dark&hide_border=true" -o github-activity-graph.svg
+          curl -sfL -A "$CURL_UA" "https://github-readme-stats.vercel.app/api?username=tiagovilasboas&show_icons=true&theme=radical&hide_border=true" -o github-stats.svg || true
+          sleep 2
+          curl -sfL -A "$CURL_UA" "https://streak-stats.demolab.com/?user=tiagovilasboas&theme=radical&hide_border=true&locale=pt_BR" -o github-streak.svg || true
+          sleep 2
+          curl -sfL -A "$CURL_UA" "https://github-readme-activity-graph.vercel.app/graph?username=tiagovilasboas&theme=github-dark&hide_border=true" -o github-activity-graph.svg || true
 
       - name: Commit and push
         run: |
