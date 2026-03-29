@@ -1,4 +1,4 @@
-<div align="center">
+<div>
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
   <strong>Principal Engineer • Montanha Tech • 20 anos</strong><br/>
 <sub>Consultoria de TI (CEO) · soluções de impacto e cibersegurança</sub>
