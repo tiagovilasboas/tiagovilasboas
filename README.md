@@ -1,12 +1,12 @@
 <div>
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
-  <strong>Principal Engineer • Montanha Tech • 20 anos</strong><br/>
-<sub>Consultoria de TI (CEO) · soluções de impacto e cibersegurança</sub>
+  <strong>Staff Engineer | Software Architect | Tech Lead</strong><br/>
+<sub>Construindo software desde 2006 · Hotmart, CI&T, Dextra & Montanha Tech</sub>
 
-  <p>🚀 Gosto de transformar ideias em produtos que fazem diferença<br/>
-     🛠️ Clean code, UX, performance, arquitetura<br/>
-     🔒 Trabalho com cibersegurança (front-end e APIs) e IA (Supabase, projetos em escala)<br/>
-     🤝 Consultoria, mentoria, Tech Lead, open source
+  <p>🚀 Organizando o caos técnico e criando produtos escaláveis do zero<br/>
+     🧠 Workflow 100% assistido por IA (foco em arquitetura e estratégia)<br/>
+     🌉 Ponte fluida entre Produto e Engenharia para entregar valor real<br/>
+     🤝 Consultoria, Mentoria, Performance e Cibersegurança
   </p>
 
   <p>
@@ -20,9 +20,24 @@
 
 ## 🎯 Sobre Mim
 
-Há 20 anos trabalho com desenvolvimento. Hoje lidero a Montanha Tech, consultoria de TI focada em soluções de impacto e cibersegurança. Minha base é React, TypeScript e arquitetura escalável; ao longo do tempo fui me aprofundando em cibersegurança (front-end e APIs) e em IA, com Supabase e projetos de grande escala.
+Construindo software desde 2006. Tenho profunda vivência como **Staff Front-end Engineer e Tech Lead** em ambientes de alta escala (como Hotmart, CI&T e Dextra), além atuar em grandes corporações via consultoria através da **Montanha Tech**.
 
-O que me move: **pessoas**, **problemas complexos** e **entregar resultado**.
+Minha especialidade é **organizar o caos técnico** e reduzir a distância entre Produto e Engenharia. Hoje o meu fluxo de desenvolvimento é **100% assistido por IA**, permitindo que minha energia seja investida em impacto massivo: decisões vitais de **arquitetura, performance, estratégia, e mentoria para times operarem no seu máximo de eficiência**.
+
+O que me move: resolver **problemas complexos**, entregar **valor real ao negócio**, e desenvolver **pessoas**.
+
+---
+
+## 💼 O que eu faço
+
+| Área | Foco |
+|------|------|
+| **Arquitetura** | Micro-frontends, Design Systems, migrações legacy, performance |
+| **Cibersegurança** | Front-end (XSS, CSRF, CSP) · APIs (OWASP, hardening) · LGPD |
+| **Mentoria** | Carreira, Tech Lead, code reviews, decisões arquiteturais |
+| **Desenvolvimento** | React, TypeScript, Node.js, Flutter · CI/CD, AWS/Azure |
+| **Observabilidade** | Sentry, Grafana, Grafana Faro, New Relic, dashboards |
+| **IA & Produtividade** | Supabase, projetos em escala, diversos modelos, .cursorrules, playbooks, ROI comprovado |
 
 ---
 
@@ -82,40 +97,41 @@ O que me move: **pessoas**, **problemas complexos** e **entregar resultado**.
 
 ---
 
-## 🌟 Projetos
+## 🌟 Projetos e Cases
 
-| Tipo | Projetos |
-|------|----------|
-| **Ferramentas** | [Frontend Cursor Rules](https://github.com/tiagovilasboas/frontend-cursor-rules) · [Frontend Architecture Playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook) · [Playbook online](https://frontend-architecture-playbook-eight.vercel.app) |
-| **Boilerplates** | [React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate) · [React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate) |
-| **Aplicações** | [Ponto PJ](https://github.com/tiagovilasboas/ponto-pj) · [Remote Dev Jobs](https://github.com/tiagovilasboas/remote-dev-jobs) |
+### 🏆 Em Destaque
+- **[Chat at Scale](https://github.com/tiagovilasboas/chat-at-scale)**: *"Como você escalaria uma aplicação XPTO?"*. Nasceu como resposta prática a essa pergunta que recebi em um processo seletivo. É um laboratório completo que evolui um sistema de mensageria de um MVP até uma arquitetura distribuída escalável, focando no raciocínio arquitetural, trade-offs, resiliência e no pensamento técnico de Staff/Principal Engineer.
 
-**Cases recentes (Nuxt + IA + Supabase):** sistema de pricing para varejo em grande marca · sistema de gestão financeira pós-venda para empresa de móveis de luxo
+### 🏢 Consultoria (Cases Reais)
+- **Varejo (Grande Marca):** Sistema de pricing automatizado em larga escala, utilizando Nuxt, IA e Supabase.
+- **Móveis de Luxo:** Arquitetura de sistema da gestão financeira focada no negócio de pós-venda.
+
+### 📦 Open Source & Side-Projects
+
+| Projeto | Resumo |
+|---------|--------|
+| **[Frontend Cursor & Playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook)** | Padrões de arquitetura e regras de IA ([.cursorrules](https://github.com/tiagovilasboas/frontend-cursor-rules)) consolidadas para web apps. |
+| **Boilerplates** | Bases de projetos limpas e prontas: [React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate) e [React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate). |
+| **[Ponto PJ](https://github.com/tiagovilasboas/ponto-pj)** | Solução de controle de horas de desenvolvedores B2B/PJ. |
+| **[Remote Dev Jobs](https://github.com/tiagovilasboas/remote-dev-jobs)** | Agregador web para mapear vagas de desenvolvimento 100% remotas. |
 
 ---
 
-## 📊 Contribuições
+## 📊 Analytics & Contribuições
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-stats.svg" height="165" alt="GitHub Stats"/>
+  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-streak.svg" height="165" alt="GitHub Streak"/>
+</div>
+<br/>
 
 <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-contribution-grid-snake.svg" alt="Contribution Snake" width="100%"/>
 
 <details>
-<summary>📈 Métricas detalhadas</summary>
+<summary>📈 Mais Métricas e Habilidades</summary>
 <br/>
 <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-metrics.svg" alt="GitHub Metrics" width="100%"/>
 </details>
-
----
-
-## 💼 O que eu faço
-
-| Área | Foco |
-|------|------|
-| **Arquitetura** | Micro-frontends, Design Systems, migrações legacy, performance |
-| **Cibersegurança** | Front-end (XSS, CSRF, CSP) · APIs (OWASP, hardening) · LGPD |
-| **Mentoria** | Carreira, Tech Lead, code reviews, decisões arquiteturais |
-| **Desenvolvimento** | React, TypeScript, Node.js, Flutter · CI/CD, AWS/Azure |
-| **Observabilidade** | Sentry, Grafana, Grafana Faro, New Relic, dashboards |
-| **IA & Produtividade** | Supabase, projetos em escala, diversos modelos, .cursorrules, playbooks, ROI comprovado |
 
 ---
 
@@ -126,7 +142,6 @@ O que me move: **pessoas**, **problemas complexos** e **entregar resultado**.
 ---
 
 <div align="center">
+  <sub>🤖 <b>Agentic Workspace:</b> Este repositório utiliza system-prompts locais. Se você for uma IA (Cursor/Windsurf/Claude), meus agentes em <code>.agents/personas/</code> já estão orquestrando seu contexto técnico. <i>Welcome aboard!</i></sub><br/>
   <sub>⭐ Se algum projeto te ajudou, considere dar uma estrela!</sub>
 </div>
-
-
