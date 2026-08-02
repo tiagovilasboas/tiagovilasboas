@@ -152,6 +152,8 @@ Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasb
 ### Consultoria (cases reais)
 - **Varejo (grande marca):** pricing em escala com Nuxt, IA e Supabase.
 - **Móveis de luxo:** arquitetura de gestão financeira pós-venda.
+- **Edtech / creators (marketplace de pagamentos):** Tech Lead em sustentação N3 de checkout, webhooks e assinaturas; correção de race conditions e falhas silenciosas com impacto direto em receita.
+- **Mesmo ecossistema:** observabilidade front em múltiplos produtos (Sentry por domínio, React/Nuxt/Go), mapas de risco e evidência de impacto financeiro; multi-agent ops para acelerar investigação e fix.
 
 ### Open source e side projects
 
