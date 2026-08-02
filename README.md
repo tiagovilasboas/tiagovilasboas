@@ -64,10 +64,10 @@ agent-kit → sync de rules/skills/MCP · doctor · autonomy · matrix L0–L3
 | **Face** | HUD para chat, workers e status |
 | **Brain** | Orquestração LLM + skill loop |
 | **Workers** | Execução real em IDEs (corp vs pessoal, por custo/domínio) |
-| **Memory** | Logseq `cogna-kb`: fonte única, grep/skill retrieval (embeddings no roadmap) |
+| **Memory** | Vault Logseq privado (contrato de scopes/hubs; retrieval estruturado; embeddings no roadmap) |
 | **Harness** | `agent-kit`: sync, doctor, eval, launchd autonomy |
 
-Evidências públicas adjacentes: [cogna-kb](https://github.com/tiagovilasboas/cogna-kb) · [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules) · [frontend-architecture-playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook)
+Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules) · [frontend-architecture-playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook)
 
 ---
 
@@ -147,7 +147,7 @@ Evidências públicas adjacentes: [cogna-kb](https://github.com/tiagovilasboas/c
 
 ### Em destaque
 - **[Chat at Scale](https://github.com/tiagovilasboas/chat-at-scale)**: laboratório Staff de mensageria (MVP → arquitetura distribuída), trade-offs e observabilidade.
-- **Agentic stack (Jarvis)**: arquitetura pessoal de agentes descrita acima (repo privado; evidência pública via playbooks e `cogna-kb`).
+- **Agentic stack (Jarvis)**: arquitetura pessoal de agentes descrita acima (repo privado; evidência pública via playbooks e cursor-rules).
 
 ### Consultoria (cases reais)
 - **Varejo (grande marca):** pricing em escala com Nuxt, IA e Supabase.
@@ -158,7 +158,6 @@ Evidências públicas adjacentes: [cogna-kb](https://github.com/tiagovilasboas/c
 | Projeto | Resumo |
 |---------|--------|
 | **[Frontend Architecture Playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook)** | Padrões, trilhas Staff e regras de IA ([cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)). |
-| **[cogna-kb](https://github.com/tiagovilasboas/cogna-kb)** | Knowledge base Logseq (memória estruturada / contrato RAG). |
 | **Boilerplates** | [React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate) · [React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate). |
 | **[Ponto PJ](https://github.com/tiagovilasboas/ponto-pj)** | Controle de horas B2B/PJ. |
 | **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** | Steerings, skills e hooks para agentic IDEs. |
