@@ -13,6 +13,7 @@
 
   <p>
     <a href="https://www.linkedin.com/in/tiagovilasboas/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+    <a href="https://dev.to/tiagovilasboas"><img alt="DEV.to" src="https://img.shields.io/badge/DEV.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white"/></a>
     <a href="https://github.com/tiagovilasboas"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/></a>
     <img alt="Visitors" src="https://komarev.com/ghpvc/?username=tiagovilasboas&style=for-the-badge&color=3ECF8E"/>
   </p>
@@ -29,6 +30,8 @@ Construindo software desde 2006. Experiência como **Staff Software Engineer e T
 Especialidade: **organizar o caos técnico**, reduzir a distância Produto ↔ Engenharia e transformar projetos do zero em produtos escaláveis.
 
 Hoje o foco é **Agentic AI**: orquestro LLMs, multi-agent systems, MCP e RAG (memória estruturada + retrieval) num stack próprio de agentes, com harness e arquitetura de ponta a ponta. Energia vai para arquitetura, performance, estratégia e mentoria de times.
+
+Norte de médio prazo: **AI Security / AppSec** (já em curso na UNINTER). Estou documentando a curva em público: [Staff → Agentic AI → AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2).
 
 O que me move: problemas complexos, valor de negócio e desenvolver pessoas.
 
@@ -148,28 +151,32 @@ Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasb
 
 ## Projetos e cases
 
-### Em destaque
+### Em destaque (sinal público)
+- **Agentic stack (Jarvis)**: arquitetura pessoal de agentes descrita acima (repo privado). Evidência pública: [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules).
+- **[Engineering Leverage](https://engineering-leverage.vercel.app)**: proposta e playbook da cadeira Staff (ADRs, topologia, leverage).
 - **[Chat at Scale](https://github.com/tiagovilasboas/chat-at-scale)**: laboratório Staff de mensageria (MVP → arquitetura distribuída), trade-offs e observabilidade.
-- **Agentic stack (Jarvis)**: arquitetura pessoal de agentes descrita acima (repo privado; evidência pública via playbooks e cursor-rules).
+- **[Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)**: padrões, trilhas Staff e decisão de arquitetura com evidência.
 
-### Consultoria (cases reais)
-- **Varejo (grande marca):** pricing em escala com Nuxt, IA e Supabase.
-- **Móveis de luxo:** arquitetura de gestão financeira pós-venda.
-- **Edtech / creators (marketplace de pagamentos):** Staff / Tech Lead em plataforma de pagamentos: checkout, webhooks e assinaturas; race conditions e falhas silenciosas com impacto em receita.
+### Cases (anonimizados)
+- **Edtech / creators (marketplace de pagamentos):** Staff / Tech Lead: checkout, webhooks e assinaturas; race conditions e falhas silenciosas com impacto em receita.
 - **Integridade financeira:** idempotência, hardening de webhooks e correção de splits / vendas duplicadas.
 - **Operação do seller:** exports e jobs travados, taxas/reembolsos e retentativa de recorrência.
 - **Observabilidade multi-produto:** Sentry por domínio (React/Nuxt/Go), mapas de risco e evidência de impacto financeiro (Grafana).
 - **Tracking e engajamento:** GA4 em escala + restauração de push notifications críticas.
 - **Staff leverage:** post-mortems, ADRs, dashboards de negócio e multi-agent ops para investigação/fix em paralelo.
+- **Varejo (grande marca):** pricing em escala com Nuxt, IA e Supabase.
+- **Móveis de luxo:** arquitetura de gestão financeira pós-venda.
 
 ### Open source e side projects
 
 | Projeto | Resumo |
 |---------|--------|
-| **[Frontend Architecture Playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook)** | Padrões, trilhas Staff e regras de IA ([cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)). |
+| **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** | Steerings, skills e hooks para agentic IDEs. |
+| **[frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)** | Regras práticas para IAs de código (React/Vue/Angular). |
+| **[Engineering Leverage](https://engineering-leverage.vercel.app)** | Cadeira Staff: strategy, ADRs, leverage (deck público). |
+| **[Frontend Architecture Playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook)** | Padrões e trilhas Staff. |
 | **Boilerplates** | [React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate) · [React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate). |
 | **[Ponto PJ](https://github.com/tiagovilasboas/ponto-pj)** | Controle de horas B2B/PJ. |
-| **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** | Steerings, skills e hooks para agentic IDEs. |
 
 ---
 
@@ -199,7 +206,7 @@ Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasb
 
 ## Contato
 
-📧 [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · 📅 [Agendar 30 min](https://calendly.com/tcarvalhovb/)
+📧 [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · ✍️ [DEV.to](https://dev.to/tiagovilasboas) · 📅 [Agendar 30 min](https://calendly.com/tcarvalhovb/)
 
 ---
 
