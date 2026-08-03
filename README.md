@@ -174,7 +174,7 @@ Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasb
 | **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** | Steerings, skills e hooks para agentic IDEs. |
 | **[frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)** | Regras práticas para IAs de código (React/Vue/Angular). |
 | **[Engineering Leverage](https://engineering-leverage.vercel.app)** | Cadeira Staff: strategy, ADRs, leverage (deck público). |
-| **[Frontend Architecture Playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook)** | Padrões e trilhas Staff. |
+| **[Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)** | Padrões e trilhas Staff (deck público). |
 | **Boilerplates** | [React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate) · [React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate). |
 | **[Ponto PJ](https://github.com/tiagovilasboas/ponto-pj)** | Controle de horas B2B/PJ. |
 
