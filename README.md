@@ -4,7 +4,7 @@
 <sub>React · TypeScript · Node.js · Go · Architecture · Observability · AppSec</sub><br/>
 <sub>Construindo software desde 2006 · Hotmart, CI&amp;T, Dextra &amp; Montanha Tech</sub>
 
-  <p><em>Construo condições para que o time tome boas decisões sem depender da minha memória.</em></p>
+  <p><em>Construo condições para que as squads tomem boas decisões sem depender da minha memória.</em></p>
   <p>🚀 Organizando o caos técnico e criando produtos escaláveis do zero<br/>
      🧠 Agentic AI no dia a dia: LLMs, multi-agent, MCP, memória estruturada e harness<br/>
      🌉 Ponte entre Produto e Engenharia para entregar valor real<br/>
@@ -22,7 +22,7 @@
 
 ## Sobre mim
 
-> Construo condições para que o time tome boas decisões sem depender da minha memória.
+> Construo condições para que as squads tomem boas decisões sem depender da minha memória.
 
 Construindo software desde 2006. Experiência como **Staff Software Engineer e Tech Lead** em alta escala (Hotmart, CI&T, Dextra) e consultoria pela **Montanha Tech**.
 
@@ -38,7 +38,7 @@ O que me move: problemas complexos, valor de negócio e desenvolver pessoas.
 
 | Prática | Como |
 |---------|------|
-| **Decisão** | Arquitetura e trade-offs primeiro; código e agents depois. Construo condições para boas decisões sem depender da minha memória. |
+| **Decisão** | Arquitetura e trade-offs primeiro; código e agents depois. Construo condições para que as squads tomem boas decisões sem depender da minha memória. |
 | **Agents** | Bridges reais para Cursor, Codex e Kiro (não só chat) |
 | **Memória** | Vault Logseq versionado, com contrato de scopes/hubs (RAG estruturado) |
 | **Governança** | ADRs, smokes sem mock, HITL em writes de risco, harness L0–L3 |
