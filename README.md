@@ -1,12 +1,12 @@
 <div>
   <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
   <strong>Staff Software Engineer &amp; Arquiteto Master | Agentic AI · LLMs · Multi-Agent Systems · MCP · RAG</strong><br/>
-<sub>Architecture · Observability · AppSec · Agentic AI (LLMs · MCP · RAG) · React/TS · Node · Go</sub><br/>
+<sub>Software Architecture · Observability · AppSec · Agentic AI · LLMs · Multi-Agent Systems · MCP · RAG · React · TypeScript · Node.js · Go</sub><br/>
 <sub>Atuo com tecnologia desde 2006 · Hotmart, CI&amp;T, Dextra &amp; Montanha Tech</sub>
 
   <p><em>Construo condições para que as squads tomem boas decisões sem depender da minha memória.</em></p>
-  <p>🚀 Organizando o caos técnico e levando projetos do zero a produto escalável<br/>
-     🧠 Agentic AI no dia a dia: LLMs, multi-agent, MCP, memória estruturada e harness<br/>
+  <p>🚀 Organizando o caos técnico e conduzindo projetos do zero a produtos escaláveis<br/>
+     🧠 Agentic AI no dia a dia: LLMs, multi-agent, MCP, RAG, memória estruturada e harness<br/>
      🌉 Ponte entre Produto e Engenharia, simplificando o complexo para gerar valor real<br/>
      🎓 Cursando Tecnologia em Segurança da Informação (UNINTER) · AppSec aplicada
   </p>
@@ -25,13 +25,15 @@
 
 > Construo condições para que as squads tomem boas decisões sem depender da minha memória.
 
-Atuo com tecnologia desde 2006. Ao longo da trajetória, passei a **fortalecer a autonomia das squads**: acelerar decisões, reduzir a dependência de conhecimento centralizado e gerar valor ao negócio.
+Atuo com tecnologia desde 2006, **fortalecendo a autonomia das squads** para acelerar decisões, reduzir a dependência de conhecimento centralizado e gerar valor ao negócio.
 
-Experiência como **Staff Software Engineer e Arquiteto Master** em ambientes de alta escala, com passagens por Hotmart, CI&T, Dextra e **Montanha Tech**.
+Tenho experiência como **Staff Software Engineer e Arquiteto Master** em ambientes de alta escala, com passagens por Hotmart, CI&T, Dextra e **Montanha Tech**.
 
-**Organizo o caos técnico**, levo projeto do zero a produto escalável e faço a ponte entre Produto e Engenharia, simplificando o complexo para entregar valor real ao negócio.
+**Organizo o caos técnico**, conduzo projetos do zero a produtos escaláveis e faço a ponte entre Produto e Engenharia, simplificando o complexo para gerar valor real ao negócio.
 
-Hoje o foco é **Agentic AI**: orquestro LLMs, multi-agent systems, MCP e RAG (memória estruturada + retrieval) numa stack própria de agentes, com harness e arquitetura de ponta a ponta. Uso isso no dia a dia para decisões de arquitetura, performance e mentoria de times.
+Hoje, meu foco é **Agentic AI**: orquestro LLMs, Multi-Agent Systems, MCP e RAG em uma stack própria de agentes, com memória estruturada, retrieval, harness e arquitetura de ponta a ponta. Aplico isso no dia a dia em decisões de arquitetura, performance, observabilidade e mentoria de times.
+
+🛠️ Stack: Software Architecture · Observability · AppSec · Agentic AI · LLMs · Multi-Agent Systems · MCP · RAG · React · TypeScript · Node.js · Go
 
 Meu desenvolvimento profissional está direcionado a **Staff Software Engineering, AI Engineering e Agentic AI**, com foco em escala, arquitetura e engenharia aplicada a LLMs. Norte de médio prazo: **AI Security / AppSec** (já em curso na UNINTER). Documento a curva em público: [Staff → Agentic AI → AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2).
 
