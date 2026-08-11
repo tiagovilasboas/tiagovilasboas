@@ -132,7 +132,6 @@ Evidência pública: [kiro-playbook](https://github.com/tiagovilasboas/kiro-play
 
 ### Em destaque (sinal público)
 - **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** · **[frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)**: Agentic AI aplicada a IDEs e times (steerings, skills, regras de código).
-- **[Engineering Leverage](https://engineering-leverage.vercel.app)**: proposta e playbook da cadeira Staff (ADRs, topologia, leverage).
 - **[Chat at Scale](https://github.com/tiagovilasboas/chat-at-scale)**: laboratório Staff de mensageria (MVP → arquitetura distribuída), trade-offs e observabilidade.
 - **[Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)**: padrões, trilhas Staff e decisão de arquitetura com evidência.
 
@@ -152,7 +151,6 @@ Evidência pública: [kiro-playbook](https://github.com/tiagovilasboas/kiro-play
 |---------|--------|
 | **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** | Steerings, skills e hooks para agentic IDEs. |
 | **[frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)** | Regras práticas para IAs de código (React/Vue/Angular). |
-| **[Engineering Leverage](https://engineering-leverage.vercel.app)** | Cadeira Staff: strategy, ADRs, leverage (deck público). |
 | **[Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)** | Padrões e trilhas Staff (deck público). |
 | **Boilerplates** | [React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate) · [React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate). |
 | **[Ponto PJ](https://github.com/tiagovilasboas/ponto-pj)** | Controle de horas B2B/PJ. |
