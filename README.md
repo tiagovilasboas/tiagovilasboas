@@ -6,7 +6,7 @@
 
   <p><em>Construo condições para que as squads tomem boas decisões sem depender da minha memória.</em></p>
   <p>🚀 Organizando o caos técnico e conduzindo projetos do zero a produtos escaláveis<br/>
-     🧠 Agentic AI no dia a dia: LLMs, multi-agent, MCP, RAG, memória estruturada e harness<br/>
+     🧠 Agentic AI no dia a dia: LLMs, multi-agent, MCP e RAG<br/>
      🌉 Ponte entre Produto e Engenharia, simplificando o complexo para gerar valor real<br/>
      🎓 Cursando Tecnologia em Segurança da Informação (UNINTER) · AppSec aplicada
   </p>
@@ -31,7 +31,7 @@ Tenho experiência como **Staff Software Engineer e Arquiteto Master** em ambien
 
 **Organizo o caos técnico**, conduzo projetos do zero a produtos escaláveis e faço a ponte entre Produto e Engenharia, simplificando o complexo para gerar valor real ao negócio.
 
-Hoje, meu foco é **Agentic AI**: orquestro LLMs, Multi-Agent Systems, MCP e RAG em uma stack própria de agentes, com memória estruturada, retrieval, harness e arquitetura de ponta a ponta. Aplico isso no dia a dia em decisões de arquitetura, performance, observabilidade e mentoria de times.
+Hoje, meu foco é **Agentic AI**: orquestro LLMs, Multi-Agent Systems, MCP e RAG no dia a dia, em decisões de arquitetura, performance, observabilidade e mentoria de times.
 
 🛠️ Stack: Software Architecture · Observability · AppSec · Agentic AI · LLMs · Multi-Agent Systems · MCP · RAG · React · TypeScript · Node.js · Go
 
@@ -46,38 +46,13 @@ O que me move: problemas complexos, valor de negócio e desenvolver pessoas.
 | Prática | Como |
 |---------|------|
 | **Decisão** | Arquitetura e trade-offs primeiro; código e agents depois. Construo condições para que as squads tomem boas decisões sem depender da minha memória. |
-| **Agents** | Bridges reais para Cursor, Codex e Kiro (não só chat) |
-| **Memória** | Vault Logseq versionado, com contrato de scopes/hubs (RAG estruturado) |
-| **Governança** | ADRs, smokes sem mock, HITL em writes de risco, harness L0–L3 |
+| **Agents** | LLMs, MCP e RAG em fluxos reais de engenharia (não só chat) |
+| **Governança** | ADRs, evidência reproduzível, human-in-the-loop em writes de risco |
 | **Segurança** | AppSec no ciclo + graduação SI (UNINTER) em andamento |
 
-Não é “usar IA para digitar mais rápido”. É **sistema**: face → gateway → brain → workers → memória → harness.
+Não é “usar IA para digitar mais rápido”. É decisão, execução e governança no mesmo ciclo.
 
----
-
-## Arquitetura recente (stack pessoal de agentes)
-
-Stack privado de produção pessoal (**Jarvis**), documentado com ADRs:
-
-```
-HUD (Iron-Man UI)
-  → FastAPI gateway
-    → Brain (Goose / LLMs via OpenRouter e fallbacks)
-         ├─ skill retrieve → skills versionadas no vault
-         ├─ memória Logseq (contrato RAG: hubs / scopes)
-         └─ bridges → Cursor | Codex | Kiro
-agent-kit → sync de rules/skills/MCP · doctor · autonomy · matrix L0–L3
-```
-
-| Camada | Papel |
-|--------|------|
-| **Face** | HUD para chat, workers e status |
-| **Brain** | Orquestração LLM + skill loop |
-| **Workers** | Execução real em IDEs (corp vs pessoal, por custo/domínio) |
-| **Memory** | Vault Logseq privado (contrato de scopes/hubs; retrieval estruturado; embeddings no roadmap) |
-| **Harness** | `agent-kit`: sync, doctor, eval, launchd autonomy |
-
-Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules) · [frontend-architecture-playbook](https://github.com/tiagovilasboas/frontend-architecture-playbook)
+Evidência pública: [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)
 
 ---
 
@@ -86,7 +61,7 @@ Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasb
 | Área | Foco |
 |------|------|
 | **Arquitetura** | System design, full stack, APIs resilientes, modernização de legado |
-| **Agentic AI** | LLMs, multi-agent, MCP, RAG estruturado, harness e governança |
+| **Agentic AI** | LLMs, multi-agent, MCP, RAG e governança |
 | **AppSec** | Segurança desde o design, hardening, LGPD, boas práticas em nuvem/APIs |
 | **Observabilidade** | Sentry, Grafana, New Relic, métricas que viram decisão |
 | **Mentoria** | Carreira, Tech Lead, code review, trade-offs explícitos |
@@ -97,7 +72,7 @@ Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasb
 ## Tech Stack
 
 <details>
-<summary><b>Agentic AI</b> LLMs · MCP · RAG · Multi-Agent · Cursor · Codex · Goose</summary>
+<summary><b>Agentic AI</b> LLMs · MCP · RAG · Multi-Agent · Cursor · Codex</summary>
 <p align="center">
   <img src="https://img.shields.io/badge/LLMs-111111?style=for-the-badge" alt="LLMs"/>
   <img src="https://img.shields.io/badge/MCP-0A66C2?style=for-the-badge" alt="MCP"/>
@@ -156,7 +131,7 @@ Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasb
 ## Projetos e cases
 
 ### Em destaque (sinal público)
-- **Agentic stack (Jarvis)**: arquitetura pessoal de agentes descrita acima (repo privado). Evidência pública: [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules).
+- **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** · **[frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)**: Agentic AI aplicada a IDEs e times (steerings, skills, regras de código).
 - **[Engineering Leverage](https://engineering-leverage.vercel.app)**: proposta e playbook da cadeira Staff (ADRs, topologia, leverage).
 - **[Chat at Scale](https://github.com/tiagovilasboas/chat-at-scale)**: laboratório Staff de mensageria (MVP → arquitetura distribuída), trade-offs e observabilidade.
 - **[Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)**: padrões, trilhas Staff e decisão de arquitetura com evidência.
@@ -215,6 +190,6 @@ Evidências públicas adjacentes: [kiro-playbook](https://github.com/tiagovilasb
 ---
 
 <div align="center">
-  <sub>Agentic workspace: system prompts e personas locais orquestram contexto técnico para Cursor / Claude / Codex.</sub><br/>
+  <sub>Staff + Agentic AI: decisão, execução e governança no mesmo ciclo.</sub><br/>
   <sub>Se algum projeto te ajudou, considere dar uma estrela.</sub>
 </div>
