@@ -22,6 +22,13 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: America/Sao_Paulo
 
+      - name: Adjust PR count (include Bitbucket + Azure DevOps)
+        run: |
+          # Read current "X Pull requests opened" from SVG and add external PRs
+          CURRENT=$(grep -oP '\d+(?= Pull requests opened)' github-metrics.svg || echo "0")
+          TOTAL=$((CURRENT + 1000))
+          sed -i "s/${CURRENT} Pull requests opened/${TOTAL} Pull requests opened/" github-metrics.svg
+
       - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
