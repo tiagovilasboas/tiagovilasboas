@@ -27,6 +27,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add github-contribution-grid-snake.svg
-          git commit -m "Update contribution snake" || exit 0
+          git add github-contribution-grid-snake.svg github-contribution-grid-snake-dark.svg
+          git commit -m "chore: update contribution snake" || exit 0
           git push
