@@ -1,92 +1,121 @@
-<div align="center">
+<div>
+  <h1>Tiago Vilas Boas (Montanha) 🏍️</h1>
+  <strong>Staff Software Engineer &amp; Arquiteto Master | Agentic AI · LLMs · Multi-Agent Systems · MCP · RAG</strong><br/>
+<sub>Software Architecture · Observability · AppSec · Agentic AI · LLMs · Multi-Agent Systems · MCP · RAG · React · TypeScript · Node.js · Go</sub><br/>
+<sub>Atuo com tecnologia desde 2006 · Hotmart, CI&amp;T, Dextra &amp; Montanha Tech</sub>
 
-# Tiago Vilas Boas (Montanha)
+  <p><em>Construo condições para que as squads tomem boas decisões sem depender da minha memória.</em></p>
+  <p>🚀 Organizando o caos técnico e conduzindo projetos do zero a produtos escaláveis<br/>
+     🧠 Agentic AI no dia a dia: LLMs, multi-agent, MCP e RAG<br/>
+     🌉 Ponte entre Produto e Engenharia, simplificando o complexo para gerar valor real<br/>
+     🎓 Cursando Tecnologia em Segurança da Informação (UNINTER) · AppSec aplicada
+  </p>
 
-**Staff Software Engineer & Arquiteto Master** — Agentic AI · LLMs · MCP · RAG · Observabilidade · AppSec
-<br/>
-<sub>Desde 2006 em Hotmart, CI&amp;T, Dextra e Montanha Tech</sub>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tiagovilasboas/)
-[![DEV.to](https://img.shields.io/badge/DEV.to-0A0A0A?style=flat&logo=devdotto&logoColor=white)](https://dev.to/tiagovilasboas)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/tiagovilasboas)
-
+  <p>
+    <a href="https://www.linkedin.com/in/tiagovilasboas/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+    <a href="https://dev.to/tiagovilasboas"><img alt="DEV.to" src="https://img.shields.io/badge/DEV.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white"/></a>
+    <a href="https://github.com/tiagovilasboas"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/></a>
+    <img alt="Visitors" src="https://komarev.com/ghpvc/?username=tiagovilasboas&style=for-the-badge&color=3ECF8E"/>
+  </p>
 </div>
 
 ---
 
-## Prova, não crachá
+## Sobre mim
 
-Construo condições para que as squads tomem boas decisões sem depender da minha memória: arquitetura e trade-offs primeiro, código e agents depois.
+Atuo com tecnologia desde 2006, fortalecendo a autonomia das squads para acelerar decisões, reduzir a dependência de conhecimento centralizado e gerar valor ao negócio. Tenho experiência como **Staff Software Engineer e Arquiteto Master** em ambientes de alta escala, com passagens por Hotmart, CI&T, Dextra e **Montanha Tech**.
 
-- **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** — steerings, skills e hooks que transformam uma IDE agentic em especialista de squad.
-- **[frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)** — regras práticas para IAs de código, baseadas em 7.4k+ cases reais (Netflix, Airbnb, Uber, Spotify).
-- **[chat-at-scale](https://github.com/tiagovilasboas/chat-at-scale)** — laboratório Staff de mensageria: MVP → arquitetura distribuída, trade-offs e observabilidade documentados.
-- **[Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)** — deck público com padrões e trilhas de decisão de arquitetura Staff.
+Organizo o caos técnico, conduzo projetos do zero a produtos escaláveis e faço a ponte entre Produto e Engenharia. Hoje meu foco é **Agentic AI**: LLMs, Multi-Agent Systems, MCP e RAG no dia a dia, em decisões de arquitetura, performance, observabilidade e mentoria de times.
 
-## Como trabalho com agents
+Meu norte de médio prazo é **AI Security / AppSec** (já em curso na UNINTER). Documento essa curva em público: [Staff → Agentic AI → AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2).
 
-Não é "IA para digitar mais rápido". LLMs, MCP e RAG entram em fluxos reais de engenharia, com decisão e execução no mesmo ciclo:
+**O que me move:** problemas complexos, valor de negócio e desenvolver pessoas.
 
-- **Decisão antes de código** — arquitetura e trade-offs primeiro; agents executam depois, dentro de limites explícitos.
-- **Agents como equipe, não atalho** — cada agent tem escopo, contexto e critério de saída definidos; nada de prompt solto esperando milagre.
-- **Governança** — ADRs, evidência reproduzível, human-in-the-loop em todo write de risco.
-- **Segurança no ciclo** — AppSec desde o design, não como etapa final.
-
-Esse é o modelo operacional por trás do kiro-playbook e do frontend-cursor-rules, aplicado em produção.
+Evidência pública do que eu falo: [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules) · [chat-at-scale](https://github.com/tiagovilasboas/chat-at-scale) · [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)
 
 ---
 
-## Foco
+## Como estou trabalhando agora
 
-| Área | O que eu faço |
+| Prática | Como |
+|---------|------|
+| **Decisão** | Arquitetura e trade-offs primeiro; código e agents depois |
+| **Agents** | LLMs, MCP e RAG em fluxos reais de engenharia — cada agent com escopo e contexto claros, não é "IA para digitar mais rápido" |
+| **Governança** | ADRs, evidência reproduzível, human-in-the-loop em writes de risco |
+| **Segurança** | AppSec no ciclo + graduação SI (UNINTER) em andamento |
+
+---
+
+## O que eu faço
+
+| Área | Foco |
 |------|------|
-| **Arquitetura** | System design, APIs resilientes, modernização de legado |
-| **Agentic AI** | LLMs, multi-agent, MCP, RAG e governança de agents |
-| **AppSec** | Segurança desde o design, hardening, LGPD (graduação SI em andamento — UNINTER) |
-| **Observabilidade** | Sentry, Grafana, New Relic — métricas que viram decisão |
+| **Arquitetura** | System design, full stack, APIs resilientes, modernização de legado |
+| **Agentic AI** | LLMs, multi-agent, MCP, RAG e governança |
+| **AppSec** | Segurança desde o design, hardening, LGPD, boas práticas em nuvem/APIs |
+| **Observabilidade** | Sentry, Grafana, New Relic, métricas que viram decisão |
+| **Mentoria** | Carreira, Tech Lead, code review, trade-offs explícitos |
 | **Entrega** | React, TypeScript, Node.js, Go · CI/CD · AWS/Azure |
 
 <details>
-<summary>Stack completa</summary>
+<summary><b>Tech stack completa</b></summary>
 <br/>
-React · Vue · Next.js · Nuxt · TypeScript · Node.js · Go · GraphQL · Supabase · Redis · PostgreSQL · Sentry · Grafana · New Relic · AWS · Azure · Vercel · Docker · Kubernetes · Cursor · Codex
-</details>
 
-Norte de médio prazo: **AI Security / AppSec**. Documento a curva em público: [Staff → Agentic AI → AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2).
+React · Vue · Next.js · Nuxt · TypeScript · Node.js · Go · GraphQL · Supabase · Redis · MySQL · PostgreSQL · Sentry · Grafana · New Relic · AWS · Azure · Vercel · Docker · Kubernetes · Cursor · Codex
+
+</details>
 
 ---
 
-## Cases (anonimizados)
+## Projetos e cases
 
-- **Edtech / creators (marketplace de pagamentos)** — Staff/Tech Lead em checkout, webhooks e assinaturas; race conditions e falhas silenciosas com impacto em receita. Idempotência e hardening de webhooks corrigiram splits e vendas duplicadas.
-- **Observabilidade multi-produto** — Sentry por domínio (React/Nuxt/Go), mapas de risco e evidência de impacto financeiro via Grafana. Curva de raciocínio documentada em público: [Por que um Staff Engineer está estudando AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2).
-- **Operação e receita** — exports/jobs travados, taxas, reembolsos e retentativa de recorrência; post-mortems e ADRs como leverage de Staff, não como burocracia.
-- **Varejo e móveis de luxo** — pricing em escala (Nuxt/IA/Supabase) e arquitetura de gestão financeira pós-venda.
+### Em destaque (sinal público)
+- **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** · **[frontend-cursor-rules](https://github.com/tiagovilasboas/frontend-cursor-rules)**: Agentic AI aplicada a IDEs e times (steerings, skills, regras de código).
+- **[Chat at Scale](https://github.com/tiagovilasboas/chat-at-scale)**: laboratório Staff de mensageria (MVP → arquitetura distribuída), trade-offs e observabilidade.
+- **[Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)**: padrões, trilhas Staff e decisão de arquitetura com evidência (deck público).
 
-## Outros projetos públicos
+### Cases (anonimizados)
+- **Edtech / creators (marketplace de pagamentos):** Staff / Tech Lead: checkout, webhooks e assinaturas; race conditions e falhas silenciosas com impacto em receita. Idempotência e hardening de webhooks corrigiram splits e vendas duplicadas.
+- **Observabilidade multi-produto:** Sentry por domínio (React/Nuxt/Go), mapas de risco e evidência de impacto financeiro (Grafana). Documentei a curva de raciocínio em público: [Por que um Staff Engineer está estudando AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2).
+- **Operação do seller:** exports e jobs travados, taxas/reembolsos e retentativa de recorrência; post-mortems e ADRs como leverage de Staff.
+- **Varejo (grande marca):** pricing em escala com Nuxt, IA e Supabase.
+- **Móveis de luxo:** arquitetura de gestão financeira pós-venda.
 
-Boilerplates e utilitários em produção real, fora do case principal: **[react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate)** · **[react-vite-boilerplate](https://github.com/tiagovilasboas/react-vite-boilerplate)** · **[ponto-pj](https://github.com/tiagovilasboas/ponto-pj)** (controle de horas B2B/PJ).
+### Outros projetos (boilerplates e side projects)
+**[React Layered](https://github.com/tiagovilasboas/react-layered-boilerplate)** · **[React Vite](https://github.com/tiagovilasboas/react-vite-boilerplate)** · **[Ponto PJ](https://github.com/tiagovilasboas/ponto-pj)** (controle de horas B2B/PJ).
 
 ---
 
 ## Busco
 
-**Staff Software Engineer** ou **AI Engineer** — Agentic AI, arquitetura e escala. Aberto a papéis equivalentes ou acima.
+**Staff Software Engineer**, **AI Engineer** ou Staff/Principal em Agentic AI — times que levam a sério escala, arquitetura e engenharia com LLMs.
+
+---
+
+## Analytics
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-stats.svg" height="165" alt="GitHub Stats"/>
+  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-streak.svg" height="165" alt="GitHub Streak"/>
+</div>
+<br/>
+
+<img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-contribution-grid-snake.svg" alt="Contribution Snake" width="100%"/>
+
+<details>
+<summary>Mais métricas</summary>
+<br/>
+<img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-metrics.svg" alt="GitHub Metrics" width="100%"/>
+</details>
+
+---
+
+## Contato
 
 📧 [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · ✍️ [DEV.to](https://dev.to/tiagovilasboas) · 📅 [Agendar 30 min](https://calendly.com/tcarvalhovb/)
 
+---
+
 <div align="center">
-  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-stats.svg" height="140" alt="GitHub Stats"/>
-  <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-streak.svg" height="140" alt="GitHub Streak"/>
+  <sub>Se algum projeto te ajudou, considere dar uma estrela ⭐</sub>
 </div>
-
-<details>
-<summary>Mais métricas (snake, visitantes, contribuições)</summary>
-<br/>
-
-<img alt="Visitors" src="https://komarev.com/ghpvc/?username=tiagovilasboas&style=flat&color=3ECF8E"/>
-
-<img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-contribution-grid-snake.svg" alt="Contribution Snake" width="100%"/>
-<img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-metrics.svg" alt="GitHub Metrics" width="100%"/>
-
-</details>
