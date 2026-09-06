@@ -8,7 +8,7 @@
   <p>🚀 Organizando o caos técnico e conduzindo projetos do zero a produtos escaláveis<br/>
      🧠 Agentic AI no dia a dia: LLMs, multi-agent, MCP e RAG<br/>
      🌉 Ponte entre Produto e Engenharia, simplificando o complexo para gerar valor real<br/>
-     🎓 Cursando Tecnologia em Segurança da Informação (UNINTER) · AppSec aplicada
+     🎓 Cursando Defesa Cibernética (Impacta) · AppSec aplicada
   </p>
 
   <p>
@@ -27,7 +27,7 @@ Atuo com tecnologia desde 2006, fortalecendo a autonomia das squads para acelera
 
 Organizo o caos técnico, conduzo projetos do zero a produtos escaláveis e faço a ponte entre Produto e Engenharia. Hoje meu foco é **Agentic AI**: LLMs, Multi-Agent Systems, MCP e RAG no dia a dia, em decisões de arquitetura, performance, observabilidade e mentoria de times.
 
-Meu norte de médio prazo é **AI Security / AppSec** (já em curso na UNINTER). Documento essa curva em público: [Staff → AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2) · [AppSec](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77) · [Agentic (RAG/MCP)](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj).
+Meu norte de médio prazo é **AI Security / AppSec** (já em curso na Impacta). Documento essa curva em público: [Staff → AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2) · [AppSec](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77) · [Agentic (RAG/MCP)](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj).
 
 **O que me move:** problemas complexos, valor de negócio e desenvolver pessoas.
 
@@ -42,7 +42,7 @@ Evidência pública do que eu falo: [kiro-playbook](https://github.com/tiagovila
 | **Decisão** | Arquitetura e trade-offs primeiro; código e agents depois |
 | **Agents** | LLMs, MCP e RAG em fluxos reais de engenharia — cada agent com escopo e contexto claros, não é "IA para digitar mais rápido" |
 | **Governança** | ADRs, evidência reproduzível, human-in-the-loop em writes de risco |
-| **Segurança** | AppSec no ciclo + graduação SI (UNINTER) em andamento |
+| **Segurança** | AppSec no ciclo + graduação Defesa Cibernética (Impacta) em andamento |
 
 ---
 
