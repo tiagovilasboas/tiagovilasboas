@@ -27,7 +27,7 @@ Atuo com tecnologia desde 2006, fortalecendo a autonomia das squads para acelera
 
 Organizo o caos técnico, conduzo projetos do zero a produtos escaláveis e faço a ponte entre Produto e Engenharia. Hoje meu foco é **Agentic AI**: LLMs, Multi-Agent Systems, MCP e RAG no dia a dia, em decisões de arquitetura, performance, observabilidade e mentoria de times.
 
-Meu norte de médio prazo é **AI Security / AppSec** (já em curso na UNINTER). Documento essa curva em público: [Staff → Agentic AI → AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2).
+Meu norte de médio prazo é **AI Security / AppSec** (já em curso na UNINTER). Documento essa curva em público: [Staff → AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2) · [AppSec](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77) · [Agentic (RAG/MCP)](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj).
 
 **O que me move:** problemas complexos, valor de negócio e desenvolver pessoas.
 
