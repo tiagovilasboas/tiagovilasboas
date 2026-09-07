@@ -31,7 +31,7 @@ Meu norte de médio prazo é **AI Security / AppSec** (já em curso na Impacta).
 
 **O que me move:** problemas complexos, valor de negócio e desenvolver pessoas.
 
-Evidência pública do que eu falo: [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [kiro-tour-voomp](https://github.com/tiagovilasboas/kiro-tour-voomp) · [awesome-agentic-ai](https://github.com/tiagovilasboas/awesome-agentic-ai) · [jarvis-architecture](https://github.com/tiagovilasboas/jarvis-architecture) · [agent-measurement](https://github.com/tiagovilasboas/agent-measurement) · [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review) · [chat-at-scale](https://github.com/tiagovilasboas/chat-at-scale) · [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)
+Evidência pública do que eu falo: [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [kiro-tour-voomp](https://github.com/tiagovilasboas/kiro-tour-voomp) · [kiro-crew](https://github.com/tiagovilasboas/kiro-crew) · [awesome-agentic-ai](https://github.com/tiagovilasboas/awesome-agentic-ai) · [jarvis-architecture](https://github.com/tiagovilasboas/jarvis-architecture) · [agent-measurement](https://github.com/tiagovilasboas/agent-measurement) · [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review) · [chat-at-scale](https://github.com/tiagovilasboas/chat-at-scale) · [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)
 
 ---
 
@@ -70,7 +70,7 @@ React · Vue · Next.js · Nuxt · TypeScript · Node.js · Go · GraphQL · Sup
 ## Projetos e cases
 
 ### Em destaque (sinal público)
-- **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** · **[kiro-tour-voomp](https://github.com/tiagovilasboas/kiro-tour-voomp)**: Agentic IDE — steerings, skills e hooks para times.
+- **[kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook)** · **[kiro-tour-voomp](https://github.com/tiagovilasboas/kiro-tour-voomp)** · **[kiro-crew](https://github.com/tiagovilasboas/kiro-crew)**: Agentic IDE — skills/hooks, onboarding e padrões de crew (roles · handoffs · HITL).
 - **[awesome-agentic-ai](https://github.com/tiagovilasboas/awesome-agentic-ai)**: curadoria Staff (MCP, multi-agent, HITL, ops) — critério, não dump.
 - **[jarvis-architecture](https://github.com/tiagovilasboas/jarvis-architecture)**: referência brain · workers · ops (vendor-agnostic).
 - **[agent-measurement](https://github.com/tiagovilasboas/agent-measurement)**: evals reproduzíveis (medir agents, não treinar modelos).
