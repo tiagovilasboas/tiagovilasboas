@@ -31,7 +31,7 @@ Meu norte de médio prazo é **AI Security / AppSec** (já em curso na Impacta).
 
 **O que me move:** problemas complexos, valor de negócio e desenvolver pessoas.
 
-Evidência pública do que eu falo: [awesome-agentic-ai](https://github.com/tiagovilasboas/awesome-agentic-ai) · [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review) · [jarvis-architecture](https://github.com/tiagovilasboas/jarvis-architecture) · [agent-measurement](https://github.com/tiagovilasboas/agent-measurement) · [chat-at-scale](https://github.com/tiagovilasboas/chat-at-scale) · [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app) · [kiro-crew](https://github.com/tiagovilasboas/kiro-crew) · [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [kiro-tour-voomp](https://github.com/tiagovilasboas/kiro-tour-voomp)
+Evidência pública do que eu falo: [awesome-agentic-ai](https://github.com/tiagovilasboas/awesome-agentic-ai) · [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review) · [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture) · [jarvis-architecture](https://github.com/tiagovilasboas/jarvis-architecture) · [agent-measurement](https://github.com/tiagovilasboas/agent-measurement) · [chat-at-scale](https://github.com/tiagovilasboas/chat-at-scale) · [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app) · [kiro-crew](https://github.com/tiagovilasboas/kiro-crew) · [kiro-playbook](https://github.com/tiagovilasboas/kiro-playbook) · [kiro-tour-voomp](https://github.com/tiagovilasboas/kiro-tour-voomp)
 
 ---
 
@@ -72,6 +72,7 @@ React · Vue · Next.js · Nuxt · TypeScript · Node.js · Go · GraphQL · Sup
 ### Em destaque (sinal público)
 - **[awesome-agentic-ai](https://github.com/tiagovilasboas/awesome-agentic-ai)**: curadoria Staff (MCP, multi-agent, HITL, ops) — critério, não dump.
 - **[agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review)**: skills · runbooks · guardrails AppSec para PR review.
+- **[grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture)**: Staff reference for Grok Bot / desktop multi-agent assistants (architecture, crew, routines, HITL, connectors).
 - **[jarvis-architecture](https://github.com/tiagovilasboas/jarvis-architecture)**: referência brain · workers · ops (vendor-agnostic).
 - **[agent-measurement](https://github.com/tiagovilasboas/agent-measurement)**: evals reproduzíveis (medir agents, não treinar modelos).
 - **[Chat at Scale](https://github.com/tiagovilasboas/chat-at-scale)**: laboratório Staff de mensageria (MVP → arquitetura distribuída), trade-offs e observabilidade.
