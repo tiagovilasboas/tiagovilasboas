@@ -1,4 +1,4 @@
-# Tiago Vilas Boas (Montanha) 🛵
+# Tiago Vilas Boas (Montanha) 🏍️
 
 **Staff · Agentic AI · AppSec · Observabilidade**
 
