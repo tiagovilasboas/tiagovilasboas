@@ -2,6 +2,9 @@
 
 **Staff · Agentic AI · AppSec · Observabilidade**
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tiagovilasboas/)
+[![DEV.to](https://img.shields.io/badge/DEV.to-0A0A0A?style=flat-square&logo=devdotto&logoColor=white)](https://dev.to/tiagovilasboas)
+
 Construo condições para que as squads tomem boas decisões sem depender da minha memória.
 
 Atuo com tecnologia desde 2006. Staff e Arquiteto Master em ambientes de alta escala, com passagens por Hotmart, CI&T, Dextra e Montanha Tech. Hoje o trabalho é Agentic AI e AppSec: arquitetura antes do código, agents com escopo e humano no loop, evidência que dá para reproduzir.
@@ -11,11 +14,11 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master em ambientes de alta es
 ## Trabalho selecionado
 
 - [awesome-agentic-ai](https://github.com/tiagovilasboas/awesome-agentic-ai): curadoria com critério Staff (MCP, HITL, agent ops). Não é dump de links.
+- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): SO assistant desktop, crew de especialistas, HITL e conectores. Padrão primeiro, host de exemplo.
 - [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): kit de review com agents. Achado só com evidência `path:line`.
 - [jarvis-architecture](https://github.com/tiagovilasboas/jarvis-architecture): arquitetura de referência multi-agent (brain, workers, ops), agnóstica de vendor.
 - [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): cases de impacto Staff, anonimizados, em PT-BR.
-- [ponto-pj](https://github.com/tiagovilasboas/ponto-pj): produto no ar. Ponto para PJ, PWA, compliance.
-- [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): React em camadas, DI, testes e CI.
+- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): Sentry conservador em produção (erros de jornada, Web Vitals, sampling baixo).
 
 Playbook vivo de decisão em arquitetura front-end: [frontend-architecture-playbook](https://frontend-architecture-playbook-eight.vercel.app)
 
