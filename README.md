@@ -25,7 +25,8 @@ Playbook vivo de decisão em arquitetura front-end: [frontend-architecture-playb
 ## Escrita
 
 - [Por que um Staff Engineer está estudando AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2)
-- [O prompt de AppSec achou 1 gap. O Semgrep achou 23 outras coisas](https://dev.to/tiagovilasboas/o-prompt-de-auditoria-que-eu-escrevi-achou-1-gap-em-174-rotas-o-semgrep-achou-23-outras-coisas-575j)
+- [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
+- [13 findings no Juice Shop. Nenhuma virou issue.](https://dev.to/tiagovilasboas/13-findings-no-juice-shop-nenhuma-virou-issue-340p)
 
 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas) · [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
 
