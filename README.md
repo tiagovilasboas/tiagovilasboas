@@ -26,7 +26,7 @@ Playbook vivo de decisão em arquitetura front-end: [frontend-architecture-playb
 
 - [Por que um Staff Engineer está estudando AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2)
 - [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
-- [13 findings no Juice Shop. Nenhuma virou issue.](https://dev.to/tiagovilasboas/13-findings-no-juice-shop-nenhuma-virou-issue-340p)
+- [RAG e MCP, na prática. Cole o prompt e monte os dois](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj)
 
 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas) · [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
 
