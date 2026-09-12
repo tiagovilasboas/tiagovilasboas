@@ -7,7 +7,7 @@
 
 Construo condições para que as squads tomem boas decisões sem depender da minha memória.
 
-Atuo com tecnologia desde 2006. Staff e Arquiteto Master em ambientes de alta escala, com passagens por Hotmart, CI&T, Dextra e Montanha Tech. Hoje o trabalho é Agentic AI e AppSec: arquitetura antes do código, agents com escopo e humano no loop, evidência que dá para reproduzir.
+Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje o trabalho é Agentic AI e AppSec: arquitetura antes do código, agents com escopo e humano no loop, evidência que dá para reproduzir.
 
 **Agora:** Defesa Cibernética na Impacta, e agents em fluxos reais de engenharia.
 
@@ -25,7 +25,6 @@ Playbook vivo de decisão em arquitetura front-end: [frontend-architecture-playb
 ## Artigos
 
 - [LangGraph versus LangChain. A conta é cadeia, grafo ou harness](https://dev.to/tiagovilasboas/langgraph-versus-langchain-a-conta-e-cadeia-grafo-ou-harness-57cn)
-- [IA generativa gera. IA agentic age](https://dev.to/tiagovilasboas/ia-generativa-gera-ia-agentic-age-1jik)
 - [RAG e MCP, na prática. Cole o prompt e monte os dois](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj)
 - [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
 - [Por que um Staff Engineer está estudando AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2)
