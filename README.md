@@ -24,10 +24,15 @@ Playbook vivo de decisão em arquitetura front-end: [frontend-architecture-playb
 
 ## Artigos
 
-- [LangGraph versus LangChain. A conta é cadeia, grafo ou harness](https://dev.to/tiagovilasboas/langgraph-versus-langchain-a-conta-e-cadeia-grafo-ou-harness-57cn)
-- [RAG e MCP, na prática. Cole o prompt e monte os dois](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj)
+- [Observabilidade no frontend: o HTTP 200 esconde ~900 catch vazios](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd)
+- [IA generativa e agentic: o README diz agent. O git não mudou](https://dev.to/tiagovilasboas/ia-generativa-gera-ia-agentic-age-1jik)
+- [13 findings no Juice Shop. Nenhuma virou issue.](https://dev.to/tiagovilasboas/13-findings-no-juice-shop-nenhuma-virou-issue-340p)
 - [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
 - [Por que um Staff Engineer está estudando AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2)
+- [LangGraph versus LangChain: a conta é cadeia, grafo ou harness](https://dev.to/tiagovilasboas/langgraph-versus-langchain-a-conta-e-cadeia-grafo-ou-harness-57cn)
+- [RAG e MCP, na prática. Cole o prompt e monte os dois](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj)
+- [Mesmo com GraphRAG, o agent se perde sem contrato de memória](https://dev.to/tiagovilasboas/mesmo-com-graphrag-o-agent-se-perde-sem-contrato-de-memoria-hc8)
+- [Consultar o grafo economiza token. Tirar o índice do git, não](https://dev.to/tiagovilasboas/indexar-o-codigo-fora-do-repo-como-economizar-tokens-sem-jogar-o-projeto-no-contexto-48c7)
 
 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas) · [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
 
