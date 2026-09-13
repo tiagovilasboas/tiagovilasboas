@@ -30,6 +30,7 @@ Playbook vivo de decisão em arquitetura front-end: [frontend-architecture-playb
 - [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
 - [Por que um Staff Engineer está estudando AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2)
 - [LangGraph versus LangChain: a conta é cadeia, grafo ou harness](https://dev.to/tiagovilasboas/langgraph-versus-langchain-a-conta-e-cadeia-grafo-ou-harness-57cn)
+- [RAG e MCP, na prática. Cole o prompt e monte os dois](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj)
 - [Mesmo com GraphRAG, o agent se perde sem contrato de memória](https://dev.to/tiagovilasboas/mesmo-com-graphrag-o-agent-se-perde-sem-contrato-de-memoria-hc8)
 - [Consultar o grafo economiza token. Tirar o índice do git, não](https://dev.to/tiagovilasboas/indexar-o-codigo-fora-do-repo-como-economizar-tokens-sem-jogar-o-projeto-no-contexto-48c7)
 
