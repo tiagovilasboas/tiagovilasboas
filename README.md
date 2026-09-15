@@ -24,6 +24,8 @@ Playbook vivo de decisão em arquitetura front-end: [frontend-architecture-playb
 
 ## Artigos
 
+- [Como o Sentry passou a mostrar o funil. A jornada antes do stacktrace](https://dev.to/tiagovilasboas/como-o-sentry-passou-a-mostrar-o-funil-a-jornada-antes-do-stacktrace-1ml6)
+- [Como o checkout ganhou 10% de conversão no mês. Timeout no pagar, não no Lighthouse](https://dev.to/tiagovilasboas/como-o-checkout-ganhou-10-de-conversao-no-mes-o-case-que-pesou-na-promocao-a-staff-ii-71)
 - [Observabilidade no frontend: o HTTP 200 esconde ~900 catch vazios](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd)
 - [IA generativa e agentic: o README diz agent. O git não mudou](https://dev.to/tiagovilasboas/ia-generativa-gera-ia-agentic-age-1jik)
 - [13 findings no Juice Shop. Nenhuma virou issue.](https://dev.to/tiagovilasboas/13-findings-no-juice-shop-nenhuma-virou-issue-340p)
