@@ -9,11 +9,13 @@ Construo condições para que as squads tomem boas decisões sem depender da min
 
 Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje o trabalho é Agentic AI e AppSec: arquitetura antes do código, agents com escopo e humano no loop, evidência que dá para reproduzir.
 
-**Agora:** Defesa Cibernética na Impacta, e agents em fluxos reais de engenharia.
+**Agora:** cursando **Graduação em Defesa Cibernética na Faculdade Impacta** e aplicando agents em fluxos reais de engenharia.
+
+**Certificação atual:** [Agentic AI with LangChain and LangGraph — IBM/Coursera](https://www.coursera.org/account/accomplishments/verify/B27T6TUQO1NB) · concluída em setembro de 2026.
 
 ## Produto em execução
 
-- [Quinto](https://quinto-eight.vercel.app/): fechamento financeiro mensal em uma PWA responsiva. Pague, reserve e saiba o que realmente sobra.
+- [Quinto](https://quinto-eight.vercel.app/): PWA completa e offline-first para fechamento financeiro mensal, com persistência local, banco em produção e regras legais incorporadas ao domínio.
 - [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): playbook vivo para decisões de arquitetura front-end.
 
 ## Arquitetura, IA e engenharia
