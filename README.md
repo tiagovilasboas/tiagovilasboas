@@ -11,30 +11,34 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje o trabalho é Age
 
 **Agora:** Defesa Cibernética na Impacta, e agents em fluxos reais de engenharia.
 
-## Projetos
+## Produto em execução
 
-- [awesome-agentic-ai](https://github.com/tiagovilasboas/awesome-agentic-ai): curadoria com critério Staff (MCP, HITL, agent ops). Não é dump de links.
-- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): SO assistant desktop, crew de especialistas, HITL e conectores. Padrão primeiro, host de exemplo.
-- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): kit de review com agents. Achado só com evidência `path:line`.
-- [jarvis-architecture](https://github.com/tiagovilasboas/jarvis-architecture): arquitetura de referência multi-agent (brain, workers, ops), agnóstica de vendor.
-- [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): cases de impacto Staff, anonimizados, em PT-BR.
-- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): Sentry conservador em produção (erros de jornada, Web Vitals, sampling baixo).
+- [Quinto](https://quinto-eight.vercel.app/): fechamento financeiro mensal em uma PWA responsiva. Pague, reserve e saiba o que realmente sobra.
+- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): playbook vivo para decisões de arquitetura front-end.
 
-Playbook vivo de decisão em arquitetura front-end: [frontend-architecture-playbook](https://frontend-architecture-playbook-eight.vercel.app)
+## Arquitetura, IA e engenharia
 
-## Artigos
+- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): review com agents, runbooks e guardrails. Achado só com evidência `path:line`.
+- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): arquitetura de assistant desktop com especialistas, HITL e conectores.
+- [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): cases de impacto Staff anonimizados e separados de material de estudo.
+- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): observabilidade de jornada, tracing, releases e AI/LLM monitoring.
+- [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): React com arquitetura em camadas, DI, TypeScript estrito, testes e CI.
 
-- [Como o Sentry passou a mostrar o funil. A jornada antes do stacktrace](https://dev.to/tiagovilasboas/como-o-sentry-passou-a-mostrar-o-funil-a-jornada-antes-do-stacktrace-1ml6)
-- [+10% de conversão no checkout no mês. A campanha quebrava na hora de pagar](https://dev.to/tiagovilasboas/como-o-checkout-ganhou-10-de-conversao-no-mes-o-case-que-pesou-na-promocao-a-staff-ii-71)
-- [Observabilidade no frontend: o HTTP 200 esconde ~900 catch vazios](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd)
-- [IA generativa e agentic: o README diz agent. O git não mudou](https://dev.to/tiagovilasboas/ia-generativa-gera-ia-agentic-age-1jik)
-- [13 findings no Juice Shop. Nenhuma virou issue.](https://dev.to/tiagovilasboas/13-findings-no-juice-shop-nenhuma-virou-issue-340p)
-- [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
-- [Por que um Staff Engineer está estudando AI Security](https://dev.to/tiagovilasboas/por-que-um-staff-engineer-esta-estudando-ai-security-37d2)
-- [LangGraph versus LangChain: a conta é cadeia, grafo ou harness](https://dev.to/tiagovilasboas/langgraph-versus-langchain-a-conta-e-cadeia-grafo-ou-harness-57cn)
-- [RAG e MCP, na prática. Cole o prompt e monte os dois](https://dev.to/tiagovilasboas/rag-ou-mcp-a-pergunta-errada-cole-o-prompt-e-monte-os-dois-57kj)
-- [Mesmo com GraphRAG, o agent se perde sem contrato de memória](https://dev.to/tiagovilasboas/mesmo-com-graphrag-o-agent-se-perde-sem-contrato-de-memoria-hc8)
-- [Consultar o grafo economiza token. Tirar o índice do git, não](https://dev.to/tiagovilasboas/indexar-o-codigo-fora-do-repo-como-economizar-tokens-sem-jogar-o-projeto-no-contexto-48c7)
+## Artigos em destaque
+
+### Harness, agentes e proximidade com o negócio
+
+- [Harness Engineering: o dev que não conhece vai ficar pra trás?](https://dev.to/tiagovilasboas/harness-engineering-o-dev-que-nao-conhece-vai-ficar-pra-tras-5cn6) — contexto, ferramentas, permissões e auditoria ao redor do modelo.
+- [Cursor, Kiro, ChatGPT: três harness, uma arquitetura](https://dev.to/tiagovilasboas/cursor-kiro-chatgpt-tres-harness-uma-arquitetura-7li) — memória compartilhada, skills e separação de contextos.
+- [FDE: o cargo de engenharia que eu não conhecia](https://dev.to/tiagovilasboas/fde-o-cargo-de-engenheiro-que-eu-nao-conhecia-e-que-talvez-voce-tambem-nao-1j3c) — engenharia que conecta código, ambiente do cliente e resultado de negócio.
+
+### Staff, observabilidade e AppSec
+
+- [+10% de conversão no checkout no mês](https://dev.to/tiagovilasboas/como-o-checkout-ganhou-10-de-conversao-no-mes-o-case-que-pesou-na-promocao-a-staff-ii-71) — performance ligada ao resultado, não ao bundle isolado.
+- [Observabilidade no frontend: o HTTP 200 esconde ~900 catch vazios](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd) — quatro frontends, falhas silenciosas e um caminho de instrumentação.
+- [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77) — evidência, falso-positivo e autorização antes de abrir uma issue.
+
+[Ver todos os artigos no DEV.to](https://dev.to/tiagovilasboas)
 
 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas) · [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
 
