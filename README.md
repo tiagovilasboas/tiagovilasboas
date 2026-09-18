@@ -1,13 +1,13 @@
 # Tiago Vilas Boas (Montanha) 🛵
 
-**Staff · Agentic AI · AppSec · Observabilidade**
+**Staff Software Engineer · Harness Engineering · Agentic AI · AppSec**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tiagovilasboas/)
 [![DEV.to](https://img.shields.io/badge/DEV.to-0A0A0A?style=flat-square&logo=devdotto&logoColor=white)](https://dev.to/tiagovilasboas)
 
 Construo condições para que as squads tomem boas decisões sem depender da minha memória.
 
-Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje o trabalho é Agentic AI e AppSec: arquitetura antes do código, agents com escopo e humano no loop, evidência que dá para reproduzir.
+Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness Engineering, Agentic AI e AppSec: arquitetura antes do código, agents com escopo, humano no loop e evidência que dá para reproduzir.
 
 **Agora:** cursando **Graduação em Defesa Cibernética na Faculdade Impacta** e aplicando agents em fluxos reais de engenharia.
 
