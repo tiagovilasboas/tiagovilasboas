@@ -20,6 +20,7 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 ## Arquitetura, IA e engenharia
 
+- [agent-measurement](https://github.com/tiagovilasboas/agent-measurement): eval harness; `false-green` pega withhold/`ok` falso com secret vazado (`./scripts/score.sh false-green`).
 - [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): CLI `npm run review` no diff. Finding com `path:line` + CWE; motor determinístico, sem LLM.
 - [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): golden path Sentry com `npm test` que falha se sampling/PII/tags quebrarem a premissa Staff.
 - [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): ADRs de crew, HITL e conectores; prova em `node scripts/validate-all.mjs` (fixtures broken/fixed).
@@ -47,3 +48,4 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 <div align="center">
   <img src="https://raw.githubusercontent.com/tiagovilasboas/tiagovilasboas/main/github-contribution-grid-snake.svg" alt="Contribution snake" width="100%"/>
 </div>
+
