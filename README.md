@@ -20,10 +20,10 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 ## Arquitetura, IA e engenharia
 
-- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): CLI determinístico de review (`npm run review`). Finding com `path:line` + CWE; sem LLM.
-- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): arquitetura de assistant desktop com especialistas, HITL e conectores.
-- [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): cases de impacto Staff anonimizados e separados de material de estudo.
-- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): observabilidade de jornada, tracing, releases e AI/LLM monitoring.
+- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): CLI `npm run review` no diff. Finding com `path:line` + CWE; motor determinístico, sem LLM.
+- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): golden path Sentry com `npm test` que falha se sampling/PII/tags quebrarem a premissa Staff.
+- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): ADRs de crew, HITL e conectores; prova em `node scripts/validate-all.mjs` (fixtures broken/fixed).
+- [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): INDEX de cases Staff (PT-BR) com rubrica impacto/profundidade/escopo; evidência narrativa, não produto.
 - [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): React com arquitetura em camadas, DI, TypeScript estrito, testes e CI.
 
 ## Artigos em destaque
