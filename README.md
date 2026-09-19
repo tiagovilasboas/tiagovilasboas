@@ -20,7 +20,7 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 ## Arquitetura, IA e engenharia
 
-- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): review com agents, runbooks e guardrails. Achado só com evidência `path:line`.
+- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): CLI determinístico de review (`npm run review`). Finding com `path:line` + CWE; sem LLM.
 - [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): arquitetura de assistant desktop com especialistas, HITL e conectores.
 - [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): cases de impacto Staff anonimizados e separados de material de estudo.
 - [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): observabilidade de jornada, tracing, releases e AI/LLM monitoring.
