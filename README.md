@@ -38,7 +38,7 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 ### Staff, observabilidade e AppSec
 
-- [+10% de conversão no checkout no mês](https://dev.to/tiagovilasboas/como-o-checkout-ganhou-10-de-conversao-no-mes-o-case-que-pesou-na-promocao-a-staff-ii-71) — performance ligada ao resultado, não ao bundle isolado.
+- [+10% de conversão no checkout no mês](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566) — performance ligada ao resultado, não ao bundle isolado.
 - [Observabilidade no frontend: o HTTP 200 esconde ~900 catch vazios](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd) — quatro frontends, falhas silenciosas e um caminho de instrumentação.
 - [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77) — evidência, falso-positivo e autorização antes de abrir uma issue.
 
