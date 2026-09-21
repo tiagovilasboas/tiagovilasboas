@@ -20,6 +20,7 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 ## Arquitetura, IA e engenharia
 
+- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): roteador determinístico de subagentes — classifica cada task, mapeia para o tier de modelo certo e reescreve o spawn antes de ele acontecer. Hook adapters para Claude Code, Cursor e Codex; telemetria local; benchmark com matriz de confusão e tier accuracy. O projeto que mais me fez pensar sobre o que separa um script de uma plataforma.
 - [agent-measurement](https://github.com/tiagovilasboas/agent-measurement): eval harness; `false-green` pega withhold/`ok` falso com secret vazado (`./scripts/score.sh false-green`).
 - [llm-guide-for-coding](https://github.com/tiagovilasboas/llm-guide-for-coding): base, custo e Anti-Auto; `node scripts/cost.mjs` estima USD e flag Auto (`npm run check`).
 - [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): CLI `npm run review` no diff. Finding com `path:line` + CWE; motor determinístico, sem LLM.
