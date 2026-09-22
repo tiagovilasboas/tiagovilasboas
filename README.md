@@ -11,7 +11,9 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 **Agora:** cursando **Graduação em Defesa Cibernética na Faculdade Impacta** e aplicando agents em fluxos reais de engenharia.
 
-**Certificação atual:** [Agentic AI with LangChain and LangGraph — IBM/Coursera](https://www.coursera.org/account/accomplishments/verify/B27T6TUQO1NB) · concluída em setembro de 2026.
+**Certificações recentes:**
+- [Agentic AI with LangChain and LangGraph — IBM/Coursera](https://www.coursera.org/account/accomplishments/verify/B27T6TUQO1NB) · concluída em setembro de 2026.
+- [Security Hardening — Google/Coursera](https://www.coursera.org/account/accomplishments/verify/MGL4PB651JCX) · concluída em setembro de 2026.
 
 ## Produto em execução
 
