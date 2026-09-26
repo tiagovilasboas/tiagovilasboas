@@ -37,13 +37,13 @@ Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
 
 ## Arquitetura, IA e engenharia
 
-- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): corta o gasto com IA no código mandando cada subtarefa para o modelo do tamanho certo, o barato para o trabalho simples e o mais caro só para o difícil. A escolha segue regras fixas, sem outra IA decidindo, e o projeto ainda está em beta.
-
-  Comando: `downshift try "rename the userId variable" claude-code`
-
 - [agent-measurement](https://github.com/tiagovilasboas/agent-measurement): mede se um agente de IA fez mesmo o trabalho ou só disse que fez. Pega os casos de "falso ok", como o agente dar a tarefa por concluída enquanto uma senha vazou num e-mail que ele mesmo enviou.
 
   Comando: `./scripts/score.sh false-green`
+
+- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): corta o gasto com IA no código mandando cada subtarefa para o modelo do tamanho certo, o barato para o trabalho simples e o mais caro só para o difícil. A escolha segue regras fixas, sem outra IA decidindo, e o projeto ainda está em beta.
+
+  Comando: `downshift try "rename the userId variable" claude-code`
 
 - [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): revisão automática de código que aponta o arquivo, a linha e o tipo de falha de segurança. Não usa IA na decisão, então o resultado é sempre o mesmo.
 
@@ -63,7 +63,7 @@ Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
 
 - [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): ponto de partida pra apps React bem organizados, com camadas separadas, tipagem estrita, testes e CI.
 
-  Comando: `npm run dev`
+  Comando: `npm test`
 
 ## Produto em execução
 
