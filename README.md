@@ -30,6 +30,28 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 - **[staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases)** — casos reais e anonimizados do meu trabalho como Staff, avaliados por impacto, profundidade e escopo. `python3 scripts/check-case-headings.py`
 - **[react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate)** — ponto de partida para apps React com camadas separadas, tipagem estrita, testes e CI. `npm run dev`
 
+## Open source
+
+<!-- oss:start -->
+<p>
+<a href="https://github.com/punkpeye/fastmcp/pull/392" title="punkpeye/fastmcp#392: ferramentas com pares de chave e valor anunciadas do jeito certo"><img src="https://github.com/punkpeye.png?size=80" width="40" height="40" alt="punkpeye/fastmcp"></a>&nbsp;
+<a href="https://github.com/NodeSecure/js-x-ray/pull/723" title="NodeSecure/js-x-ray#723: importações com crase não escapam mais do alerta"><img src="https://github.com/NodeSecure.png?size=80" width="40" height="40" alt="NodeSecure/js-x-ray"></a>&nbsp;
+<a href="https://github.com/nanostores/nanostores/pull/437" title="nanostores/nanostores#437: aviso certo quando um campo aninhado muda"><img src="https://github.com/nanostores.png?size=80" width="40" height="40" alt="nanostores/nanostores"></a>&nbsp;
+<a href="https://github.com/alecthomas/chroma/pull/1387" title="alecthomas/chroma#1387: números do Go moderno coloridos do jeito certo"><img src="https://github.com/alecthomas.png?size=80" width="40" height="40" alt="alecthomas/chroma"></a>&nbsp;
+<a href="https://github.com/openai/openai-agents-python/pull/4961" title="openai/openai-agents-python#4961: histórico longo de conversa sem erro"><img src="https://github.com/openai.png?size=80" width="40" height="40" alt="openai/openai-agents-python"></a>
+</p>
+
+<sub>fastmcp · js-x-ray · nanostores · chroma · openai-agents-python</sub>
+
+- [punkpeye/fastmcp#392](https://github.com/punkpeye/fastmcp/pull/392): ferramentas que recebem pares de chave e valor deixam de aparecer para os clientes de IA como se só aceitassem um objeto vazio, o que ajuda quem cria servidores MCP com a biblioteca.
+- [NodeSecure/js-x-ray#723](https://github.com/NodeSecure/js-x-ray/pull/723): o scanner de segurança passa a pegar importações escritas com crase, um truque que antes deixava código perigoso passar sem alerta, o que protege quem audita pacotes do npm com ele.
+- [nanostores/nanostores#437](https://github.com/nanostores/nanostores/pull/437): quem acompanha um campo dentro de um estado aninhado passa a ser avisado quando ele muda pela troca do objeto pai ou pela remoção de um item da lista, o que evita que apps com a biblioteca deixem de reagir a uma mudança real.
+- [alecthomas/chroma#1387](https://github.com/alecthomas/chroma/pull/1387): o colorizador de código passa a reconhecer números do Go no formato moderno, como `0o644` e `0x1p-2`, que antes saíam quebrados, o que melhora o destaque de código Go para quem usa a biblioteca.
+- [openai/openai-agents-python#4961](https://github.com/openai/openai-agents-python/pull/4961): buscar um histórico longo de conversa com limite de itens deixa de dar erro na API da OpenAI, o que ajuda quem guarda sessões de agentes com o SDK.
+
+Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
+<!-- oss:end -->
+
 ## Artigos em destaque
 
 ### Harness, agentes e proximidade com o negócio
