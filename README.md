@@ -17,8 +17,13 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 ## Produto em execução
 
-- [Quinto](https://quinto-eight.vercel.app/): PWA completa e offline-first para fechamento financeiro mensal, com persistência local, banco em produção e regras legais incorporadas ao domínio.
-- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): playbook vivo para decisões de arquitetura front-end.
+- [Quinto](https://quinto-eight.vercel.app/): ajuda a fechar as contas do mês e mostra quanto realmente sobra depois de pagar o que já tem valor. Dá pra instalar no celular e usar mesmo sem internet depois do primeiro acesso, e as mudanças sincronizam quando a rede volta.
+
+  App no ar: [quinto-eight.vercel.app](https://quinto-eight.vercel.app/)
+
+- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): guia prático pra decidir como organizar o código de sites e apps, com os prós e contras de cada caminho explicados em tom de mentoria. Tudo parte de situações reais que vivi na carreira.
+
+  App no ar: [frontend-architecture-playbook-eight.vercel.app](https://frontend-architecture-playbook-eight.vercel.app)
 
 ## Arquitetura, IA e engenharia
 
@@ -29,8 +34,6 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 - [agent-measurement](https://github.com/tiagovilasboas/agent-measurement): mede se um agente de IA fez mesmo o trabalho ou só disse que fez. Pega os casos de "falso ok", como o agente dar a tarefa por concluída enquanto uma senha vazou num e-mail que ele mesmo enviou.
 
   Comando: `./scripts/score.sh false-green`
-
-- [llm-guide-for-coding](https://github.com/tiagovilasboas/llm-guide-for-coding): base, custo e Anti-Auto; `node scripts/cost.mjs` estima USD e flag Auto (`npm run check`).
 
 - [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): revisão automática de código que aponta o arquivo, a linha e o tipo de falha de segurança. Não usa IA na decisão, então o resultado é sempre o mesmo.
 
