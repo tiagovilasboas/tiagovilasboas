@@ -43,11 +43,11 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 <sub>fastmcp · js-x-ray · nanostores · chroma · openai-agents-python</sub>
 
-- [punkpeye/fastmcp#392](https://github.com/punkpeye/fastmcp/pull/392): ferramentas que recebem pares de chave e valor deixam de aparecer para os clientes de IA como se só aceitassem um objeto vazio, o que ajuda quem cria servidores MCP com a biblioteca.
-- [NodeSecure/js-x-ray#723](https://github.com/NodeSecure/js-x-ray/pull/723): o scanner de segurança passa a pegar importações escritas com crase, um truque que antes deixava código perigoso passar sem alerta, o que protege quem audita pacotes do npm com ele.
-- [nanostores/nanostores#437](https://github.com/nanostores/nanostores/pull/437): quem acompanha um campo dentro de um estado aninhado passa a ser avisado quando ele muda pela troca do objeto pai ou pela remoção de um item da lista, o que evita que apps com a biblioteca deixem de reagir a uma mudança real.
-- [alecthomas/chroma#1387](https://github.com/alecthomas/chroma/pull/1387): o colorizador de código passa a reconhecer números do Go no formato moderno, como `0o644` e `0x1p-2`, que antes saíam quebrados, o que melhora o destaque de código Go para quem usa a biblioteca.
-- [openai/openai-agents-python#4961](https://github.com/openai/openai-agents-python/pull/4961): buscar um histórico longo de conversa com limite de itens deixa de dar erro na API da OpenAI, o que ajuda quem guarda sessões de agentes com o SDK.
+- [punkpeye/fastmcp#392](https://github.com/punkpeye/fastmcp/pull/392): servidores MCP feitos com a biblioteca passam a anunciar do jeito certo as ferramentas que recebem pares de chave e valor.
+- [NodeSecure/js-x-ray#723](https://github.com/NodeSecure/js-x-ray/pull/723): o scanner de segurança de pacotes npm passa a pegar importações escritas com crase, que antes escapavam do alerta.
+- [nanostores/nanostores#437](https://github.com/nanostores/nanostores/pull/437): apps que observam um campo dentro de um estado aninhado passam a ser avisados quando esse campo muda de verdade.
+- [alecthomas/chroma#1387](https://github.com/alecthomas/chroma/pull/1387): o colorizador de código passa a mostrar certo os números do Go moderno, como `0o644`.
+- [openai/openai-agents-python#4961](https://github.com/openai/openai-agents-python/pull/4961): sessões de agente com histórico longo deixam de dar erro ao buscar as mensagens com limite de itens.
 
 Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
 <!-- oss:end -->
