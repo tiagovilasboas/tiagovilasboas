@@ -17,19 +17,43 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 ## Produto em execução
 
-- [Quinto](https://quinto-eight.vercel.app/): PWA completa e offline-first para fechamento financeiro mensal, com persistência local, banco em produção e regras legais incorporadas ao domínio.
-- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): playbook vivo para decisões de arquitetura front-end.
+- [Quinto](https://quinto-eight.vercel.app/): ajuda a fechar as contas do mês e mostra quanto realmente sobra depois de pagar o que já tem valor. Dá pra instalar no celular e usar mesmo sem internet depois do primeiro acesso, e as mudanças sincronizam quando a rede volta.
+
+  App no ar: [quinto-eight.vercel.app](https://quinto-eight.vercel.app/)
+
+- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): guia prático pra decidir como organizar o código de sites e apps, com os prós e contras de cada caminho explicados em tom de mentoria. Tudo parte de situações reais que vivi na carreira.
+
+  App no ar: [frontend-architecture-playbook-eight.vercel.app](https://frontend-architecture-playbook-eight.vercel.app)
 
 ## Arquitetura, IA e engenharia
 
-- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): roteador determinístico de subagentes — classifica cada task, mapeia para o tier de modelo certo e reescreve o spawn antes de ele acontecer. Hook adapters para Claude Code, Cursor e Codex; telemetria local; benchmark com matriz de confusão e tier accuracy. O projeto que mais me fez pensar sobre o que separa um script de uma plataforma.
-- [agent-measurement](https://github.com/tiagovilasboas/agent-measurement): eval harness; `false-green` pega withhold/`ok` falso com secret vazado (`./scripts/score.sh false-green`).
-- [llm-guide-for-coding](https://github.com/tiagovilasboas/llm-guide-for-coding): base, custo e Anti-Auto; `node scripts/cost.mjs` estima USD e flag Auto (`npm run check`).
-- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): CLI `npm run review` no diff. Finding com `path:line` + CWE; motor determinístico, sem LLM.
-- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): golden path Sentry com `npm test` que falha se sampling/PII/tags quebrarem a premissa Staff.
-- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): ADRs de crew, HITL e conectores; prova em `node scripts/validate-all.mjs` (fixtures broken/fixed).
-- [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): INDEX de cases Staff (PT-BR) com rubrica impacto/profundidade/escopo; evidência narrativa, não produto.
-- [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): React com arquitetura em camadas, DI, TypeScript estrito, testes e CI.
+- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): corta o gasto com IA no código mandando cada subtarefa para o modelo do tamanho certo, o barato para o trabalho simples e o mais caro só para o difícil. A escolha segue regras fixas, sem outra IA decidindo, e o projeto ainda está em beta.
+
+  Comando: `downshift try "rename the userId variable" claude-code`
+
+- [agent-measurement](https://github.com/tiagovilasboas/agent-measurement): mede se um agente de IA fez mesmo o trabalho ou só disse que fez. Pega os casos de "falso ok", como o agente dar a tarefa por concluída enquanto uma senha vazou num e-mail que ele mesmo enviou.
+
+  Comando: `./scripts/score.sh false-green`
+
+- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): revisão automática de código que aponta o arquivo, a linha e o tipo de falha de segurança. Não usa IA na decisão, então o resultado é sempre o mesmo.
+
+  Comando: `npm run review -- examples/sample-pr.diff`
+
+- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): modelo pronto pra monitorar erros com o Sentry do jeito certo. Os testes falham se alguém tirar a proteção de dados pessoais ou quebrar a configuração.
+
+  Comando: `npm test`
+
+- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): como montei uma equipe de assistentes de IA que trabalham juntos, com aprovação humana nas ações de risco. As decisões estão documentadas, e um script confere se a troca de tarefas e os pedidos de aprovação seguem as regras.
+
+  Comando: `node scripts/validate-all.mjs`
+
+- [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): casos reais e anonimizados do meu trabalho como Staff, avaliados por impacto, profundidade, escopo e decisão. São histórias, não código.
+
+  Comando: `python3 scripts/check-case-headings.py`
+
+- [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): ponto de partida pra apps React bem organizados, com camadas separadas, tipagem estrita, testes e CI.
+
+  Comando: `npm run dev`
 
 ## Artigos em destaque
 
