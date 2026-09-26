@@ -17,43 +17,40 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 
 ## Produto em execução
 
-- [Quinto](https://quinto-eight.vercel.app/): ajuda a fechar as contas do mês e mostra quanto realmente sobra depois de pagar o que já tem valor. Dá pra instalar no celular e usar mesmo sem internet depois do primeiro acesso, e as mudanças sincronizam quando a rede volta.
-
-  App no ar: [quinto-eight.vercel.app](https://quinto-eight.vercel.app/)
-
-- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): guia prático pra decidir como organizar o código de sites e apps, com os prós e contras de cada caminho explicados em tom de mentoria. Tudo parte de situações reais que vivi na carreira.
-
-  App no ar: [frontend-architecture-playbook-eight.vercel.app](https://frontend-architecture-playbook-eight.vercel.app)
+- **[Quinto](https://quinto-eight.vercel.app/)** — orçamento pessoal: mostra quanto sobra depois das contas fixas. PWA offline, sincroniza quando a rede volta.
+- **[Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app)** — guia de decisão de arquitetura front-end, com trade-offs e casos reais da minha carreira.
 
 ## Arquitetura, IA e engenharia
 
-- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): corta o gasto com IA no código mandando cada subtarefa para o modelo do tamanho certo, o barato para o trabalho simples e o mais caro só para o difícil. A escolha segue regras fixas, sem outra IA decidindo, e o projeto ainda está em beta.
+- **[harness-downshift](https://github.com/tiagovilasboas/harness-downshift)** — roteia cada subtarefa de código pro modelo certo: barato no simples, caro só no difícil, com regras fixas, sem IA decidindo. Em beta. `downshift try "rename the userId variable" claude-code`
+- **[agent-measurement](https://github.com/tiagovilasboas/agent-measurement)** — mede se um agente de IA terminou a tarefa de verdade ou só disse que terminou (ex.: senha vazada num e-mail que o próprio agente enviou). `./scripts/score.sh false-green`
+- **[agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review)** — revisão automática que aponta arquivo, linha e tipo de falha de segurança, sem IA na decisão final. `npm run review -- examples/sample-pr.diff`
+- **[sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path)** — monitoramento de erros com Sentry; testes falham se alguém remover a proteção de dados pessoais. `npm test`
+- **[grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture)** — equipe de assistentes de IA com aprovação humana em ações de risco e decisões documentadas. `node scripts/validate-all.mjs`
+- **[staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases)** — casos reais e anonimizados do meu trabalho como Staff, avaliados por impacto, profundidade e escopo. `python3 scripts/check-case-headings.py`
+- **[react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate)** — ponto de partida para apps React com camadas separadas, tipagem estrita, testes e CI. `npm run dev`
 
-  Comando: `downshift try "rename the userId variable" claude-code`
+## Open source
 
-- [agent-measurement](https://github.com/tiagovilasboas/agent-measurement): mede se um agente de IA fez mesmo o trabalho ou só disse que fez. Pega os casos de "falso ok", como o agente dar a tarefa por concluída enquanto uma senha vazou num e-mail que ele mesmo enviou.
+<!-- oss:start -->
+<p>
+<a href="https://github.com/punkpeye/fastmcp/pull/392" title="punkpeye/fastmcp#392: ferramentas com pares de chave e valor anunciadas do jeito certo"><img src="https://github.com/punkpeye.png?size=80" width="40" height="40" alt="punkpeye/fastmcp"></a>&nbsp;
+<a href="https://github.com/NodeSecure/js-x-ray/pull/723" title="NodeSecure/js-x-ray#723: importações com crase não escapam mais do alerta"><img src="https://github.com/NodeSecure.png?size=80" width="40" height="40" alt="NodeSecure/js-x-ray"></a>&nbsp;
+<a href="https://github.com/nanostores/nanostores/pull/437" title="nanostores/nanostores#437: aviso certo quando um campo aninhado muda"><img src="https://github.com/nanostores.png?size=80" width="40" height="40" alt="nanostores/nanostores"></a>&nbsp;
+<a href="https://github.com/alecthomas/chroma/pull/1387" title="alecthomas/chroma#1387: números do Go moderno coloridos do jeito certo"><img src="https://github.com/alecthomas.png?size=80" width="40" height="40" alt="alecthomas/chroma"></a>&nbsp;
+<a href="https://github.com/openai/openai-agents-python/pull/4961" title="openai/openai-agents-python#4961: histórico longo de conversa sem erro"><img src="https://github.com/openai.png?size=80" width="40" height="40" alt="openai/openai-agents-python"></a>
+</p>
 
-  Comando: `./scripts/score.sh false-green`
+<sub>fastmcp · js-x-ray · nanostores · chroma · openai-agents-python</sub>
 
-- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): revisão automática de código que aponta o arquivo, a linha e o tipo de falha de segurança. Não usa IA na decisão, então o resultado é sempre o mesmo.
+- [punkpeye/fastmcp#392](https://github.com/punkpeye/fastmcp/pull/392): servidores MCP feitos com a biblioteca passam a anunciar do jeito certo as ferramentas que recebem pares de chave e valor.
+- [NodeSecure/js-x-ray#723](https://github.com/NodeSecure/js-x-ray/pull/723): o scanner de segurança de pacotes npm passa a pegar importações escritas com crase, que antes escapavam do alerta.
+- [nanostores/nanostores#437](https://github.com/nanostores/nanostores/pull/437): apps que observam um campo dentro de um estado aninhado passam a ser avisados quando esse campo muda de verdade.
+- [alecthomas/chroma#1387](https://github.com/alecthomas/chroma/pull/1387): o colorizador de código passa a mostrar certo os números do Go moderno, como `0o644`.
+- [openai/openai-agents-python#4961](https://github.com/openai/openai-agents-python/pull/4961): sessões de agente com histórico longo deixam de dar erro ao buscar as mensagens com limite de itens.
 
-  Comando: `npm run review -- examples/sample-pr.diff`
-
-- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): modelo pronto pra monitorar erros com o Sentry do jeito certo. Os testes falham se alguém tirar a proteção de dados pessoais ou quebrar a configuração.
-
-  Comando: `npm test`
-
-- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): como montei uma equipe de assistentes de IA que trabalham juntos, com aprovação humana nas ações de risco. As decisões estão documentadas, e um script confere se a troca de tarefas e os pedidos de aprovação seguem as regras.
-
-  Comando: `node scripts/validate-all.mjs`
-
-- [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): casos reais e anonimizados do meu trabalho como Staff, avaliados por impacto, profundidade, escopo e decisão. São histórias, não código.
-
-  Comando: `python3 scripts/check-case-headings.py`
-
-- [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): ponto de partida pra apps React bem organizados, com camadas separadas, tipagem estrita, testes e CI.
-
-  Comando: `npm run dev`
+Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
+<!-- oss:end -->
 
 ## Artigos em destaque
 
