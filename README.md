@@ -65,13 +65,17 @@ Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
 
   Comando: `npm test`
 
-## Produto em execução
+## Produtos e evidências de produto
+
+- [Nexo](https://github.com/tiagovilasboas/obsidian-nexo) · [Nexo Graph](https://github.com/tiagovilasboas/obsidian-nexo-graph): produto open source para Obsidian, com tema visual próprio e plugin independente de exploração do grafo. Evidência de concepção e entrega de produto, da identidade visual à interação.
 
 - [Quinto](https://quinto-eight.vercel.app/): ajuda a fechar as contas do mês e mostra quanto realmente sobra depois de pagar o que já tem valor. Dá pra instalar no celular e usar mesmo sem internet depois do primeiro acesso, e as mudanças sincronizam quando a rede volta.
 
   App no ar: [quinto-eight.vercel.app](https://quinto-eight.vercel.app/)
 
-- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): guia prático pra decidir como organizar o código de sites e apps, com os prós e contras de cada caminho explicados em tom de mentoria. Tudo parte de situações reais que vivi na carreira.
+## Mentorias e material de apoio
+
+- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): guia interativo de apoio a mentorias para discutir decisões, trade-offs e evolução de arquitetura front-end. Parte de situações reais da minha trajetória.
 
   App no ar: [frontend-architecture-playbook-eight.vercel.app](https://frontend-architecture-playbook-eight.vercel.app)
 
