@@ -35,43 +35,15 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
 <!-- oss:end -->
 
-## Arquitetura, IA e engenharia
+## Produtos
 
-- [agent-measurement](https://github.com/tiagovilasboas/agent-measurement): mede se um agente de IA fez mesmo o trabalho ou só disse que fez. Pega os casos de "falso ok", como o agente dar a tarefa por concluída enquanto uma senha vazou num e-mail que ele mesmo enviou.
+- [Nexo](https://github.com/tiagovilasboas/obsidian-nexo) · [Nexo Graph](https://github.com/tiagovilasboas/obsidian-nexo-graph): tema e plugin de grafo para Obsidian. Da identidade visual à interação.
 
-  Comando: `./scripts/score.sh false-green`
+- [Quinto](https://quinto-eight.vercel.app/): PWA offline-first pra controle financeiro familiar. Funciona sem internet, sincroniza quando a rede volta.
 
-- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): corta o gasto com IA no código mandando cada subtarefa para o modelo do tamanho certo, o barato para o trabalho simples e o mais caro só para o difícil. A escolha segue regras fixas, sem outra IA decidindo, e o projeto ainda está em beta.
+- [dev-to-mcp](https://github.com/tiagovilasboas/dev-to-mcp): servidor MCP em Go que conecta agentes de IA à API do DEV.to.
 
-  Comando: `downshift try "rename the userId variable" claude-code`
-
-- [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review): revisão automática de código que aponta o arquivo, a linha e o tipo de falha de segurança. Não usa IA na decisão, então o resultado é sempre o mesmo.
-
-  Comando: `npm run review -- examples/sample-pr.diff`
-
-- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): modelo pronto pra monitorar erros com o Sentry do jeito certo. Os testes falham se alguém tirar a proteção de dados pessoais ou quebrar a configuração.
-
-  Comando: `npm test`
-
-- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): como montei uma equipe de assistentes de IA que trabalham juntos, com aprovação humana nas ações de risco. As decisões estão documentadas, e um script confere se a troca de tarefas e os pedidos de aprovação seguem as regras.
-
-  Comando: `node scripts/validate-all.mjs`
-
-- [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases): casos reais e anonimizados do meu trabalho como Staff, avaliados por impacto, profundidade, escopo e decisão. São histórias, não código.
-
-  Comando: `python3 scripts/check-case-headings.py`
-
-- [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): ponto de partida pra apps React bem organizados, com camadas separadas, tipagem estrita, testes e CI.
-
-  Comando: `npm test`
-
-## Produtos e evidências de produto
-
-- [Nexo](https://github.com/tiagovilasboas/obsidian-nexo) · [Nexo Graph](https://github.com/tiagovilasboas/obsidian-nexo-graph): produto open source para Obsidian, com tema visual próprio e plugin independente de exploração do grafo. Evidência de concepção e entrega de produto, da identidade visual à interação.
-
-- [Quinto](https://quinto-eight.vercel.app/): ajuda a fechar as contas do mês e mostra quanto realmente sobra depois de pagar o que já tem valor. Dá pra instalar no celular e usar mesmo sem internet depois do primeiro acesso, e as mudanças sincronizam quando a rede volta.
-
-  App no ar: [quinto-eight.vercel.app](https://quinto-eight.vercel.app/)
+Também: [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review) · [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path) · [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases)
 
 ## Mentorias e material de apoio
 
