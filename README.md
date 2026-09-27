@@ -1,6 +1,6 @@
 # Tiago Vilas Boas (Montanha) 🛵
 
-**Staff Software Engineer · Harness Engineering · Agentic AI · AppSec**
+**Staff Engineer | IA Engineer**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tiagovilasboas/)
 [![DEV.to](https://img.shields.io/badge/DEV.to-0A0A0A?style=flat-square&logo=devdotto&logoColor=white)](https://dev.to/tiagovilasboas)
