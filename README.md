@@ -7,7 +7,7 @@
 
 Construo condições para que as squads tomem boas decisões sem depender da minha memória.
 
-Staff Engineer e Harness Engineer na Cogna/Voomp, atuando em múltiplas frentes e squads. Estruturo iniciativas de Enablement e aplico Harness Engineering com uma knowledge base central interna para apoiar o desenvolvimento com IA.
+Na Cogna/Voomp, contribuo em múltiplas frentes e squads. Estruturo iniciativas de Enablement e aplico Harness Engineering com uma knowledge base central interna para apoiar o desenvolvimento de software com IA.
 
 Atuo com tecnologia desde 2006. Hoje aplico Harness Engineering, Agentic AI e AppSec: arquitetura antes do código, agents com escopo, humano no loop e evidência que dá para reproduzir.
 
