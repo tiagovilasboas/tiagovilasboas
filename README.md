@@ -7,7 +7,9 @@
 
 Construo condições para que as squads tomem boas decisões sem depender da minha memória.
 
-Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness Engineering, Agentic AI e AppSec: arquitetura antes do código, agents com escopo, humano no loop e evidência que dá para reproduzir.
+Atualmente: Staff Engineer no Squad ADM (Cogna/Voomp), montando frente de Enablement e aplicando Harness Engineering em code review com IA.
+
+Atuo com tecnologia desde 2006. Hoje aplico Harness Engineering, Agentic AI e AppSec: arquitetura antes do código, agents com escopo, humano no loop e evidência que dá para reproduzir.
 
 **Impacto:**
 - [+10% de vendas no checkout no mês](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566), depois de achar por que a campanha quebrava na hora de pagar.
@@ -32,10 +34,12 @@ Atuo com tecnologia desde 2006. Staff e Arquiteto Master. Hoje aplico Harness En
 - [alecthomas/chroma#1387](https://github.com/alecthomas/chroma/pull/1387): o colorizador de código passa a mostrar certo os números do Go moderno, como `0o644`.
 - [openai/openai-agents-python#4961](https://github.com/openai/openai-agents-python/pull/4961): sessões de agente com histórico longo deixam de dar erro ao buscar as mensagens com limite de itens.
 
-Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
+Em revisão: [punkpeye/fastmcp#405](https://github.com/punkpeye/fastmcp/pull/405) · [getsentry/sentry-javascript#16553](https://github.com/getsentry/sentry-javascript/pull/16553) · [vercel/ai#6292](https://github.com/vercel/ai/pull/6292)
 <!-- oss:end -->
 
 ## Produtos
+
+- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): roteamento de modelo por custo. Manda cada subtarefa pro modelo do tamanho certo, sem outra IA decidindo.
 
 - [Nexo](https://github.com/tiagovilasboas/obsidian-nexo) · [Nexo Graph](https://github.com/tiagovilasboas/obsidian-nexo-graph): tema e plugin de grafo para Obsidian. Da identidade visual à interação.
 
@@ -66,6 +70,6 @@ Também: [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-re
 - [Agentic AI with LangChain and LangGraph (IBM/Coursera)](https://www.coursera.org/account/accomplishments/verify/B27T6TUQO1NB), concluída em setembro de 2026.
 - [Security Hardening (Google/Coursera)](https://www.coursera.org/account/accomplishments/verify/MGL4PB651JCX), concluída em setembro de 2026.
 
-[LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas) · [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas)
 
 [![Buy me a coffee](assets/buy-me-a-coffee.svg)](https://buymeacoffee.com/nexoobsidian)
