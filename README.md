@@ -12,7 +12,7 @@ Na Cogna/Voomp, contribuo em múltiplas frentes e squads. Estruturo iniciativas 
 Atuo com tecnologia desde 2006. Hoje aplico Harness Engineering, Agentic AI e AppSec: arquitetura antes do código, agents com escopo, humano no loop e evidência que dá para reproduzir.
 
 **Impacto:**
-- **Knowledge Base + Harness Engineering na Voomp:** levei para o Git interno uma base de conhecimento de domínio com 217 fichas; 194 estão aptas a apoiar code reviews. No conjunto de seis casos históricos usado na validação, a ficha correspondente foi recuperada em 6 de 6 casos. [Leia o case](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako).
+- **[Knowledge Base + Harness Engineering na Voomp](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako):** levei para o Git interno uma base de conhecimento de domínio com 217 fichas; 194 estão aptas a apoiar code reviews. No conjunto de seis casos históricos usado na validação, a ficha correspondente foi recuperada em 6 de 6 casos.
 - [+10% de vendas no checkout no mês](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566), depois de achar por que a campanha quebrava na hora de pagar.
 - [Um contrato de observabilidade de frontend](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd) adotado pelos squads: o mesmo padrão de erro e de proteção de dado pessoal em cada front, com um guia aberto pra qualquer squad copiar ([sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path)).
 
