@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="44" viewBox="0 0 210 44" role="img" aria-labelledby="title">
+  <title id="title">Buy me a coffee</title>
+  <defs>
+    <linearGradient id="support" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#00ff41"/>
+      <stop offset="1" stop-color="#00e5a0"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="208" height="42" rx="21" fill="#0d1117" stroke="#00b32c" stroke-width="2"/>
+  <circle cx="23" cy="22" r="12" fill="url(#support)"/>
+  <path d="M19 17h9v7a4.5 4.5 0 0 1-9 0zM28 18h2a2 2 0 0 1 0 4h-2" fill="#07100a"/>
+  <text x="44" y="27" fill="#d8f7df" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700">Buy me a coffee</text>
+</svg>

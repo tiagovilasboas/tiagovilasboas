@@ -95,3 +95,5 @@ Em revisão: contribuições abertas em MCP, Sentry e vercel/ai.
 - [Security Hardening (Google/Coursera)](https://www.coursera.org/account/accomplishments/verify/MGL4PB651JCX), concluída em setembro de 2026.
 
 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas) · [tcarvalhovb@gmail.com](mailto:tcarvalhovb@gmail.com)
+
+[![Buy me a coffee](assets/buy-me-a-coffee.svg)](https://buymeacoffee.com/nexoobsidian)
