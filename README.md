@@ -45,7 +45,7 @@ Atuo com tecnologia desde 2006. Hoje aplico Harness Engineering, Agentic AI e Ap
 
 - [dev-to-mcp](https://github.com/tiagovilasboas/dev-to-mcp): servidor MCP em Go que conecta agentes de IA à API do DEV.to.
 
-Também: [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-review) · [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path) · [staff-impact-cases](https://github.com/tiagovilasboas/staff-impact-cases)
+Também: [ai-code-review](https://github.com/tiagovilasboas/ai-code-review) · [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path) · [staff-engineering-case-studies](https://github.com/tiagovilasboas/staff-engineering-case-studies)
 
 ## Mentorias e material de apoio
 
