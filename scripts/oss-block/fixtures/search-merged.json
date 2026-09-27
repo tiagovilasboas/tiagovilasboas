@@ -1,0 +1,78 @@
+{
+  "_note": "Search-API-shaped fixture. The first 5 items are a snapshot of the real merged PRs (2026-09-27); the example-org/own-repo items are synthetic noise that must not render.",
+  "incomplete_results": false,
+  "items": [
+    {
+      "repository_url": "https://api.github.com/repos/alecthomas/chroma",
+      "number": 1387,
+      "html_url": "https://github.com/alecthomas/chroma/pull/1387",
+      "title": "fix(lexers): recognize Go octal, binary and hex float literals",
+      "pull_request": {
+        "merged_at": "2026-09-25T11:46:51Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/nanostores/nanostores",
+      "number": 437,
+      "html_url": "https://github.com/nanostores/nanostores/pull/437",
+      "title": "fix(listen-keys): fire for deep keys changed through a parent key",
+      "pull_request": {
+        "merged_at": "2026-09-25T06:47:41Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/NodeSecure/js-x-ray",
+      "number": 723,
+      "html_url": "https://github.com/NodeSecure/js-x-ray/pull/723",
+      "title": "fix(js-x-ray): resolve template literal dynamic import specifiers",
+      "pull_request": {
+        "merged_at": "2026-09-25T14:31:57Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/punkpeye/fastmcp",
+      "number": 392,
+      "html_url": "https://github.com/punkpeye/fastmcp/pull/392",
+      "title": "fix: keep record value schemas in advertised tool inputs",
+      "pull_request": {
+        "merged_at": "2026-09-25T13:16:14Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/openai/openai-agents-python",
+      "number": 4961,
+      "html_url": "https://github.com/openai/openai-agents-python/pull/4961",
+      "title": "fix(sessions): do not forward session limit as Conversations page size",
+      "pull_request": {
+        "merged_at": "2026-09-14T00:24:18Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/tiagovilasboas/harness-downshift",
+      "number": 1,
+      "html_url": "https://github.com/tiagovilasboas/harness-downshift/pull/1",
+      "title": "synthetic: own repo, must be excluded",
+      "pull_request": {
+        "merged_at": "2026-09-26T19:00:00Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/example-org/unmerged",
+      "number": 2,
+      "html_url": "https://github.com/example-org/unmerged/pull/2",
+      "title": "synthetic: closed without merge, must be excluded",
+      "pull_request": {
+        "merged_at": null
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/example-org/older",
+      "number": 3,
+      "html_url": "https://github.com/example-org/older/pull/3",
+      "title": "synthetic: sixth merged PR, cut by the limit of 5",
+      "pull_request": {
+        "merged_at": "2026-01-01T00:00:00Z"
+      }
+    }
+  ]
+}

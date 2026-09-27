@@ -1,0 +1,22 @@
+{
+  "punkpeye/fastmcp#392": {
+    "short": "ferramentas com pares de chave e valor anunciadas do jeito certo",
+    "long": "servidores MCP feitos com a biblioteca passam a anunciar do jeito certo as ferramentas que recebem pares de chave e valor."
+  },
+  "NodeSecure/js-x-ray#723": {
+    "short": "importações com crase não escapam mais do alerta",
+    "long": "o scanner de segurança de pacotes npm passa a pegar importações escritas com crase, que antes escapavam do alerta."
+  },
+  "nanostores/nanostores#437": {
+    "short": "aviso certo quando um campo aninhado muda",
+    "long": "apps que observam um campo dentro de um estado aninhado passam a ser avisados quando esse campo muda de verdade."
+  },
+  "alecthomas/chroma#1387": {
+    "short": "números do Go moderno coloridos do jeito certo",
+    "long": "o colorizador de código passa a mostrar certo os números do Go moderno, como `0o644`."
+  },
+  "openai/openai-agents-python#4961": {
+    "short": "histórico longo de conversa sem erro",
+    "long": "sessões de agente com histórico longo deixam de dar erro ao buscar as mensagens com limite de itens."
+  }
+}

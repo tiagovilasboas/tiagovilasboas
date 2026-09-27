@@ -1,0 +1,93 @@
+name: Update OSS block
+
+on:
+  schedule:
+    - cron: "37 7 * * *" # daily, 07:37 UTC
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/oss-block/**
+      - .github/workflows/**
+
+permissions: {}
+
+jobs:
+  # Pull requests: offline only. Unit tests, render against the versioned fixture,
+  # and actionlint. No GitHub API calls and no diff against the live README.
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    concurrency:
+      group: oss-block-check-${{ github.ref }}
+      cancel-in-progress: true
+    env:
+      ACTIONLINT_VERSION: 1.7.12
+      ACTIONLINT_SHA256: 8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - name: Unit tests + fixture render
+        run: node --version && node --test scripts/oss-block/oss-block.test.mjs
+      - name: actionlint (pinned binary, checksum verified)
+        run: |
+          archive="actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz"
+          curl -fsSLo "$RUNNER_TEMP/$archive" "https://github.com/rhysd/actionlint/releases/download/v${ACTIONLINT_VERSION}/$archive"
+          echo "${ACTIONLINT_SHA256}  $RUNNER_TEMP/$archive" | sha256sum -c -
+          tar -xzf "$RUNNER_TEMP/$archive" -C "$RUNNER_TEMP" actionlint
+          "$RUNNER_TEMP/actionlint" -version
+          "$RUNNER_TEMP/actionlint" -color
+
+  # Schedule / manual run: regenerate from live data. Only the default branch is
+  # written and committed; on any other ref the diff is printed and nothing is written.
+  update:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    concurrency:
+      group: oss-block-update
+      cancel-in-progress: false
+    env:
+      WRITE: ${{ (github.event_name == 'schedule' || github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) && 'true' || 'false' }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - name: Unit tests + fixture render
+        run: node --version && node --test scripts/oss-block/oss-block.test.mjs
+      - name: Regenerate README block (diff in log and step summary)
+        env:
+          GH_TOKEN: ${{ github.token }} # public search API only
+          OSS_USER: ${{ github.repository_owner }}
+        run: |
+          if [ "$WRITE" = true ]; then
+            node scripts/oss-block/update.mjs README.md
+          else
+            node scripts/oss-block/update.mjs README.md --dry-run
+          fi
+      - name: Commit if changed (signed by GitHub as github-actions[bot])
+        if: env.WRITE == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README unchanged; nothing to commit"
+            exit 0
+          fi
+          jq -n \
+            --arg repo "$GITHUB_REPOSITORY" \
+            --arg branch "$GITHUB_REF_NAME" \
+            --arg head "$(git rev-parse HEAD)" \
+            --arg contents "$(base64 -w0 README.md)" \
+            '{query: "mutation($input: CreateCommitOnBranchInput!) { createCommitOnBranch(input: $input) { commit { url } } }",
+              variables: {input: {
+                branch: {repositoryNameWithOwner: $repo, branchName: $branch},
+                expectedHeadOid: $head,
+                message: {headline: "docs(profile): refresh open source block"},
+                fileChanges: {additions: [{path: "README.md", contents: $contents}]}}}}' \
+            | gh api graphql --input - --jq '.data.createCommitOnBranch.commit.url'
