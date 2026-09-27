@@ -70,4 +70,4 @@ Também: [agentic-code-review](https://github.com/tiagovilasboas/agentic-code-re
 
 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas)
 
-[![Buy me a coffee](assets/buy-me-a-coffee.svg)](https://buymeacoffee.com/nexoobsidian)
+[![Buy me a coffee](assets/buy-me-a-coffee.svg)](https://buymeacoffee.com/tiagovilasboas)
