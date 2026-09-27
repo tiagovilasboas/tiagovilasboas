@@ -33,8 +33,6 @@ Atuo com tecnologia desde 2006. Hoje aplico Harness Engineering, Agentic AI e Ap
 - [nanostores/nanostores#437](https://github.com/nanostores/nanostores/pull/437): apps que observam um campo dentro de um estado aninhado passam a ser avisados quando esse campo muda de verdade.
 - [alecthomas/chroma#1387](https://github.com/alecthomas/chroma/pull/1387): o colorizador de código passa a mostrar certo os números do Go moderno, como `0o644`.
 - [openai/openai-agents-python#4961](https://github.com/openai/openai-agents-python/pull/4961): sessões de agente com histórico longo deixam de dar erro ao buscar as mensagens com limite de itens.
-
-Em revisão: [punkpeye/fastmcp#405](https://github.com/punkpeye/fastmcp/pull/405) · [getsentry/sentry-javascript#16553](https://github.com/getsentry/sentry-javascript/pull/16553) · [vercel/ai#6292](https://github.com/vercel/ai/pull/6292)
 <!-- oss:end -->
 
 ## Produtos
