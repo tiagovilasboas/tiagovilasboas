@@ -38,7 +38,7 @@ Atuo com tecnologia desde 2006. Hoje aplico Harness Engineering, Agentic AI e Ap
 
 ## Produtos
 
-- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): roteamento de modelo por custo. Manda cada subtarefa pro modelo do tamanho certo, sem outra IA decidindo.
+- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): roteamento de modelo por custo. Manda cada subtarefa pro modelo do tamanho certo, sem outra IA decidindo. A escolha do modelo e do effort está em [model routing](https://dev.to/tiagovilasboas/model-routing-para-software-engineers-como-escolher-o-llm-certo-dentro-de-cada-harness-o5g) e [effort](https://dev.to/tiagovilasboas/o-effort-da-tarefa-quando-pensar-demais-vira-stage-3-na-fatura-do-agente-1h3d).
 
 - [Nexo](https://github.com/tiagovilasboas/obsidian-nexo) · [Nexo Graph](https://github.com/tiagovilasboas/obsidian-nexo-graph): tema e plugin de grafo para Obsidian. Da identidade visual à interação.
 
@@ -56,6 +56,8 @@ Também: [ai-code-review](https://github.com/tiagovilasboas/ai-code-review) · [
 
 ## Artigos em destaque
 
+- [Model Routing para Software Engineers: como escolher o LLM certo dentro de cada harness](https://dev.to/tiagovilasboas/model-routing-para-software-engineers-como-escolher-o-llm-certo-dentro-de-cada-harness-o5g): qual modelo entra em cada tarefa, antes de a fatura chegar.
+- [O effort da tarefa: quando pensar demais vira stage 3 na fatura do agente](https://dev.to/tiagovilasboas/o-effort-da-tarefa-quando-pensar-demais-vira-stage-3-na-fatura-do-agente-1h3d): quanto esse modelo pode pensar. O segundo knob, depois do routing.
 - [+10% de vendas no checkout no mês. A campanha quebrava na hora de pagar](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566): performance ligada ao resultado, não ao bundle isolado.
 - [Observabilidade no frontend: o HTTP 200 esconde centenas de catch vazios](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd): falhas silenciosas no frontend e um caminho de instrumentação.
 - [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77): evidência, falso-positivo e autorização antes de abrir uma issue.
