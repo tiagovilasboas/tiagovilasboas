@@ -70,6 +70,7 @@ Também: [ai-code-review](https://github.com/tiagovilasboas/ai-code-review) · [
 - Cursando **Graduação em Defesa Cibernética na Faculdade Impacta**.
 - [Agentic AI with LangChain and LangGraph (IBM/Coursera)](https://www.coursera.org/account/accomplishments/verify/B27T6TUQO1NB), concluída em setembro de 2026.
 - [Security Hardening (Google/Coursera)](https://www.coursera.org/account/accomplishments/verify/MGL4PB651JCX), concluída em setembro de 2026.
+- [Claude Code: Software Engineering with Generative AI Agents (Vanderbilt/Coursera)](https://www.coursera.org/account/accomplishments/verify/9EA34R2T1S8S), concluída em setembro de 2026.
 
 [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/) · [DEV.to](https://dev.to/tiagovilasboas)
 
