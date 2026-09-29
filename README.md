@@ -58,6 +58,7 @@ Também: [ai-code-review](https://github.com/tiagovilasboas/ai-code-review) · [
 
 ## Artigos em destaque
 
+- [Antigravity Operator: Helping AI Coding Agents Stay on Track](https://dev.to/tiagovilasboas/antigravity-operator-helping-ai-coding-agents-stay-on-track-216n): memória de sessão, dashboard local e Chrome isolado pros agentes não perderem o fio.
 - [Harness Engineer: como um knowledge base (RAG) centralizado pode impactar positivamente sua empresa](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako): base central de conhecimento e fichas no code review.
 - [Model Routing para Software Engineers: como escolher o LLM certo dentro de cada harness](https://dev.to/tiagovilasboas/model-routing-para-software-engineers-como-escolher-o-llm-certo-dentro-de-cada-harness-o5g): qual modelo entra em cada tarefa, antes de a fatura chegar.
 - [+10% de vendas no checkout no mês. A campanha quebrava na hora de pagar](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566): performance ligada ao resultado, não ao bundle isolado.
