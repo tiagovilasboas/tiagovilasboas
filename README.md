@@ -38,6 +38,8 @@ Atuo com tecnologia desde 2006. Hoje aplico Harness Engineering, Agentic AI e Ap
 
 ## Produtos
 
+- [agyo – Antigravity Operator](https://github.com/tiagovilasboas/antigravity-operator): memória de sessão em disco, dashboard local e Chrome isolado pro Google Antigravity. Detalhes em [Antigravity Operator: Helping AI Coding Agents Stay on Track](https://dev.to/tiagovilasboas/antigravity-operator-helping-ai-coding-agents-stay-on-track-216n).
+
 - [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): roteamento de modelo por custo. Manda cada subtarefa pro modelo do tamanho certo, sem outra IA decidindo. A escolha do modelo e do effort está em [model routing](https://dev.to/tiagovilasboas/model-routing-para-software-engineers-como-escolher-o-llm-certo-dentro-de-cada-harness-o5g) e [effort](https://dev.to/tiagovilasboas/o-effort-da-tarefa-quando-pensar-demais-vira-stage-3-na-fatura-do-agente-1h3d).
 
 - [Nexo](https://github.com/tiagovilasboas/obsidian-nexo) · [Nexo Graph](https://github.com/tiagovilasboas/obsidian-nexo-graph): tema e plugin de grafo para Obsidian. Da identidade visual à interação.
