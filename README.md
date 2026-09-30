@@ -22,39 +22,12 @@ OSS: [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [openai-age
 
 ## Arquitetura, IA e engenharia
 
-- [ai-agent-evals](https://github.com/tiagovilasboas/ai-agent-evals): mede se um agente de IA fez mesmo o trabalho ou só disse que fez. Pega os casos de "falso ok", como o agente dar a tarefa por concluída enquanto uma senha vazou num e-mail que ele mesmo enviou.
-
-  Comando: `./scripts/score.sh false-green`
-
-- [ai-code-review](https://github.com/tiagovilasboas/ai-code-review): revisão automática de código que aponta o arquivo, a linha e o tipo de falha de segurança. Não usa IA na decisão, então o resultado é sempre o mesmo.
-
-  Comando: `npm run review -- examples/sample-pr.diff`
-
-- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): corta o gasto com IA no código mandando cada subtarefa para o modelo do tamanho certo, o barato para o trabalho simples e o mais caro só para o difícil. A escolha segue regras fixas, sem outra IA decidindo, e o projeto ainda está em beta.
-
-  Comando: `downshift try "rename the userId variable" claude-code`
-
-- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): modelo pronto pra monitorar erros com o Sentry do jeito certo. Os testes falham se alguém tirar a proteção de dados pessoais ou quebrar a configuração.
-
-  Comando: `npm test`
-
-- [grok-bot-architecture](https://github.com/tiagovilasboas/grok-bot-architecture): como montei uma equipe de assistentes de IA que trabalham juntos, com aprovação humana nas ações de risco. As decisões estão documentadas, e um script confere se a troca de tarefas e os pedidos de aprovação seguem as regras.
-
-  Comando: `node scripts/validate-all.mjs`
-
-- [dev-to-mcp](https://github.com/tiagovilasboas/dev-to-mcp): servidor MCP em Go que deixa agentes de IA lerem e publicarem no DEV.to, num binário só.
-
-  Comando: `go build -o dist/dev-to-mcp .`
-
-- [staff-engineering-case-studies](https://github.com/tiagovilasboas/staff-engineering-case-studies): casos reais e anonimizados do meu trabalho como Staff, avaliados por impacto, profundidade, escopo e decisão. São histórias, não código.
-
-  Comando: `python3 scripts/check-case-headings.py`
-
-- [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): ponto de partida pra apps React bem organizados, com camadas separadas, tipagem estrita, testes e CI.
-
-  Comando: `npm test`
-
-- [Frontend Architecture Playbook](https://frontend-architecture-playbook-eight.vercel.app): guia que uso em mentorias pra discutir decisões e trade-offs de arquitetura front-end, a partir de situações reais da minha trajetória.
+- [ai-agent-evals](https://github.com/tiagovilasboas/ai-agent-evals): confere se agentes de IA fazem o que dizem e pega vazamentos que passariam batido.
+- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): manda cada subtarefa ao modelo do tamanho certo e corta o gasto com IA (beta).
+- [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): configuração pronta do Sentry para front-end, com testes que barram vazamento de dados pessoais.
+- [dev-to-mcp](https://github.com/tiagovilasboas/dev-to-mcp): servidor MCP em Go que deixa agentes de IA lerem e publicarem no DEV.to.
+- [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): base de projeto React com camadas separadas, tipagem estrita, testes e CI já prontos.
+- [staff-engineering-case-studies](https://github.com/tiagovilasboas/staff-engineering-case-studies): casos reais e anonimizados do meu trabalho como Staff: problema, decisão, evidência e resultado.
 
 ## Artigos em destaque
 
