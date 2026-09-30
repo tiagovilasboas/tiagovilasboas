@@ -11,7 +11,7 @@ import { lineDiff, pickMerged, render, replaceBlock } from './oss-block.mjs'
 const [file = 'README.md', ...flags] = process.argv.slice(2)
 const dryRun = flags.includes('--dry-run')
 const user = process.env.OSS_USER
-const limit = Number(process.env.OSS_LIMIT ?? 5)
+const limit = Number(process.env.OSS_LIMIT ?? 7)
 if (!user) throw new Error('OSS_USER is required')
 
 async function searchMerged() {
