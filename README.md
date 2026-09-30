@@ -18,7 +18,7 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
 ## Open source
 
 <!-- oss:start -->
-OSS: [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [nanostores](https://github.com/nanostores/nanostores/pull/437) · [fastmcp](https://github.com/punkpeye/fastmcp/pull/392)
+OSS: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [nanostores](https://github.com/nanostores/nanostores/pull/437) · [chroma](https://github.com/alecthomas/chroma/pull/1387) · [fastmcp](https://github.com/punkpeye/fastmcp/pull/392) · [pipefy](https://github.com/pipefy/ai-toolkit/pull/716)
 <!-- oss:end -->
 
 ## Arquitetura, IA e engenharia
