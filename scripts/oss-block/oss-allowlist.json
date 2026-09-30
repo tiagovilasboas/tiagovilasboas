@@ -1,0 +1,8 @@
+{
+  "repos": [
+    "web-infra-dev/rspack",
+    "openai/openai-agents-python",
+    "nanostores/nanostores",
+    "punkpeye/fastmcp"
+  ]
+}
