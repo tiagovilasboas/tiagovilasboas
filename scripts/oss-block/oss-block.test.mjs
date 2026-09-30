@@ -77,7 +77,7 @@ test('every rendered fixture entry has a curated blurb', () => {
 
 const cli = (readme, ...flags) => spawnSync(process.execPath, [here('./update.mjs'), readme, ...flags], {
   encoding: 'utf8',
-  env: { PATH: process.env.PATH, OSS_USER: 'tiagovilasboas', OSS_FIXTURE: FIXTURE },
+  env: { PATH: process.env.PATH, OSS_USER: 'tiagovilasboas', OSS_FIXTURE: FIXTURE, OSS_LIMIT: '5' },
 })
 
 test('CLI (fixture): dry run prints the diff and never writes; write is idempotent', () => {

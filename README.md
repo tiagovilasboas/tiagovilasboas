@@ -22,16 +22,20 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
 <a href="https://github.com/web-infra-dev/rspress/pull/3710" title="web-infra-dev/rspress#3710: Enter com a busca fechada não dá mais erro"><img src="https://github.com/web-infra-dev.png?size=80" width="40" height="40" alt="web-infra-dev/rspress"></a>&nbsp;
 <a href="https://github.com/NodeSecure/js-x-ray/pull/723" title="NodeSecure/js-x-ray#723: importações com crase não escapam mais do alerta"><img src="https://github.com/NodeSecure.png?size=80" width="40" height="40" alt="NodeSecure/js-x-ray"></a>&nbsp;
 <a href="https://github.com/punkpeye/fastmcp/pull/392" title="punkpeye/fastmcp#392: ferramentas com pares de chave e valor anunciadas do jeito certo"><img src="https://github.com/punkpeye.png?size=80" width="40" height="40" alt="punkpeye/fastmcp"></a>&nbsp;
-<a href="https://github.com/alecthomas/chroma/pull/1387" title="alecthomas/chroma#1387: números do Go moderno coloridos do jeito certo"><img src="https://github.com/alecthomas.png?size=80" width="40" height="40" alt="alecthomas/chroma"></a>
+<a href="https://github.com/alecthomas/chroma/pull/1387" title="alecthomas/chroma#1387: números do Go moderno coloridos do jeito certo"><img src="https://github.com/alecthomas.png?size=80" width="40" height="40" alt="alecthomas/chroma"></a>&nbsp;
+<a href="https://github.com/nanostores/nanostores/pull/437" title="nanostores/nanostores#437: aviso certo quando um campo aninhado muda"><img src="https://github.com/nanostores.png?size=80" width="40" height="40" alt="nanostores/nanostores"></a>&nbsp;
+<a href="https://github.com/openai/openai-agents-python/pull/4961" title="openai/openai-agents-python#4961: histórico longo de conversa sem erro"><img src="https://github.com/openai.png?size=80" width="40" height="40" alt="openai/openai-agents-python"></a>
 </p>
 
-<sub>rspack · rspress · js-x-ray · fastmcp · chroma</sub>
+<sub>rspack · rspress · js-x-ray · fastmcp · chroma · nanostores · openai-agents-python</sub>
 
 - [web-infra-dev/rspack#15900](https://github.com/web-infra-dev/rspack/pull/15900): o bundler deixa de alterar as opções do loader de CSS que o usuário passou, e o build não quebra mais quando um plugin cria um segundo compilador, como o html-webpack-plugin.
 - [web-infra-dev/rspress#3710](https://github.com/web-infra-dev/rspress/pull/3710): sites de documentação feitos com o framework deixam de dar erro na página quando alguém aperta Enter com a busca fechada.
 - [NodeSecure/js-x-ray#723](https://github.com/NodeSecure/js-x-ray/pull/723): o scanner de segurança de pacotes npm passa a pegar importações escritas com crase, que antes escapavam do alerta.
 - [punkpeye/fastmcp#392](https://github.com/punkpeye/fastmcp/pull/392): servidores MCP feitos com a biblioteca passam a anunciar do jeito certo as ferramentas que recebem pares de chave e valor.
 - [alecthomas/chroma#1387](https://github.com/alecthomas/chroma/pull/1387): o colorizador de código passa a mostrar certo os números do Go moderno, como `0o644`.
+- [nanostores/nanostores#437](https://github.com/nanostores/nanostores/pull/437): apps que observam um campo dentro de um estado aninhado passam a ser avisados quando esse campo muda de verdade.
+- [openai/openai-agents-python#4961](https://github.com/openai/openai-agents-python/pull/4961): sessões de agente com histórico longo deixam de dar erro ao buscar as mensagens com limite de itens.
 <!-- oss:end -->
 
 ## Arquitetura, IA e engenharia
@@ -72,10 +76,10 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
 
 ## Artigos em destaque
 
-- [Harness Engineering: uma fonte de verdade entre Cursor, Kiro, Codex e seus agentes](https://dev.to/tiagovilasboas/harness-engineering-uma-fonte-de-verdade-entre-cursor-kiro-codex-e-seus-agentes-4ji5): um repositório Git central com symlinks pra manter as mesmas regras e skills em todas as ferramentas de IA.
-- [Antigravity Operator: Helping AI Coding Agents Stay on Track](https://dev.to/tiagovilasboas/antigravity-operator-helping-ai-coding-agents-stay-on-track-216n): memória de sessão, dashboard local e Chrome isolado pros agentes não perderem o fio.
+- [Claude Code, Copilot e Cursor na empresa: um padrão por fluxo](https://dev.to/tiagovilasboas/claude-code-copilot-e-cursor-na-empresa-um-padrao-por-fluxo-571i): um agente padrão por fluxo, com políticas e evals comuns, a partir de cases públicos de outras empresas.
 - [Harness Engineer: como um knowledge base (RAG) centralizado pode impactar positivamente sua empresa](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako): a base de conhecimento que o agente consulta antes de comentar o PR.
-- [Mesmo com GraphRAG, o agent se perde sem contrato de memória](https://dev.to/tiagovilasboas/mesmo-com-graphrag-o-agent-se-perde-sem-contrato-de-memoria-hc8): o contrato do que o agente pode lembrar e por onde ele entra, porque sem isso o índice só erra mais rápido.
+- [O effort da tarefa: quando pensar demais vira stage 3 na fatura do agente](https://dev.to/tiagovilasboas/o-effort-da-tarefa-quando-pensar-demais-vira-stage-3-na-fatura-do-agente-1h3d): quanto o agente deve pensar em cada tarefa, antes que o raciocínio extra vire custo sem ganho.
+- [Antigravity Operator: Helping AI Coding Agents Stay on Track](https://dev.to/tiagovilasboas/antigravity-operator-helping-ai-coding-agents-stay-on-track-216n): memória de sessão, dashboard local e Chrome isolado pros agentes não perderem o fio.
 - [+10% de vendas no checkout no mês. A campanha quebrava na hora de pagar](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566): performance ligada ao resultado, não ao bundle isolado.
 - [Observabilidade no frontend: o BFF respondia 200, mas o clique falhava](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd): falhas silenciosas no frontend e um caminho de instrumentação.
 - [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77): evidência, falso-positivo e autorização antes de abrir uma issue.
