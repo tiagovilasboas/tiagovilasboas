@@ -22,12 +22,10 @@ OSS: [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [openai-age
 
 ## Arquitetura, IA e engenharia
 
-- [ai-agent-evals](https://github.com/tiagovilasboas/ai-agent-evals): confere se agentes de IA fazem o que dizem e pega vazamentos que passariam batido.
 - [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): manda cada subtarefa ao modelo do tamanho certo e corta o gasto com IA (beta).
 - [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): configuração pronta do Sentry para front-end, com testes que barram vazamento de dados pessoais.
 - [dev-to-mcp](https://github.com/tiagovilasboas/dev-to-mcp): servidor MCP em Go que deixa agentes de IA lerem e publicarem no DEV.to.
 - [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): base de projeto React com camadas separadas, tipagem estrita, testes e CI já prontos.
-- [staff-engineering-case-studies](https://github.com/tiagovilasboas/staff-engineering-case-studies): casos reais e anonimizados do meu trabalho como Staff: problema, decisão, evidência e resultado.
 
 ## Artigos em destaque
 
