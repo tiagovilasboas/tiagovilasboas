@@ -31,13 +31,13 @@ OSS: [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [openai-age
 
 ## Artigos em destaque
 
-- [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77): contrato de hunt com requisito ASVS e denominador; virou issues públicas de hardening em Formbricks, Dub e Cal.com, e silêncio onde o controle segurava.
-- [+10% de vendas no checkout no mês. A campanha quebrava na hora de pagar](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566): bundle, SSR e CDN ligados ao número de vendas do backoffice, não ao Lighthouse.
-- [Observabilidade no frontend: o BFF respondia 200, mas o clique falhava](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd): um contrato de Sentry em quatro frontends (domínio, dedup, máscara de PII, sample), com o kit aberto no [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path).
-- [Harness Engineer: como um knowledge base (RAG) centralizado pode impactar positivamente sua empresa](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako): a base de regras que o agente consulta antes de comentar o PR, com um AGENTS.md pronto pra copiar.
-- [Antigravity Operator: Helping AI Coding Agents Stay on Track](https://dev.to/tiagovilasboas/antigravity-operator-helping-ai-coding-agents-stay-on-track-216n): meu primeiro projeto open source, em Go (v0.4.1): estado de sessão, dashboard local e os limites de segurança declarados.
-- [Claude Code, Copilot e Cursor na empresa: um padrão por fluxo](https://dev.to/tiagovilasboas/claude-code-copilot-e-cursor-na-empresa-um-padrao-por-fluxo-571i): um agente padrão por fluxo, com políticas e evals comuns, apoiado em cases e pesquisas públicas com fonte.
-- [O effort da tarefa: quando pensar demais vira stage 3 na fatura do agente](https://dev.to/tiagovilasboas/o-effort-da-tarefa-quando-pensar-demais-vira-stage-3-na-fatura-do-agente-1h3d): quanto raciocínio dar ao agente por classe de tarefa, com a documentação oficial de cada provedor e a heurística do [harness-downshift](https://github.com/tiagovilasboas/harness-downshift).
+- [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
+- [+10% de vendas no checkout no mês. A campanha quebrava na hora de pagar](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566)
+- [Observabilidade no frontend: o BFF respondia 200, mas o clique falhava](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd)
+- [Harness Engineer: como um knowledge base (RAG) centralizado pode impactar positivamente sua empresa](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako)
+- [Antigravity Operator: Helping AI Coding Agents Stay on Track](https://dev.to/tiagovilasboas/antigravity-operator-helping-ai-coding-agents-stay-on-track-216n)
+- [Claude Code, Copilot e Cursor na empresa: um padrão por fluxo](https://dev.to/tiagovilasboas/claude-code-copilot-e-cursor-na-empresa-um-padrao-por-fluxo-571i)
+- [O effort da tarefa: quando pensar demais vira stage 3 na fatura do agente](https://dev.to/tiagovilasboas/o-effort-da-tarefa-quando-pensar-demais-vira-stage-3-na-fatura-do-agente-1h3d)
 
 [Ver todos os artigos no DEV.to](https://dev.to/tiagovilasboas)
 
