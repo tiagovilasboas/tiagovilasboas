@@ -46,17 +46,32 @@ test('one PR per repo: the most recently merged; order follows the allowlist, ca
   assert.deepEqual(keys(got), ['b/y#3', 'A/X#2'])
 })
 
-test('ceiling: at most 4 items; OSS_LIMIT can lower it but never raise it', () => {
-  const five = ['a/a', 'b/b', 'c/c', 'd/d', 'e/e']
-  assert.throws(() => parseAllowlist({ repos: five }), /at most 4/)
+test('ceiling: at most 6 items; OSS_LIMIT can lower it but never raise it', () => {
+  const seven = ['a/a', 'b/b', 'c/c', 'd/d', 'e/e', 'f/f', 'g/g']
+  assert.throws(() => parseAllowlist({ repos: seven }), /at most 6/)
   assert.throws(() => parseAllowlist({ repos: ['a/a', 'A/a'] }), /duplicate/)
+  assert.throws(() => parseAllowlist({ repos: ['a/a', { repo: 'A/A', label: 'x' }] }), /duplicate/)
   assert.throws(() => parseAllowlist({ repos: ['not-a-repo'] }), /owner\/name/)
-  const items = five.map((r, i) => item(r, i + 1, `2026-09-1${i}T00:00:00Z`))
-  assert.equal(MAX_ITEMS, 4)
-  assert.equal(pickMerged(items, 'me', five).length, 4)
-  assert.equal(pickMerged(items, 'me', five, 99).length, 4)
-  assert.equal(pickMerged(items, 'me', five, 2).length, 2)
+  const items = seven.map((r, i) => item(r, i + 1, `2026-09-1${i}T00:00:00Z`))
+  assert.equal(MAX_ITEMS, 6)
+  assert.equal(pickMerged(items, 'me', seven).length, 6)
+  assert.equal(pickMerged(items, 'me', seven, 99).length, 6)
+  assert.equal(pickMerged(items, 'me', seven, 2).length, 2)
   assert.ok(ALLOWLIST.length <= MAX_ITEMS)
+})
+
+test('optional curated label replaces the repo name in the link text and is escaped', () => {
+  assert.deepEqual(parseAllowlist({ repos: ['a/x', { repo: 'b/y', label: 'why' }] }), [{ repo: 'a/x' }, { repo: 'b/y', label: 'why' }])
+  assert.throws(() => parseAllowlist({ repos: [{ repo: 'b/y', label: '  ' }] }), /owner\/name/)
+  assert.throws(() => parseAllowlist({ repos: [{ repo: 'b/y', label: 7 }] }), /owner\/name/)
+  assert.throws(() => parseAllowlist({ repos: [{ label: 'no repo' }] }), /owner\/name/)
+  const merged = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z'), item('b/y', 2, '2026-09-11T00:00:00Z')], 'me', ['a/x', { repo: 'b/y', label: '<img src=x onerror=alert(1)> "q" & [x]' }])
+  assert.equal(render(merged), 'OSS: [x](https://github.com/a/x/pull/1) · [&lt;img src=x onerror=alert(1)&gt; &quot;q&quot; &amp; \\[x\\]](https://github.com/b/y/pull/2)')
+})
+
+test('live allowlist: pipefy/ai-toolkit shows as "pipefy"; order follows the allowlist', () => {
+  assert.deepEqual(ALLOWLIST.map((c) => c.repo), ['openai/openai-agents-python', 'web-infra-dev/rspack', 'nanostores/nanostores', 'alecthomas/chroma', 'punkpeye/fastmcp', 'pipefy/ai-toolkit'])
+  assert.equal(ALLOWLIST.find((c) => c.repo === 'pipefy/ai-toolkit').label, 'pipefy')
 })
 
 test('repo names and URLs with special characters are escaped and cannot break the link', () => {
@@ -115,7 +130,7 @@ test('CLI (fixture): OSS_LIMIT lowers the ceiling', () => {
   writeFileSync(readme, `${START}\n${END}\n`)
   const r = cli(readme, { OSS_LIMIT: '2' })
   assert.equal(r.status, 0, r.stderr)
-  assert.equal(readFileSync(readme, 'utf8'), `${START}\nOSS: [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961)\n${END}\n`)
+  assert.equal(readFileSync(readme, 'utf8'), `${START}\nOSS: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900)\n${END}\n`)
 })
 
 test('lineDiff shows a pure reordering as moved lines only', () => {

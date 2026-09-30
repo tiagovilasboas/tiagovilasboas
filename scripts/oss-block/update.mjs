@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Regenerates the <!-- oss:start --> ... <!-- oss:end --> block of the profile README
 // as one line of links to the user's merged PRs in the curated repos of oss-allowlist.json
-// (GitHub search API; latest merged PR per repo; OSS_LIMIT can lower the ceiling of 4).
+// (GitHub search API; latest merged PR per repo; OSS_LIMIT can lower the ceiling of 6).
 //   OSS_USER=<login> GH_TOKEN=<token> node scripts/oss-block/update.mjs README.md            # write if changed
 //   OSS_USER=<login> GH_TOKEN=<token> node scripts/oss-block/update.mjs README.md --dry-run  # print diff, never write
 // OSS_FIXTURE=<file> reads a search-shaped JSON instead of calling the API (tests, no network).
@@ -12,7 +12,7 @@ import { lineDiff, parseAllowlist, pickMerged, render, replaceBlock } from './os
 const [file = 'README.md', ...flags] = process.argv.slice(2)
 const dryRun = flags.includes('--dry-run')
 const user = process.env.OSS_USER
-const limit = Number(process.env.OSS_LIMIT ?? 4)
+const limit = Number(process.env.OSS_LIMIT ?? 6)
 if (!user) throw new Error('OSS_USER is required')
 
 async function searchMerged() {

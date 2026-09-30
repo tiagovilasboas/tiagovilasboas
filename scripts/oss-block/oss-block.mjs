@@ -23,15 +23,26 @@ export function byMergedDesc(a, b) {
 }
 
 /** Hard ceiling of items in the OSS line (the allowlist and OSS_LIMIT can only lower it). */
-export const MAX_ITEMS = 4
+export const MAX_ITEMS = 6
 
-/** Validate the curated allowlist: array of "owner/name", no duplicates, at most MAX_ITEMS. */
+const REPO_RE = /^[^/\s]+\/[^/\s]+$/
+
+/** One allowlist entry: "owner/name" or { "repo": "owner/name", "label": "shown text" } -> { repo, label? }. */
+function toCurated(x) {
+  const c = typeof x === 'string' ? { repo: x } : x
+  if (!c || typeof c.repo !== 'string' || !REPO_RE.test(c.repo)) return null
+  if (c.label !== undefined && (typeof c.label !== 'string' || !c.label.trim())) return null
+  return c.label === undefined ? { repo: c.repo } : { repo: c.repo, label: c.label }
+}
+
+/** Validate the curated allowlist: "owner/name" strings or { repo, label } objects, no duplicates, at most MAX_ITEMS. */
 export function parseAllowlist(json) {
-  const repos = json?.repos
-  if (!Array.isArray(repos) || repos.some((r) => typeof r !== 'string' || !/^[^/\s]+\/[^/\s]+$/.test(r))) {
-    throw new Error('oss-allowlist.json: "repos" must be an array of "owner/name"')
+  const raw = json?.repos
+  const repos = Array.isArray(raw) ? raw.map(toCurated) : null
+  if (!repos || repos.includes(null)) {
+    throw new Error('oss-allowlist.json: "repos" must be an array of "owner/name" or { "repo": "owner/name", "label": "text" }')
   }
-  if (new Set(repos.map((r) => r.toLowerCase())).size !== repos.length) throw new Error('oss-allowlist.json: duplicate repo')
+  if (new Set(repos.map((r) => r.repo.toLowerCase())).size !== repos.length) throw new Error('oss-allowlist.json: duplicate repo')
   if (repos.length > MAX_ITEMS) throw new Error(`oss-allowlist.json: at most ${MAX_ITEMS} repos, got ${repos.length}`)
   return repos
 }
@@ -40,9 +51,11 @@ export function parseAllowlist(json) {
  * Merged PRs in curated repos only. One PR per repo: the most recently merged one.
  * Order follows the allowlist; curated repos without a merged PR are omitted;
  * the user's own repos never count. At most min(limit, MAX_ITEMS) items.
+ * An optional curated label replaces the repo name in the link text.
  */
 export function pickMerged(items, user, allowlist, limit = MAX_ITEMS) {
-  const rank = new Map(allowlist.map((r, i) => [r.toLowerCase(), i]))
+  const curated = allowlist.map((x) => (typeof x === 'string' ? { repo: x } : x))
+  const rank = new Map(curated.map((c, i) => [c.repo.toLowerCase(), i]))
   const cap = Math.max(0, Math.min(Number.isFinite(limit) ? limit : MAX_ITEMS, MAX_ITEMS))
   return items
     .map(toEntry)
@@ -51,6 +64,10 @@ export function pickMerged(items, user, allowlist, limit = MAX_ITEMS) {
     .filter((e, i, all) => all.findIndex((x) => x.repo.toLowerCase() === e.repo.toLowerCase()) === i)
     .sort((a, b) => rank.get(a.repo.toLowerCase()) - rank.get(b.repo.toLowerCase()))
     .slice(0, cap)
+    .map((e) => {
+      const { label } = curated[rank.get(e.repo.toLowerCase())]
+      return label === undefined ? e : { ...e, label }
+    })
 }
 
 /** Only https://github.com/ PR URLs; ( ) < > and whitespace are percent-encoded so the markdown link cannot break. */
@@ -62,7 +79,7 @@ export function safeUrl(url) {
 
 /** Block body (between the markers): one line, only merged PRs, e.g. `OSS: [rspack](pr) · [nanostores](pr)`. */
 export function render(merged) {
-  return `OSS: ${merged.map((e) => `[${escapeMarkdownText(e.name)}](${safeUrl(e.url)})`).join(' · ')}`
+  return `OSS: ${merged.map((e) => `[${escapeMarkdownText(e.label ?? e.name)}](${safeUrl(e.url)})`).join(' · ')}`
 }
 
 /** Replace only what sits between the markers. */
