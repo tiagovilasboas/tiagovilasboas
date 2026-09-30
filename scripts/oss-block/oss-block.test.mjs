@@ -6,7 +6,7 @@ import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { lineDiff, MAX_ITEMS, parseAllowlist, pickMerged, render, replaceBlock, START, END } from './oss-block.mjs'
+import { lineDiff, MAX_ITEMS, parseAllowlist, pickMerged, PREFIX, render, replaceBlock, START, END } from './oss-block.mjs'
 
 const here = (p) => fileURLToPath(new URL(p, import.meta.url))
 const FIXTURE = here('./fixtures/search-merged.json')
@@ -18,7 +18,7 @@ const keys = (entries) => entries.map((e) => `${e.repo}#${e.number}`)
 
 test('render is a single line of repo-name links, only merged PRs', () => {
   const out = render(pickMerged([item('a/x', 2, '2026-09-10T00:00:00Z'), item('b/y', 3, '2026-09-11T00:00:00Z')], 'me', ['a/x', 'b/y']))
-  assert.equal(out, 'OSS: [x](https://github.com/a/x/pull/2) · [y](https://github.com/b/y/pull/3)')
+  assert.equal(out, 'PRs mergeados em: [x](https://github.com/a/x/pull/2) · [y](https://github.com/b/y/pull/3)')
   assert.ok(!out.includes('\n'))
   assert.doesNotMatch(out, /Em revisão|revis[aã]o|in review/i)
 })
@@ -66,7 +66,7 @@ test('optional curated label replaces the repo name in the link text and is esca
   assert.throws(() => parseAllowlist({ repos: [{ repo: 'b/y', label: 7 }] }), /owner\/name/)
   assert.throws(() => parseAllowlist({ repos: [{ label: 'no repo' }] }), /owner\/name/)
   const merged = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z'), item('b/y', 2, '2026-09-11T00:00:00Z')], 'me', ['a/x', { repo: 'b/y', label: '<img src=x onerror=alert(1)> "q" & [x]' }])
-  assert.equal(render(merged), 'OSS: [x](https://github.com/a/x/pull/1) · [&lt;img src=x onerror=alert(1)&gt; &quot;q&quot; &amp; \\[x\\]](https://github.com/b/y/pull/2)')
+  assert.equal(render(merged), 'PRs mergeados em: [x](https://github.com/a/x/pull/1) · [&lt;img src=x onerror=alert(1)&gt; &quot;q&quot; &amp; \\[x\\]](https://github.com/b/y/pull/2)')
 })
 
 test('live allowlist: pipefy/ai-toolkit shows as "pipefy"; order follows the allowlist', () => {
@@ -77,9 +77,18 @@ test('live allowlist: pipefy/ai-toolkit shows as "pipefy"; order follows the all
 test('repo names and URLs with special characters are escaped and cannot break the link', () => {
   const evil = { repository_url: 'https://api.github.com/repos/o/<img src=x onerror=alert(1)>"&[x]', number: 1, html_url: 'https://github.com/o/r/pull/1) [pwn](https://evil', title: 't', pull_request: { merged_at: '2026-09-10T00:00:00Z' } }
   const out = render(pickMerged([evil], 'me', ['o/<img src=x onerror=alert(1)>"&[x]']))
-  assert.equal(out, 'OSS: [&lt;img src=x onerror=alert(1)&gt;&quot;&amp;\\[x\\]](https://github.com/o/r/pull/1%29%20[pwn]%28https://evil)')
+  assert.equal(out, 'PRs mergeados em: [&lt;img src=x onerror=alert(1)&gt;&quot;&amp;\\[x\\]](https://github.com/o/r/pull/1%29%20[pwn]%28https://evil)')
   assert.doesNotMatch(out, /<img/)
   assert.throws(() => render([{ name: 'x', url: 'javascript:alert(1)' }]), /unexpected PR URL/)
+})
+
+test('README: "## Contribuições" header sits right above the block, which is one "PRs mergeados em:" line', () => {
+  const readme = readFileSync(here('../../README.md'), 'utf8')
+  assert.equal(PREFIX, 'PRs mergeados em:')
+  assert.ok(readme.includes(`## Contribuições\n\n${START}\n${PREFIX} [`), 'header/prefix drifted')
+  const body = readme.slice(readme.indexOf(START) + START.length + 1, readme.indexOf(END) - 1)
+  assert.ok(!body.includes('\n'))
+  assert.doesNotMatch(readme, /^## Open source$/m)
 })
 
 test('replaceBlock only rewrites between markers and is idempotent', () => {
@@ -130,7 +139,7 @@ test('CLI (fixture): OSS_LIMIT lowers the ceiling', () => {
   writeFileSync(readme, `${START}\n${END}\n`)
   const r = cli(readme, { OSS_LIMIT: '2' })
   assert.equal(r.status, 0, r.stderr)
-  assert.equal(readFileSync(readme, 'utf8'), `${START}\nOSS: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900)\n${END}\n`)
+  assert.equal(readFileSync(readme, 'utf8'), `${START}\nPRs mergeados em: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900)\n${END}\n`)
 })
 
 test('lineDiff shows a pure reordering as moved lines only', () => {

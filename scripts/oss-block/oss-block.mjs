@@ -2,6 +2,8 @@
 // Tested in oss-block.test.mjs.
 export const START = '<!-- oss:start -->'
 export const END = '<!-- oss:end -->'
+/** Prefix of the rendered line (the section header lives outside the markers, in the README). */
+export const PREFIX = 'PRs mergeados em:'
 
 /** HTML-escape (& < > " ') for text and attribute values. */
 export const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
@@ -77,9 +79,9 @@ export function safeUrl(url) {
   return u.replace(/[()<>\s]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0')}`)
 }
 
-/** Block body (between the markers): one line, only merged PRs, e.g. `OSS: [rspack](pr) · [nanostores](pr)`. */
+/** Block body (between the markers): one line, only merged PRs, e.g. `PRs mergeados em: [rspack](pr) · [nanostores](pr)`. */
 export function render(merged) {
-  return `OSS: ${merged.map((e) => `[${escapeMarkdownText(e.label ?? e.name)}](${safeUrl(e.url)})`).join(' · ')}`
+  return `${PREFIX} ${merged.map((e) => `[${escapeMarkdownText(e.label ?? e.name)}](${safeUrl(e.url)})`).join(' · ')}`
 }
 
 /** Replace only what sits between the markers. */

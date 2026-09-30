@@ -15,10 +15,10 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
 - [+10% de vendas no checkout no mês](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566), depois de achar por que a campanha quebrava na hora de pagar.
 - [Um contrato de observabilidade de frontend](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd) adotado pelos squads: o mesmo padrão de erro e de proteção de dado pessoal em cada front, com um guia aberto pra qualquer squad copiar ([sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path)).
 
-## Open source
+## Contribuições
 
 <!-- oss:start -->
-OSS: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [nanostores](https://github.com/nanostores/nanostores/pull/437) · [chroma](https://github.com/alecthomas/chroma/pull/1387) · [fastmcp](https://github.com/punkpeye/fastmcp/pull/392) · [pipefy](https://github.com/pipefy/ai-toolkit/pull/716)
+PRs mergeados em: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [nanostores](https://github.com/nanostores/nanostores/pull/437) · [chroma](https://github.com/alecthomas/chroma/pull/1387) · [fastmcp](https://github.com/punkpeye/fastmcp/pull/392) · [pipefy](https://github.com/pipefy/ai-toolkit/pull/716)
 <!-- oss:end -->
 
 ## Arquitetura, IA e engenharia
