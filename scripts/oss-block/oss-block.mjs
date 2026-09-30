@@ -3,7 +3,12 @@
 export const START = '<!-- oss:start -->'
 export const END = '<!-- oss:end -->'
 
-const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+/** HTML-escape (& < > " ') for text and attribute values. */
+export const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+const esc = escapeHtml
+
+/** Third-party text placed in a markdown line: one line, HTML-escaped, and \\ [ ] backslash-escaped so it cannot open a link. */
+export const escapeMarkdownText = (s) => escapeHtml(String(s).replace(/\s+/g, ' ').trim().replace(/[\\[\]]/g, (c) => `\\${c}`))
 
 /** GitHub search item -> entry. */
 export function toEntry(item) {
@@ -33,11 +38,13 @@ export function render(merged, blurbs) {
   const key = (e) => `${e.repo}#${e.number}`
   const avatars = merged.map((e) => {
     const short = blurbs[key(e)]?.short ?? e.title
-    return `<a href="${e.url}" title="${esc(`${key(e)}: ${short}`)}"><img src="https://github.com/${e.owner}.png?size=80" width="40" height="40" alt="${esc(e.repo)}"></a>`
+    return `<a href="${esc(e.url)}" title="${esc(`${key(e)}: ${short}`)}"><img src="https://github.com/${encodeURIComponent(e.owner)}.png?size=80" width="40" height="40" alt="${esc(e.repo)}"></a>`
   })
   const lines = ['<p>', avatars.join('&nbsp;\n'), '</p>', '', `<sub>${merged.map((e) => esc(e.name)).join(' · ')}</sub>`, '']
   for (const e of merged) {
-    lines.push(`- [${key(e)}](${e.url}): ${blurbs[key(e)]?.long ?? e.title}`)
+    // Curated blurbs are our own markdown and render verbatim; the API title fallback is untrusted.
+    const long = blurbs[key(e)]?.long ?? escapeMarkdownText(e.title)
+    lines.push(`- [${escapeMarkdownText(key(e))}](${e.url}): ${long}`)
   }
   return lines.join('\n')
 }

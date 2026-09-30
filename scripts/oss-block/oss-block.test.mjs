@@ -47,6 +47,26 @@ test('render uses curated blurbs, falls back to the escaped PR title, no &nbsp; 
   assert.ok(avatarLines[1].endsWith('</a>'))
 })
 
+test('fallback PR title is HTML- and markdown-escaped everywhere it lands (no raw HTML)', () => {
+  const evil = '<img src=x onerror=alert(1)> "quoted" & [x]'
+  const merged = pickMerged([item('evil/repo', 7, '2026-09-10T00:00:00Z', evil)], 'me', 5)
+  const out = render(merged, {})
+  assert.doesNotMatch(out, /<img src=x/)
+  assert.match(out, /title="evil\/repo#7: &lt;img src=x onerror=alert\(1\)&gt; &quot;quoted&quot; &amp; \[x\]"/)
+  assert.equal(out.split('\n').at(-1), '- [evil/repo#7](https://github.com/evil/repo/pull/7): &lt;img src=x onerror=alert(1)&gt; &quot;quoted&quot; &amp; \\[x\\]')
+  const withQuote = render(pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z', "it's")], 'me', 5), {})
+  assert.match(withQuote, /: it&#39;s$/)
+})
+
+test('curated blurbs render verbatim, so the live block stays byte-identical', () => {
+  for (const [k, b] of Object.entries(BLURBS)) {
+    const [repo, number] = k.split('#')
+    const out = render(pickMerged([item(repo, Number(number), '2026-09-10T00:00:00Z', 'ignored <b>')], 'me', 5), BLURBS)
+    assert.ok(out.includes(`title="${k}: ${b.short}"`), `short changed for ${k}`)
+    assert.equal(out.split('\n').at(-1), `- [${k}](https://github.com/${repo}/pull/${number}): ${b.long}`)
+  }
+})
+
 test('render never emits an "in review" line, only merged PRs', () => {
   const merged = pickMerged([item('a/x', 2, '2026-09-10T00:00:00Z'), item('b/y', 3, null)], 'me', 5)
   const out = render(merged, {})
