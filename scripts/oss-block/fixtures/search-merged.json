@@ -3,6 +3,15 @@
   "incomplete_results": false,
   "items": [
     {
+      "repository_url": "https://api.github.com/repos/securego/gosec",
+      "number": 1760,
+      "html_url": "https://github.com/securego/gosec/pull/1760",
+      "title": "fix(G102): detect binding to the IPv6 unspecified address",
+      "pull_request": {
+        "merged_at": "2026-09-30T18:25:24Z"
+      }
+    },
+    {
       "repository_url": "https://api.github.com/repos/pipefy/ai-toolkit",
       "number": 716,
       "html_url": "https://github.com/pipefy/ai-toolkit/pull/716",

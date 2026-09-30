@@ -2,6 +2,7 @@
   "repos": [
     "openai/openai-agents-python",
     "web-infra-dev/rspack",
+    "securego/gosec",
     "nanostores/nanostores",
     "alecthomas/chroma",
     "punkpeye/fastmcp",
