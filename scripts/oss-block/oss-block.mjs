@@ -25,7 +25,7 @@ export function byMergedDesc(a, b) {
 }
 
 /** Hard ceiling of items in the OSS line (the allowlist and OSS_LIMIT can only lower it). */
-export const MAX_ITEMS = 6
+export const MAX_ITEMS = 7
 
 const REPO_RE = /^[^/\s]+\/[^/\s]+$/
 
