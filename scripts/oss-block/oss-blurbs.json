@@ -18,5 +18,13 @@
   "openai/openai-agents-python#4961": {
     "short": "histórico longo de conversa sem erro",
     "long": "sessões de agente com histórico longo deixam de dar erro ao buscar as mensagens com limite de itens."
+  },
+  "web-infra-dev/rspack#15900": {
+    "short": "build com child compiler não quebra mais o CSS",
+    "long": "o bundler deixa de alterar as opções do loader de CSS que o usuário passou, e o build não quebra mais quando um plugin cria um segundo compilador, como o html-webpack-plugin."
+  },
+  "web-infra-dev/rspress#3710": {
+    "short": "Enter com a busca fechada não dá mais erro",
+    "long": "sites de documentação feitos com o framework deixam de dar erro na página quando alguém aperta Enter com a busca fechada."
   }
 }
