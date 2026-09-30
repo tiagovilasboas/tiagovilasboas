@@ -3,6 +3,42 @@
   "incomplete_results": false,
   "items": [
     {
+      "repository_url": "https://api.github.com/repos/web-infra-dev/rspack",
+      "number": 15900,
+      "html_url": "https://github.com/web-infra-dev/rspack/pull/15900",
+      "title": "fix(css): do not mutate user CSS loader options across child compilers",
+      "pull_request": {
+        "merged_at": "2026-09-28T04:34:54Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/web-infra-dev/rspress",
+      "number": 3710,
+      "html_url": "https://github.com/web-infra-dev/rspress/pull/3710",
+      "title": "fix(search): ignore Enter when the search panel is closed",
+      "pull_request": {
+        "merged_at": "2026-09-27T17:24:26Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/web-infra-dev/rspack",
+      "number": 15001,
+      "html_url": "https://github.com/web-infra-dev/rspack/pull/15001",
+      "title": "synthetic: older merged PR in a curated repo, the newer one wins",
+      "pull_request": {
+        "merged_at": "2026-08-01T00:00:00Z"
+      }
+    },
+    {
+      "repository_url": "https://api.github.com/repos/punkpeye/fastmcp",
+      "number": 999,
+      "html_url": "https://github.com/punkpeye/fastmcp/pull/999",
+      "title": "synthetic: open PR in a curated repo, never listed",
+      "pull_request": {
+        "merged_at": null
+      }
+    },
+    {
       "repository_url": "https://api.github.com/repos/alecthomas/chroma",
       "number": 1387,
       "html_url": "https://github.com/alecthomas/chroma/pull/1387",
@@ -69,7 +105,7 @@
       "repository_url": "https://api.github.com/repos/example-org/older",
       "number": 3,
       "html_url": "https://github.com/example-org/older/pull/3",
-      "title": "synthetic: sixth merged PR, cut by the limit of 5",
+      "title": "synthetic: merged PR in a repo outside the allowlist, ignored",
       "pull_request": {
         "merged_at": "2026-01-01T00:00:00Z"
       }

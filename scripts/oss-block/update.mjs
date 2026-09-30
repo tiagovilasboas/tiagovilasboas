@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 // Regenerates the <!-- oss:start --> ... <!-- oss:end --> block of the profile README
-// from the user's merged PRs in other people's repos (GitHub search API).
+// as one line of links to the user's merged PRs in the curated repos of oss-allowlist.json
+// (GitHub search API; latest merged PR per repo; OSS_LIMIT can lower the ceiling of 4).
 //   OSS_USER=<login> GH_TOKEN=<token> node scripts/oss-block/update.mjs README.md            # write if changed
 //   OSS_USER=<login> GH_TOKEN=<token> node scripts/oss-block/update.mjs README.md --dry-run  # print diff, never write
 // OSS_FIXTURE=<file> reads a search-shaped JSON instead of calling the API (tests, no network).
 // Always exits 0 unless something is broken; the diff goes to stdout and $GITHUB_STEP_SUMMARY.
 import { appendFileSync, readFileSync, writeFileSync } from 'node:fs'
-import { lineDiff, pickMerged, render, replaceBlock } from './oss-block.mjs'
+import { lineDiff, parseAllowlist, pickMerged, render, replaceBlock } from './oss-block.mjs'
 
 const [file = 'README.md', ...flags] = process.argv.slice(2)
 const dryRun = flags.includes('--dry-run')
 const user = process.env.OSS_USER
-const limit = Number(process.env.OSS_LIMIT ?? 7)
+const limit = Number(process.env.OSS_LIMIT ?? 4)
 if (!user) throw new Error('OSS_USER is required')
 
 async function searchMerged() {
@@ -26,12 +27,12 @@ async function searchMerged() {
 
 const body = await searchMerged()
 if (body.incomplete_results) throw new Error('GitHub search returned incomplete results; refusing to rewrite the block')
-const merged = pickMerged(body.items, user, limit)
-if (merged.length === 0) throw new Error('no merged PRs found; refusing to empty the block')
-const blurbs = JSON.parse(readFileSync(new URL('./oss-blurbs.json', import.meta.url), 'utf8'))
+const allowlist = parseAllowlist(JSON.parse(readFileSync(new URL('./oss-allowlist.json', import.meta.url), 'utf8')))
+const merged = pickMerged(body.items, user, allowlist, limit)
+if (merged.length === 0) throw new Error('no merged PRs in the curated repos; refusing to empty the block')
 
 const before = readFileSync(file, 'utf8')
-const after = replaceBlock(before, render(merged, blurbs))
+const after = replaceBlock(before, render(merged))
 const sources = merged.map((e) => `${e.repo}#${e.number} merged ${e.mergedAt}`).join('\n')
 
 let report

@@ -6,73 +6,65 @@ import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { lineDiff, pickMerged, render, replaceBlock, START, END } from './oss-block.mjs'
+import { lineDiff, MAX_ITEMS, parseAllowlist, pickMerged, render, replaceBlock, START, END } from './oss-block.mjs'
 
 const here = (p) => fileURLToPath(new URL(p, import.meta.url))
 const FIXTURE = here('./fixtures/search-merged.json')
 const EXPECTED = readFileSync(here('./fixtures/expected-block.md'), 'utf8').replace(/\n$/, '')
-const BLURBS = JSON.parse(readFileSync(here('./oss-blurbs.json'), 'utf8'))
+const ALLOWLIST = parseAllowlist(JSON.parse(readFileSync(here('./oss-allowlist.json'), 'utf8')))
 
 const item = (repo, number, merged_at, title = 't') => ({ repository_url: `https://api.github.com/repos/${repo}`, number, html_url: `https://github.com/${repo}/pull/${number}`, title, pull_request: { merged_at } })
 const keys = (entries) => entries.map((e) => `${e.repo}#${e.number}`)
 
-test('pickMerged keeps the latest merged PR per external repo, newest first, limited', () => {
+test('render is a single line of repo-name links, only merged PRs', () => {
+  const out = render(pickMerged([item('a/x', 2, '2026-09-10T00:00:00Z'), item('b/y', 3, '2026-09-11T00:00:00Z')], 'me', ['a/x', 'b/y']))
+  assert.equal(out, 'OSS: [x](https://github.com/a/x/pull/2) · [y](https://github.com/b/y/pull/3)')
+  assert.ok(!out.includes('\n'))
+  assert.doesNotMatch(out, /Em revisão|revis[aã]o|in review/i)
+})
+
+test('only merged PRs: a curated repo whose PRs are all unmerged is omitted', () => {
+  const got = pickMerged([item('a/x', 1, null), item('b/y', 2, '2026-09-10T00:00:00Z')], 'me', ['a/x', 'b/y'])
+  assert.deepEqual(keys(got), ['b/y#2'])
+})
+
+test('repos outside the allowlist are ignored, even if merged and newer; own repos never count', () => {
+  const got = pickMerged([
+    item('z/uncurated', 9, '2026-09-30T00:00:00Z'),
+    item('me/own', 8, '2026-09-29T00:00:00Z'),
+    item('a/x', 1, '2026-09-01T00:00:00Z'),
+  ], 'me', ['a/x', 'me/own'])
+  assert.deepEqual(keys(got), ['a/x#1'])
+})
+
+test('one PR per repo: the most recently merged; order follows the allowlist, case-insensitive', () => {
   const got = pickMerged([
     item('a/x', 1, '2026-09-01T00:00:00Z'),
-    item('a/x', 2, '2026-09-10T00:00:00Z'),
-    item('me/own', 3, '2026-09-20T00:00:00Z'),
-    item('b/y', 4, '2026-09-05T00:00:00Z'),
-    item('c/z', 5, null),
-    item('d/w', 6, '2026-09-11T00:00:00Z'),
-  ], 'me', 2)
-  assert.deepEqual(keys(got), ['d/w#6', 'a/x#2'])
+    item('A/X', 2, '2026-09-10T00:00:00Z'),
+    item('b/y', 3, '2026-09-20T00:00:00Z'),
+  ], 'me', ['b/y', 'a/x'])
+  assert.deepEqual(keys(got), ['b/y#3', 'A/X#2'])
 })
 
-test('order is deterministic: same merge time is broken by URL, whatever the API order', () => {
-  const items = [item('b/y', 1, '2026-09-10T00:00:00Z'), item('a/x', 9, '2026-09-10T00:00:00Z'), item('c/z', 2, '2026-09-12T00:00:00Z')]
-  const expected = ['c/z#2', 'a/x#9', 'b/y#1']
-  assert.deepEqual(keys(pickMerged(items, 'me', 5)), expected)
-  assert.deepEqual(keys(pickMerged([...items].reverse(), 'me', 5)), expected)
+test('ceiling: at most 4 items; OSS_LIMIT can lower it but never raise it', () => {
+  const five = ['a/a', 'b/b', 'c/c', 'd/d', 'e/e']
+  assert.throws(() => parseAllowlist({ repos: five }), /at most 4/)
+  assert.throws(() => parseAllowlist({ repos: ['a/a', 'A/a'] }), /duplicate/)
+  assert.throws(() => parseAllowlist({ repos: ['not-a-repo'] }), /owner\/name/)
+  const items = five.map((r, i) => item(r, i + 1, `2026-09-1${i}T00:00:00Z`))
+  assert.equal(MAX_ITEMS, 4)
+  assert.equal(pickMerged(items, 'me', five).length, 4)
+  assert.equal(pickMerged(items, 'me', five, 99).length, 4)
+  assert.equal(pickMerged(items, 'me', five, 2).length, 2)
+  assert.ok(ALLOWLIST.length <= MAX_ITEMS)
 })
 
-test('render uses curated blurbs, falls back to the escaped PR title, no &nbsp; after the last avatar', () => {
-  const merged = pickMerged([item('a/x', 2, '2026-09-10T00:00:00Z', 'fix: <b> "q"'), item('o/p', 3, '2026-09-11T00:00:00Z')], 'me', 5)
-  const out = render(merged, { 'o/p#3': { short: 'curto', long: 'longo.' } })
-  assert.match(out, /title="o\/p#3: curto"/)
-  assert.match(out, /- \[o\/p#3\]\(https:\/\/github.com\/o\/p\/pull\/3\): longo\./)
-  assert.match(out, /title="a\/x#2: fix: &lt;b&gt; &quot;q&quot;"/)
-  const avatarLines = out.split('\n').filter((l) => l.startsWith('<a '))
-  assert.equal(avatarLines.length, 2)
-  assert.ok(avatarLines[0].endsWith('</a>&nbsp;'))
-  assert.ok(avatarLines[1].endsWith('</a>'))
-})
-
-test('fallback PR title is HTML- and markdown-escaped everywhere it lands (no raw HTML)', () => {
-  const evil = '<img src=x onerror=alert(1)> "quoted" & [x]'
-  const merged = pickMerged([item('evil/repo', 7, '2026-09-10T00:00:00Z', evil)], 'me', 5)
-  const out = render(merged, {})
-  assert.doesNotMatch(out, /<img src=x/)
-  assert.match(out, /title="evil\/repo#7: &lt;img src=x onerror=alert\(1\)&gt; &quot;quoted&quot; &amp; \[x\]"/)
-  assert.equal(out.split('\n').at(-1), '- [evil/repo#7](https://github.com/evil/repo/pull/7): &lt;img src=x onerror=alert(1)&gt; &quot;quoted&quot; &amp; \\[x\\]')
-  const withQuote = render(pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z', "it's")], 'me', 5), {})
-  assert.match(withQuote, /: it&#39;s$/)
-})
-
-test('curated blurbs render verbatim, so the live block stays byte-identical', () => {
-  for (const [k, b] of Object.entries(BLURBS)) {
-    const [repo, number] = k.split('#')
-    const out = render(pickMerged([item(repo, Number(number), '2026-09-10T00:00:00Z', 'ignored <b>')], 'me', 5), BLURBS)
-    assert.ok(out.includes(`title="${k}: ${b.short}"`), `short changed for ${k}`)
-    assert.equal(out.split('\n').at(-1), `- [${k}](https://github.com/${repo}/pull/${number}): ${b.long}`)
-  }
-})
-
-test('render never emits an "in review" line, only merged PRs', () => {
-  const merged = pickMerged([item('a/x', 2, '2026-09-10T00:00:00Z'), item('b/y', 3, null)], 'me', 5)
-  const out = render(merged, {})
-  assert.doesNotMatch(out, /Em revisão|revis[aã]o|in review/i)
-  assert.doesNotMatch(out, /b\/y/)
-  assert.equal(out.split('\n').at(-1), '- [a/x#2](https://github.com/a/x/pull/2): t')
+test('repo names and URLs with special characters are escaped and cannot break the link', () => {
+  const evil = { repository_url: 'https://api.github.com/repos/o/<img src=x onerror=alert(1)>"&[x]', number: 1, html_url: 'https://github.com/o/r/pull/1) [pwn](https://evil', title: 't', pull_request: { merged_at: '2026-09-10T00:00:00Z' } }
+  const out = render(pickMerged([evil], 'me', ['o/<img src=x onerror=alert(1)>"&[x]']))
+  assert.equal(out, 'OSS: [&lt;img src=x onerror=alert(1)&gt;&quot;&amp;\\[x\\]](https://github.com/o/r/pull/1%29%20[pwn]%28https://evil)')
+  assert.doesNotMatch(out, /<img/)
+  assert.throws(() => render([{ name: 'x', url: 'javascript:alert(1)' }]), /unexpected PR URL/)
 })
 
 test('replaceBlock only rewrites between markers and is idempotent', () => {
@@ -83,21 +75,14 @@ test('replaceBlock only rewrites between markers and is idempotent', () => {
   assert.throws(() => replaceBlock('no markers', 'x'))
 })
 
-test('fixture renders exactly the versioned expected block (no network)', () => {
+test('fixture renders exactly the versioned expected line (no network)', () => {
   const { items } = JSON.parse(readFileSync(FIXTURE, 'utf8'))
-  assert.equal(render(pickMerged(items, 'tiagovilasboas', 5), BLURBS), EXPECTED)
+  assert.equal(render(pickMerged(items, 'tiagovilasboas', ALLOWLIST)), EXPECTED)
 })
 
-test('every rendered fixture entry has a curated blurb', () => {
-  const { items } = JSON.parse(readFileSync(FIXTURE, 'utf8'))
-  for (const e of pickMerged(items, 'tiagovilasboas', 5)) {
-    assert.ok(BLURBS[`${e.repo}#${e.number}`], `missing blurb for ${e.repo}#${e.number}`)
-  }
-})
-
-const cli = (readme, ...flags) => spawnSync(process.execPath, [here('./update.mjs'), readme, ...flags], {
+const cli = (readme, env, ...flags) => spawnSync(process.execPath, [here('./update.mjs'), readme, ...flags], {
   encoding: 'utf8',
-  env: { PATH: process.env.PATH, OSS_USER: 'tiagovilasboas', OSS_FIXTURE: FIXTURE, OSS_LIMIT: '5' },
+  env: { PATH: process.env.PATH, OSS_USER: 'tiagovilasboas', OSS_FIXTURE: FIXTURE, ...env },
 })
 
 test('CLI (fixture): dry run prints the diff and never writes; write is idempotent', () => {
@@ -106,22 +91,31 @@ test('CLI (fixture): dry run prints the diff and never writes; write is idempote
   const stale = `# hi\n\n${START}\nold\n${END}\n\n## tail\n`
   writeFileSync(readme, stale)
 
-  const dry = cli(readme, '--dry-run')
+  const dry = cli(readme, {}, '--dry-run')
   assert.equal(dry.status, 0, dry.stderr)
   assert.match(dry.stdout, /dry run, not written/)
   assert.match(dry.stdout, /^-old$/m)
   assert.equal(readFileSync(readme, 'utf8'), stale)
 
-  const write = cli(readme)
+  const write = cli(readme, {})
   assert.equal(write.status, 0, write.stderr)
   assert.match(write.stdout, /updated /)
   const once = readFileSync(readme, 'utf8')
   assert.equal(once, `# hi\n\n${START}\n${EXPECTED}\n${END}\n\n## tail\n`)
 
-  const again = cli(readme)
+  const again = cli(readme, {})
   assert.equal(again.status, 0, again.stderr)
   assert.match(again.stdout, /no change/)
   assert.equal(readFileSync(readme, 'utf8'), once)
+})
+
+test('CLI (fixture): OSS_LIMIT lowers the ceiling', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'oss-block-'))
+  const readme = join(dir, 'README.md')
+  writeFileSync(readme, `${START}\n${END}\n`)
+  const r = cli(readme, { OSS_LIMIT: '2' })
+  assert.equal(r.status, 0, r.stderr)
+  assert.equal(readFileSync(readme, 'utf8'), `${START}\nOSS: [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961)\n${END}\n`)
 })
 
 test('lineDiff shows a pure reordering as moved lines only', () => {

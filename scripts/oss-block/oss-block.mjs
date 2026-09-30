@@ -5,7 +5,6 @@ export const END = '<!-- oss:end -->'
 
 /** HTML-escape (& < > " ') for text and attribute values. */
 export const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
-const esc = escapeHtml
 
 /** Third-party text placed in a markdown line: one line, HTML-escaped, and \\ [ ] backslash-escaped so it cannot open a link. */
 export const escapeMarkdownText = (s) => escapeHtml(String(s).replace(/\s+/g, ' ').trim().replace(/[\\[\]]/g, (c) => `\\${c}`))
@@ -23,30 +22,47 @@ export function byMergedDesc(a, b) {
   return a.url < b.url ? -1 : a.url > b.url ? 1 : 0
 }
 
-/** Merged PRs in other people's repos: latest merged PR per repo, newest first, at most `limit`. */
-export function pickMerged(items, user, limit) {
-  return items
-    .map(toEntry)
-    .filter((e) => e.mergedAt && e.owner.toLowerCase() !== user.toLowerCase())
-    .sort(byMergedDesc)
-    .filter((e, i, all) => all.findIndex((x) => x.repo === e.repo) === i)
-    .slice(0, limit)
+/** Hard ceiling of items in the OSS line (the allowlist and OSS_LIMIT can only lower it). */
+export const MAX_ITEMS = 4
+
+/** Validate the curated allowlist: array of "owner/name", no duplicates, at most MAX_ITEMS. */
+export function parseAllowlist(json) {
+  const repos = json?.repos
+  if (!Array.isArray(repos) || repos.some((r) => typeof r !== 'string' || !/^[^/\s]+\/[^/\s]+$/.test(r))) {
+    throw new Error('oss-allowlist.json: "repos" must be an array of "owner/name"')
+  }
+  if (new Set(repos.map((r) => r.toLowerCase())).size !== repos.length) throw new Error('oss-allowlist.json: duplicate repo')
+  if (repos.length > MAX_ITEMS) throw new Error(`oss-allowlist.json: at most ${MAX_ITEMS} repos, got ${repos.length}`)
+  return repos
 }
 
-/** Block body (between the markers). Only merged PRs; never an "in review" line. */
-export function render(merged, blurbs) {
-  const key = (e) => `${e.repo}#${e.number}`
-  const avatars = merged.map((e) => {
-    const short = blurbs[key(e)]?.short ?? e.title
-    return `<a href="${esc(e.url)}" title="${esc(`${key(e)}: ${short}`)}"><img src="https://github.com/${encodeURIComponent(e.owner)}.png?size=80" width="40" height="40" alt="${esc(e.repo)}"></a>`
-  })
-  const lines = ['<p>', avatars.join('&nbsp;\n'), '</p>', '', `<sub>${merged.map((e) => esc(e.name)).join(' · ')}</sub>`, '']
-  for (const e of merged) {
-    // Curated blurbs are our own markdown and render verbatim; the API title fallback is untrusted.
-    const long = blurbs[key(e)]?.long ?? escapeMarkdownText(e.title)
-    lines.push(`- [${escapeMarkdownText(key(e))}](${e.url}): ${long}`)
-  }
-  return lines.join('\n')
+/**
+ * Merged PRs in curated repos only. One PR per repo: the most recently merged one.
+ * Order follows the allowlist; curated repos without a merged PR are omitted;
+ * the user's own repos never count. At most min(limit, MAX_ITEMS) items.
+ */
+export function pickMerged(items, user, allowlist, limit = MAX_ITEMS) {
+  const rank = new Map(allowlist.map((r, i) => [r.toLowerCase(), i]))
+  const cap = Math.max(0, Math.min(Number.isFinite(limit) ? limit : MAX_ITEMS, MAX_ITEMS))
+  return items
+    .map(toEntry)
+    .filter((e) => e.mergedAt && e.owner.toLowerCase() !== user.toLowerCase() && rank.has(e.repo.toLowerCase()))
+    .sort(byMergedDesc)
+    .filter((e, i, all) => all.findIndex((x) => x.repo.toLowerCase() === e.repo.toLowerCase()) === i)
+    .sort((a, b) => rank.get(a.repo.toLowerCase()) - rank.get(b.repo.toLowerCase()))
+    .slice(0, cap)
+}
+
+/** Only https://github.com/ PR URLs; ( ) < > and whitespace are percent-encoded so the markdown link cannot break. */
+export function safeUrl(url) {
+  const u = String(url)
+  if (!u.startsWith('https://github.com/')) throw new Error(`unexpected PR URL: ${u}`)
+  return u.replace(/[()<>\s]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0')}`)
+}
+
+/** Block body (between the markers): one line, only merged PRs, e.g. `OSS: [rspack](pr) · [nanostores](pr)`. */
+export function render(merged) {
+  return `OSS: ${merged.map((e) => `[${escapeMarkdownText(e.name)}](${safeUrl(e.url)})`).join(' · ')}`
 }
 
 /** Replace only what sits between the markers. */
