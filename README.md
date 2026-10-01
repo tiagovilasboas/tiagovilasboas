@@ -18,7 +18,7 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
 ## Contribuições
 
 <!-- oss:start -->
-PRs mergeados em: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [gosec](https://github.com/securego/gosec/pull/1760) · [nanostores](https://github.com/nanostores/nanostores/pull/437) · [chroma](https://github.com/alecthomas/chroma/pull/1387) · [fastmcp](https://github.com/punkpeye/fastmcp/pull/392) · [pipefy](https://github.com/pipefy/ai-toolkit/pull/716)
+PRs mergeados em: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [gosec](https://github.com/securego/gosec/pull/1760) · [nanostores](https://github.com/nanostores/nanostores/pull/437) · [chroma](https://github.com/alecthomas/chroma/pull/1387) · [fastmcp](https://github.com/punkpeye/fastmcp/pull/392) · [pipefy](https://github.com/pipefy/ai-toolkit/pull/724)
 <!-- oss:end -->
 
 ## Arquitetura, IA e engenharia
