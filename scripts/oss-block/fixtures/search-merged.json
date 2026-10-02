@@ -3,6 +3,15 @@
   "incomplete_results": false,
   "items": [
     {
+      "repository_url": "https://api.github.com/repos/NandhaKishorM/laya",
+      "number": 849,
+      "html_url": "https://github.com/NandhaKishorM/laya/pull/849",
+      "title": "fix(router): build checkpoints outside the lifecycle lock",
+      "pull_request": {
+        "merged_at": "2026-10-02T16:39:06Z"
+      }
+    },
+    {
       "repository_url": "https://api.github.com/repos/aaif-goose/goose",
       "number": 12629,
       "html_url": "https://github.com/aaif-goose/goose/pull/12629",
