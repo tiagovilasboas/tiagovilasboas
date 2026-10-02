@@ -30,13 +30,13 @@ PRs mergeados em: [goose](https://github.com/aaif-goose/goose/pull/12629) · [op
 
 ## Artigos em destaque
 
-- [Observabilidade no frontend: o BFF respondia 200, mas o clique falhava](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd)
-- [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
 - [+10% de vendas no checkout no mês. A campanha quebrava na hora de pagar](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566)
+- [O prompt de AppSec que eu criei achou 4 gaps de segurança](https://dev.to/tiagovilasboas/prompt-appsec-4-gaps-autorizacao-1k77)
+- [Observabilidade no frontend: o BFF respondia 200, mas o clique falhava](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd)
 - [Harness Engineer: como um knowledge base (RAG) centralizado pode impactar positivamente sua empresa](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako)
+- [Jev e Laya além do hype: o que modelos de decisão fazem que o LLM não faz](https://dev.to/tiagovilasboas/jev-e-laya-alem-do-hype-o-que-modelos-de-decisao-fazem-que-o-llm-nao-faz-5f1j)
 - [Mesmo com GraphRAG, o agent se perde sem contrato de memória](https://dev.to/tiagovilasboas/mesmo-com-graphrag-o-agent-se-perde-sem-contrato-de-memoria-hc8)
 - [Antigravity Operator: Helping AI Coding Agents Stay on Track](https://dev.to/tiagovilasboas/antigravity-operator-helping-ai-coding-agents-stay-on-track-216n)
-- [Jev e Laya além do hype: o que modelos de decisão fazem que o LLM não faz](https://dev.to/tiagovilasboas/jev-e-laya-alem-do-hype-o-que-modelos-de-decisao-fazem-que-o-llm-nao-faz-5f1j)
 
 [Ver todos os artigos no DEV.to](https://dev.to/tiagovilasboas)
 
