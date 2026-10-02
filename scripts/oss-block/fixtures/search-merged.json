@@ -3,6 +3,15 @@
   "incomplete_results": false,
   "items": [
     {
+      "repository_url": "https://api.github.com/repos/aaif-goose/goose",
+      "number": 12629,
+      "html_url": "https://github.com/aaif-goose/goose/pull/12629",
+      "title": "feat(cli): prompt for goose mode during first-time configure",
+      "pull_request": {
+        "merged_at": "2026-10-02T05:56:52Z"
+      }
+    },
+    {
       "repository_url": "https://api.github.com/repos/securego/gosec",
       "number": 1760,
       "html_url": "https://github.com/securego/gosec/pull/1760",

@@ -1,11 +1,11 @@
 {
   "repos": [
+    "aaif-goose/goose",
     "openai/openai-agents-python",
     "web-infra-dev/rspack",
     "securego/gosec",
     "nanostores/nanostores",
     "alecthomas/chroma",
-    "punkpeye/fastmcp",
-    { "repo": "pipefy/ai-toolkit", "label": "pipefy" }
+    "punkpeye/fastmcp"
   ]
 }

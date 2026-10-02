@@ -69,9 +69,13 @@ test('optional curated label replaces the repo name in the link text and is esca
   assert.equal(render(merged), 'PRs mergeados em: [x](https://github.com/a/x/pull/1) · [&lt;img src=x onerror=alert(1)&gt; &quot;q&quot; &amp; \\[x\\]](https://github.com/b/y/pull/2)')
 })
 
-test('live allowlist: pipefy/ai-toolkit shows as "pipefy"; order follows the allowlist', () => {
-  assert.deepEqual(ALLOWLIST.map((c) => c.repo), ['openai/openai-agents-python', 'web-infra-dev/rspack', 'securego/gosec', 'nanostores/nanostores', 'alecthomas/chroma', 'punkpeye/fastmcp', 'pipefy/ai-toolkit'])
-  assert.equal(ALLOWLIST.find((c) => c.repo === 'pipefy/ai-toolkit').label, 'pipefy')
+test('live allowlist: goose first, at the ceiling, plain repo names; dropped repos are not curated', () => {
+  assert.deepEqual(ALLOWLIST.map((c) => c.repo), ['aaif-goose/goose', 'openai/openai-agents-python', 'web-infra-dev/rspack', 'securego/gosec', 'nanostores/nanostores', 'alecthomas/chroma', 'punkpeye/fastmcp'])
+  assert.equal(ALLOWLIST.length, MAX_ITEMS)
+  assert.ok(ALLOWLIST.every((c) => c.label === undefined))
+  const { items } = JSON.parse(readFileSync(FIXTURE, 'utf8'))
+  assert.ok(items.some((i) => i.html_url.includes('pipefy/ai-toolkit')), 'fixture keeps a merged pipefy PR')
+  assert.doesNotMatch(render(pickMerged(items, 'tiagovilasboas', ALLOWLIST)), /pipefy/)
 })
 
 test('repo names and URLs with special characters are escaped and cannot break the link', () => {
@@ -139,7 +143,7 @@ test('CLI (fixture): OSS_LIMIT lowers the ceiling', () => {
   writeFileSync(readme, `${START}\n${END}\n`)
   const r = cli(readme, { OSS_LIMIT: '2' })
   assert.equal(r.status, 0, r.stderr)
-  assert.equal(readFileSync(readme, 'utf8'), `${START}\nPRs mergeados em: [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900)\n${END}\n`)
+  assert.equal(readFileSync(readme, 'utf8'), `${START}\nPRs mergeados em: [goose](https://github.com/aaif-goose/goose/pull/12629) · [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961)\n${END}\n`)
 })
 
 test('lineDiff shows a pure reordering as moved lines only', () => {
