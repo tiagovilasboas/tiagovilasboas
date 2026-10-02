@@ -69,13 +69,17 @@ test('optional curated label replaces the repo name in the link text and is esca
   assert.equal(render(merged), 'PRs mergeados em: [x](https://github.com/a/x/pull/1) · [&lt;img src=x onerror=alert(1)&gt; &quot;q&quot; &amp; \\[x\\]](https://github.com/b/y/pull/2)')
 })
 
-test('live allowlist: goose first, at the ceiling, plain repo names; dropped repos are not curated', () => {
-  assert.deepEqual(ALLOWLIST.map((c) => c.repo), ['aaif-goose/goose', 'openai/openai-agents-python', 'web-infra-dev/rspack', 'securego/gosec', 'nanostores/nanostores', 'alecthomas/chroma', 'punkpeye/fastmcp'])
+test('live allowlist: goose first, laya second, at the ceiling, plain repo names; dropped repos are not curated', () => {
+  assert.deepEqual(ALLOWLIST.map((c) => c.repo), ['aaif-goose/goose', 'NandhaKishorM/laya', 'openai/openai-agents-python', 'web-infra-dev/rspack', 'securego/gosec', 'nanostores/nanostores', 'alecthomas/chroma'])
   assert.equal(ALLOWLIST.length, MAX_ITEMS)
   assert.ok(ALLOWLIST.every((c) => c.label === undefined))
   const { items } = JSON.parse(readFileSync(FIXTURE, 'utf8'))
-  assert.ok(items.some((i) => i.html_url.includes('pipefy/ai-toolkit')), 'fixture keeps a merged pipefy PR')
-  assert.doesNotMatch(render(pickMerged(items, 'tiagovilasboas', ALLOWLIST)), /pipefy/)
+  for (const dropped of ['pipefy/ai-toolkit', 'punkpeye/fastmcp']) {
+    assert.ok(items.some((i) => i.html_url.includes(dropped) && i.pull_request.merged_at), `fixture keeps a merged ${dropped} PR`)
+  }
+  const out = render(pickMerged(items, 'tiagovilasboas', ALLOWLIST))
+  assert.doesNotMatch(out, /pipefy|fastmcp/)
+  assert.match(out, /^PRs mergeados em: \[goose\]\([^)]+\) · \[laya\]\(https:\/\/github\.com\/NandhaKishorM\/laya\/pull\/849\) · /)
 })
 
 test('repo names and URLs with special characters are escaped and cannot break the link', () => {
@@ -143,7 +147,7 @@ test('CLI (fixture): OSS_LIMIT lowers the ceiling', () => {
   writeFileSync(readme, `${START}\n${END}\n`)
   const r = cli(readme, { OSS_LIMIT: '2' })
   assert.equal(r.status, 0, r.stderr)
-  assert.equal(readFileSync(readme, 'utf8'), `${START}\nPRs mergeados em: [goose](https://github.com/aaif-goose/goose/pull/12629) · [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961)\n${END}\n`)
+  assert.equal(readFileSync(readme, 'utf8'), `${START}\nPRs mergeados em: [goose](https://github.com/aaif-goose/goose/pull/12629) · [laya](https://github.com/NandhaKishorM/laya/pull/849)\n${END}\n`)
 })
 
 test('lineDiff shows a pure reordering as moved lines only', () => {

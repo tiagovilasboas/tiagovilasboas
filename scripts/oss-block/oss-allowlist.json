@@ -1,11 +1,11 @@
 {
   "repos": [
     "aaif-goose/goose",
+    "NandhaKishorM/laya",
     "openai/openai-agents-python",
     "web-infra-dev/rspack",
     "securego/gosec",
     "nanostores/nanostores",
-    "alecthomas/chroma",
-    "punkpeye/fastmcp"
+    "alecthomas/chroma"
   ]
 }
