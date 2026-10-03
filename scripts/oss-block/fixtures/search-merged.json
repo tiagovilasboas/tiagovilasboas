@@ -3,6 +3,15 @@
   "incomplete_results": false,
   "items": [
     {
+      "repository_url": "https://api.github.com/repos/evilmartians/lefthook",
+      "number": 1565,
+      "html_url": "https://github.com/evilmartians/lefthook/pull/1565",
+      "title": "fix: diff push files against the merge base with the default branch",
+      "pull_request": {
+        "merged_at": "2026-10-03T07:46:26Z"
+      }
+    },
+    {
       "repository_url": "https://api.github.com/repos/NandhaKishorM/laya",
       "number": 849,
       "html_url": "https://github.com/NandhaKishorM/laya/pull/849",

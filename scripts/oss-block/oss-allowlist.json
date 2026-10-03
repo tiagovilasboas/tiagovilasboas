@@ -1,11 +1,11 @@
 {
   "repos": [
+    "evilmartians/lefthook",
     "aaif-goose/goose",
     "NandhaKishorM/laya",
     "openai/openai-agents-python",
     "web-infra-dev/rspack",
     "securego/gosec",
-    "nanostores/nanostores",
-    "alecthomas/chroma"
+    "nanostores/nanostores"
   ]
 }
