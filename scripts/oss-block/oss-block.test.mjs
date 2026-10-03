@@ -69,17 +69,17 @@ test('optional curated label replaces the repo name in the link text and is esca
   assert.equal(render(merged), 'PRs mergeados em: [x](https://github.com/a/x/pull/1) · [&lt;img src=x onerror=alert(1)&gt; &quot;q&quot; &amp; \\[x\\]](https://github.com/b/y/pull/2)')
 })
 
-test('live allowlist: goose first, laya second, at the ceiling, plain repo names; dropped repos are not curated', () => {
-  assert.deepEqual(ALLOWLIST.map((c) => c.repo), ['aaif-goose/goose', 'NandhaKishorM/laya', 'openai/openai-agents-python', 'web-infra-dev/rspack', 'securego/gosec', 'nanostores/nanostores', 'alecthomas/chroma'])
+test('live allowlist: lefthook first, goose second, at the ceiling, plain repo names; dropped repos are not curated', () => {
+  assert.deepEqual(ALLOWLIST.map((c) => c.repo), ['evilmartians/lefthook', 'aaif-goose/goose', 'NandhaKishorM/laya', 'openai/openai-agents-python', 'web-infra-dev/rspack', 'securego/gosec', 'nanostores/nanostores'])
   assert.equal(ALLOWLIST.length, MAX_ITEMS)
   assert.ok(ALLOWLIST.every((c) => c.label === undefined))
   const { items } = JSON.parse(readFileSync(FIXTURE, 'utf8'))
-  for (const dropped of ['pipefy/ai-toolkit', 'punkpeye/fastmcp']) {
+  for (const dropped of ['alecthomas/chroma', 'pipefy/ai-toolkit', 'punkpeye/fastmcp']) {
     assert.ok(items.some((i) => i.html_url.includes(dropped) && i.pull_request.merged_at), `fixture keeps a merged ${dropped} PR`)
   }
   const out = render(pickMerged(items, 'tiagovilasboas', ALLOWLIST))
-  assert.doesNotMatch(out, /pipefy|fastmcp/)
-  assert.match(out, /^PRs mergeados em: \[goose\]\([^)]+\) · \[laya\]\(https:\/\/github\.com\/NandhaKishorM\/laya\/pull\/849\) · /)
+  assert.doesNotMatch(out, /chroma|pipefy|fastmcp/)
+  assert.match(out, /^PRs mergeados em: \[lefthook\]\(https:\/\/github\.com\/evilmartians\/lefthook\/pull\/1565\) · \[goose\]\([^)]+\) · \[laya\]\(https:\/\/github\.com\/NandhaKishorM\/laya\/pull\/849\) · /)
 })
 
 test('repo names and URLs with special characters are escaped and cannot break the link', () => {
@@ -147,7 +147,7 @@ test('CLI (fixture): OSS_LIMIT lowers the ceiling', () => {
   writeFileSync(readme, `${START}\n${END}\n`)
   const r = cli(readme, { OSS_LIMIT: '2' })
   assert.equal(r.status, 0, r.stderr)
-  assert.equal(readFileSync(readme, 'utf8'), `${START}\nPRs mergeados em: [goose](https://github.com/aaif-goose/goose/pull/12629) · [laya](https://github.com/NandhaKishorM/laya/pull/849)\n${END}\n`)
+  assert.equal(readFileSync(readme, 'utf8'), `${START}\nPRs mergeados em: [lefthook](https://github.com/evilmartians/lefthook/pull/1565) · [goose](https://github.com/aaif-goose/goose/pull/12629)\n${END}\n`)
 })
 
 test('lineDiff shows a pure reordering as moved lines only', () => {
