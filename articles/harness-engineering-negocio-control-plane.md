@@ -639,3 +639,34 @@ Esse é o pedaço que transforma a discussão de "como usar agentes" em "como um
 Para Staff/Principal, é o salto: sair do harness que acelera o PR e desenhar o control plane que a empresa consegue governar.
 
 Seat não é resultado. Gateway sem política é proxy caro. Eval sem rollout é laboratório. Observability sem ROI é dashboard. O mapa só fecha quando as onze etapas da seção 3 existem de verdade — não quando o logo do agente aparece no onboarding.
+
+## Checklist para aplicar na segunda-feira
+
+- [ ] O problema de negócio está escrito antes da escolha do agente.
+- [ ] Risco e classificação de dados existem para aquele fluxo.
+- [ ] Há allowlist de modelo e de provider, não preferência pessoal.
+- [ ] O agente tem blast radius explícito: o que lê, o que escreve, o que precisa de humano.
+- [ ] Budget empilha: organização, time, projeto, chave, usuário, invocação.
+- [ ] Há teto de iterações, tool calls e runtime — não só `max_tokens`.
+- [ ] Routing sobe de tier; frontier não é default.
+- [ ] Eval interno existe para a tarefa, não só benchmark público.
+- [ ] Trace carrega tokens, custo, modelo selecionado e decisão de política.
+- [ ] A pergunta de diretoria tem dono: custo por tarefa aceita, não seat.
+
+Se o seu time já opera um gateway, o que ainda falta no topo: policy, identity, budget ou eval?
+
+---
+
+## Referências públicas
+
+- [Vercel AI Gateway: budgets por team, project, API key e user](https://vercel.com/docs/ai-gateway/observability-and-spend/budgets)
+- [Vercel AI Gateway Production Index — julho de 2026](https://vercel.com/blog/ai-gateway-production-index-july-2026)
+- [AWS Bedrock AgentCore: observability and cost controls](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html)
+- [AWS Bedrock Guardrails](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html)
+- [Anthropic: How we contain Claude across products](https://www.anthropic.com/engineering/how-we-contain-claude)
+- [Claude Code usage analytics (Usage e Value)](https://support.claude.com/en/articles/12157520-claude-code-usage-analytics)
+- [Claude Enterprise consumption guide (spend caps)](https://support.claude.com/en/articles/14782391-claude-enterprise-consumption-guide)
+
+Números de fornecedor (29% dos tokens e menos de 4% do spend, cost per commit, spend caps) são relato deles, no recorte publicado. Não são telemetria da minha empresa. O R$0,02 → R$4 é ilustração da árvore de agentes, não fatura.
+
+> A IA auxiliou na estrutura e na revisão editorial. Eu revisei as fontes, os diagramas e me responsabilizo pelo conteúdo técnico.
