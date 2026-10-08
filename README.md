@@ -24,7 +24,8 @@ PRs mergeados em: [lefthook](https://github.com/evilmartians/lefthook/pull/1566)
 ## Arquitetura, IA e engenharia
 
 - [Montanha: Zero Day](https://github.com/tiagovilasboas/montanha-zero-day): plataforma cyberpunk no browser, offline no celular ([jogar](https://tiagovilasboas.github.io/montanha-zero-day/)). Relato em [I Built a Full PWA Game in One Day with Claude Opus 5.5 and Claude Code](https://dev.to/tiagovilasboas/i-built-a-full-pwa-game-in-one-day-with-claude-opus-55-and-claude-code-here-is-the-real-token-41p7).
-- [harness-downshift](https://github.com/tiagovilasboas/harness-downshift): manda cada subtarefa ao modelo do tamanho certo e corta o gasto com IA (beta).
+- [downshift](https://github.com/tiagovilasboas/downshift): manda cada subtarefa ao modelo do tamanho certo e corta o gasto com IA (beta).
+- [agyo (Antigravity Operator)](https://github.com/tiagovilasboas/antigravity-operator): harness externo em Go pro Google Antigravity, que mantém as sessões com escopo, com evidência e recuperáveis.
 - [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path): configuração pronta do Sentry para front-end, com testes que barram vazamento de dados pessoais.
 - [dev-to-mcp](https://github.com/tiagovilasboas/dev-to-mcp): servidor MCP em Go que deixa agentes de IA lerem e publicarem no DEV.to.
 - [react-layered-boilerplate](https://github.com/tiagovilasboas/react-layered-boilerplate): base de projeto React com camadas separadas, tipagem estrita, testes e CI já prontos.
