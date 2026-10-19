@@ -3,8 +3,8 @@
 export const START = '<!-- oss:start -->'
 export const END = '<!-- oss:end -->'
 
-/** HTML-escape (& < > " ') for text and attribute values. */
-export const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+/** HTML-escape (& < >) for text content; quotes stay literal (the block emits no HTML attributes). */
+export const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 /** Third-party text placed in a markdown line: one line, HTML-escaped, and \\ [ ] backslash-escaped so it cannot open a link. */
 export const escapeMarkdownText = (s) => escapeHtml(String(s).replace(/\s+/g, ' ').trim().replace(/[\\[\]]/g, (c) => `\\${c}`))

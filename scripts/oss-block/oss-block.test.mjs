@@ -88,7 +88,7 @@ test('optional curated label replaces the repo name in the link text and is esca
   assert.throws(() => parseAllowlist({ repos: [{ repo: 'b/y', label: 7 }] }), /owner\/name/)
   assert.throws(() => parseAllowlist({ repos: [{ label: 'no repo' }] }), /owner\/name/)
   const merged = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z'), item('b/y', 2, '2026-09-11T00:00:00Z')], 'me', ['a/x', { repo: 'b/y', label: '<img src=x onerror=alert(1)> "q" & [x]' }])
-  assert.equal(render(merged), '- [x #1](https://github.com/a/x/pull/1): t\n- [&lt;img src=x onerror=alert(1)&gt; &quot;q&quot; &amp; \\[x\\] #2](https://github.com/b/y/pull/2): t')
+  assert.equal(render(merged), '- [x #1](https://github.com/a/x/pull/1): t\n- [&lt;img src=x onerror=alert(1)&gt; "q" &amp; \\[x\\] #2](https://github.com/b/y/pull/2): t')
 })
 
 test('live allowlist: lefthook first, goose second, at the ceiling, plain repo names; dropped repos are not curated', () => {
@@ -104,10 +104,15 @@ test('live allowlist: lefthook first, goose second, at the ceiling, plain repo n
   assert.match(out, /^- \[lefthook #1565\]\(https:\/\/github\.com\/evilmartians\/lefthook\/pull\/1565\): .+\n- \[goose #\d+\]\([^)]+\): .+\n- \[laya #849\]\(https:\/\/github\.com\/NandhaKishorM\/laya\/pull\/849\): /)
 })
 
+test('titles keep apostrophes and quotes literal, still escape < > & and brackets', () => {
+  const merged = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z', `fix: don't "hash" <b> & [x] ]`)], 'me', ['a/x'])
+  assert.equal(render(merged), `- [x #1](https://github.com/a/x/pull/1): fix: don't "hash" &lt;b&gt; &amp; \\[x\\] \\]`)
+})
+
 test('repo names and URLs with special characters are escaped and cannot break the link', () => {
   const evil = { repository_url: 'https://api.github.com/repos/o/<img src=x onerror=alert(1)>"&[x]', number: 1, html_url: 'https://github.com/o/r/pull/1) [pwn](https://evil', title: 't', pull_request: { merged_at: '2026-09-10T00:00:00Z' } }
   const out = render(pickMerged([evil], 'me', ['o/<img src=x onerror=alert(1)>"&[x]']))
-  assert.equal(out, '- [&lt;img src=x onerror=alert(1)&gt;&quot;&amp;\\[x\\] #1](https://github.com/o/r/pull/1%29%20[pwn]%28https://evil): t')
+  assert.equal(out, '- [&lt;img src=x onerror=alert(1)&gt;"&amp;\\[x\\] #1](https://github.com/o/r/pull/1%29%20[pwn]%28https://evil): t')
   assert.doesNotMatch(out, /<img/)
   assert.throws(() => render([{ name: 'x', url: 'javascript:alert(1)' }]), /unexpected PR URL/)
 })

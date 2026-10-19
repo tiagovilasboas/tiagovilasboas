@@ -114,7 +114,7 @@ Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [
 I send small, tested fixes to projects I use. Some examples:
 
 <!-- oss:start -->
-- [lefthook #1566](https://github.com/evilmartians/lefthook/pull/1566): fix: don&#39;t hash submodules when checking fail_on_changes
+- [lefthook #1566](https://github.com/evilmartians/lefthook/pull/1566): fix: don't hash submodules when checking fail_on_changes
 - [goose #12629](https://github.com/aaif-goose/goose/pull/12629): feat(cli): prompt for goose mode during first-time configure
 - [laya #968](https://github.com/NandhaKishorM/laya/pull/968): fix(train): warn when fine-tune predictions collapse to the class prior
 - [openai-agents-python #4961](https://github.com/openai/openai-agents-python/pull/4961): fix(sessions): do not forward session limit as Conversations page size
