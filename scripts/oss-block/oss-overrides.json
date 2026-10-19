@@ -3,22 +3,22 @@
     {
       "url": "https://github.com/diegosouzapw/OmniRoute/pull/15800",
       "text": "OmniRoute #15800",
-      "description": "sinaliza passos de combo presos a modelos que sumiram do catálogo sincronizado."
+      "description": "flags combo steps pinned to models that disappeared from the synced catalog."
     },
     {
       "url": "https://github.com/diegosouzapw/OmniRoute/pull/15925",
       "text": "OmniRoute #15925",
-      "description": "limpeza opcional desses passos depois de um sync de modelos."
+      "description": "optional cleanup of those steps after a model sync."
     },
     {
       "url": "https://github.com/diegosouzapw/OmniRoute/pull/17101",
       "text": "OmniRoute #17101",
-      "description": "a limpeza de um snapshot travado é tentada de novo em vez de derrubar a tarefa em background."
+      "description": "cleanup of a locked snapshot is retried instead of crashing the background task."
     },
     {
       "url": "https://github.com/TanStack/query/pull/11679",
       "text": "TanStack Query #11679",
-      "description": "mutations com escopo que estavam na fila voltam a iniciar quando a janela está sem foco."
+      "description": "queued scoped mutations start again while the window is unfocused."
     }
   ]
 }

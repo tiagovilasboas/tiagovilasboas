@@ -5,7 +5,7 @@
 - [rspack #15900](https://github.com/web-infra-dev/rspack/pull/15900): fix(css): do not mutate user CSS loader options across child compilers
 - [gosec #1760](https://github.com/securego/gosec/pull/1760): fix(G102): detect binding to the IPv6 unspecified address
 - [nanostores #437](https://github.com/nanostores/nanostores/pull/437): fix(listen-keys): fire for deep keys changed through a parent key
-- [OmniRoute #15800](https://github.com/diegosouzapw/OmniRoute/pull/15800): sinaliza passos de combo presos a modelos que sumiram do catálogo sincronizado.
-- [OmniRoute #15925](https://github.com/diegosouzapw/OmniRoute/pull/15925): limpeza opcional desses passos depois de um sync de modelos.
-- [OmniRoute #17101](https://github.com/diegosouzapw/OmniRoute/pull/17101): a limpeza de um snapshot travado é tentada de novo em vez de derrubar a tarefa em background.
-- [TanStack Query #11679](https://github.com/TanStack/query/pull/11679): mutations com escopo que estavam na fila voltam a iniciar quando a janela está sem foco.
+- [OmniRoute #15800](https://github.com/diegosouzapw/OmniRoute/pull/15800): flags combo steps pinned to models that disappeared from the synced catalog.
+- [OmniRoute #15925](https://github.com/diegosouzapw/OmniRoute/pull/15925): optional cleanup of those steps after a model sync.
+- [OmniRoute #17101](https://github.com/diegosouzapw/OmniRoute/pull/17101): cleanup of a locked snapshot is retried instead of crashing the background task.
+- [TanStack Query #11679](https://github.com/TanStack/query/pull/11679): queued scoped mutations start again while the window is unfocused.
