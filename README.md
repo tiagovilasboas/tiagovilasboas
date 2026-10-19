@@ -41,12 +41,12 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/obsidian-nexo">obsidian-nexo</a></b>
-      <a href="https://github.com/tiagovilasboas/obsidian-nexo"><img height="18" src="https://img.shields.io/badge/-Public-lightgrey?style=flat-square" alt="Public"/></a><br/>
-      <sub>Tema escuro para Obsidian inspirado em Matrix: grafo verde de alto contraste e interface mínima.</sub><br/>
-      <img height="18" src="https://img.shields.io/badge/-CSS-663399?style=flat-square" alt="CSS"/>
-      <a href="https://github.com/tiagovilasboas/obsidian-nexo/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/obsidian-nexo?style=social" alt="stars"/></a>
-      <a href="https://github.com/tiagovilasboas/obsidian-nexo/forks"><img height="18" src="https://img.shields.io/github/forks/tiagovilasboas/obsidian-nexo?style=social" alt="forks"/></a>
+      <b><a href="https://github.com/tiagovilasboas/sentry-golden-path">sentry-golden-path</a></b>
+      <a href="https://github.com/tiagovilasboas/sentry-golden-path"><img height="18" src="https://img.shields.io/badge/-Public-lightgrey?style=flat-square" alt="Public"/></a><br/>
+      <sub>Guia Staff do golden path do Sentry: erros, tracing, releases, alertas e monitoramento de IA/LLM, com boas práticas de implementação.</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
+      <a href="https://github.com/tiagovilasboas/sentry-golden-path/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/sentry-golden-path?style=social" alt="stars"/></a>
+      <a href="https://github.com/tiagovilasboas/sentry-golden-path/forks"><img height="18" src="https://img.shields.io/github/forks/tiagovilasboas/sentry-golden-path?style=social" alt="forks"/></a>
     </td>
     <td width="50%" valign="top">
       <b><a href="https://github.com/tiagovilasboas/ai-code-review">ai-code-review</a></b>
