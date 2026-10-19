@@ -98,9 +98,6 @@ Em volta disso:
 | [Downshift: benchmark](https://github.com/tiagovilasboas/downshift/blob/main/benchmark/report.md) | O A/B controlado: braço roteado contra braço de controle, julgado por testes escondidos |
 | [agyo: arquitetura](https://github.com/tiagovilasboas/antigravity-operator/blob/main/docs/ARCHITECTURE.md) | Onde o runtime em Go fica entre o agent e o sistema operacional, e onde o estado da sessão é gravado |
 | [ai-code-review: runbooks](https://github.com/tiagovilasboas/ai-code-review/blob/main/runbooks/00-overview.md) | Um review de PR em uns 15 minutos: uma skill por passada, achado sem `path:line` cai, e dá para treinar em dry-run com diffs de exemplo |
-| [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path/blob/main/docs/golden-path.md) | Configuração de Sentry para front-end, com testes que barram vazamento de dado pessoal |
-| [+10% de vendas no checkout no mês](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566) | Como achei por que a campanha quebrava na hora de pagar |
-| [Knowledge base (RAG) centralizado](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako) | A regra de negócio sai da cabeça de quem lembra e passa a ser checada no PR |
 | [Montanha: Zero Day](https://github.com/tiagovilasboas/montanha-zero-day) | Jogo de plataforma em PWA, offline no celular ([jogar](https://tiagovilasboas.github.io/montanha-zero-day/)) |
 
 ## Contribuições
