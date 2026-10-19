@@ -97,7 +97,12 @@ Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [
       <img height="18" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square" alt="TypeScript"/>
       <a href="https://github.com/tiagovilasboas/react-layered-boilerplate/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/react-layered-boilerplate?style=social" alt="stars"/></a>
     </td>
-    <td width="50%" valign="top"></td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/tiagovilasboas/montanha-zero-day">montanha-zero-day</a></b><br/>
+      <sub>Platformer game as an offline PWA on your phone (<a href="https://tiagovilasboas.github.io/montanha-zero-day/">play</a>).</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
+      <a href="https://github.com/tiagovilasboas/montanha-zero-day/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/montanha-zero-day?style=social" alt="stars"/></a>
+    </td>
   </tr>
 </table>
 
@@ -107,20 +112,19 @@ Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [
 | --- | --- |
 | [agyo: architecture](https://github.com/tiagovilasboas/antigravity-operator/blob/main/docs/ARCHITECTURE.md) | Where the Go runtime sits between the agent and the OS, and where session state is written |
 | [ai-code-review: runbooks](https://github.com/tiagovilasboas/ai-code-review/blob/main/runbooks/00-overview.md) | A PR review in about 15 minutes: one skill per pass, a HIGH AuthZ/IDOR or CRITICAL secret becomes BLOCK, findings without `path:line` are dropped |
-| [Montanha: Zero Day](https://github.com/tiagovilasboas/montanha-zero-day) | Platformer game as an offline PWA on your phone ([play](https://tiagovilasboas.github.io/montanha-zero-day/)) |
 
 ## Contributions
 
 I send small, tested fixes to projects I use. Some examples:
 
 <!-- oss:start -->
-- [lefthook #1566](https://github.com/evilmartians/lefthook/pull/1566): fix: don&#39;t hash submodules when checking fail_on_changes
-- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): feat(cli): prompt for goose mode during first-time configure
-- [laya #968](https://github.com/NandhaKishorM/laya/pull/968): fix(train): warn when fine-tune predictions collapse to the class prior
-- [openai-agents-python #4961](https://github.com/openai/openai-agents-python/pull/4961): fix(sessions): do not forward session limit as Conversations page size
-- [rspack #15900](https://github.com/web-infra-dev/rspack/pull/15900): fix(loader): avoid mutating lightningcss-loader options
-- [gosec #1760](https://github.com/securego/gosec/pull/1760): fix(G102): detect binding to the IPv6 unspecified address
-- [nanostores #437](https://github.com/nanostores/nanostores/pull/437): fix(listen-keys): fire for deep keys changed through a parent key
+- [lefthook #1566](https://github.com/evilmartians/lefthook/pull/1566): fail_on_changes no longer breaks the hook when a submodule is staged.
+- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): first-time CLI configure asks for the goose mode and saves it.
+- [laya #968](https://github.com/NandhaKishorM/laya/pull/968): fine-tune warns when predictions collapse to the class prior.
+- [openai-agents-python #4961](https://github.com/openai/openai-agents-python/pull/4961): the session history limit is no longer sent as the Conversations API page size.
+- [rspack #15900](https://github.com/web-infra-dev/rspack/pull/15900): lightningcss-loader stops mutating user options, so child compilers build again.
+- [gosec #1760](https://github.com/securego/gosec/pull/1760): G102 now flags binding to the IPv6 unspecified address.
+- [nanostores #437](https://github.com/nanostores/nanostores/pull/437): listenKeys fires for deep keys changed through a parent key.
 - [OmniRoute #15800](https://github.com/diegosouzapw/OmniRoute/pull/15800): flags combo steps pinned to models that disappeared from the synced catalog.
 - [OmniRoute #15925](https://github.com/diegosouzapw/OmniRoute/pull/15925): optional cleanup of those steps after a model sync.
 - [OmniRoute #17101](https://github.com/diegosouzapw/OmniRoute/pull/17101): cleanup of a locked snapshot is retried instead of crashing the background task.

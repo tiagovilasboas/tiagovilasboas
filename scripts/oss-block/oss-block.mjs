@@ -3,8 +3,8 @@
 export const START = '<!-- oss:start -->'
 export const END = '<!-- oss:end -->'
 
-/** HTML-escape (& < > " ') for text and attribute values. */
-export const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+/** HTML-escape (& < >) for text content; quotes stay literal (the block emits no HTML attributes). */
+export const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 /** Third-party text placed in a markdown line: one line, HTML-escaped, and \\ [ ] backslash-escaped so it cannot open a link. */
 export const escapeMarkdownText = (s) => escapeHtml(String(s).replace(/\s+/g, ' ').trim().replace(/[\\[\]]/g, (c) => `\\${c}`))
@@ -93,7 +93,14 @@ export function parseOverrides(json) {
   return raw.map(({ url, text, description }) => ({ url, text, description }))
 }
 
-const bullet = (text, url, description) => `- [${escapeMarkdownText(text)}](${safeUrl(url)}): ${escapeMarkdownText(description)}`
+/**
+ * Third-party text after the link: one line, HTML-escaped, \\ escaped, and a ] escaped only where it
+ * could close a link or reference (before ( or [). A plain [::] stays literal; the block has no
+ * reference definitions, so a bare [x] cannot become a shortcut link.
+ */
+export const escapeMarkdownDescription = (s) => escapeHtml(String(s).replace(/\s+/g, ' ').trim().replace(/\\/g, '\\\\').replace(/\](?=[([])/g, '\\]'))
+
+const bullet = (text, url, description) => `- [${escapeMarkdownText(text)}](${safeUrl(url)}): ${escapeMarkdownDescription(description)}`
 
 /**
  * Block body (between the markers): one bullet per PR, `- [name #N](pr): description`.

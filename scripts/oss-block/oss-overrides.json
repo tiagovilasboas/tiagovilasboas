@@ -1,6 +1,41 @@
 {
   "prs": [
     {
+      "url": "https://github.com/evilmartians/lefthook/pull/1566",
+      "text": "lefthook #1566",
+      "description": "fail_on_changes no longer breaks the hook when a submodule is staged."
+    },
+    {
+      "url": "https://github.com/aaif-goose/goose/pull/12629",
+      "text": "goose #12629",
+      "description": "first-time CLI configure asks for the goose mode and saves it."
+    },
+    {
+      "url": "https://github.com/NandhaKishorM/laya/pull/968",
+      "text": "laya #968",
+      "description": "fine-tune warns when predictions collapse to the class prior."
+    },
+    {
+      "url": "https://github.com/openai/openai-agents-python/pull/4961",
+      "text": "openai-agents-python #4961",
+      "description": "the session history limit is no longer sent as the Conversations API page size."
+    },
+    {
+      "url": "https://github.com/web-infra-dev/rspack/pull/15900",
+      "text": "rspack #15900",
+      "description": "lightningcss-loader stops mutating user options, so child compilers build again."
+    },
+    {
+      "url": "https://github.com/securego/gosec/pull/1760",
+      "text": "gosec #1760",
+      "description": "G102 now flags binding to the IPv6 unspecified address."
+    },
+    {
+      "url": "https://github.com/nanostores/nanostores/pull/437",
+      "text": "nanostores #437",
+      "description": "listenKeys fires for deep keys changed through a parent key."
+    },
+    {
       "url": "https://github.com/diegosouzapw/OmniRoute/pull/15800",
       "text": "OmniRoute #15800",
       "description": "flags combo steps pinned to models that disappeared from the synced catalog."

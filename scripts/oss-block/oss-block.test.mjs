@@ -27,11 +27,18 @@ test('block is a single list: one PR per line, each with its title or its overri
   const { items } = JSON.parse(readFileSync(FIXTURE, 'utf8'))
   const merged = pickMerged(items, 'tiagovilasboas', ALLOWLIST)
   const lines = render(merged, OVERRIDES).split('\n')
-  assert.equal(lines.length, merged.length + OVERRIDES.length)
+  const overrideFor = (url) => OVERRIDES.find((o) => o.url.toLowerCase() === url.toLowerCase())
+  const pinned = OVERRIDES.filter((o) => !merged.some((e) => e.url.toLowerCase() === o.url.toLowerCase()))
+  assert.ok(pinned.length < OVERRIDES.length, 'fixture should cover overrides that apply to picked PRs')
+  assert.equal(lines.length, merged.length + pinned.length)
+  assert.equal(lines.length, 13)
   for (const line of lines) assert.match(line, /^- \[[^\]]+ #\d+\]\(https:\/\/github\.com\/[^)\s]+\/pull\/\d+\): \S/)
   assert.equal(new Set(lines.map((l) => l.slice(l.indexOf('](') + 2, l.indexOf('):')))).size, lines.length)
-  merged.forEach((e, i) => assert.ok(lines[i].endsWith(`): ${e.title}`), lines[i]))
-  OVERRIDES.forEach((o, i) => assert.equal(lines[merged.length + i], `- [${o.text}](${o.url}): ${o.description}`))
+  merged.forEach((e, i) => {
+    const o = overrideFor(e.url)
+    assert.equal(lines[i], o ? `- [${o.text}](${e.url}): ${o.description}` : `- [${e.name} #${e.number}](${e.url}): ${e.title}`)
+  })
+  pinned.forEach((o, i) => assert.equal(lines[merged.length + i], `- [${o.text}](${o.url}): ${o.description}`))
 })
 
 test('an override on a picked PR replaces its text and description in place, without a second bullet', () => {
@@ -88,7 +95,7 @@ test('optional curated label replaces the repo name in the link text and is esca
   assert.throws(() => parseAllowlist({ repos: [{ repo: 'b/y', label: 7 }] }), /owner\/name/)
   assert.throws(() => parseAllowlist({ repos: [{ label: 'no repo' }] }), /owner\/name/)
   const merged = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z'), item('b/y', 2, '2026-09-11T00:00:00Z')], 'me', ['a/x', { repo: 'b/y', label: '<img src=x onerror=alert(1)> "q" & [x]' }])
-  assert.equal(render(merged), '- [x #1](https://github.com/a/x/pull/1): t\n- [&lt;img src=x onerror=alert(1)&gt; &quot;q&quot; &amp; \\[x\\] #2](https://github.com/b/y/pull/2): t')
+  assert.equal(render(merged), '- [x #1](https://github.com/a/x/pull/1): t\n- [&lt;img src=x onerror=alert(1)&gt; "q" &amp; \\[x\\] #2](https://github.com/b/y/pull/2): t')
 })
 
 test('live allowlist: lefthook first, goose second, at the ceiling, plain repo names; dropped repos are not curated', () => {
@@ -104,10 +111,22 @@ test('live allowlist: lefthook first, goose second, at the ceiling, plain repo n
   assert.match(out, /^- \[lefthook #1565\]\(https:\/\/github\.com\/evilmartians\/lefthook\/pull\/1565\): .+\n- \[goose #\d+\]\([^)]+\): .+\n- \[laya #849\]\(https:\/\/github\.com\/NandhaKishorM\/laya\/pull\/849\): /)
 })
 
+test('titles keep apostrophes and quotes literal and still escape < > &', () => {
+  const merged = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z', `fix: don't "hash" <b> & co`)], 'me', ['a/x'])
+  assert.equal(render(merged), `- [x #1](https://github.com/a/x/pull/1): fix: don't "hash" &lt;b&gt; &amp; co`)
+})
+
+test('brackets in descriptions stay literal ([::]) unless they could form a link; link text stays escaped', () => {
+  const merged = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z', 'fix(G102): detect binding to [::]')], 'me', [{ repo: 'a/x', label: 'x [::]' }])
+  assert.equal(render(merged), '- [x \\[::\\] #1](https://github.com/a/x/pull/1): fix(G102): detect binding to [::]')
+  const evil = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z', 'see [a](https://evil) [b][c] \\](x)')], 'me', ['a/x'])
+  assert.equal(render(evil), '- [x #1](https://github.com/a/x/pull/1): see [a\\](https://evil) [b\\][c] \\\\\\](x)')
+})
+
 test('repo names and URLs with special characters are escaped and cannot break the link', () => {
   const evil = { repository_url: 'https://api.github.com/repos/o/<img src=x onerror=alert(1)>"&[x]', number: 1, html_url: 'https://github.com/o/r/pull/1) [pwn](https://evil', title: 't', pull_request: { merged_at: '2026-09-10T00:00:00Z' } }
   const out = render(pickMerged([evil], 'me', ['o/<img src=x onerror=alert(1)>"&[x]']))
-  assert.equal(out, '- [&lt;img src=x onerror=alert(1)&gt;&quot;&amp;\\[x\\] #1](https://github.com/o/r/pull/1%29%20[pwn]%28https://evil): t')
+  assert.equal(out, '- [&lt;img src=x onerror=alert(1)&gt;"&amp;\\[x\\] #1](https://github.com/o/r/pull/1%29%20[pwn]%28https://evil): t')
   assert.doesNotMatch(out, /<img/)
   assert.throws(() => render([{ name: 'x', url: 'javascript:alert(1)' }]), /unexpected PR URL/)
 })
@@ -171,7 +190,7 @@ test('CLI (fixture): OSS_LIMIT lowers the ceiling', () => {
   writeFileSync(readme, `${START}\n${END}\n`)
   const r = cli(readme, { OSS_LIMIT: '2' })
   assert.equal(r.status, 0, r.stderr)
-  assert.equal(readFileSync(readme, 'utf8'), `${START}\n- [lefthook #1565](https://github.com/evilmartians/lefthook/pull/1565): fix: diff push files against the merge base with the default branch\n- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): feat(cli): prompt for goose mode during first-time configure\n${OVERRIDES.map((o) => `- [${o.text}](${o.url}): ${o.description}\n`).join('')}${END}\n`)
+  assert.equal(readFileSync(readme, 'utf8'), `${START}\n- [lefthook #1565](https://github.com/evilmartians/lefthook/pull/1565): fix: diff push files against the merge base with the default branch\n- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): first-time CLI configure asks for the goose mode and saves it.\n${OVERRIDES.filter((o) => !/\/(lefthook\/pull\/1565|goose\/pull\/12629)$/.test(o.url)).map((o) => `- [${o.text}](${o.url}): ${o.description}\n`).join('')}${END}\n`)
 })
 
 test('lineDiff shows a pure reordering as moved lines only', () => {

@@ -1,10 +1,12 @@
 - [lefthook #1565](https://github.com/evilmartians/lefthook/pull/1565): fix: diff push files against the merge base with the default branch
-- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): feat(cli): prompt for goose mode during first-time configure
+- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): first-time CLI configure asks for the goose mode and saves it.
 - [laya #849](https://github.com/NandhaKishorM/laya/pull/849): fix(router): build checkpoints outside the lifecycle lock
-- [openai-agents-python #4961](https://github.com/openai/openai-agents-python/pull/4961): fix(sessions): do not forward session limit as Conversations page size
-- [rspack #15900](https://github.com/web-infra-dev/rspack/pull/15900): fix(css): do not mutate user CSS loader options across child compilers
-- [gosec #1760](https://github.com/securego/gosec/pull/1760): fix(G102): detect binding to the IPv6 unspecified address
-- [nanostores #437](https://github.com/nanostores/nanostores/pull/437): fix(listen-keys): fire for deep keys changed through a parent key
+- [openai-agents-python #4961](https://github.com/openai/openai-agents-python/pull/4961): the session history limit is no longer sent as the Conversations API page size.
+- [rspack #15900](https://github.com/web-infra-dev/rspack/pull/15900): lightningcss-loader stops mutating user options, so child compilers build again.
+- [gosec #1760](https://github.com/securego/gosec/pull/1760): G102 now flags binding to the IPv6 unspecified address.
+- [nanostores #437](https://github.com/nanostores/nanostores/pull/437): listenKeys fires for deep keys changed through a parent key.
+- [lefthook #1566](https://github.com/evilmartians/lefthook/pull/1566): fail_on_changes no longer breaks the hook when a submodule is staged.
+- [laya #968](https://github.com/NandhaKishorM/laya/pull/968): fine-tune warns when predictions collapse to the class prior.
 - [OmniRoute #15800](https://github.com/diegosouzapw/OmniRoute/pull/15800): flags combo steps pinned to models that disappeared from the synced catalog.
 - [OmniRoute #15925](https://github.com/diegosouzapw/OmniRoute/pull/15925): optional cleanup of those steps after a model sync.
 - [OmniRoute #17101](https://github.com/diegosouzapw/OmniRoute/pull/17101): cleanup of a locked snapshot is retried instead of crashing the background task.
