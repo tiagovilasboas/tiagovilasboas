@@ -2,12 +2,18 @@
 
 **Staff Engineer · Agentic AI · AppSec · Observabilidade**
 
-Construo condições para que as squads tomem boas decisões sem depender da minha memória.
-Lidero enablement de IA entre squads e trabalho com tecnologia desde 2006: arquitetura antes do código, agents com escopo, humano no loop e evidência que dá para reproduzir.
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tiagovilasboas/)
 [![DEV.to](https://img.shields.io/badge/DEV.to-0A0A0A?style=flat-square&logo=devdotto&logoColor=white)](https://dev.to/tiagovilasboas)
 [![Sponsor](https://img.shields.io/badge/Sponsor-EA4AAA?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/tiagovilasboas)
+
+Construo condições para que as squads tomem boas decisões sem depender da minha memória.
+
+Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje aplico Harness Engineering, Agentic AI e AppSec: arquitetura antes do código, agents com escopo, humano no loop e evidência que dá para reproduzir.
+
+**Impacto:**
+- [Uma base de conhecimento de domínio no Git interno](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako), usada como contexto pelos agentes no code review: a regra de negócio sai da cabeça de quem lembra e passa a ser checada no PR.
+- [+10% de vendas no checkout no mês](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566), depois de achar por que a campanha quebrava na hora de pagar.
+- [Um contrato de observabilidade de frontend](https://dev.to/tiagovilasboas/observabilidade-no-frontend-o-http-200-esconde-900-catch-vazios-53jd) adotado pelos squads: o mesmo padrão de erro e de proteção de dado pessoal em cada front, com um guia aberto pra qualquer squad copiar ([sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path)).
 
 ## 📌 Projetos em destaque
 
@@ -92,9 +98,6 @@ Em volta disso:
 | [Downshift: benchmark](https://github.com/tiagovilasboas/downshift/blob/main/benchmark/report.md) | O A/B controlado: braço roteado contra braço de controle, julgado por testes escondidos |
 | [agyo: arquitetura](https://github.com/tiagovilasboas/antigravity-operator/blob/main/docs/ARCHITECTURE.md) | Onde o runtime em Go fica entre o agent e o sistema operacional, e onde o estado da sessão é gravado |
 | [ai-code-review: runbooks](https://github.com/tiagovilasboas/ai-code-review/blob/main/runbooks/00-overview.md) | Um review de PR em uns 15 minutos: uma skill por passada, achado sem `path:line` cai, e dá para treinar em dry-run com diffs de exemplo |
-| [sentry-golden-path](https://github.com/tiagovilasboas/sentry-golden-path/blob/main/docs/golden-path.md) | Configuração de Sentry para front-end, com testes que barram vazamento de dado pessoal |
-| [+10% de vendas no checkout no mês](https://dev.to/tiagovilasboas/10-de-conversao-no-checkout-no-mes-a-campanha-quebrava-na-hora-de-pagar-5566) | Como achei por que a campanha quebrava na hora de pagar |
-| [Knowledge base (RAG) centralizado](https://dev.to/tiagovilasboas/harness-engineer-como-um-knowledge-base-rag-centralizado-pode-impactar-positivamente-sua-empresa-2ako) | A regra de negócio sai da cabeça de quem lembra e passa a ser checada no PR |
 | [Montanha: Zero Day](https://github.com/tiagovilasboas/montanha-zero-day) | Jogo de plataforma em PWA, offline no celular ([jogar](https://tiagovilasboas.github.io/montanha-zero-day/)) |
 
 ## Contribuições
