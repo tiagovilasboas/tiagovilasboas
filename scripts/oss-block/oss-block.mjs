@@ -93,7 +93,14 @@ export function parseOverrides(json) {
   return raw.map(({ url, text, description }) => ({ url, text, description }))
 }
 
-const bullet = (text, url, description) => `- [${escapeMarkdownText(text)}](${safeUrl(url)}): ${escapeMarkdownText(description)}`
+/**
+ * Third-party text after the link: one line, HTML-escaped, \\ escaped, and a ] escaped only where it
+ * could close a link or reference (before ( or [). A plain [::] stays literal; the block has no
+ * reference definitions, so a bare [x] cannot become a shortcut link.
+ */
+export const escapeMarkdownDescription = (s) => escapeHtml(String(s).replace(/\s+/g, ' ').trim().replace(/\\/g, '\\\\').replace(/\](?=[([])/g, '\\]'))
+
+const bullet = (text, url, description) => `- [${escapeMarkdownText(text)}](${safeUrl(url)}): ${escapeMarkdownDescription(description)}`
 
 /**
  * Block body (between the markers): one bullet per PR, `- [name #N](pr): description`.

@@ -116,6 +116,13 @@ test('titles keep apostrophes and quotes literal and still escape < > &', () => 
   assert.equal(render(merged), `- [x #1](https://github.com/a/x/pull/1): fix: don't "hash" &lt;b&gt; &amp; co`)
 })
 
+test('brackets in descriptions stay literal ([::]) unless they could form a link; link text stays escaped', () => {
+  const merged = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z', 'fix(G102): detect binding to [::]')], 'me', [{ repo: 'a/x', label: 'x [::]' }])
+  assert.equal(render(merged), '- [x \\[::\\] #1](https://github.com/a/x/pull/1): fix(G102): detect binding to [::]')
+  const evil = pickMerged([item('a/x', 1, '2026-09-10T00:00:00Z', 'see [a](https://evil) [b][c] \\](x)')], 'me', ['a/x'])
+  assert.equal(render(evil), '- [x #1](https://github.com/a/x/pull/1): see [a\\](https://evil) [b\\][c] \\\\\\](x)')
+})
+
 test('repo names and URLs with special characters are escaped and cannot break the link', () => {
   const evil = { repository_url: 'https://api.github.com/repos/o/<img src=x onerror=alert(1)>"&[x]', number: 1, html_url: 'https://github.com/o/r/pull/1) [pwn](https://evil', title: 't', pull_request: { merged_at: '2026-09-10T00:00:00Z' } }
   const out = render(pickMerged([evil], 'me', ['o/<img src=x onerror=alert(1)>"&[x]']))
