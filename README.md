@@ -102,16 +102,21 @@ Em volta disso:
 
 ## Contribuições
 
-<!-- oss:start -->
-PRs mergeados em: [lefthook](https://github.com/evilmartians/lefthook/pull/1566) · [goose](https://github.com/aaif-goose/goose/pull/12629) · [laya](https://github.com/NandhaKishorM/laya/pull/968) · [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [gosec](https://github.com/securego/gosec/pull/1760) · [nanostores](https://github.com/nanostores/nanostores/pull/437)
-<!-- oss:end -->
-
 Contribuo com correções pequenas e testadas em projetos que eu uso. Alguns exemplos:
 
+<!-- oss:start -->
+- [lefthook #1566](https://github.com/evilmartians/lefthook/pull/1566): fix: don&#39;t hash submodules when checking fail_on_changes
+- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): feat(cli): prompt for goose mode during first-time configure
+- [laya #968](https://github.com/NandhaKishorM/laya/pull/968): fix(train): warn when fine-tune predictions collapse to the class prior
+- [openai-agents-python #4961](https://github.com/openai/openai-agents-python/pull/4961): fix(sessions): do not forward session limit as Conversations page size
+- [rspack #15900](https://github.com/web-infra-dev/rspack/pull/15900): fix(loader): avoid mutating lightningcss-loader options
+- [gosec #1760](https://github.com/securego/gosec/pull/1760): fix(G102): detect binding to the IPv6 unspecified address
+- [nanostores #437](https://github.com/nanostores/nanostores/pull/437): fix(listen-keys): fire for deep keys changed through a parent key
 - [OmniRoute #15800](https://github.com/diegosouzapw/OmniRoute/pull/15800): sinaliza passos de combo presos a modelos que sumiram do catálogo sincronizado.
 - [OmniRoute #15925](https://github.com/diegosouzapw/OmniRoute/pull/15925): limpeza opcional desses passos depois de um sync de modelos.
 - [OmniRoute #17101](https://github.com/diegosouzapw/OmniRoute/pull/17101): a limpeza de um snapshot travado é tentada de novo em vez de derrubar a tarefa em background.
 - [TanStack Query #11679](https://github.com/TanStack/query/pull/11679): mutations com escopo que estavam na fila voltam a iniciar quando a janela está sem foco.
+<!-- oss:end -->
 
 ## Formação
 

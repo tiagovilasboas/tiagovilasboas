@@ -1,1 +1,11 @@
-PRs mergeados em: [lefthook](https://github.com/evilmartians/lefthook/pull/1565) · [goose](https://github.com/aaif-goose/goose/pull/12629) · [laya](https://github.com/NandhaKishorM/laya/pull/849) · [openai-agents-python](https://github.com/openai/openai-agents-python/pull/4961) · [rspack](https://github.com/web-infra-dev/rspack/pull/15900) · [gosec](https://github.com/securego/gosec/pull/1760) · [nanostores](https://github.com/nanostores/nanostores/pull/437)
+- [lefthook #1565](https://github.com/evilmartians/lefthook/pull/1565): fix: diff push files against the merge base with the default branch
+- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): feat(cli): prompt for goose mode during first-time configure
+- [laya #849](https://github.com/NandhaKishorM/laya/pull/849): fix(router): build checkpoints outside the lifecycle lock
+- [openai-agents-python #4961](https://github.com/openai/openai-agents-python/pull/4961): fix(sessions): do not forward session limit as Conversations page size
+- [rspack #15900](https://github.com/web-infra-dev/rspack/pull/15900): fix(css): do not mutate user CSS loader options across child compilers
+- [gosec #1760](https://github.com/securego/gosec/pull/1760): fix(G102): detect binding to the IPv6 unspecified address
+- [nanostores #437](https://github.com/nanostores/nanostores/pull/437): fix(listen-keys): fire for deep keys changed through a parent key
+- [OmniRoute #15800](https://github.com/diegosouzapw/OmniRoute/pull/15800): sinaliza passos de combo presos a modelos que sumiram do catálogo sincronizado.
+- [OmniRoute #15925](https://github.com/diegosouzapw/OmniRoute/pull/15925): limpeza opcional desses passos depois de um sync de modelos.
+- [OmniRoute #17101](https://github.com/diegosouzapw/OmniRoute/pull/17101): a limpeza de um snapshot travado é tentada de novo em vez de derrubar a tarefa em background.
+- [TanStack Query #11679](https://github.com/TanStack/query/pull/11679): mutations com escopo que estavam na fila voltam a iniciar quando a janela está sem foco.
