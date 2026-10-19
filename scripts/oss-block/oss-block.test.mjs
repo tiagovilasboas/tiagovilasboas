@@ -112,9 +112,9 @@ test('repo names and URLs with special characters are escaped and cannot break t
   assert.throws(() => render([{ name: 'x', url: 'javascript:alert(1)' }]), /unexpected PR URL/)
 })
 
-test('README: the block under "## Contribuições" is the only PR list; no hand-written PR bullets outside it', () => {
+test('README: the block under "## Contributions" is the only PR list; no hand-written PR bullets outside it', () => {
   const readme = readFileSync(here('../../README.md'), 'utf8')
-  assert.ok(readme.includes(`## Contribuições\n\nContribuo com correções pequenas e testadas em projetos que eu uso. Alguns exemplos:\n\n${START}\n- [`), 'header/intro drifted')
+  assert.ok(readme.includes(`## Contributions\n\nI send small, tested fixes to projects I use. Some examples:\n\n${START}\n- [`), 'header/intro drifted')
   const body = readme.slice(readme.indexOf(START) + START.length + 1, readme.indexOf(END) - 1)
   assert.ok(body.split('\n').every((l) => l.startsWith('- [')))
   const outside = readme.slice(0, readme.indexOf(START)) + readme.slice(readme.indexOf(END))
