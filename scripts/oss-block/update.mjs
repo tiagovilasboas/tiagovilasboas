@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 // Regenerates the <!-- oss:start --> ... <!-- oss:end --> block of the profile README
-// as one line of links to the user's merged PRs in the curated repos of oss-allowlist.json
-// (GitHub search API; latest merged PR per repo; OSS_LIMIT can lower the ceiling of 7).
+// as a list of the user's merged PRs in the curated repos of oss-allowlist.json
+// (GitHub search API; latest merged PR per repo; OSS_LIMIT can lower the ceiling of 7),
+// one bullet per PR described by its title, followed by the PRs pinned in oss-overrides.json.
+// An override replaces a PR's link text and description with the curated wording.
 //   OSS_USER=<login> GH_TOKEN=<token> node scripts/oss-block/update.mjs README.md            # write if changed
 //   OSS_USER=<login> GH_TOKEN=<token> node scripts/oss-block/update.mjs README.md --dry-run  # print diff, never write
 // OSS_FIXTURE=<file> reads a search-shaped JSON instead of calling the API (tests, no network).
 // Always exits 0 unless something is broken; the diff goes to stdout and $GITHUB_STEP_SUMMARY.
 import { appendFileSync, readFileSync, writeFileSync } from 'node:fs'
-import { lineDiff, parseAllowlist, pickMerged, render, replaceBlock } from './oss-block.mjs'
+import { lineDiff, parseAllowlist, parseOverrides, pickMerged, render, replaceBlock } from './oss-block.mjs'
 
 const [file = 'README.md', ...flags] = process.argv.slice(2)
 const dryRun = flags.includes('--dry-run')
@@ -28,12 +30,13 @@ async function searchMerged() {
 const body = await searchMerged()
 if (body.incomplete_results) throw new Error('GitHub search returned incomplete results; refusing to rewrite the block')
 const allowlist = parseAllowlist(JSON.parse(readFileSync(new URL('./oss-allowlist.json', import.meta.url), 'utf8')))
+const overrides = parseOverrides(JSON.parse(readFileSync(new URL('./oss-overrides.json', import.meta.url), 'utf8')))
 const merged = pickMerged(body.items, user, allowlist, limit)
 if (merged.length === 0) throw new Error('no merged PRs in the curated repos; refusing to empty the block')
 
 const before = readFileSync(file, 'utf8')
-const after = replaceBlock(before, render(merged))
-const sources = merged.map((e) => `${e.repo}#${e.number} merged ${e.mergedAt}`).join('\n')
+const after = replaceBlock(before, render(merged, overrides))
+const sources = [...merged.map((e) => `${e.repo}#${e.number} merged ${e.mergedAt}`), ...overrides.map((o) => `${o.url} (override)`)].join('\n')
 
 let report
 if (after === before) {

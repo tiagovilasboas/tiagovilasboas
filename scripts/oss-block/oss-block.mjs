@@ -2,8 +2,6 @@
 // Tested in oss-block.test.mjs.
 export const START = '<!-- oss:start -->'
 export const END = '<!-- oss:end -->'
-/** Prefix of the rendered line (the section header lives outside the markers, in the README). */
-export const PREFIX = 'PRs mergeados em:'
 
 /** HTML-escape (& < > " ') for text and attribute values. */
 export const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
@@ -79,9 +77,37 @@ export function safeUrl(url) {
   return u.replace(/[()<>\s]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0')}`)
 }
 
-/** Block body (between the markers): one line, only merged PRs, e.g. `PRs mergeados em: [rspack](pr) · [nanostores](pr)`. */
-export function render(merged) {
-  return `${PREFIX} ${merged.map((e) => `[${escapeMarkdownText(e.label ?? e.name)}](${safeUrl(e.url)})`).join(' · ')}`
+const PR_URL_RE = /^https:\/\/github\.com\/[^/\s]+\/[^/\s]+\/pull\/\d+$/
+const nonEmpty = (v) => typeof v === 'string' && v.trim().length > 0
+
+/**
+ * Validate oss-overrides.json: { "prs": [{ "url", "text", "description" }] }, unique URLs.
+ * An override replaces the link text and description of a listed PR; an override whose PR
+ * is not picked from search is still listed, after the picked ones, in file order.
+ */
+export function parseOverrides(json) {
+  const raw = json?.prs
+  const ok = Array.isArray(raw) && raw.every((o) => o && PR_URL_RE.test(o.url) && nonEmpty(o.text) && nonEmpty(o.description))
+  if (!ok) throw new Error('oss-overrides.json: "prs" must be an array of { "url": "https://github.com/owner/name/pull/N", "text": "...", "description": "..." }')
+  if (new Set(raw.map((o) => o.url.toLowerCase())).size !== raw.length) throw new Error('oss-overrides.json: duplicate url')
+  return raw.map(({ url, text, description }) => ({ url, text, description }))
+}
+
+const bullet = (text, url, description) => `- [${escapeMarkdownText(text)}](${safeUrl(url)}): ${escapeMarkdownText(description)}`
+
+/**
+ * Block body (between the markers): one bullet per PR, `- [name #N](pr): description`.
+ * The description is the PR title unless an override supplies the text and description.
+ */
+export function render(merged, overrides = []) {
+  const byUrl = new Map(overrides.map((o) => [o.url.toLowerCase(), o]))
+  const picked = merged.map((e) => {
+    const o = byUrl.get(e.url.toLowerCase())
+    return o ? bullet(o.text, e.url, o.description) : bullet(`${e.label ?? e.name} #${e.number}`, e.url, e.title)
+  })
+  const seen = new Set(merged.map((e) => e.url.toLowerCase()))
+  const pinned = overrides.filter((o) => !seen.has(o.url.toLowerCase())).map((o) => bullet(o.text, o.url, o.description))
+  return [...picked, ...pinned].join('\n')
 }
 
 /** Replace only what sits between the markers. */
