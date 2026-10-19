@@ -12,7 +12,7 @@ I lead AI enablement across squads. I've worked in tech since 2006 and today app
 
 ## 🔧 Building now: Downshift
 
-<a href="https://github.com/tiagovilasboas/downshift">
+<a href="https://downshift-ai.vercel.app/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tiagovilasboas/downshift/main/docs/brand/downshift-logo-dark.svg">
     <img src="https://raw.githubusercontent.com/tiagovilasboas/downshift/main/docs/brand/downshift-logo-light.svg" alt="Downshift" width="260">
@@ -40,7 +40,7 @@ curl -fsSL https://raw.githubusercontent.com/tiagovilasboas/downshift/main/insta
 
 Works with **Claude Code, Cursor, Codex and OpenCode**. Fail-open: any doubt or error leaves the spawn untouched. Prompts never leave memory.
 
-Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [controlled A/B](https://github.com/tiagovilasboas/downshift/blob/main/benchmark/report.md), nothing attributable on natural use yet. Every claim has a rung on the [evidence ladder](https://github.com/tiagovilasboas/downshift/blob/main/docs/guides/evidence.md).
+Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [controlled A/B](https://downshift-ai.vercel.app/docs/report/), nothing attributable on natural use yet. Every claim has a rung on the [evidence ladder](https://downshift-ai.vercel.app/docs/evidence/).
 
 [![Website](https://img.shields.io/badge/website-downshift--ai.vercel.app-22C55E?style=flat-square)](https://downshift-ai.vercel.app/)
 [![Release](https://img.shields.io/github/v/release/tiagovilasboas/downshift?include_prereleases&label=release&style=flat-square)](https://github.com/tiagovilasboas/downshift/releases)
@@ -48,7 +48,7 @@ Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [
 [![Stars](https://img.shields.io/github/stars/tiagovilasboas/downshift?style=flat-square)](https://github.com/tiagovilasboas/downshift/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square)](https://github.com/tiagovilasboas/downshift/blob/main/LICENSE)
 
-**[🌐 Website](https://downshift-ai.vercel.app/) · [Try it](https://github.com/tiagovilasboas/downshift#quickstart) · [Architecture](https://github.com/tiagovilasboas/downshift/blob/main/docs/design/architecture.md) · [Discussions](https://github.com/tiagovilasboas/downshift/discussions) · ⭐ [Star it](https://github.com/tiagovilasboas/downshift)**
+**[🌐 Website](https://downshift-ai.vercel.app/) · [Try it](https://downshift-ai.vercel.app/#start) · [Architecture](https://downshift-ai.vercel.app/docs/architecture/) · [Discussions](https://github.com/tiagovilasboas/downshift/discussions) · ⭐ [Star it](https://github.com/tiagovilasboas/downshift)**
 
 ## Impact
 
