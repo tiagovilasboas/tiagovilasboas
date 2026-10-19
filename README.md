@@ -42,12 +42,13 @@ Works with **Claude Code, Cursor, Codex and OpenCode**. Fail-open: any doubt or 
 
 Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [controlled A/B](https://github.com/tiagovilasboas/downshift/blob/main/benchmark/report.md), nothing attributable on natural use yet. Every claim has a rung on the [evidence ladder](https://github.com/tiagovilasboas/downshift/blob/main/docs/guides/evidence.md).
 
+[![Website](https://img.shields.io/badge/website-downshift--ai.vercel.app-22C55E?style=flat-square)](https://downshift-ai.vercel.app/)
 [![Release](https://img.shields.io/github/v/release/tiagovilasboas/downshift?include_prereleases&label=release&style=flat-square)](https://github.com/tiagovilasboas/downshift/releases)
 [![Build](https://img.shields.io/github/actions/workflow/status/tiagovilasboas/downshift/ci.yml?branch=main&style=flat-square&label=build)](https://github.com/tiagovilasboas/downshift/actions/workflows/ci.yml)
 [![Stars](https://img.shields.io/github/stars/tiagovilasboas/downshift?style=flat-square)](https://github.com/tiagovilasboas/downshift/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square)](https://github.com/tiagovilasboas/downshift/blob/main/LICENSE)
 
-**[Try it](https://github.com/tiagovilasboas/downshift#quickstart) · [Architecture](https://github.com/tiagovilasboas/downshift/blob/main/docs/design/architecture.md) · [Discussions](https://github.com/tiagovilasboas/downshift/discussions) · ⭐ [Star it](https://github.com/tiagovilasboas/downshift)**
+**[🌐 Website](https://downshift-ai.vercel.app/) · [Try it](https://github.com/tiagovilasboas/downshift#quickstart) · [Architecture](https://github.com/tiagovilasboas/downshift/blob/main/docs/design/architecture.md) · [Discussions](https://github.com/tiagovilasboas/downshift/discussions) · ⭐ [Star it](https://github.com/tiagovilasboas/downshift)**
 
 ## Impact
 
