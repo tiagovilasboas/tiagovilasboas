@@ -41,14 +41,6 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/obsidian-nexo">obsidian-nexo</a></b>
-      <a href="https://github.com/tiagovilasboas/obsidian-nexo"><img height="18" src="https://img.shields.io/badge/-Public-lightgrey?style=flat-square" alt="Public"/></a><br/>
-      <sub>Tema escuro para Obsidian inspirado em Matrix: grafo verde de alto contraste e interface mínima.</sub><br/>
-      <img height="18" src="https://img.shields.io/badge/-CSS-663399?style=flat-square" alt="CSS"/>
-      <a href="https://github.com/tiagovilasboas/obsidian-nexo/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/obsidian-nexo?style=social" alt="stars"/></a>
-      <a href="https://github.com/tiagovilasboas/obsidian-nexo/forks"><img height="18" src="https://img.shields.io/github/forks/tiagovilasboas/obsidian-nexo?style=social" alt="forks"/></a>
-    </td>
-    <td width="50%" valign="top">
       <b><a href="https://github.com/tiagovilasboas/ai-code-review">ai-code-review</a></b>
       <a href="https://github.com/tiagovilasboas/ai-code-review"><img height="18" src="https://img.shields.io/badge/-Public-lightgrey?style=flat-square" alt="Public"/></a><br/>
       <sub>Toolkit de code review agêntico: skills, runbooks e guardrails de AppSec para pipelines de PR.</sub><br/>
@@ -56,8 +48,6 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
       <a href="https://github.com/tiagovilasboas/ai-code-review/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/ai-code-review?style=social" alt="stars"/></a>
       <a href="https://github.com/tiagovilasboas/ai-code-review/forks"><img height="18" src="https://img.shields.io/github/forks/tiagovilasboas/ai-code-review?style=social" alt="forks"/></a>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <b><a href="https://github.com/tiagovilasboas/dev-to-mcp">dev-to-mcp</a></b>
       <a href="https://github.com/tiagovilasboas/dev-to-mcp"><img height="18" src="https://img.shields.io/badge/-Public-lightgrey?style=flat-square" alt="Public"/></a><br/>
@@ -66,6 +56,8 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
       <a href="https://github.com/tiagovilasboas/dev-to-mcp/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/dev-to-mcp?style=social" alt="stars"/></a>
       <a href="https://github.com/tiagovilasboas/dev-to-mcp/forks"><img height="18" src="https://img.shields.io/github/forks/tiagovilasboas/dev-to-mcp?style=social" alt="forks"/></a>
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <b><a href="https://github.com/tiagovilasboas/react-layered-boilerplate">react-layered-boilerplate</a></b>
       <a href="https://github.com/tiagovilasboas/react-layered-boilerplate"><img height="18" src="https://img.shields.io/badge/-Public-lightgrey?style=flat-square" alt="Public"/></a><br/>
@@ -73,6 +65,14 @@ Lidero enablement de IA entre squads. Atuo com tecnologia desde 2006 e hoje apli
       <img height="18" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square" alt="TypeScript"/>
       <a href="https://github.com/tiagovilasboas/react-layered-boilerplate/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/react-layered-boilerplate?style=social" alt="stars"/></a>
       <a href="https://github.com/tiagovilasboas/react-layered-boilerplate/forks"><img height="18" src="https://img.shields.io/github/forks/tiagovilasboas/react-layered-boilerplate?style=social" alt="forks"/></a>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/tiagovilasboas/sentry-golden-path">sentry-golden-path</a></b>
+      <a href="https://github.com/tiagovilasboas/sentry-golden-path"><img height="18" src="https://img.shields.io/badge/-Public-lightgrey?style=flat-square" alt="Public"/></a><br/>
+      <sub>Guia Staff do golden path do Sentry: erros, tracing, releases, alertas e monitoramento de IA/LLM, com boas práticas de implementação.</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
+      <a href="https://github.com/tiagovilasboas/sentry-golden-path/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/sentry-golden-path?style=social" alt="stars"/></a>
+      <a href="https://github.com/tiagovilasboas/sentry-golden-path/forks"><img height="18" src="https://img.shields.io/github/forks/tiagovilasboas/sentry-golden-path?style=social" alt="forks"/></a>
     </td>
   </tr>
 </table>
