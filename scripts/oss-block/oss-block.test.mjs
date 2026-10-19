@@ -27,11 +27,18 @@ test('block is a single list: one PR per line, each with its title or its overri
   const { items } = JSON.parse(readFileSync(FIXTURE, 'utf8'))
   const merged = pickMerged(items, 'tiagovilasboas', ALLOWLIST)
   const lines = render(merged, OVERRIDES).split('\n')
-  assert.equal(lines.length, merged.length + OVERRIDES.length)
+  const overrideFor = (url) => OVERRIDES.find((o) => o.url.toLowerCase() === url.toLowerCase())
+  const pinned = OVERRIDES.filter((o) => !merged.some((e) => e.url.toLowerCase() === o.url.toLowerCase()))
+  assert.ok(pinned.length < OVERRIDES.length, 'fixture should cover overrides that apply to picked PRs')
+  assert.equal(lines.length, merged.length + pinned.length)
+  assert.equal(lines.length, 13)
   for (const line of lines) assert.match(line, /^- \[[^\]]+ #\d+\]\(https:\/\/github\.com\/[^)\s]+\/pull\/\d+\): \S/)
   assert.equal(new Set(lines.map((l) => l.slice(l.indexOf('](') + 2, l.indexOf('):')))).size, lines.length)
-  merged.forEach((e, i) => assert.ok(lines[i].endsWith(`): ${e.title}`), lines[i]))
-  OVERRIDES.forEach((o, i) => assert.equal(lines[merged.length + i], `- [${o.text}](${o.url}): ${o.description}`))
+  merged.forEach((e, i) => {
+    const o = overrideFor(e.url)
+    assert.equal(lines[i], o ? `- [${o.text}](${e.url}): ${o.description}` : `- [${e.name} #${e.number}](${e.url}): ${e.title}`)
+  })
+  pinned.forEach((o, i) => assert.equal(lines[merged.length + i], `- [${o.text}](${o.url}): ${o.description}`))
 })
 
 test('an override on a picked PR replaces its text and description in place, without a second bullet', () => {
@@ -171,7 +178,7 @@ test('CLI (fixture): OSS_LIMIT lowers the ceiling', () => {
   writeFileSync(readme, `${START}\n${END}\n`)
   const r = cli(readme, { OSS_LIMIT: '2' })
   assert.equal(r.status, 0, r.stderr)
-  assert.equal(readFileSync(readme, 'utf8'), `${START}\n- [lefthook #1565](https://github.com/evilmartians/lefthook/pull/1565): fix: diff push files against the merge base with the default branch\n- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): feat(cli): prompt for goose mode during first-time configure\n${OVERRIDES.map((o) => `- [${o.text}](${o.url}): ${o.description}\n`).join('')}${END}\n`)
+  assert.equal(readFileSync(readme, 'utf8'), `${START}\n- [lefthook #1565](https://github.com/evilmartians/lefthook/pull/1565): fix: diff push files against the merge base with the default branch\n- [goose #12629](https://github.com/aaif-goose/goose/pull/12629): first-time CLI configure asks for the goose mode and saves it.\n${OVERRIDES.filter((o) => !/\/(lefthook\/pull\/1565|goose\/pull\/12629)$/.test(o.url)).map((o) => `- [${o.text}](${o.url}): ${o.description}\n`).join('')}${END}\n`)
 })
 
 test('lineDiff shows a pure reordering as moved lines only', () => {
