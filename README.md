@@ -57,52 +57,9 @@ Honest numbers: on a synthetic corpus of 248 command outputs, clean runs shrink 
 
 ## 📌 Other projects
 
-<!-- Same repos and order as the Pinned section, minus Downshift (featured above).
-     Stars are live shields.io social badges; nothing here is updated by hand. -->
+<!-- Curated: agentic AI, AppSec and observability first, then the best-starred. Stars are live shields.io badges. -->
 
 <table>
-  <tr>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/antigravity-operator">antigravity-operator</a></b><br/>
-      <sub>Outer harness for coding agents on Google AI Pro: scoped, evidence-backed, recoverable sessions.</sub><br/>
-      <img height="18" src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square" alt="Go"/>
-      <a href="https://github.com/tiagovilasboas/antigravity-operator/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/antigravity-operator?style=social" alt="stars"/></a>
-    </td>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/sentry-golden-path">sentry-golden-path</a></b><br/>
-      <sub>Staff guide to the Sentry golden path: errors, tracing, releases, alerts and AI/LLM monitoring.</sub><br/>
-      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
-      <a href="https://github.com/tiagovilasboas/sentry-golden-path/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/sentry-golden-path?style=social" alt="stars"/></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/ai-code-review">ai-code-review</a></b><br/>
-      <sub>Agentic code review toolkit: skills, runbooks and AppSec guardrails for PR pipelines.</sub><br/>
-      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
-      <a href="https://github.com/tiagovilasboas/ai-code-review/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/ai-code-review?style=social" alt="stars"/></a>
-    </td>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/dev-to-mcp">dev-to-mcp</a></b><br/>
-      <sub>MCP server for the Forem/DEV.to API in a single binary. Go + stdio, no cold start.</sub><br/>
-      <img height="18" src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square" alt="Go"/>
-      <a href="https://github.com/tiagovilasboas/dev-to-mcp/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/dev-to-mcp?style=social" alt="stars"/></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/react-layered-boilerplate">react-layered-boilerplate</a></b><br/>
-      <sub>Production-ready React + Vite starter with strict layering, TypeScript, tests and CI.</sub><br/>
-      <img height="18" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square" alt="TypeScript"/>
-      <a href="https://github.com/tiagovilasboas/react-layered-boilerplate/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/react-layered-boilerplate?style=social" alt="stars"/></a>
-    </td>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/montanha-zero-day">montanha-zero-day</a></b><br/>
-      <sub>Platformer game as an offline PWA on your phone (<a href="https://tiagovilasboas.github.io/montanha-zero-day/">play</a>).</sub><br/>
-      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
-      <a href="https://github.com/tiagovilasboas/montanha-zero-day/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/montanha-zero-day?style=social" alt="stars"/></a>
-    </td>
-  </tr>
   <tr>
     <td width="50%" valign="top">
       <b><a href="https://github.com/tiagovilasboas/grok-bot-architecture">grok-bot-architecture</a></b><br/>
@@ -111,10 +68,38 @@ Honest numbers: on a synthetic corpus of 248 command outputs, clean runs shrink 
       <a href="https://github.com/tiagovilasboas/grok-bot-architecture/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/grok-bot-architecture?style=social" alt="stars"/></a>
     </td>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/tiagovilasboas/openbot">openbot</a></b><br/>
-      <sub>Open-source personal AI agent, local-first and mobile-friendly.</sub><br/>
+      <b><a href="https://github.com/tiagovilasboas/antigravity-operator">antigravity-operator</a></b><br/>
+      <sub>Outer harness for coding agents on Google AI Pro: sessions stay scoped, evidence-backed and recoverable.</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square" alt="Go"/>
+      <a href="https://github.com/tiagovilasboas/antigravity-operator/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/antigravity-operator?style=social" alt="stars"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/tiagovilasboas/ai-code-review">ai-code-review</a></b><br/>
+      <sub>Agentic PR review with AppSec guardrails: one skill per pass, and a HIGH AuthZ/IDOR or CRITICAL secret blocks the merge.</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
+      <a href="https://github.com/tiagovilasboas/ai-code-review/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/ai-code-review?style=social" alt="stars"/></a>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/tiagovilasboas/sentry-golden-path">sentry-golden-path</a></b><br/>
+      <sub>Staff guide to Sentry done right: errors, tracing, releases, alerts and AI/LLM monitoring, with a pattern any squad can copy.</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
+      <a href="https://github.com/tiagovilasboas/sentry-golden-path/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/sentry-golden-path?style=social" alt="stars"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/tiagovilasboas/dev-to-mcp">dev-to-mcp</a></b><br/>
+      <sub>MCP server for the DEV.to API in one Go binary: stdio, no cold start.</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square" alt="Go"/>
+      <a href="https://github.com/tiagovilasboas/dev-to-mcp/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/dev-to-mcp?style=social" alt="stars"/></a>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/tiagovilasboas/react-layered-boilerplate">react-layered-boilerplate</a></b><br/>
+      <sub>React + Vite starter with strict layering, TypeScript, tests and CI.</sub><br/>
       <img height="18" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square" alt="TypeScript"/>
-      <a href="https://github.com/tiagovilasboas/openbot/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/openbot?style=social" alt="stars"/></a>
+      <a href="https://github.com/tiagovilasboas/react-layered-boilerplate/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/react-layered-boilerplate?style=social" alt="stars"/></a>
     </td>
   </tr>
 </table>
