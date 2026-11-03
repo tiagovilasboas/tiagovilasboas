@@ -19,28 +19,27 @@ I lead AI enablement across squads. I've worked in tech since 2006 and today app
   </picture>
 </a>
 
-**Right model for every subagent. No LLM in the loop.**
+**Cut your coding agent's token use. No LLM in the loop.**
 
-A single Go binary that sits in your coding agent's hooks, scores each delegated task and picks the model and effort. Unsure? The spawn keeps the model it asked for.
+A single Go binary that sits in your coding agent's hooks. It compacts verbose command output before it fills the context window, and applies the model the orchestrator chose for each subagent within the bounds of a policy you declare. Any doubt or error leaves the command or spawn untouched.
 
 ```text
-$ downshift try "rename the userId variable"
-→ small: opus → haiku (~75% cheaper) (est., list prices)
-why: trivial task, no risk, confident
+$ go test ./internal/...            # ~4 KB to say everything passed
+Go test: PASS (53 packages ok, 4 without tests)   # ~1 KB, same verdict
 ```
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/tiagovilasboas/downshift/main/install.sh | sh && downshift setup
+curl -fsSL https://raw.githubusercontent.com/tiagovilasboas/downshift/main/install.sh | sh && downshift setup && downshift doctor
 ```
 
-- **Deterministic model routing:** mechanical work (renames, test runs, listings) is downshifted; auth, payment and secrets keep risk floors.
-- **Cache hygiene (`cache-tax`):** prices a cold prompt cache before you pay for it.
-- **Code intelligence (opt-in):** reverse call graph and only the relevant symbols packed under a byte cap.
-- **Output compaction:** noisy terminal output is compacted; errors, diffs and stack traces stay verbatim.
+- **Output compaction (on by default):** clean, noisy output (test runs, `git status`, repeated logs) is compacted; failures, diffs and stack traces stay verbatim. It also learns which commands need new compressors.
+- **Subagent model delegation:** the orchestrator picks agent, model and effort; Downshift applies it within your `policy.json` and reports tokens per harness. It never raises a tier on its own and never touches your main session's model, so the prompt cache stays intact.
+- **Agent orchestration:** a 12-agent squad you trigger in plain language (`downshift full-force`, `downshift shift security`).
+- **Cache hygiene (`cache-tax`) and opt-in code intelligence:** price a cold prompt cache before you pay for it; pack only the symbols a change affects.
 
-Works with **Claude Code, Cursor, Codex and OpenCode**. Fail-open: any doubt or error leaves the spawn untouched. Prompts never leave memory.
+Works with **Claude Code** (completed), **Codex** and **Cursor** (functional), **OpenCode** (beta), **Antigravity** and **KiroCrew** (experimental). Only Claude Code rewrites commands automatically; on the others the agent runs the compactor itself.
 
-Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [controlled A/B](https://downshift-ai.vercel.app/docs/report/), nothing attributable on natural use yet. Every claim has a rung on the [evidence ladder](https://downshift-ai.vercel.app/docs/evidence/).
+Honest numbers: on a synthetic corpus of 248 command outputs, clean runs shrink by 82% in bytes and the whole corpus by 24% (failures pass through unchanged). Savings on everyday use are not established yet, and Downshift reports tokens, never dollars. Every claim has a rung on the [evidence ladder](https://downshift-ai.vercel.app/docs/evidence/).
 
 [![Website](https://img.shields.io/badge/website-downshift--ai.vercel.app-22C55E?style=flat-square)](https://downshift-ai.vercel.app/)
 [![Release](https://img.shields.io/github/v/release/tiagovilasboas/downshift?include_prereleases&label=release&style=flat-square)](https://github.com/tiagovilasboas/downshift/releases)
@@ -102,6 +101,20 @@ Honest numbers: up to ~12% list-price saving on mechanical delegated work in a [
       <sub>Platformer game as an offline PWA on your phone (<a href="https://tiagovilasboas.github.io/montanha-zero-day/">play</a>).</sub><br/>
       <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
       <a href="https://github.com/tiagovilasboas/montanha-zero-day/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/montanha-zero-day?style=social" alt="stars"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/tiagovilasboas/grok-bot-architecture">grok-bot-architecture</a></b><br/>
+      <sub>MCP-native multi-agent architecture with desktop agents and human-in-the-loop gates.</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square" alt="JavaScript"/>
+      <a href="https://github.com/tiagovilasboas/grok-bot-architecture/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/grok-bot-architecture?style=social" alt="stars"/></a>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/tiagovilasboas/openbot">openbot</a></b><br/>
+      <sub>Open-source personal AI agent, local-first and mobile-friendly.</sub><br/>
+      <img height="18" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square" alt="TypeScript"/>
+      <a href="https://github.com/tiagovilasboas/openbot/stargazers"><img height="18" src="https://img.shields.io/github/stars/tiagovilasboas/openbot?style=social" alt="stars"/></a>
     </td>
   </tr>
 </table>
