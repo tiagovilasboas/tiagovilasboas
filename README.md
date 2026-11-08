@@ -14,8 +14,8 @@ I lead AI enablement across squads. I've worked in tech since 2006 and today app
 
 <a href="https://downshift-ai.vercel.app/">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tiagovilasboas/downshift/main/docs/brand/downshift-logo-dark.svg">
-    <img src="https://raw.githubusercontent.com/tiagovilasboas/downshift/main/docs/brand/downshift-logo-light.svg" alt="Downshift" width="260">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tiagovilasboas/downshift-ai/main/docs/brand/downshift-logo-dark.svg">
+    <img src="https://raw.githubusercontent.com/tiagovilasboas/downshift-ai/main/docs/brand/downshift-logo-light.svg" alt="Downshift" width="260">
   </picture>
 </a>
 
@@ -29,7 +29,7 @@ Go test: PASS (53 packages ok, 4 without tests)   # ~1 KB, same verdict
 ```
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/tiagovilasboas/downshift/main/install.sh | sh && downshift setup && downshift doctor
+curl -fsSL https://raw.githubusercontent.com/tiagovilasboas/downshift-ai/main/install.sh | sh && downshift setup && downshift doctor
 ```
 
 - **Output compaction (on by default):** clean, noisy output (test runs, `git status`, repeated logs) is compacted; failures, diffs and stack traces stay verbatim. It also learns which commands need new compressors.
@@ -37,17 +37,17 @@ curl -fsSL https://raw.githubusercontent.com/tiagovilasboas/downshift/main/insta
 - **Agent orchestration:** a 12-agent squad you trigger in plain language (`downshift full-force`, `downshift shift security`).
 - **Cache hygiene (`cache-tax`) and opt-in code intelligence:** price a cold prompt cache before you pay for it; pack only the symbols a change affects.
 
-Works with **Claude Code** (completed), **Codex** and **Cursor** (functional), **OpenCode** (beta), **Antigravity** and **KiroCrew** (experimental). Only Claude Code rewrites commands automatically; on the others the agent runs the compactor itself.
+Works with **Claude Code** (completed), **Codex** and **Cursor** (functional), **Antigravity** (functional), **OpenCode** (beta), and **KiroCrew** (experimental). Only Claude Code rewrites commands automatically; on the others the agent runs the compactor itself.
 
 Honest numbers: on a synthetic corpus of 248 command outputs, clean runs shrink by 82% in bytes and the whole corpus by 24% (failures pass through unchanged). Savings on everyday use are not established yet, and Downshift reports tokens, never dollars. Every claim has a rung on the [evidence ladder](https://downshift-ai.vercel.app/docs/evidence/).
 
 [![Website](https://img.shields.io/badge/website-downshift--ai.vercel.app-22C55E?style=flat-square)](https://downshift-ai.vercel.app/)
-[![Release](https://img.shields.io/github/v/release/tiagovilasboas/downshift?include_prereleases&label=release&style=flat-square)](https://github.com/tiagovilasboas/downshift/releases)
-[![Build](https://img.shields.io/github/actions/workflow/status/tiagovilasboas/downshift/ci.yml?branch=main&style=flat-square&label=build)](https://github.com/tiagovilasboas/downshift/actions/workflows/ci.yml)
-[![Stars](https://img.shields.io/github/stars/tiagovilasboas/downshift?style=flat-square)](https://github.com/tiagovilasboas/downshift/stargazers)
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square)](https://github.com/tiagovilasboas/downshift/blob/main/LICENSE)
+[![Release](https://img.shields.io/github/v/release/tiagovilasboas/downshift-ai?include_prereleases&label=release&style=flat-square)](https://github.com/tiagovilasboas/downshift-ai/releases)
+[![Build](https://img.shields.io/github/actions/workflow/status/tiagovilasboas/downshift-ai/ci.yml?branch=main&style=flat-square&label=build)](https://github.com/tiagovilasboas/downshift-ai/actions/workflows/ci.yml)
+[![Stars](https://img.shields.io/github/stars/tiagovilasboas/downshift-ai?style=flat-square)](https://github.com/tiagovilasboas/downshift-ai/stargazers)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square)](https://github.com/tiagovilasboas/downshift-ai/blob/main/LICENSE)
 
-**[🌐 Website](https://downshift-ai.vercel.app/) · [Try it](https://downshift-ai.vercel.app/#start) · [Architecture](https://downshift-ai.vercel.app/docs/architecture/) · [Discussions](https://github.com/tiagovilasboas/downshift/discussions) · ⭐ [Star it](https://github.com/tiagovilasboas/downshift)**
+**[🌐 Website](https://downshift-ai.vercel.app/) · [🇧🇷 Versão em Português](https://downshift-ai.vercel.app/pt-br/) · [Try it](https://downshift-ai.vercel.app/#start) · [Architecture](https://downshift-ai.vercel.app/docs/architecture/) · [Discussions](https://github.com/tiagovilasboas/downshift-ai/discussions) · ⭐ [Star it](https://github.com/tiagovilasboas/downshift-ai)**
 
 ## Impact
 
