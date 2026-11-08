@@ -19,9 +19,9 @@ I lead AI enablement across squads. I've worked in tech since 2006 and today app
   </picture>
 </a>
 
-**Cut your coding agent's token use. No LLM in the loop.**
+**Protect your coding agent's context window and route subagents to the right model tier. No LLM in the loop.**
 
-A single Go binary that sits in your coding agent's hooks. It compacts verbose command output before it fills the context window, and applies the model the orchestrator chose for each subagent within the bounds of a policy you declare. Any doubt or error leaves the command or spawn untouched.
+A single Go binary that sits in your coding agent's hooks. It compacts verbose command output before it pollutes the context window and degrades the model's attention, and applies the model and reasoning effort the orchestrator chose for each subagent within the bounds of a policy you declare. Any doubt or error leaves the command or spawn untouched.
 
 ```text
 $ go test ./internal/...            # ~4 KB to say everything passed
@@ -32,14 +32,14 @@ Go test: PASS (53 packages ok, 4 without tests)   # ~1 KB, same verdict
 curl -fsSL https://raw.githubusercontent.com/tiagovilasboas/downshift-ai/main/install.sh | sh && downshift setup && downshift doctor
 ```
 
-- **Output compaction (on by default):** clean, noisy output (test runs, `git status`, repeated logs) is compacted; failures, diffs and stack traces stay verbatim. It also learns which commands need new compressors.
-- **Subagent model delegation:** the orchestrator picks agent, model and effort; Downshift applies it within your `policy.json` and reports tokens per harness. It never raises a tier on its own and never touches your main session's model, so the prompt cache stays intact.
-- **Agent orchestration:** a 12-agent squad you trigger in plain language (`downshift full-force`, `downshift shift security`).
+- **Context-window attention & compaction:** Clean, noisy command output (`go test`, `git status`, build logs) doesn't just burn tokens — it pollutes the context window and degrades the model's attention on earlier instructions. Compactor shrinks clean runs (72% in bytes across the corpus with CCR on by default, 82% on clean runs) while keeping every failure, diff, and stack trace verbatim.
+- **Subagent model & effort routing:** Applies the orchestrator's chosen model tier and reasoning effort within your `policy.json` — keeping high-effort frontier models for architecture, security, and root-cause debugging while mechanical subagents run on smaller tiers without invalidating your main session's prompt cache.
+- **Agent orchestration:** a 14-agent squad you trigger in plain language (`downshift full-power`, `downshift shift security`).
 - **Cache hygiene (`cache-tax`) and opt-in code intelligence:** price a cold prompt cache before you pay for it; pack only the symbols a change affects.
 
 Works with **Claude Code** (completed), **Codex** and **Cursor** (functional), **Antigravity** (functional), **OpenCode** (beta), and **KiroCrew** (experimental). Only Claude Code rewrites commands automatically; on the others the agent runs the compactor itself.
 
-Honest numbers: on a synthetic corpus of 248 command outputs, clean runs shrink by 82% in bytes and the whole corpus by 24% (failures pass through unchanged). Savings on everyday use are not established yet, and Downshift reports tokens, never dollars. Every claim has a rung on the [evidence ladder](https://downshift-ai.vercel.app/docs/evidence/).
+Honest numbers: on a synthetic corpus of 248 command outputs, clean runs shrink by 82% in bytes and the whole corpus by 72% with CCR on by default (24% inline when failures pass through unchanged). Savings on everyday use are not established yet, and Downshift reports tokens, never dollars. Every claim has a rung on the [evidence ladder](https://downshift-ai.vercel.app/docs/evidence/).
 
 [![Website](https://img.shields.io/badge/website-downshift--ai.vercel.app-22C55E?style=flat-square)](https://downshift-ai.vercel.app/)
 [![Release](https://img.shields.io/github/v/release/tiagovilasboas/downshift-ai?include_prereleases&label=release&style=flat-square)](https://github.com/tiagovilasboas/downshift-ai/releases)
