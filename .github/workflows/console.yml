@@ -24,7 +24,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Unit tests
-        run: node --version && node --test scripts/console/
+        run: node --version && node --test scripts/console/console.test.mjs
 
   # Schedule / manual run on the default branch: fetch live data, render, commit.
   render:
@@ -43,7 +43,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Unit tests
-        run: node --test scripts/console/
+        run: node --test scripts/console/console.test.mjs
       - name: Fetch GitHub data and render SVGs
         env:
           GH_TOKEN: ${{ github.token }} # public profile data only
