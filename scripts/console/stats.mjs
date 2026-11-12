@@ -48,7 +48,7 @@ ${segs.join('')}
 <text x="${X}" y="334" style="font-size:12px">${legend.join('')}</text>
 </g>`;
 
-  const body = `${heading(44, 'stats', '// 01')}\n${cells.join('\n')}\n${langs}`;
+  const body = `${heading(44, 'stats', '// 02')}\n${cells.join('\n')}\n${langs}`;
   const desc = `Stats: ${fmt(d.contributions)} contributions in the last year, ${fmt(d.prs.total)} pull requests (${fmt(d.prs.merged)} merged), `
     + `${fmt(d.stars)} stars, ${fmt(d.followers)} followers, current streak ${d.streak.current} days, longest ${d.streak.longest}. `
     + `Top languages: ${d.languages.map((l) => l.name).join(', ')}.`;

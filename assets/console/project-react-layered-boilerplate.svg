@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="120" viewBox="0 0 440 120" role="img" aria-labelledby="t d">
+<title id="t">react-layered-boilerplate</title>
+<desc id="d">react-layered-boilerplate (TypeScript): React + Vite starter with strict layering, TypeScript, tests and CI.</desc>
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:15px}
+.dim{fill:#3a8a4c}.gr{fill:#00ff41}.mid{fill:#00b82e}.fg{fill:#a8f5b8}.wh{fill:#e4ffe9}
+@keyframes fadein{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.ln{animation:fadein .35s ease-out both}
+.cursor{animation:blink 1.05s step-end infinite}
+.dot{animation:pulse 2s ease-in-out infinite}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="0"><path d="M40 0H0V40" fill="none" stroke="#00ff41" stroke-opacity=".045"/></pattern>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".22"/></pattern>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="g" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="3.5"/></filter>
+
+</defs>
+<path d="M424 -40V160" fill="none" stroke="#00ff41" stroke-width="3" opacity=".4" filter="url(#glow)"/>
+<rect x="0" y="0" width="424" height="120" fill="#010803"/>
+<rect x="0" y="0" width="424" height="120" fill="url(#grid)"/>
+<g class="ln" style="animation-delay:0.50s">
+<rect x="8" y="10" width="402" height="100" fill="#0b3d17" fill-opacity=".3" stroke="#00ff41" stroke-opacity=".35"/>
+<path d="M8 22V10H20" fill="none" stroke="#00ff41" stroke-width="2"/>
+<text x="24" y="36" font-weight="700" class="wh">react-layered-boilerplate</text>
+<text x="394" y="36" text-anchor="end" class="mid" style="font-size:12px">★ 9</text>
+<text x="24" y="60" class="fg" fill-opacity=".72" style="font-size:13px">React + Vite starter with strict layering,</text><text x="24" y="78" class="fg" fill-opacity=".72" style="font-size:13px">TypeScript, tests and CI.</text>
+<circle cx="29" cy="97" r="4" fill="#3178C6"/>
+<text x="39" y="101" class="dim" style="font-size:11px">TypeScript</text>
+</g>
+<rect x="0" y="0" width="424" height="120" fill="url(#scan)" pointer-events="none"/>
+<path d="M424 0V120" fill="none" stroke="#00ff41" stroke-width="1.2"/>
+<g fill="none" stroke="#00ff41" stroke-width="2"></g>
+</svg>

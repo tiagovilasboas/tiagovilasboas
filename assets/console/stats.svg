@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" role="img" aria-labelledby="t d">
 <title id="t">Stats</title>
-<desc id="d">Stats: 8,368 contributions in the last year, 568 pull requests (524 merged), 94 stars, 74 followers, current streak 85 days, longest 85. Top languages: Go, TypeScript, HTML, JavaScript, Python.</desc>
+<desc id="d">Stats: 8,382 contributions in the last year, 1,987 pull requests (1,878 merged), 94 stars, 74 followers, current streak 85 days, longest 85. Top languages: Go, TypeScript, HTML, JavaScript, Python.</desc>
 <style>
 text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:15px}
-.dim{fill:#2f7a3f}.gr{fill:#00ff41}.mid{fill:#00b82e}.fg{fill:#a8f5b8}.wh{fill:#e4ffe9}
+.dim{fill:#3a8a4c}.gr{fill:#00ff41}.mid{fill:#00b82e}.fg{fill:#a8f5b8}.wh{fill:#e4ffe9}
 @keyframes fadein{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
@@ -14,34 +14,34 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 <defs>
-<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#00ff41" stroke-opacity=".05"/></pattern>
-<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".35"/></pattern>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="0"><path d="M40 0H0V40" fill="none" stroke="#00ff41" stroke-opacity=".045"/></pattern>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".22"/></pattern>
 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
-<filter id="g" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+<filter id="g" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="3.5"/></filter>
 
 </defs>
-<path d="M16 -40V400M864 -40V400" fill="none" stroke="#00ff41" stroke-width="3" opacity=".5" filter="url(#glow)"/>
+<path d="M16 -40V400M864 -40V400" fill="none" stroke="#00ff41" stroke-width="3" opacity=".4" filter="url(#glow)"/>
 <rect x="16" y="0" width="848" height="360" fill="#010803"/>
 <rect x="16" y="0" width="848" height="360" fill="url(#grid)"/>
-<text x="52" y="44" font-weight="700" fill="#00ff41" filter="url(#g)" opacity=".8" style="font-size:20px">~/</text>
+<text x="52" y="44" font-weight="700" fill="#00ff41" filter="url(#g)" opacity=".6" style="font-size:20px">~/</text>
 <text x="52" y="44" font-weight="700" style="font-size:20px"><tspan class="gr">~/</tspan><tspan class="wh">stats</tspan></text>
-<text x="828" y="44" text-anchor="end" letter-spacing="2" fill="#2f7a3f" style="font-size:12px">// 01</text>
-<line x1="52" y1="58" x2="828" y2="58" stroke="#00ff41" stroke-opacity=".35"/>
+<text x="828" y="44" text-anchor="end" letter-spacing="2" class="dim" style="font-size:12px">// 02</text>
+<line x1="52" y1="58" x2="828" y2="58" stroke="#00ff41" stroke-opacity=".25"/>
 <line x1="52" y1="58" x2="172" y2="58" stroke="#00ff41" stroke-width="2"/>
-<line x1="52" y1="58" x2="172" y2="58" stroke="#00ff41" stroke-width="3" filter="url(#g)"/>
+<line x1="52" y1="58" x2="172" y2="58" stroke="#00ff41" stroke-width="3" filter="url(#g)" opacity=".7"/>
 <g class="ln" style="animation-delay:0.15s">
 <rect x="52" y="92" width="182" height="76" fill="#0b3d17" fill-opacity=".35" stroke="#00ff41" stroke-opacity=".35"/>
 <path d="M52 104V92H64" fill="none" stroke="#00ff41" stroke-width="2"/>
 <text x="66" y="114" letter-spacing="2" class="dim" style="font-size:11px">CONTRIBUTIONS</text>
-<text x="66" y="144" font-weight="700" class="wh" style="font-size:24px">8,368</text>
+<text x="66" y="144" font-weight="700" class="wh" style="font-size:24px">8,382</text>
 <text x="66" y="160" class="mid" style="font-size:11px">last 365 days</text>
 </g>
 <g class="ln" style="animation-delay:0.23s">
 <rect x="246" y="92" width="182" height="76" fill="#0b3d17" fill-opacity=".35" stroke="#00ff41" stroke-opacity=".35"/>
 <path d="M246 104V92H258" fill="none" stroke="#00ff41" stroke-width="2"/>
 <text x="260" y="114" letter-spacing="2" class="dim" style="font-size:11px">PULL REQUESTS</text>
-<text x="260" y="144" font-weight="700" class="wh" style="font-size:24px">568</text>
-<text x="260" y="160" class="mid" style="font-size:11px">524 merged</text>
+<text x="260" y="144" font-weight="700" class="wh" style="font-size:24px">1,987</text>
+<text x="260" y="160" class="mid" style="font-size:11px">1,878 merged</text>
 </g>
 <g class="ln" style="animation-delay:0.31s">
 <rect x="440" y="92" width="182" height="76" fill="#0b3d17" fill-opacity=".35" stroke="#00ff41" stroke-opacity=".35"/>
@@ -87,8 +87,8 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 </g>
 <g class="ln" style="animation-delay:.9s">
 <text x="52" y="284" class="dim" style="font-size:12px"><tspan class="gr">$</tspan> top-languages --by bytes</text>
-<rect x="52.0" y="300" width="528.2" height="10" fill="#00ff41"/><rect x="582.2" y="300" width="162.2" height="10" fill="#00c836"/><rect x="746.4" y="300" width="39.5" height="10" fill="#00942a"/><rect x="787.9" y="300" width="29.4" height="10" fill="#006b1f"/><rect x="819.3" y="300" width="6.7" height="10" fill="#0b3d17"/>
-<text x="52" y="334" style="font-size:12px"><tspan fill="#00ff41">■</tspan> <tspan class="fg">Go</tspan> <tspan class="dim">68%</tspan>   <tspan fill="#00c836">■</tspan> <tspan class="fg">TypeScript</tspan> <tspan class="dim">21%</tspan>   <tspan fill="#00942a">■</tspan> <tspan class="fg">HTML</tspan> <tspan class="dim">5%</tspan>   <tspan fill="#006b1f">■</tspan> <tspan class="fg">JavaScript</tspan> <tspan class="dim">4%</tspan>   <tspan fill="#0b3d17">■</tspan> <tspan class="fg">Python</tspan> <tspan class="dim">1%</tspan>   </text>
+<rect x="52.0" y="300" width="523.7" height="10" fill="#00ff41"/><rect x="577.7" y="300" width="167.4" height="10" fill="#00c836"/><rect x="747.1" y="300" width="39.2" height="10" fill="#00942a"/><rect x="788.2" y="300" width="29.2" height="10" fill="#006b1f"/><rect x="819.4" y="300" width="6.6" height="10" fill="#0b3d17"/>
+<text x="52" y="334" style="font-size:12px"><tspan fill="#00ff41">■</tspan> <tspan class="fg">Go</tspan> <tspan class="dim">68%</tspan>   <tspan fill="#00c836">■</tspan> <tspan class="fg">TypeScript</tspan> <tspan class="dim">22%</tspan>   <tspan fill="#00942a">■</tspan> <tspan class="fg">HTML</tspan> <tspan class="dim">5%</tspan>   <tspan fill="#006b1f">■</tspan> <tspan class="fg">JavaScript</tspan> <tspan class="dim">4%</tspan>   <tspan fill="#0b3d17">■</tspan> <tspan class="fg">Python</tspan> <tspan class="dim">1%</tspan>   </text>
 </g>
 <rect x="16" y="0" width="848" height="360" fill="url(#scan)" pointer-events="none"/>
 <path d="M16 0V360M864 0V360" fill="none" stroke="#00ff41" stroke-width="1.2"/>

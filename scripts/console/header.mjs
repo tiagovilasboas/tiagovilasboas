@@ -26,12 +26,12 @@ export function rain(seed, { x0, x1, y0, y1 }) {
     const dur = 4 + rnd() * 6;
     const delay = -rnd() * dur;
     const right = x > 560; // keep the text side quiet
-    const op = right ? 0.16 + rnd() * 0.1 : 0.06 + rnd() * 0.05; // subtle: texture, not foreground
+    const op = right ? 0.07 + rnd() * 0.05 : 0.025 + rnd() * 0.02; // barely there: texture, not foreground
     const spans = [];
     for (let i = 0; i < LEN; i++) {
       const g = GLYPHS[Math.floor(rnd() * GLYPHS.length)];
       const head = i === LEN - 1;
-      const a = head ? 1 : ((i + 1) / LEN) * 0.85;
+      const a = head ? 0.9 : ((i + 1) / LEN) * 0.7;
       spans.push(`<tspan x="${x}" dy="${LH}" fill="${head ? C.text : C.green}" fill-opacity="${a.toFixed(2)}">${esc(g)}</tspan>`);
     }
     cols.push(`<text class="rn" opacity="${op.toFixed(2)}" style="animation-duration:${dur.toFixed(2)}s;animation-delay:${delay.toFixed(2)}s" y="${y0 - LEN * LH}">${spans.join('')}</text>`);
@@ -54,7 +54,7 @@ export function buildHeader(p = PROFILE) {
   const [rows] = stagger([
     `<text x="${X}" y="{y}" class="fg"><tspan class="gr">$</tspan> whoami</text>`,
     null,
-    `<text x="${X}" y="{y}" font-weight="800" fill="${C.green}" filter="url(#g)" opacity=".7" style="font-size:44px" letter-spacing="1">${esc(p.name)}</text><text x="${X}" y="{y}" font-weight="800" class="wh" style="font-size:44px" letter-spacing="1">${esc(p.name)}</text>`,
+    `<text x="${X}" y="{y}" font-weight="800" fill="${C.green}" filter="url(#g)" opacity=".45" style="font-size:44px" letter-spacing="1">${esc(p.name)}</text><text x="${X}" y="{y}" font-weight="800" class="wh" style="font-size:44px" letter-spacing="1">${esc(p.name)}</text>`,
     null,
     ...p.lines.map((l) => `<text x="${X}" y="{y}" class="fg"><tspan class="gr">&gt;&gt;</tspan> ${esc(l)}</text>`),
     null,

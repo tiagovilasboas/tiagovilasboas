@@ -53,6 +53,7 @@ jobs:
       group: oss-block-update
       cancel-in-progress: false
     env:
+      OSS_FILE: scripts/oss-block/contributions.md
       WRITE: ${{ (github.event_name == 'schedule' || github.ref == format('refs/heads/{0}', github.event.repository.default_branch)) && 'true' || 'false' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -60,34 +61,35 @@ jobs:
           persist-credentials: false
       - name: Unit tests + fixture render
         run: node --version && node --test scripts/oss-block/oss-block.test.mjs
-      - name: Regenerate README block (diff in log and step summary)
+      - name: Regenerate the OSS block (diff in log and step summary)
         env:
           GH_TOKEN: ${{ github.token }} # public search API only
           OSS_USER: ${{ github.repository_owner }}
         run: |
           if [ "$WRITE" = true ]; then
-            node scripts/oss-block/update.mjs README.md
+            node scripts/oss-block/update.mjs "$OSS_FILE"
           else
-            node scripts/oss-block/update.mjs README.md --dry-run
+            node scripts/oss-block/update.mjs "$OSS_FILE" --dry-run
           fi
       - name: Commit if changed (signed by GitHub as github-actions[bot])
         if: env.WRITE == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- README.md; then
-            echo "README unchanged; nothing to commit"
+          if git diff --quiet -- "$OSS_FILE"; then
+            echo "OSS block unchanged; nothing to commit"
             exit 0
           fi
           jq -n \
             --arg repo "$GITHUB_REPOSITORY" \
             --arg branch "$GITHUB_REF_NAME" \
             --arg head "$(git rev-parse HEAD)" \
-            --arg contents "$(base64 -w0 README.md)" \
+            --arg path "$OSS_FILE" \
+            --arg contents "$(base64 -w0 "$OSS_FILE")" \
             '{query: "mutation($input: CreateCommitOnBranchInput!) { createCommitOnBranch(input: $input) { commit { url } } }",
               variables: {input: {
                 branch: {repositoryNameWithOwner: $repo, branchName: $branch},
                 expectedHeadOid: $head,
                 message: {headline: "docs(profile): refresh open source block"},
-                fileChanges: {additions: [{path: "README.md", contents: $contents}]}}}}' \
+                fileChanges: {additions: [{path: $path, contents: $contents}]}}}}' \
             | gh api graphql --input - --jq '.data.createCommitOnBranch.commit.url'

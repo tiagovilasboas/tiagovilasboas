@@ -4,13 +4,13 @@
  "createdAt": "2012-07-19",
  "followers": 74,
  "prs": {
-  "total": 568,
-  "merged": 524
+  "total": 1987,
+  "merged": 1878
  },
  "repos": 28,
  "stars": 94,
  "forks": 19,
- "contributions": 8368,
+ "contributions": 8382,
  "activeDays": 223,
  "streak": {
   "current": 85,
@@ -19,25 +19,59 @@
  "languages": [
   {
    "name": "Go",
-   "pct": 68.32457450498379
+   "pct": 67.74546415263087
   },
   {
    "name": "TypeScript",
-   "pct": 21.156884991881608
+   "pct": 21.825149147842396
   },
   {
    "name": "HTML",
-   "pct": 5.348758781159401
+   "pct": 5.303423386027419
   },
   {
    "name": "JavaScript",
-   "pct": 4.0491758409368455
+   "pct": 4.014855544543154
   },
   {
    "name": "Python",
-   "pct": 1.1206058810383586
+   "pct": 1.1111077689561597
   }
  ],
+ "repoStars": {
+  "react-layered-boilerplate": 9,
+  "ponto-pj": 8,
+  "tiagovilasboas": 0,
+  "awesome-frontend-architecture": 0,
+  "react-vite-boilerplate": 0,
+  "betalent-desafio-frontend": 0,
+  "chat-at-scale": 2,
+  "awesome-agentic-ai": 0,
+  "jarvis-architecture": 0,
+  "ai-code-review": 0,
+  "grok-bot-architecture": 62,
+  "staff-engineering-postmortem": 0,
+  "sentry-golden-path": 1,
+  "nuxt-layered-boilerplate": 0,
+  "lotrace-design-system": 0,
+  "langgraph-study-guide": 0,
+  "harness-engineering-stack": 0,
+  "cybersecurity-study-guide": 0,
+  "dev-to-mcp": 3,
+  "devto-assets": 0,
+  "obsidian-nexo": 1,
+  "obsidian-nexo-graph": 0,
+  "antigravity-operator": 1,
+  "homebrew-tap": 0,
+  "montanha-zero-day": 0,
+  "rag-delivery-lab": 0,
+  "openbot": 4,
+  "downshift-ai": 3
+ },
+ "downshift": {
+  "stars": 3,
+  "release": "v0.17.1"
+ },
  "calendar": [
   [
    "2025-11-09",
@@ -1369,11 +1403,11 @@
   ],
   [
    "2026-10-07",
-   20
+   21
   ],
   [
    "2026-10-08",
-   105
+   104
   ],
   [
    "2026-10-09",
@@ -1457,11 +1491,11 @@
   ],
   [
    "2026-10-29",
-   186
+   187
   ],
   [
    "2026-10-30",
-   72
+   71
   ],
   [
    "2026-10-31",
@@ -1513,7 +1547,7 @@
   ],
   [
    "2026-11-12",
-   38
+   52
   ]
  ]
 }

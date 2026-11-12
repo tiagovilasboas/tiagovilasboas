@@ -10,13 +10,17 @@ export const QUERY = `query($login: String!) {
     repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
       totalCount
       nodes {
-        stargazerCount forkCount
+        name stargazerCount forkCount
         languages(first: 6, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } }
       }
     }
     contributionsCollection {
       contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } }
     }
+  }
+  downshift: repository(owner: "tiagovilasboas", name: "downshift-ai") {
+    stargazerCount
+    releases(first: 1, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { tagName } }
   }
 }`;
 
@@ -49,8 +53,10 @@ export function topLanguages(repos, limit = 5) {
 
 /** raw: the GraphQL response ({data:{user}} or {user}). today: YYYY-MM-DD. */
 export function normalize(raw, today) {
-  const u = (raw.data ?? raw).user;
+  const root = raw.data ?? raw;
+  const u = root.user;
   if (!u) throw new Error('GraphQL response has no user');
+  const ds = root.downshift;
   const repos = u.repositories.nodes;
   const calendar = u.contributionsCollection.contributionCalendar.weeks
     .flatMap((w) => w.contributionDays)
@@ -68,6 +74,8 @@ export function normalize(raw, today) {
     activeDays: calendar.filter(([, n]) => n > 0).length,
     streak: streaks(calendar, today),
     languages: topLanguages(repos),
+    repoStars: Object.fromEntries(repos.filter((r) => r.name).map((r) => [r.name, r.stargazerCount])),
+    downshift: ds ? { stars: ds.stargazerCount, release: ds.releases.nodes[0]?.tagName ?? null } : null,
     calendar,
   };
 }
