@@ -131,15 +131,14 @@ test('repo names and URLs with special characters are escaped and cannot break t
   assert.throws(() => render([{ name: 'x', url: 'javascript:alert(1)' }]), /unexpected PR URL/)
 })
 
-test('README: the block under "## Contributions" is the only PR list; no hand-written PR bullets outside it', () => {
-  const readme = readFileSync(here('../../README.md'), 'utf8')
-  assert.ok(readme.includes(`## Contributions\n\nI send small, tested fixes to projects I use. Some examples:\n\n${START}\n- [`), 'header/intro drifted')
-  const body = readme.slice(readme.indexOf(START) + START.length + 1, readme.indexOf(END) - 1)
+test('contributions.md holds the only PR list; the generated README has no hand-written PR bullets', () => {
+  const file = readFileSync(here('./contributions.md'), 'utf8')
+  assert.ok(file.includes(`${START}\n- [`), 'block markers drifted')
+  const body = file.slice(file.indexOf(START) + START.length + 1, file.indexOf(END) - 1)
   assert.ok(body.split('\n').every((l) => l.startsWith('- [')))
-  const outside = readme.slice(0, readme.indexOf(START)) + readme.slice(readme.indexOf(END))
-  assert.doesNotMatch(outside, /^- \[[^\]]*#\d+\]\(https:\/\/github\.com\/[^)]+\/pull\/\d+\)/m)
   for (const o of OVERRIDES) assert.ok(body.includes(`- [${o.text}](${o.url}): ${o.description}`), o.url)
-  assert.doesNotMatch(readme, /^## Open source$/m)
+  const readme = readFileSync(here('../../README.md'), 'utf8')
+  assert.doesNotMatch(readme, /^- \[[^\]]*#\d+\]\(https:\/\/github\.com\/[^)]+\/pull\/\d+\)/m)
 })
 
 test('replaceBlock only rewrites between markers and is idempotent', () => {

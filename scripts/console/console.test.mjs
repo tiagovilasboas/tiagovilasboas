@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { levels } from './city.mjs';
 import { normalize, streaks, topLanguages } from './data.mjs';
-import { esc, slice } from './frame.mjs';
+import { parseContributions } from './contributions.mjs';
+import { clip, esc, slice, wrapN } from './frame.mjs';
 import { renderAll } from './render.mjs';
 
 function rawFixture() {
@@ -63,13 +64,21 @@ test('normalize maps the GraphQL response and rejects a missing user', () => {
   assert.throws(() => normalize({ data: { user: null } }, '2026-11-12'), /no user/);
 });
 
+const OSS = '<!-- oss:start -->\n- [x \\[y\\] #1](https://github.com/a/x/pull/1): fix &lt;b&gt; & co\n- not a bullet\n<!-- oss:end -->';
+
+test('parseContributions reads the oss bullets and unescapes them', () => {
+  assert.deepEqual(parseContributions(OSS), [{ label: 'x [y] #1', text: 'fix <b> & co', url: 'https://github.com/a/x/pull/1' }]);
+  assert.deepEqual(parseContributions('- [evil](javascript:alert(1)): x'), []);
+});
+
 test('every slice is valid-looking SVG, deterministic, and on the 40px grid', () => {
   const d = normalize(rawFixture(), '2026-11-12');
-  const a = renderAll(d);
-  const b = renderAll(d);
-  assert.deepEqual(Object.keys(a), ['header.svg', 'stats.svg', 'city.svg', 'footer.svg']);
-  for (const [name, svg] of Object.entries(a)) {
-    assert.equal(svg, b[name], `${name} is not deterministic`);
+  const a = renderAll(d, parseContributions(OSS));
+  const b = renderAll(d, parseContributions(OSS));
+  assert.equal(a.readme, b.readme);
+  for (const name of ['header.svg', 'link-linkedin.svg', 'downshift.svg', 'stats.svg', 'city.svg', 'impact-01.svg', 'oss-01.svg', 'footer.svg']) assert.ok(a.files[name], name);
+  for (const [name, svg] of Object.entries(a.files)) {
+    assert.equal(svg, b.files[name], `${name} is not deterministic`);
     assert.match(svg, /^<svg [^>]*role="img"/, name);
     assert.ok(svg.trimEnd().endsWith('</svg>'), name);
     assert.equal(Number(svg.match(/height="(\d+)"/)[1]) % 40, 0, name);
@@ -78,10 +87,27 @@ test('every slice is valid-looking SVG, deterministic, and on the 40px grid', ()
   }
 });
 
+test('the README references every slice once, and each row adds up to the full width', () => {
+  const { files, readme } = renderAll(normalize(rawFixture(), '2026-11-12'), parseContributions(OSS));
+  const refs = [...readme.matchAll(/src="\.\/assets\/console\/([^"]+)"/g)].map((m) => m[1]);
+  assert.deepEqual(refs.sort(), Object.keys(files).sort());
+  for (const line of readme.split('\n').filter((l) => l.includes('<img'))) {
+    const total = [...line.matchAll(/width="([\d.]+)%"/g)].reduce((a, m) => a + Number(m[1]), 0);
+    assert.equal(Math.round(total), 100, line.slice(0, 80));
+  }
+  assert.match(readme, /href="https:\/\/github\.com\/a\/x\/pull\/1"/);
+});
+
 test('the header only shows the public name', () => {
-  const svg = renderAll(normalize(rawFixture(), '2026-11-12'))['header.svg'];
+  const svg = renderAll(normalize(rawFixture(), '2026-11-12')).files['header.svg'];
   assert.match(svg, /TIAGO VILAS BOAS/);
   assert.match(svg, /<title id="t">Tiago Vilas Boas<\/title>/);
+});
+
+test('clip and wrapN keep text inside its box', () => {
+  assert.equal(clip('abcdef', 4), 'abc…');
+  assert.equal(clip('abc', 4), 'abc');
+  assert.deepEqual(wrapN('one two three four', 9, 2), ['one two', 'three fo…']);
 });
 
 test('esc and slice guard the frame', () => {

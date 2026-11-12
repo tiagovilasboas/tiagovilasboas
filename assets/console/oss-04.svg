@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="40" viewBox="0 0 880 40" role="img" aria-labelledby="t d">
+<title id="t">openai-agents-python #4961</title>
+<desc id="d">openai-agents-python #4961: the session history limit is no longer sent as the Conversations API page size.</desc>
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:15px}
+.dim{fill:#3a8a4c}.gr{fill:#00ff41}.mid{fill:#00b82e}.fg{fill:#a8f5b8}.wh{fill:#e4ffe9}
+@keyframes fadein{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.ln{animation:fadein .35s ease-out both}
+.cursor{animation:blink 1.05s step-end infinite}
+.dot{animation:pulse 2s ease-in-out infinite}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="0"><path d="M40 0H0V40" fill="none" stroke="#00ff41" stroke-opacity=".045"/></pattern>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".22"/></pattern>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="g" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="3.5"/></filter>
+
+</defs>
+<path d="M16 -40V80M864 -40V80" fill="none" stroke="#00ff41" stroke-width="3" opacity=".4" filter="url(#glow)"/>
+<rect x="16" y="0" width="848" height="40" fill="#010803"/>
+<rect x="16" y="0" width="848" height="40" fill="url(#grid)"/>
+<g class="ln" style="animation-delay:0.25s">
+<text x="52" y="25" style="font-size:12px"><tspan class="gr">▸ openai-agents-python #4961</tspan><tspan class="fg" fill-opacity=".75">  the session history limit is no longer sent as the Conversations API p…</tspan></text>
+<text x="828" y="25" text-anchor="end" class="mid" style="font-size:12px">↗</text>
+</g>
+<rect x="16" y="0" width="848" height="40" fill="url(#scan)" pointer-events="none"/>
+<path d="M16 0V40M864 0V40" fill="none" stroke="#00ff41" stroke-width="1.2"/>
+<g fill="none" stroke="#00ff41" stroke-width="2"></g>
+</svg>

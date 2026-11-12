@@ -99,7 +99,7 @@ export function buildCity(calendar, updated) {
 
   const sky = rain(`sky-${updated}`, { x0: 500, x1: FR - 30, y0: 110, y1: 250 });
   const legend = ['#06180b', ...ROOFS].map((c, i) => `<rect x="${X + 52 + i * 16}" y="642" width="11" height="11" fill="${c}"/>`).join('');
-  const body = `${heading(44, 'contribution-city', '// 02')}
+  const body = `${heading(44, 'contribution-city', '// 03')}
 <g class="ln" style="animation-delay:.15s"><text x="${X}" y="96" class="dim"><tspan class="gr">$</tspan> render-city --last 365d <tspan fill="${C.dim}"># one building per day</tspan></text></g>
 ${sky.markup}
 ${info}
@@ -111,5 +111,5 @@ ${shapes.join('')}
   const defs = '<clipPath id="rainclip"><rect x="480" y="110" width="360" height="150"/></clipPath>';
   const desc = `Contribution city: an isometric skyline with one building per day of the last year, taller and brighter for busier days. ${total.toLocaleString('en-US')} contributions`
     + (busiest[1] ? `, busiest day ${fmtDay(busiest[0])} with ${busiest[1]}` : '') + '.';
-  return slice(H, body, { title: "Contribution city", desc, bottom: true, css, defs });
+  return slice(H, body, { title: "Contribution city", desc, css, defs });
 }
