@@ -1,6 +1,9 @@
-# Tiago Vilas Boas (Montanha) 🛵
-
-**Staff Engineer · Agentic AI · AppSec · Observability**
+<!-- The console images are rendered daily by scripts/console (see .github/workflows/console.yml). -->
+<p align="center">
+<img src="./assets/console/header.svg" width="100%" alt="Tiago Vilas Boas. Staff engineer: agentic AI, AppSec, observability. In tech since 2006, leading AI enablement across squads. Building Downshift.">
+<img src="./assets/console/stats.svg" width="100%" alt="GitHub stats: contributions in the last year, pull requests, stars, followers, streaks and top languages.">
+<img src="./assets/console/city.svg" width="100%" alt="Contribution city: an isometric skyline with one building per day of the last year, taller and brighter for busier days.">
+</p>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tiagovilasboas/)
 [![DEV.to](https://img.shields.io/badge/DEV.to-0A0A0A?style=flat-square&logo=devdotto&logoColor=white)](https://dev.to/tiagovilasboas)
@@ -141,3 +144,5 @@ I send small, tested fixes to projects I use. Some examples:
 - [LinkedIn](https://www.linkedin.com/in/tiagovilasboas/)
 - [Articles on DEV.to](https://dev.to/tiagovilasboas)
 - [Support my open source work](https://github.com/sponsors/tiagovilasboas)
+
+<p align="center"><img src="./assets/console/footer.svg" width="100%" alt="Connection closed."></p>
