@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="120" viewBox="0 0 880 120" role="img" aria-labelledby="t d">
+<title id="t">End of profile</title>
+<desc id="d">Connection closed.</desc>
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:15px}
+.dim{fill:#2f7a3f}.gr{fill:#00ff41}.mid{fill:#00b82e}.fg{fill:#a8f5b8}.wh{fill:#e4ffe9}
+@keyframes fadein{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.ln{animation:fadein .35s ease-out both}
+.cursor{animation:blink 1.05s step-end infinite}
+.dot{animation:pulse 2s ease-in-out infinite}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#00ff41" stroke-opacity=".05"/></pattern>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".35"/></pattern>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="g" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+
+</defs>
+<path d="M16 16V104M864 16V104M16 16H864M16 104H864" fill="none" stroke="#00ff41" stroke-width="3" opacity=".5" filter="url(#glow)"/>
+<rect x="16" y="16" width="848" height="88" fill="#010803"/>
+<rect x="16" y="16" width="848" height="88" fill="url(#grid)"/>
+<text x="52" y="52" class="dim"><tspan class="gr">$</tspan> exit</text>
+<text x="52" y="76" class="dim">connection to <tspan class="gr">tiagovilasboas</tspan> closed. <tspan fill="#2f7a3f">// there is no spoon</tspan></text>
+<rect x="16" y="16" width="848" height="88" fill="url(#scan)" pointer-events="none"/>
+<path d="M16 16V104M864 16V104M16 16H864M16 104H864" fill="none" stroke="#00ff41" stroke-width="1.2"/>
+<g fill="none" stroke="#00ff41" stroke-width="2"><path d="M9 34V9H34"/><path d="M846 9H871V34"/><path d="M9 86V111H34"/><path d="M846 111H871V86"/></g>
+</svg>
