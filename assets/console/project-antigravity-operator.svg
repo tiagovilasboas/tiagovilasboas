@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="440" height="120" viewBox="0 0 440 120" role="img" aria-labelledby="t d">
 <title id="t">antigravity-operator</title>
-<desc id="d">antigravity-operator (Go): Outer harness for coding agents: sessions stay scoped, evidence-backed and recoverable.</desc>
+<desc id="d">antigravity-operator (Go): Outer harness for coding agents: scoped, evidence-backed, recoverable sessions.</desc>
 <style>
 text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:15px}
 .dim{fill:#3a8a4c}.gr{fill:#00ff41}.mid{fill:#00b82e}.fg{fill:#a8f5b8}.wh{fill:#e4ffe9}
@@ -27,10 +27,10 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 <rect x="8" y="10" width="402" height="100" fill="#0b3d17" fill-opacity=".3" stroke="#00ff41" stroke-opacity=".35"/>
 <path d="M8 22V10H20" fill="none" stroke="#00ff41" stroke-width="2"/>
 <text x="24" y="36" font-weight="700" class="wh">antigravity-operator</text>
-<text x="394" y="36" text-anchor="end" class="mid" style="font-size:12px">★ 1</text>
-<text x="24" y="60" class="fg" fill-opacity=".72" style="font-size:13px">Outer harness for coding agents: sessions stay</text><text x="24" y="78" class="fg" fill-opacity=".72" style="font-size:13px">scoped, evidence-backed and recoverable.</text>
+<text x="394" y="36" text-anchor="end" class="mid" style="font-size:13px">★ 1</text>
+<text x="24" y="60" class="fg" fill-opacity=".85" style="font-size:14px">Outer harness for coding agents: scoped,</text><text x="24" y="79" class="fg" fill-opacity=".85" style="font-size:14px">evidence-backed, recoverable sessions.</text>
 <circle cx="29" cy="97" r="4" fill="#00ADD8"/>
-<text x="39" y="101" class="dim" style="font-size:11px">Go</text>
+<text x="39" y="101" class="dim" style="font-size:12px">Go</text>
 </g>
 <rect x="0" y="0" width="424" height="120" fill="url(#scan)" pointer-events="none"/>
 <path d="M424 0V120" fill="none" stroke="#00ff41" stroke-width="1.2"/>

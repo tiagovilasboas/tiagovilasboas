@@ -24,10 +24,10 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 <rect x="16" y="0" width="848" height="80" fill="#010803"/>
 <rect x="16" y="0" width="848" height="80" fill="url(#grid)"/>
 <g class="ln" style="animation-delay:0.10s">
-<text x="52" y="27" class="gr" style="font-size:13px">0x01</text>
-<text x="108" y="27" font-weight="700" class="wh">Bachelor&#39;s in Cyber Defense</text>
-<text x="108" y="49" class="fg" fill-opacity=".72" style="font-size:13px">Faculdade Impacta, in progress</text>
-<text x="828" y="27" text-anchor="end" class="mid" style="font-size:12px">open ↗</text>
+<text x="52" y="26" class="gr" style="font-size:13px">0x01</text>
+<text x="108" y="26" font-weight="700" class="wh">Bachelor&#39;s in Cyber Defense</text>
+<text x="108" y="49" class="fg" fill-opacity=".85" style="font-size:14px">Faculdade Impacta, in progress</text>
+<text x="828" y="26" text-anchor="end" class="mid" style="font-size:13px">open ↗</text>
 <line x1="52" y1="79" x2="828" y2="79" stroke="#00ff41" stroke-opacity=".14" stroke-dasharray="2 4"/>
 </g>
 <rect x="16" y="0" width="848" height="80" fill="url(#scan)" pointer-events="none"/>

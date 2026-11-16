@@ -10,9 +10,9 @@ function tile(x, y, w, label, value, sub, delay) {
   return `<g class="ln" style="animation-delay:${delay.toFixed(2)}s">
 <rect x="${x}" y="${y}" width="${w}" height="76" fill="${C.dark}" fill-opacity=".35" stroke="${C.green}" stroke-opacity=".35"/>
 <path d="M${x} ${y + 12}V${y}H${x + 12}" fill="none" stroke="${C.green}" stroke-width="2"/>
-<text x="${x + 14}" y="${y + 22}" letter-spacing="2" class="dim" style="font-size:11px">${esc(label)}</text>
+<text x="${x + 14}" y="${y + 22}" letter-spacing="2" class="dim" style="font-size:12px">${esc(label)}</text>
 <text x="${x + 14}" y="${y + 52}" font-weight="700" class="wh" style="font-size:24px">${esc(value)}</text>
-<text x="${x + 14}" y="${y + 68}" class="mid" style="font-size:11px">${esc(sub)}</text>
+<text x="${x + 14}" y="${y + 68}" class="mid" style="font-size:12px">${esc(sub)}</text>
 </g>`;
 }
 
@@ -43,9 +43,9 @@ export function buildStats(d) {
     legend.push(`<tspan fill="${SHADES[i % SHADES.length]}">■</tspan> <tspan class="fg">${esc(l.name)}</tspan> <tspan class="dim">${l.pct.toFixed(0)}%</tspan>   `);
   });
   const langs = `<g class="ln" style="animation-delay:.9s">
-<text x="${X}" y="284" class="dim" style="font-size:12px"><tspan class="gr">$</tspan> top-languages --by bytes</text>
+<text x="${X}" y="284" class="dim" style="font-size:13px"><tspan class="gr">$</tspan> top-languages --by bytes</text>
 ${segs.join('')}
-<text x="${X}" y="334" style="font-size:12px">${legend.join('')}</text>
+<text x="${X}" y="334" style="font-size:13px">${legend.join('')}</text>
 </g>`;
 
   const body = `${heading(44, 'stats', '// 02')}\n${cells.join('\n')}\n${langs}`;

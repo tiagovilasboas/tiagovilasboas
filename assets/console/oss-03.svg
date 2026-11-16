@@ -24,8 +24,9 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 <rect x="16" y="0" width="848" height="40" fill="#010803"/>
 <rect x="16" y="0" width="848" height="40" fill="url(#grid)"/>
 <g class="ln" style="animation-delay:0.20s">
-<text x="52" y="25" style="font-size:12px"><tspan class="gr">▸ laya #968</tspan><tspan class="fg" fill-opacity=".75">  fine-tune warns when predictions collapse to the class prior.</tspan></text>
-<text x="828" y="25" text-anchor="end" class="mid" style="font-size:12px">↗</text>
+<text x="52" y="25" style="font-size:13px"><tspan class="gr">▸ laya #968</tspan><tspan class="fg" fill-opacity=".85">  fine-tune warns when predictions collapse to the class prior.</tspan></text>
+
+<text x="828" y="25" text-anchor="end" class="mid" style="font-size:13px">↗</text>
 </g>
 <rect x="16" y="0" width="848" height="40" fill="url(#scan)" pointer-events="none"/>
 <path d="M16 0V40M864 0V40" fill="none" stroke="#00ff41" stroke-width="1.2"/>

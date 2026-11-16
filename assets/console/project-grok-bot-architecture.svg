@@ -27,10 +27,10 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 <rect x="30" y="10" width="402" height="100" fill="#0b3d17" fill-opacity=".3" stroke="#00ff41" stroke-opacity=".35"/>
 <path d="M30 22V10H42" fill="none" stroke="#00ff41" stroke-width="2"/>
 <text x="46" y="36" font-weight="700" class="wh">grok-bot-architecture</text>
-<text x="416" y="36" text-anchor="end" class="mid" style="font-size:12px">★ 62</text>
-<text x="46" y="60" class="fg" fill-opacity=".72" style="font-size:13px">MCP-native multi-agent architecture with</text><text x="46" y="78" class="fg" fill-opacity=".72" style="font-size:13px">desktop agents and human-in-the-loop gates.</text>
+<text x="416" y="36" text-anchor="end" class="mid" style="font-size:13px">★ 62</text>
+<text x="46" y="60" class="fg" fill-opacity=".85" style="font-size:14px">MCP-native multi-agent architecture with</text><text x="46" y="79" class="fg" fill-opacity=".85" style="font-size:14px">desktop agents and human-in-the-loop gates.</text>
 <circle cx="51" cy="97" r="4" fill="#F7DF1E"/>
-<text x="61" y="101" class="dim" style="font-size:11px">JavaScript</text>
+<text x="61" y="101" class="dim" style="font-size:12px">JavaScript</text>
 </g>
 <rect x="16" y="0" width="424" height="120" fill="url(#scan)" pointer-events="none"/>
 <path d="M16 0V120" fill="none" stroke="#00ff41" stroke-width="1.2"/>

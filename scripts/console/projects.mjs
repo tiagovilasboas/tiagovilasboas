@@ -10,7 +10,7 @@ function card(p, i, stars) {
   const ox = (i % 2) * HALF;
   const left = ox === 0 ? 30 : 8;
   const right = ox === 0 ? HALF - 8 : HALF - 30;
-  const max = Math.floor((right - left - 32) / 7.8);
+  const max = Math.floor((right - left - 32) / 8.4);
   const desc = wrapN(p.desc, max, 2);
   const lang = LANG[p.lang] ?? C.green;
   const star = stars > 0 ? `★ ${stars}` : '';
@@ -18,10 +18,10 @@ function card(p, i, stars) {
 <rect x="${left}" y="10" width="${right - left}" height="100" fill="${C.dark}" fill-opacity=".3" stroke="${C.green}" stroke-opacity=".35"/>
 <path d="M${left} 22V10H${left + 12}" fill="none" stroke="${C.green}" stroke-width="2"/>
 <text x="${left + 16}" y="36" font-weight="700" class="wh">${esc(p.name)}</text>
-<text x="${right - 16}" y="36" text-anchor="end" class="mid" style="font-size:12px">${esc(star)}</text>
-${desc.map((l, j) => `<text x="${left + 16}" y="${60 + j * 18}" class="fg" fill-opacity=".72" style="font-size:13px">${esc(l)}</text>`).join('')}
+<text x="${right - 16}" y="36" text-anchor="end" class="mid" style="font-size:13px">${esc(star)}</text>
+${desc.map((l, j) => `<text x="${left + 16}" y="${60 + j * 19}" class="fg" fill-opacity=".85" style="font-size:14px">${esc(l)}</text>`).join('')}
 <circle cx="${left + 21}" cy="97" r="4" fill="${lang}"/>
-<text x="${left + 31}" y="101" class="dim" style="font-size:11px">${esc(p.lang)}</text>
+<text x="${left + 31}" y="101" class="dim" style="font-size:12px">${esc(p.lang)}</text>
 </g>`;
   const alt = `${p.name} (${p.lang}): ${p.desc}`;
   return {
