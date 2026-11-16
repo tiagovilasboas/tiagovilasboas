@@ -25,7 +25,7 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 <rect x="16" y="0" width="848" height="120" fill="url(#grid)"/>
 <text x="52" y="44" font-weight="700" fill="#00ff41" filter="url(#g)" opacity=".6" style="font-size:20px">~/</text>
 <text x="52" y="44" font-weight="700" style="font-size:20px"><tspan class="gr">~/</tspan><tspan class="wh">contributions</tspan></text>
-<text x="828" y="44" text-anchor="end" letter-spacing="2" class="dim" style="font-size:12px">// 07</text>
+<text x="828" y="44" text-anchor="end" letter-spacing="2" class="dim" style="font-size:12px">// 04</text>
 <line x1="52" y1="58" x2="828" y2="58" stroke="#00ff41" stroke-opacity=".25"/>
 <line x1="52" y1="58" x2="172" y2="58" stroke="#00ff41" stroke-width="2"/>
 <line x1="52" y1="58" x2="172" y2="58" stroke="#00ff41" stroke-width="3" filter="url(#g)" opacity=".7"/>

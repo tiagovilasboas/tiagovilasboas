@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="40" viewBox="0 0 880 40" role="img" aria-labelledby="t d">
-<title id="t">goose #12629</title>
-<desc id="d">goose #12629: first-time CLI configure asks for the goose mode and saves it.</desc>
+<title id="t">TanStack Query #11679</title>
+<desc id="d">TanStack Query #11679: queued scoped mutations start again while the window is unfocused.</desc>
 <style>
 text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:15px}
 .dim{fill:#3a8a4c}.gr{fill:#00ff41}.mid{fill:#00b82e}.fg{fill:#a8f5b8}.wh{fill:#e4ffe9}
@@ -24,7 +24,7 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 <rect x="16" y="0" width="848" height="40" fill="#010803"/>
 <rect x="16" y="0" width="848" height="40" fill="url(#grid)"/>
 <g class="ln" style="animation-delay:0.15s">
-<text x="52" y="25" style="font-size:13px"><tspan class="gr">▸ goose #12629</tspan><tspan class="fg" fill-opacity=".85">  first-time CLI configure asks for the goose mode and saves it.</tspan></text>
+<text x="52" y="25" style="font-size:13px"><tspan class="gr">▸ TanStack Query #11679</tspan><tspan class="fg" fill-opacity=".85">  queued scoped mutations start again while the window is unfocused.</tspan></text>
 
 <text x="828" y="25" text-anchor="end" class="mid" style="font-size:13px">↗</text>
 </g>

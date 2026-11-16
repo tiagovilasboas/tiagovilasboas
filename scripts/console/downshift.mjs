@@ -1,11 +1,9 @@
-// The Downshift hero: what it is, a before/after, the install line, what it
-// does, where it runs and the honest numbers. One slice, linked to the site.
+// The Downshift hero: what it is, a before/after, the install line and the
+// honest numbers. One slice, linked to the site; the details live there.
 import { C, FR, FRAME, X, clip, esc, grid, heading, slice, stagger, wrap } from './frame.mjs';
-import { buildButtons } from './buttons.mjs';
 
 const RIGHT = FR - 36;
 const WIDTH = RIGHT - X;
-const STATUS = { done: C.green, ok: C.mid, beta: '#c8e05a', exp: C.dim };
 
 function terminal(y, ds) {
   const [cmd, out] = ds.demo;
@@ -21,22 +19,6 @@ ${line(y + 48, out[0], out[1], 'gr')}
 </g>`, y + h];
 }
 
-function chips(y, harnesses) {
-  // Exact text width (13px ≈ 7.8 per char) plus padding; the spare space is
-  // spread between chips so the row spans the full text column, never past it.
-  const widths = harnesses.map(([name, st]) => (name.length + 1 + st.length) * 7.8 + 16);
-  const gap = Math.max(6, (WIDTH - widths.reduce((a, w) => a + w, 0)) / Math.max(harnesses.length - 1, 1));
-  let x = X;
-  const out = harnesses.map(([name, st], i) => {
-    const w = widths[i];
-    const chip = `<rect x="${x.toFixed(1)}" y="${y}" width="${w.toFixed(1)}" height="24" fill="${C.dark}" fill-opacity=".35" stroke="${STATUS[st] ?? C.dim}" stroke-opacity=".6"/>`
-      + `<text x="${(x + 8).toFixed(1)}" y="${y + 17}" style="font-size:13px"><tspan class="wh">${esc(name)}</tspan><tspan fill="${STATUS[st] ?? C.dim}"> ${esc(st)}</tspan></text>`;
-    x += w + gap;
-    return chip;
-  });
-  return [`<g class="ln" style="animation-delay:1.1s">${out.join('')}</g>`, y + 24];
-}
-
 export function buildDownshiftHero(ds, live, counter) {
   const meta = live ? `★ ${live.stars}${live.release ? ` · ${live.release}` : ''}  ${counter}` : counter;
   const parts = [heading(44, 'building/downshift', meta)];
@@ -44,24 +26,17 @@ export function buildDownshiftHero(ds, live, counter) {
   const tag = wrap(ds.tagline, Math.floor(WIDTH / 9.6));
   parts.push(...tag.map((l, i) => `<g class="ln" style="animation-delay:.2s"><text x="${X}" y="${y + i * 24}" font-weight="700" class="wh" style="font-size:16px">${esc(l)}</text></g>`));
   y += tag.length * 24 + 4;
-  const about = wrap(ds.about, Math.floor(WIDTH / 8.4));
-  const [aboutRows, ay] = stagger(about.map((l) => `<text x="${X}" y="{y}" class="fg" fill-opacity=".85" style="font-size:14px">${esc(l)}</text>`), y, 21, 0.3, 0.05);
-  parts.push(aboutRows);
-  const [term, ty] = terminal(ay + 4, ds);
+  const [term, ty] = terminal(y + 4, ds);
   parts.push(term);
-  const [bullets, by] = stagger(ds.bullets.map(([k, v]) => `<text x="${X}" y="{y}" style="font-size:14px"><tspan class="gr">▸ ${esc(k.padEnd(11))}</tspan><tspan class="fg">${esc(v)}</tspan></text>`), ty + 32, 22, 0.7, 0.08);
-  parts.push(bullets);
-  const [chipRow, cy] = chips(by + 2, ds.harnesses);
-  parts.push(chipRow);
   const honest = wrap(ds.honest, Math.floor(WIDTH / 7.8) - 3);
-  const [notes, ny] = stagger(honest.map((l, i) => `<text x="${X}" y="{y}" class="dim" style="font-size:13px">${i === 0 ? '<tspan class="gr">// </tspan>' : '   '}${esc(l)}</text>`), cy + 34, 20, 1.2, 0.05);
+  const [notes, ny] = stagger(honest.map((l, i) => `<text x="${X}" y="{y}" class="dim" style="font-size:13px">${i === 0 ? '<tspan class="gr">// </tspan>' : '   '}${esc(l)}</text>`), ty + 30, 20, .8, 0.05);
   parts.push(notes);
   const h = grid(ny + 8);
-  const desc = `Downshift: ${ds.tagline} ${ds.about}`;
+  const desc = `Downshift: ${ds.tagline} ${ds.honest}`;
   return { file: 'downshift.svg', svg: slice(h, parts.join('\n'), { title: 'Downshift', desc }), alt: desc, href: ds.url, w: FRAME };
 }
 
-/** Layout rows: the hero, then the call-to-action buttons. */
+/** Layout rows: the hero alone; its link goes to the site. */
 export function buildDownshift(ds, live, counter) {
-  return [[buildDownshiftHero(ds, live, counter)], ...buildButtons(ds.ctas, 'downshift')];
+  return [[buildDownshiftHero(ds, live, counter)]];
 }

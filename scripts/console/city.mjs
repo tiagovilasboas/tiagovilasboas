@@ -1,18 +1,21 @@
-// Contribution city: one isometric building per day of the last year,
-// taller and brighter for busier days, under a sky of digital rain.
+// Contribution city: four headline numbers, then one isometric building per
+// day of the last year, taller and brighter for busier days, under digital rain.
 import { C, FR, X, esc, heading, rng, slice } from './frame.mjs';
 import { rain } from './header.mjs';
 
-const H = 680;
+const DY = 80; // room for the numbers strip
+const H = 680 + DY;
 const TW = 25; // iso tile width
 const TH = 12.5; // iso tile height
 const OX = 152.5; // grid origin inside the slice
-const OY = 262;
+const OY = 262 + DY;
 const HMAX = 118; // tallest building, px
 export const ROOFS = ['#0b4d1c', '#00862a', '#00c836', C.green];
 const WIN_ON = '#7dff9e';
 const WIN_SIDE = '#3fdc6a';
 const WIN_OFF = '#04170a';
+
+export const fmt = (n) => Number(n).toLocaleString('en-US');
 
 const p = (x, y) => `${x.toFixed(1)},${y.toFixed(1)}`;
 
@@ -52,8 +55,24 @@ function windows(rnd, faces, h) {
   return out.join('');
 }
 
-export function buildCity(calendar, updated) {
-  const days = calendar.map(([d, n]) => [new Date(`${d}T00:00:00Z`), n]);
+/** The four numbers that matter, in one row under the prompt. */
+function numbers(d) {
+  const items = [
+    [fmt(d.contributions), 'contributions · 1y'],
+    [fmt(d.prs.merged), 'pull requests merged'],
+    [fmt(d.stars), 'stars'],
+    [`${d.streak.current}d`, 'current streak'],
+  ];
+  const w = (FR - 36 - X) / items.length;
+  return items.map(([v, l], i) => `<g class="ln" style="animation-delay:${(0.2 + i * 0.08).toFixed(2)}s">
+<text x="${(X + i * w).toFixed(1)}" y="140" font-weight="700" class="wh" style="font-size:24px">${esc(v)}</text>
+<text x="${(X + i * w).toFixed(1)}" y="162" class="dim" style="font-size:12px">${esc(l)}</text>
+</g>`).join('\n');
+}
+
+export function buildCity(d) {
+  const { calendar, updated } = d;
+  const days = calendar.map(([day, n]) => [new Date(`${day}T00:00:00Z`), n]);
   const counts = days.map(([, n]) => n);
   const total = counts.reduce((a, b) => a + b, 0);
   const peak = Math.max(1, ...counts);
@@ -92,24 +111,24 @@ export function buildCity(calendar, updated) {
   const active = counts.filter((n) => n > 0).length;
   const fmtDay = (d) => d.toLocaleString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
   const info = [
-    `<tspan class="gr" font-weight="700">${total.toLocaleString('en-US')}</tspan> contributions · last 365 days`,
     busiest[1] ? `busiest day <tspan class="fg">${fmtDay(busiest[0])}</tspan> · ${busiest[1]}` : '',
     `${active} active days`,
-  ].filter(Boolean).map((t, i) => `<text x="${FR - 36}" y="${300 + i * 20}" text-anchor="end" class="dim" style="font-size:13px">${t}</text>`).join('');
+  ].filter(Boolean).map((t, i) => `<text x="${FR - 36}" y="${300 + DY + i * 20}" text-anchor="end" class="dim" style="font-size:13px">${t}</text>`).join('');
 
-  const sky = rain(`sky-${updated}`, { x0: 500, x1: FR - 30, y0: 110, y1: 250 });
-  const legend = ['#06180b', ...ROOFS].map((c, i) => `<rect x="${X + 52 + i * 16}" y="642" width="11" height="11" fill="${c}"/>`).join('');
+  const sky = rain(`sky-${updated}`, { x0: 500, x1: FR - 30, y0: 110 + DY, y1: 250 + DY });
+  const legend = ['#06180b', ...ROOFS].map((c, i) => `<rect x="${X + 52 + i * 16}" y="${642 + DY}" width="11" height="11" fill="${c}"/>`).join('');
   const body = `${heading(44, 'contribution-city', '// 03')}
 <g class="ln" style="animation-delay:.15s"><text x="${X}" y="96" class="dim"><tspan class="gr">$</tspan> render-city --last 365d <tspan fill="${C.dim}"># one building per day</tspan></text></g>
+${numbers(d)}
 ${sky.markup}
 ${info}
 ${shapes.join('')}
-<text x="${X}" y="652" class="dim" style="font-size:12px">quiet</text>${legend}<text x="${X + 52 + 5 * 16 + 6}" y="652" class="dim" style="font-size:12px">skyscraper</text>`;
+<text x="${X}" y="${652 + DY}" class="dim" style="font-size:12px">quiet</text>${legend}<text x="${X + 52 + 5 * 16 + 6}" y="${652 + DY}" class="dim" style="font-size:12px">skyscraper</text>`;
   const css = `${sky.css}
 @keyframes fl{0%,40%,100%{opacity:1}45%,60%{opacity:.1}}
 .f0{animation:fl 5s infinite}.f1{animation:fl 7s infinite 2s}.f2{animation:fl 9s infinite 4s}`;
-  const defs = '<clipPath id="rainclip"><rect x="480" y="110" width="360" height="150"/></clipPath>';
-  const desc = `Contribution city: an isometric skyline with one building per day of the last year, taller and brighter for busier days. ${total.toLocaleString('en-US')} contributions`
+  const defs = `<clipPath id="rainclip"><rect x="480" y="${110 + DY}" width="360" height="150"/></clipPath>`;
+  const desc = `Contribution city: ${fmt(d.prs.merged)} pull requests merged, ${fmt(d.stars)} stars, current streak ${d.streak.current} days. An isometric skyline with one building per day of the last year, taller and brighter for busier days. ${total.toLocaleString('en-US')} contributions`
     + (busiest[1] ? `, busiest day ${fmtDay(busiest[0])} with ${busiest[1]}` : '') + '.';
   return slice(H, body, { title: "Contribution city", desc, css, defs });
 }

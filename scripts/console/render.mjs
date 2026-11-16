@@ -11,16 +11,14 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildButtons } from './buttons.mjs';
 import { buildCity } from './city.mjs';
-import { DOWNSHIFT, EDUCATION, IMPACT, LINKS, PROJECTS, START_HERE } from './content.mjs';
+import { DOWNSHIFT, IMPACT, LINKS, OSS as OSS_PICK } from './content.mjs';
 import { parseContributions } from './contributions.mjs';
 import { QUERY, normalize } from './data.mjs';
 import { buildDownshift } from './downshift.mjs';
 import { buildFooter } from './footer.mjs';
 import { buildHeader } from './header.mjs';
-import { buildProjects } from './projects.mjs';
 import { buildReadme } from './readme.mjs';
 import { buildList, compactRow } from './rows.mjs';
-import { buildStats } from './stats.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..', '..');
@@ -28,19 +26,23 @@ const OSS = join(ROOT, 'scripts', 'oss-block', 'contributions.md');
 
 const full = (file, svg, alt) => [{ file, svg, alt, w: 880 }];
 
+/** The featured contributions that exist, topped up with the newest, then the "all" row. */
+export function pickContributions(all, pick = OSS_PICK) {
+  const has = (c, name) => c.label.startsWith(`${name} #`);
+  const featured = pick.featured.map((n) => all.find((c) => has(c, n))).filter(Boolean);
+  const rest = all.filter((c) => !featured.includes(c));
+  return [...featured, ...rest].slice(0, pick.max).concat(pick.all);
+}
+
 /** The whole console, top to bottom, as layout rows of tiles. */
 export function layout(d, contributions) {
   return [
     full('header.svg', buildHeader(), 'Tiago Vilas Boas. Staff engineer: agentic AI, AppSec, observability. In tech since 2006, leading AI enablement across squads. Building Downshift.'),
     ...buildButtons(LINKS, 'link'),
     ...buildDownshift(DOWNSHIFT, d.downshift, '// 01'),
-    full('stats.svg', buildStats(d), 'GitHub stats: contributions in the last year, pull requests, stars, followers, streaks and top languages.'),
-    full('city.svg', buildCity(d.calendar, d.updated), 'Contribution city: an isometric skyline with one building per day of the last year, taller and brighter for busier days.'),
-    ...buildList('impact', 'impact', '// 04', 'cat impact.log  # articles in Portuguese', IMPACT),
-    ...buildProjects(PROJECTS, d.repoStars, '// 05'),
-    ...buildList('start', 'start-here', '// 06', 'open --first', START_HERE),
-    ...buildList('oss', 'contributions', '// 07', 'gh pr list --author @me --state merged  # small, tested fixes to projects I use', contributions, compactRow),
-    ...buildList('edu', 'education', '// 08', 'ls ~/certs', EDUCATION),
+    ...buildList('impact', 'impact', '// 02', 'cat impact.log  # articles in Portuguese', IMPACT),
+    full('city.svg', buildCity(d), 'Contribution city: contributions, merged pull requests, stars and current streak, over an isometric skyline with one building per day of the last year.'),
+    ...buildList('oss', 'contributions', '// 04', 'gh pr list --author @me --state merged  # small, tested fixes to projects I use', pickContributions(contributions), compactRow),
     full('footer.svg', buildFooter(d.login), 'Connection closed.'),
   ];
 }
