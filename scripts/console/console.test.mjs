@@ -96,6 +96,9 @@ test('the README references every slice once, and each row adds up to the full w
     assert.equal(Math.round(total), 100, line.slice(0, 80));
   }
   assert.match(readme, /href="https:\/\/github\.com\/a\/x\/pull\/1"/);
+  // GitHub adds padding-right: 20px to align="left" images, so rows would wrap.
+  assert.doesNotMatch(readme, /align="(left|right)"/);
+  assert.equal([...readme.matchAll(/<img /g)].length, [...readme.matchAll(/align="top"/g)].length);
 });
 
 test('the header only shows the public name', () => {

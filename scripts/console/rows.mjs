@@ -1,10 +1,11 @@
 // List sections: a heading slice, then one full-width row per item so every
 // row can be its own link. Used by impact, start-here, contributions, education.
-import { C, FR, FRAME, X, clip, esc, grid, heading, slice, wrapN } from './frame.mjs';
+import { C, FR, FRAME, X, clip, esc, grid, heading, slice, wrap, wrapN } from './frame.mjs';
 
 const RIGHT = FR - 36;
-const CH13 = 7.8; // monospace advance at 13px
-const CH12 = 7.2;
+const CH14 = 8.4; // monospace advance at 14px (detail text)
+const CH13 = 7.8; // at 13px (compact rows)
+const CH15 = 9; // at 15px (titles)
 
 const tile = (file, svg, alt, href) => ({ file, svg, alt, href, w: FRAME });
 
@@ -17,35 +18,41 @@ export function sectionHead(key, name, counter, prompt) {
 
 /** A row with an index, a bold title and up to two lines of detail. */
 export function listRow(key, i, item) {
-  const max = Math.floor((RIGHT - 80 - X - 56) / CH13);
+  const avail = RIGHT - 80 - X - 56;
+  const max = Math.floor(avail / CH14);
   const sub = item.sub ? wrapN(item.sub, max, 2) : [];
-  const content = 34 + sub.length * 19;
-  const h = grid(content + 6);
+  const content = 34 + sub.length * 21;
+  const h = grid(content + 2);
   const t = Math.floor((h - content) / 2) + 14; // title baseline, content centred
   const idx = String(i + 1).padStart(2, '0');
-  const lines = sub.map((s, j) => `<text x="${X + 56}" y="${t + 22 + j * 19}" class="fg" fill-opacity=".72" style="font-size:13px">${esc(s)}</text>`).join('');
+  const lines = sub.map((s, j) => `<text x="${X + 56}" y="${t + 23 + j * 21}" class="fg" fill-opacity=".85" style="font-size:14px">${esc(s)}</text>`).join('');
   const body = `<g class="ln" style="animation-delay:${(0.1 + i * 0.08).toFixed(2)}s">
 <text x="${X}" y="${t}" class="gr" style="font-size:13px">0x${idx}</text>
-<text x="${X + 56}" y="${t}" font-weight="700" class="wh">${esc(clip(item.title, max))}</text>
+<text x="${X + 56}" y="${t}" font-weight="700" class="wh">${esc(clip(item.title, Math.floor(avail / CH15)))}</text>
 ${lines}
-<text x="${RIGHT}" y="${t}" text-anchor="end" class="mid" style="font-size:12px">open ↗</text>
+<text x="${RIGHT}" y="${t}" text-anchor="end" class="mid" style="font-size:13px">open ↗</text>
 <line x1="${X}" y1="${h - 1}" x2="${RIGHT}" y2="${h - 1}" stroke="${C.green}" stroke-opacity=".14" stroke-dasharray="2 4"/>
 </g>`;
   const alt = item.sub ? `${item.title}. ${item.sub}` : item.title;
   return tile(`${key}-${idx}.svg`, slice(h, body, { title: item.title, desc: alt }), alt, item.url);
 }
 
-/** A one-line row: "label: text", for long lists like contributions. */
+/** A compact row: "▸ label  text", wrapping to a second line when the text is long. */
 export function compactRow(key, i, item) {
-  const max = Math.floor((RIGHT - 40 - X - 20) / CH12);
-  const text = clip(item.text, Math.max(max - item.label.length - 2, 10));
+  const max = Math.floor((RIGHT - 40 - X - 20) / CH13);
+  const first = Math.max(max - item.label.length - 4, 10);
+  const [head, ...rest] = wrap(item.text, first);
+  const lines = rest.length ? [head, clip(rest.join(' '), max - 4)] : [head];
+  const h = lines.length === 1 ? 40 : 80;
+  const y0 = lines.length === 1 ? 25 : 35;
   const idx = String(i + 1).padStart(2, '0');
   const body = `<g class="ln" style="animation-delay:${(0.1 + i * 0.05).toFixed(2)}s">
-<text x="${X}" y="25" style="font-size:12px"><tspan class="gr">▸ ${esc(item.label)}</tspan><tspan class="fg" fill-opacity=".75">  ${esc(text)}</tspan></text>
-<text x="${RIGHT}" y="25" text-anchor="end" class="mid" style="font-size:12px">↗</text>
+<text x="${X}" y="${y0}" style="font-size:13px"><tspan class="gr">▸ ${esc(item.label)}</tspan><tspan class="fg" fill-opacity=".85">  ${esc(lines[0])}</tspan></text>
+${lines[1] ? `<text x="${X + 4 * CH13}" y="${y0 + 21}" class="fg" fill-opacity=".85" style="font-size:13px">${esc(lines[1])}</text>` : ''}
+<text x="${RIGHT}" y="${y0}" text-anchor="end" class="mid" style="font-size:13px">↗</text>
 </g>`;
   const alt = `${item.label}: ${item.text}`;
-  return tile(`${key}-${idx}.svg`, slice(40, body, { title: item.label, desc: alt }), alt, item.url);
+  return tile(`${key}-${idx}.svg`, slice(h, body, { title: item.label, desc: alt }), alt, item.url);
 }
 
 /** Heading plus one row per item. Returns layout rows (one tile each). */

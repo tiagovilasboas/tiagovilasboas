@@ -6,8 +6,9 @@ const ASSETS = './assets/console';
 
 function img(t) {
   const width = `${+((t.w / FRAME) * 100).toFixed(2)}%`;
-  // align="left" floats the image: no inline baseline gap, so slices touch.
-  const tag = `<img src="${ASSETS}/${t.file}" width="${width}" align="left" alt="${esc(t.alt)}">`;
+  // align="top" (vertical-align: top) removes the inline baseline gap so slices
+  // touch. Not align="left": GitHub pads floated images by 20px, which breaks rows.
+  const tag = `<img src="${ASSETS}/${t.file}" width="${width}" align="top" alt="${esc(t.alt)}">`;
   return t.href ? `<a href="${esc(t.href)}">${tag}</a>` : tag;
 }
 

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="80" viewBox="0 0 220 80" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="80" viewBox="0 0 440 80" role="img" aria-labelledby="t d">
 <title id="t">DEV.to</title>
 <desc id="d">DEV.to: @tiagovilasboas</desc>
 <style>
@@ -14,23 +14,23 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 <defs>
-<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="-20"><path d="M40 0H0V40" fill="none" stroke="#00ff41" stroke-opacity=".045"/></pattern>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="0"><path d="M40 0H0V40" fill="none" stroke="#00ff41" stroke-opacity=".045"/></pattern>
 <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".22"/></pattern>
 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
 <filter id="g" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="3.5"/></filter>
 
 </defs>
-
-<rect x="0" y="0" width="220" height="80" fill="#010803"/>
-<rect x="0" y="0" width="220" height="80" fill="url(#grid)"/>
+<path d="M424 -40V120" fill="none" stroke="#00ff41" stroke-width="3" opacity=".4" filter="url(#glow)"/>
+<rect x="0" y="0" width="424" height="80" fill="#010803"/>
+<rect x="0" y="0" width="424" height="80" fill="url(#grid)"/>
 <g class="ln" style="animation-delay:0.20s">
-<rect x="8" y="14" width="204" height="52" fill="#0b3d17" fill-opacity=".4" stroke="#00ff41" stroke-opacity=".45"/>
-<path d="M8 26V14H20M200 66H212V54" fill="none" stroke="#00ff41" stroke-width="2"/>
+<rect x="8" y="14" width="402" height="52" fill="#0b3d17" fill-opacity=".4" stroke="#00ff41" stroke-opacity=".45"/>
+<path d="M8 26V14H20M398 66H410V54" fill="none" stroke="#00ff41" stroke-width="2"/>
 <text x="22" y="37" font-weight="700" class="wh"><tspan class="gr">[2]</tspan> DEV.to</text>
-<text x="22" y="55" class="dim" style="font-size:11px">@tiagovilasboas</text>
-<text x="200" y="37" text-anchor="end" class="gr">↗</text>
+<text x="22" y="56" class="dim" style="font-size:12px">@tiagovilasboas</text>
+<text x="396" y="46" text-anchor="end" class="gr">↗</text>
 </g>
-<rect x="0" y="0" width="220" height="80" fill="url(#scan)" pointer-events="none"/>
-
+<rect x="0" y="0" width="424" height="80" fill="url(#scan)" pointer-events="none"/>
+<path d="M424 0V80" fill="none" stroke="#00ff41" stroke-width="1.2"/>
 <g fill="none" stroke="#00ff41" stroke-width="2"></g>
 </svg>

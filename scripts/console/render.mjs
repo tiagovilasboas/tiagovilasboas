@@ -32,7 +32,7 @@ const full = (file, svg, alt) => [{ file, svg, alt, w: 880 }];
 export function layout(d, contributions) {
   return [
     full('header.svg', buildHeader(), 'Tiago Vilas Boas. Staff engineer: agentic AI, AppSec, observability. In tech since 2006, leading AI enablement across squads. Building Downshift.'),
-    buildButtons(LINKS, 'link'),
+    ...buildButtons(LINKS, 'link'),
     ...buildDownshift(DOWNSHIFT, d.downshift, '// 01'),
     full('stats.svg', buildStats(d), 'GitHub stats: contributions in the last year, pull requests, stars, followers, streaks and top languages.'),
     full('city.svg', buildCity(d.calendar, d.updated), 'Contribution city: an isometric skyline with one building per day of the last year, taller and brighter for busier days.'),

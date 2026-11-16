@@ -54,7 +54,7 @@ export const IMPACT = [
 
 export const PROJECTS = [
   { name: 'grok-bot-architecture', lang: 'JavaScript', desc: 'MCP-native multi-agent architecture with desktop agents and human-in-the-loop gates.' },
-  { name: 'antigravity-operator', lang: 'Go', desc: 'Outer harness for coding agents: sessions stay scoped, evidence-backed and recoverable.' },
+  { name: 'antigravity-operator', lang: 'Go', desc: 'Outer harness for coding agents: scoped, evidence-backed, recoverable sessions.' },
   { name: 'ai-code-review', lang: 'JavaScript', desc: 'Agentic PR review with AppSec guardrails: a HIGH IDOR or leaked secret blocks the merge.' },
   { name: 'sentry-golden-path', lang: 'JavaScript', desc: 'Sentry done right: errors, tracing, releases, alerts and LLM monitoring.' },
   { name: 'dev-to-mcp', lang: 'Go', desc: 'MCP server for the DEV.to API in one Go binary: stdio, no cold start.' },

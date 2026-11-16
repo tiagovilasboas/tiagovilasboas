@@ -95,7 +95,7 @@ export function buildCity(calendar, updated) {
     `<tspan class="gr" font-weight="700">${total.toLocaleString('en-US')}</tspan> contributions · last 365 days`,
     busiest[1] ? `busiest day <tspan class="fg">${fmtDay(busiest[0])}</tspan> · ${busiest[1]}` : '',
     `${active} active days`,
-  ].filter(Boolean).map((t, i) => `<text x="${FR - 36}" y="${300 + i * 20}" text-anchor="end" class="dim" style="font-size:12px">${t}</text>`).join('');
+  ].filter(Boolean).map((t, i) => `<text x="${FR - 36}" y="${300 + i * 20}" text-anchor="end" class="dim" style="font-size:13px">${t}</text>`).join('');
 
   const sky = rain(`sky-${updated}`, { x0: 500, x1: FR - 30, y0: 110, y1: 250 });
   const legend = ['#06180b', ...ROOFS].map((c, i) => `<rect x="${X + 52 + i * 16}" y="642" width="11" height="11" fill="${c}"/>`).join('');
@@ -104,7 +104,7 @@ export function buildCity(calendar, updated) {
 ${sky.markup}
 ${info}
 ${shapes.join('')}
-<text x="${X}" y="652" class="dim" style="font-size:11px">quiet</text>${legend}<text x="${X + 52 + 5 * 16 + 6}" y="652" class="dim" style="font-size:11px">skyscraper</text>`;
+<text x="${X}" y="652" class="dim" style="font-size:12px">quiet</text>${legend}<text x="${X + 52 + 5 * 16 + 6}" y="652" class="dim" style="font-size:12px">skyscraper</text>`;
   const css = `${sky.css}
 @keyframes fl{0%,40%,100%{opacity:1}45%,60%{opacity:.1}}
 .f0{animation:fl 5s infinite}.f1{animation:fl 7s infinite 2s}.f2{animation:fl 9s infinite 4s}`;
