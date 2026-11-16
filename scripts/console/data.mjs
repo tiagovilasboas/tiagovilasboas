@@ -10,7 +10,7 @@ export const QUERY = `query($login: String!) {
     repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
       totalCount
       nodes {
-        name stargazerCount forkCount
+        stargazerCount forkCount
         languages(first: 6, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } }
       }
     }
@@ -74,7 +74,6 @@ export function normalize(raw, today) {
     activeDays: calendar.filter(([, n]) => n > 0).length,
     streak: streaks(calendar, today),
     languages: topLanguages(repos),
-    repoStars: Object.fromEntries(repos.filter((r) => r.name).map((r) => [r.name, r.stargazerCount])),
     downshift: ds ? { stars: ds.stargazerCount, release: ds.releases.nodes[0]?.tagName ?? null } : null,
     calendar,
   };

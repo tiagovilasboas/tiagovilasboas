@@ -1,5 +1,5 @@
 // List sections: a heading slice, then one full-width row per item so every
-// row can be its own link. Used by impact, start-here, contributions, education.
+// row can be its own link. Used by impact and contributions.
 import { C, FR, FRAME, X, clip, esc, grid, heading, slice, wrap, wrapN } from './frame.mjs';
 
 const RIGHT = FR - 36;

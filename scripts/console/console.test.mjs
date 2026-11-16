@@ -4,7 +4,7 @@ import { levels } from './city.mjs';
 import { normalize, streaks, topLanguages } from './data.mjs';
 import { parseContributions } from './contributions.mjs';
 import { clip, esc, slice, wrapN } from './frame.mjs';
-import { renderAll } from './render.mjs';
+import { pickContributions, renderAll } from './render.mjs';
 
 function rawFixture() {
   const days = [];
@@ -76,7 +76,7 @@ test('every slice is valid-looking SVG, deterministic, and on the 40px grid', ()
   const a = renderAll(d, parseContributions(OSS));
   const b = renderAll(d, parseContributions(OSS));
   assert.equal(a.readme, b.readme);
-  for (const name of ['header.svg', 'link-linkedin.svg', 'downshift.svg', 'stats.svg', 'city.svg', 'impact-01.svg', 'oss-01.svg', 'footer.svg']) assert.ok(a.files[name], name);
+  for (const name of ['header.svg', 'link-linkedin.svg', 'downshift.svg', 'city.svg', 'impact-01.svg', 'oss-01.svg', 'footer.svg']) assert.ok(a.files[name], name);
   for (const [name, svg] of Object.entries(a.files)) {
     assert.equal(svg, b.files[name], `${name} is not deterministic`);
     assert.match(svg, /^<svg [^>]*role="img"/, name);
@@ -116,4 +116,11 @@ test('clip and wrapN keep text inside its box', () => {
 test('esc and slice guard the frame', () => {
   assert.equal(esc(`<a href="x">&'`), '&lt;a href=&quot;x&quot;&gt;&amp;&#39;');
   assert.throws(() => slice(50, '', { title: 't', desc: 'd' }), /multiple of 40/);
+});
+
+test('pickContributions puts featured PRs first, tops up with the newest, ends with "all"', () => {
+  const c = (label) => ({ label, text: 't', url: `https://github.com/x/${label}` });
+  const all = [c('a #1'), c('b #2'), c('c #3'), c('d #4'), c('e #5')];
+  const pick = { featured: ['d', 'missing'], max: 3, all: c('all') };
+  assert.deepEqual(pickContributions(all, pick).map((x) => x.label), ['d #4', 'a #1', 'b #2', 'all']);
 });
