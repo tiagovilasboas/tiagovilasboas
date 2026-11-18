@@ -61,7 +61,7 @@ function numbers(d) {
     [fmt(d.contributions), 'contributions · 1y', 'gr'],
     [fmt(d.prs.merged), 'pull requests merged', 'bl'],
     [fmt(d.stars), 'stars', 'or'],
-    [`${d.streak.current}d`, 'current streak', 'pu'],
+    [`${d.streak.longest}d`, 'longest streak', 'pu'],
   ];
   const w = (FR - 36 - X) / items.length;
   return items.map(([v, l, cls], i) => `<g class="ln" style="animation-delay:${(0.2 + i * 0.08).toFixed(2)}s">
@@ -128,7 +128,7 @@ ${shapes.join('')}
 @keyframes fl{0%,40%,100%{opacity:1}45%,60%{opacity:.1}}
 .f0{animation:fl 5s infinite}.f1{animation:fl 7s infinite 2s}.f2{animation:fl 9s infinite 4s}`;
   const defs = `<clipPath id="rainclip"><rect x="480" y="${110 + DY}" width="360" height="150"/></clipPath>`;
-  const desc = `Contribution city: ${fmt(d.prs.merged)} pull requests merged, ${fmt(d.stars)} stars, current streak ${d.streak.current} days. An isometric skyline with one building per day of the last year, taller and brighter for busier days. ${total.toLocaleString('en-US')} contributions`
+  const desc = `Contribution city: ${fmt(d.prs.merged)} pull requests merged, ${fmt(d.stars)} stars, longest streak ${d.streak.longest} days. An isometric skyline with one building per day of the last year, taller and brighter for busier days. ${total.toLocaleString('en-US')} contributions`
     + (busiest[1] ? `, busiest day ${fmtDay(busiest[0])} with ${busiest[1]}` : '') + '.';
   return slice(H, body, { title: "Contribution city", desc, css, defs });
 }
