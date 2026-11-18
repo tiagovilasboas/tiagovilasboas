@@ -10,10 +10,10 @@ const TH = 12.5; // iso tile height
 const OX = 152.5; // grid origin inside the slice
 const OY = 262 + DY;
 const HMAX = 118; // tallest building, px
-export const ROOFS = ['#0b4d1c', '#00862a', '#00c836', C.green];
-const WIN_ON = '#7dff9e';
-const WIN_SIDE = '#3fdc6a';
-const WIN_OFF = '#04170a';
+export const ROOFS = ['#0e4429', '#006d32', '#26a641', C.green]; // GitHub's contribution greens
+const WIN_ON = '#aff5b4';
+const WIN_SIDE = '#7ee787';
+const WIN_OFF = C.bg;
 
 export const fmt = (n) => Number(n).toLocaleString('en-US');
 
@@ -58,14 +58,14 @@ function windows(rnd, faces, h) {
 /** The four numbers that matter, in one row under the prompt. */
 function numbers(d) {
   const items = [
-    [fmt(d.contributions), 'contributions · 1y'],
-    [fmt(d.prs.merged), 'pull requests merged'],
-    [fmt(d.stars), 'stars'],
-    [`${d.streak.current}d`, 'current streak'],
+    [fmt(d.contributions), 'contributions · 1y', 'gr'],
+    [fmt(d.prs.merged), 'pull requests merged', 'bl'],
+    [fmt(d.stars), 'stars', 'or'],
+    [`${d.streak.current}d`, 'current streak', 'pu'],
   ];
   const w = (FR - 36 - X) / items.length;
-  return items.map(([v, l], i) => `<g class="ln" style="animation-delay:${(0.2 + i * 0.08).toFixed(2)}s">
-<text x="${(X + i * w).toFixed(1)}" y="140" font-weight="700" class="wh" style="font-size:24px">${esc(v)}</text>
+  return items.map(([v, l, cls], i) => `<g class="ln" style="animation-delay:${(0.2 + i * 0.08).toFixed(2)}s">
+<text x="${(X + i * w).toFixed(1)}" y="140" font-weight="700" class="${cls}" style="font-size:24px">${esc(v)}</text>
 <text x="${(X + i * w).toFixed(1)}" y="162" class="dim" style="font-size:12px">${esc(l)}</text>
 </g>`).join('\n');
 }
@@ -95,14 +95,14 @@ export function buildCity(d) {
     const T = [cx, cy - TH / 2];
     const B = [cx, cy + TH / 2];
     if (n === 0) {
-      shapes.push(`<path d="M${p(...T)}L${p(...R)}L${p(...B)}L${p(...L)}Z" fill="#06180b" stroke="${C.bg}" stroke-width=".6"/>`);
+      shapes.push(`<path d="M${p(...T)}L${p(...R)}L${p(...B)}L${p(...L)}Z" fill="${C.dark}" stroke="${C.bg}" stroke-width=".6"/>`);
       continue;
     }
     const h = 8 + (HMAX - 8) * Math.sqrt(n / peak);
     const level = lv.filter((t) => n > t).length;
     const [Tu, Ru, Bu, Lu] = [T, R, B, L].map(([x, y]) => [x, y - h]);
-    shapes.push(`<path d="M${p(...L)}L${p(...B)}L${p(...Bu)}L${p(...Lu)}Z" fill="#0a2a12"/>`
-      + `<path d="M${p(...B)}L${p(...R)}L${p(...Ru)}L${p(...Bu)}Z" fill="#061c0c"/>`
+    shapes.push(`<path d="M${p(...L)}L${p(...B)}L${p(...Bu)}L${p(...Lu)}Z" fill="#14261b"/>`
+      + `<path d="M${p(...B)}L${p(...R)}L${p(...Ru)}L${p(...Bu)}Z" fill="#0f1d15"/>`
       + `<path d="M${p(...Tu)}L${p(...Ru)}L${p(...Bu)}L${p(...Lu)}Z" fill="${ROOFS[level]}"/>`
       + windows(rnd, [['l', L, B], ['r', B, R]], h));
   }
@@ -116,7 +116,7 @@ export function buildCity(d) {
   ].filter(Boolean).map((t, i) => `<text x="${FR - 36}" y="${300 + DY + i * 20}" text-anchor="end" class="dim" style="font-size:13px">${t}</text>`).join('');
 
   const sky = rain(`sky-${updated}`, { x0: 500, x1: FR - 30, y0: 110 + DY, y1: 250 + DY });
-  const legend = ['#06180b', ...ROOFS].map((c, i) => `<rect x="${X + 52 + i * 16}" y="${642 + DY}" width="11" height="11" fill="${c}"/>`).join('');
+  const legend = [C.dark, ...ROOFS].map((c, i) => `<rect x="${X + 52 + i * 16}" y="${642 + DY}" width="11" height="11" fill="${c}"/>`).join('');
   const body = `${heading(44, 'contribution-city', '// 03')}
 <g class="ln" style="animation-delay:.15s"><text x="${X}" y="96" class="dim"><tspan class="gr">$</tspan> render-city --last 365d <tspan fill="${C.dim}"># one building per day</tspan></text></g>
 ${numbers(d)}

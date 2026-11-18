@@ -30,8 +30,8 @@ export function listRow(key, i, item) {
 <text x="${X}" y="${t}" class="gr" style="font-size:13px">0x${idx}</text>
 <text x="${X + 56}" y="${t}" font-weight="700" class="wh">${esc(clip(item.title, Math.floor(avail / CH15)))}</text>
 ${lines}
-<text x="${RIGHT}" y="${t}" text-anchor="end" class="mid" style="font-size:13px">open ↗</text>
-<line x1="${X}" y1="${h - 1}" x2="${RIGHT}" y2="${h - 1}" stroke="${C.green}" stroke-opacity=".14" stroke-dasharray="2 4"/>
+<text x="${RIGHT}" y="${t}" text-anchor="end" class="bl" style="font-size:13px">open ↗</text>
+<line x1="${X}" y1="${h - 1}" x2="${RIGHT}" y2="${h - 1}" stroke="${C.line}" stroke-dasharray="2 4"/>
 </g>`;
   const alt = item.sub ? `${item.title}. ${item.sub}` : item.title;
   return tile(`${key}-${idx}.svg`, slice(h, body, { title: item.title, desc: alt }), alt, item.url);
@@ -47,9 +47,9 @@ export function compactRow(key, i, item) {
   const y0 = lines.length === 1 ? 25 : 35;
   const idx = String(i + 1).padStart(2, '0');
   const body = `<g class="ln" style="animation-delay:${(0.1 + i * 0.05).toFixed(2)}s">
-<text x="${X}" y="${y0}" style="font-size:13px"><tspan class="gr">▸ ${esc(item.label)}</tspan><tspan class="fg" fill-opacity=".85">  ${esc(lines[0])}</tspan></text>
+<text x="${X}" y="${y0}" style="font-size:13px"><tspan class="gr">▸ </tspan><tspan class="bl">${esc(item.label)}</tspan><tspan class="fg" fill-opacity=".85">  ${esc(lines[0])}</tspan></text>
 ${lines[1] ? `<text x="${X + 4 * CH13}" y="${y0 + 21}" class="fg" fill-opacity=".85" style="font-size:13px">${esc(lines[1])}</text>` : ''}
-<text x="${RIGHT}" y="${y0}" text-anchor="end" class="mid" style="font-size:13px">↗</text>
+<text x="${RIGHT}" y="${y0}" text-anchor="end" class="bl" style="font-size:13px">↗</text>
 </g>`;
   const alt = `${item.label}: ${item.text}`;
   return tile(`${key}-${idx}.svg`, slice(h, body, { title: item.label, desc: alt }), alt, item.url);

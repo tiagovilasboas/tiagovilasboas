@@ -1,5 +1,5 @@
-// The console frame every slice shares: Matrix palette, side rails, grid, and
-// the heading style. GitHub stacks the images, so every slice is a multiple of
+// The console frame every slice shares: GitHub-dark palette with syntax
+// accents, side rails, grid, and the heading style. GitHub stacks the images, so every slice is a multiple of
 // 40px tall and offsets its grid by its x position (ox) inside the 880px frame.
 
 export const FRAME = 880;
@@ -10,14 +10,19 @@ export const X = 52; // text left edge
 export const CHAR = 9; // monospace advance at 15px, for wrapping
 
 export const C = {
-  green: '#00ff41',
-  mid: '#00b82e',
-  dim: '#3a8a4c',
-  dark: '#0b3d17',
-  line: '#0f5a24',
-  bg: '#010803',
-  text: '#a8f5b8',
-  white: '#e4ffe9',
+  green: '#39d353',
+  mid: '#2ea043',
+  dim: '#8b949e',
+  dark: '#161b22', // panels
+  line: '#30363d', // borders
+  bg: '#0d1117',
+  text: '#c9d1d9',
+  white: '#f0f6fc',
+  blue: '#58a6ff',
+  purple: '#d2a8ff',
+  orange: '#ffa657',
+  red: '#ff5f57',
+  yellow: '#febc2e',
 };
 
 const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -49,6 +54,7 @@ export const grid = (h) => Math.ceil(h / 40) * 40;
 
 const BASE_CSS = `text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:15px}
 .dim{fill:${C.dim}}.gr{fill:${C.green}}.mid{fill:${C.mid}}.fg{fill:${C.text}}.wh{fill:${C.white}}
+.bl{fill:${C.blue}}.pu{fill:${C.purple}}.or{fill:${C.orange}}
 @keyframes fadein{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
@@ -56,8 +62,8 @@ const BASE_CSS = `text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'L
 .cursor{animation:blink 1.05s step-end infinite}
 .dot{animation:pulse 2s ease-in-out infinite}`;
 
-const defs = (ox) => `<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="${-ox % 40}"><path d="M40 0H0V40" fill="none" stroke="${C.green}" stroke-opacity=".045"/></pattern>
-<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".22"/></pattern>
+const defs = (ox) => `<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="${-ox % 40}"><path d="M40 0H0V40" fill="none" stroke="${C.text}" stroke-opacity=".025"/></pattern>
+<linearGradient id="hl" x1="0" x2="1"><stop offset="0" stop-color="${C.green}"/><stop offset="1" stop-color="${C.green}" stop-opacity="0"/></linearGradient>
 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
 <filter id="g" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="3.5"/></filter>`;
 
@@ -100,25 +106,32 @@ ${css}
 ${defs(ox)}
 ${extra}
 </defs>
-${glow ? `<path d="${glow}" fill="none" stroke="${C.green}" stroke-width="3" opacity=".4" filter="url(#glow)"/>` : ''}
+${glow ? `<path d="${glow}" fill="none" stroke="${C.green}" stroke-width="3" opacity=".12" filter="url(#glow)"/>` : ''}
 <rect x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}" fill="${C.bg}"/>
 <rect x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}" fill="url(#grid)"/>
 ${body}
-<rect x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}" fill="url(#scan)" pointer-events="none"/>
-${rails ? `<path d="${rails}" fill="none" stroke="${C.green}" stroke-width="1.2"/>` : ''}
+${rails ? `<path d="${rails}" fill="none" stroke="${C.line}" stroke-width="1.2"/>` : ''}
 <g fill="none" stroke="${C.green}" stroke-width="2">${corners}</g>
 </svg>
 `;
 }
 
-/** Section heading: "~/name" with a glowing underline and a counter on the right. */
+/**
+ * Section heading in a code style: "01. // name()" in a panel, a cursor and a
+ * fading rule. The number comes from the counter ("// 01"); anything before it
+ * (stars, release) is shown on the right.
+ */
 export function heading(y, name, counter, right = FR - 36) {
-  return `<text x="${X}" y="${y}" font-weight="700" fill="${C.green}" filter="url(#g)" opacity=".6" style="font-size:20px">~/</text>
-<text x="${X}" y="${y}" font-weight="700" style="font-size:20px"><tspan class="gr">~/</tspan><tspan class="wh">${esc(name)}</tspan></text>
-<text x="${right}" y="${y}" text-anchor="end" letter-spacing="2" class="dim" style="font-size:12px">${esc(counter)}</text>
-<line x1="${X}" y1="${y + 14}" x2="${right}" y2="${y + 14}" stroke="${C.green}" stroke-opacity=".25"/>
-<line x1="${X}" y1="${y + 14}" x2="${X + 120}" y2="${y + 14}" stroke="${C.green}" stroke-width="2"/>
-<line x1="${X}" y1="${y + 14}" x2="${X + 120}" y2="${y + 14}" stroke="${C.green}" stroke-width="3" filter="url(#g)" opacity=".7"/>`;
+  const num = (String(counter).match(/(\d+)\s*$/) ?? [])[1];
+  const meta = String(counter).replace(/\/\/\s*\d+\s*$/, '').trim();
+  const lead = num ? `${num}. // ` : '// ';
+  const end = X + (lead.length + name.length + 2) * 12 + 8; // 20px monospace ≈ 12px a char
+  const ruleEnd = meta ? right - meta.length * 9.4 - 16 : right;
+  return `<rect x="${X - 16}" y="${y - 28}" width="${right - X + 32}" height="44" rx="6" fill="${C.dark}" stroke="${C.line}"/>
+<text x="${X}" y="${y}" font-weight="700" style="font-size:20px"><tspan class="gr">${esc(lead.slice(0, -4))}</tspan><tspan class="dim">${esc(lead.slice(-4))}</tspan><tspan class="wh">${esc(name)}</tspan><tspan class="pu">()</tspan></text>
+<rect class="cursor" x="${end}" y="${y - 16}" width="10" height="20" fill="${C.green}"/>
+${ruleEnd > end + 40 ? `<rect x="${end + 22}" y="${y - 7}" width="${ruleEnd - end - 22}" height="2" fill="url(#hl)"/>` : ''}
+${meta ? `<text x="${right}" y="${y - 1}" text-anchor="end" letter-spacing="2" class="dim" style="font-size:12px">${esc(meta)}</text>` : ''}`;
 }
 
 /** rows: markup with {y}, or null for a small spacer. Returns [markup, nextY]. */
@@ -134,6 +147,9 @@ export function stagger(rows, y0, lh, delay0 = 0.15, step = 0.12) {
   }
   return [out.join('\n'), y];
 }
+
+/** macOS-style window dots at (x, y). */
+export const dots = (x, y) => [C.red, C.yellow, C.green].map((c, i) => `<circle cx="${x + i * 16}" cy="${y}" r="5" fill="${c}"/>`).join('');
 
 /** Tiny deterministic PRNG so the same seed always draws the same picture. */
 export function rng(seed) {
