@@ -3,7 +3,8 @@
 <desc id="d">Connection closed.</desc>
 <style>
 text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:15px}
-.dim{fill:#3a8a4c}.gr{fill:#00ff41}.mid{fill:#00b82e}.fg{fill:#a8f5b8}.wh{fill:#e4ffe9}
+.dim{fill:#8b949e}.gr{fill:#39d353}.mid{fill:#2ea043}.fg{fill:#c9d1d9}.wh{fill:#f0f6fc}
+.bl{fill:#58a6ff}.pu{fill:#d2a8ff}.or{fill:#ffa657}
 @keyframes fadein{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
@@ -14,18 +15,17 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 <defs>
-<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="0"><path d="M40 0H0V40" fill="none" stroke="#00ff41" stroke-opacity=".045"/></pattern>
-<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".22"/></pattern>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" x="0"><path d="M40 0H0V40" fill="none" stroke="#c9d1d9" stroke-opacity=".025"/></pattern>
+<linearGradient id="hl" x1="0" x2="1"><stop offset="0" stop-color="#39d353"/><stop offset="1" stop-color="#39d353" stop-opacity="0"/></linearGradient>
 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
 <filter id="g" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="3.5"/></filter>
 
 </defs>
-<path d="M16 -40V104M864 -40V104M16 104H864" fill="none" stroke="#00ff41" stroke-width="3" opacity=".4" filter="url(#glow)"/>
-<rect x="16" y="0" width="848" height="104" fill="#010803"/>
+<path d="M16 -40V104M864 -40V104M16 104H864" fill="none" stroke="#39d353" stroke-width="3" opacity=".12" filter="url(#glow)"/>
+<rect x="16" y="0" width="848" height="104" fill="#0d1117"/>
 <rect x="16" y="0" width="848" height="104" fill="url(#grid)"/>
 <text x="52" y="52" class="dim"><tspan class="gr">$</tspan> exit</text>
-<text x="52" y="76" class="dim">connection to <tspan class="gr">tiagovilasboas</tspan> closed. <tspan fill="#3a8a4c">// there is no spoon</tspan></text>
-<rect x="16" y="0" width="848" height="104" fill="url(#scan)" pointer-events="none"/>
-<path d="M16 0V104M864 0V104M16 104H864" fill="none" stroke="#00ff41" stroke-width="1.2"/>
-<g fill="none" stroke="#00ff41" stroke-width="2"><path d="M9 86V111H34"/><path d="M846 111H871V86"/></g>
+<text x="52" y="76" class="dim">connection to <tspan class="gr">tiagovilasboas</tspan> closed. <tspan fill="#8b949e">// there is no spoon</tspan></text>
+<path d="M16 0V104M864 0V104M16 104H864" fill="none" stroke="#30363d" stroke-width="1.2"/>
+<g fill="none" stroke="#39d353" stroke-width="2"><path d="M9 86V111H34"/><path d="M846 111H871V86"/></g>
 </svg>

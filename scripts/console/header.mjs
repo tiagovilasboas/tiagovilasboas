@@ -1,5 +1,5 @@
 // Top slice: title bar, digital rain, and the "whoami" boot sequence.
-import { C, FL, FR, M, X, esc, rng, slice, stagger } from './frame.mjs';
+import { C, FL, FR, M, X, dots, esc, rng, slice, stagger } from './frame.mjs';
 
 const H = 360;
 const GLYPHS = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ0123456789Z:.=*+<>';
@@ -45,18 +45,18 @@ export function rain(seed, { x0, x1, y0, y1 }) {
 export function buildHeader(p = PROFILE) {
   const top = M;
   const bar = `<rect x="${FL}" y="${top}" width="${FR - FL}" height="34" fill="${C.dark}" fill-opacity=".55"/>
-<line x1="${FL}" y1="${top + 34}" x2="${FR}" y2="${top + 34}" stroke="${C.green}" stroke-opacity=".5"/>
-<circle class="dot" cx="${X - 14}" cy="${top + 17}" r="4" fill="${C.green}"/>
-<text x="${X}" y="${top + 22}" letter-spacing="2" class="mid" style="font-size:12px">${esc(p.bar[0])}</text>
-<text x="${FR - 36}" y="${top + 22}" text-anchor="end" letter-spacing="2" class="mid" style="font-size:12px">${esc(p.bar[1])}</text>`;
+<line x1="${FL}" y1="${top + 34}" x2="${FR}" y2="${top + 34}" stroke="${C.line}"/>
+${dots(FL + 18, top + 17)}
+<text x="${X + 40}" y="${top + 22}" letter-spacing="2" class="dim" style="font-size:12px">${esc(p.bar[0])}</text>
+<text x="${FR - 36}" y="${top + 22}" text-anchor="end" letter-spacing="2" class="dim" style="font-size:12px"><tspan class="dot gr">● </tspan>${esc(p.bar[1])}</text>`;
 
   const r = rain(p.name, { x0: FL + 14, x1: FR - 14, y0: top + 34, y1: H });
   const [rows] = stagger([
     `<text x="${X}" y="{y}" class="fg"><tspan class="gr">$</tspan> whoami</text>`,
     null,
-    `<text x="${X}" y="{y}" font-weight="800" fill="${C.green}" filter="url(#g)" opacity=".45" style="font-size:44px" letter-spacing="1">${esc(p.name)}</text><text x="${X}" y="{y}" font-weight="800" class="wh" style="font-size:44px" letter-spacing="1">${esc(p.name)}</text>`,
+    `<text x="${X}" y="{y}" font-weight="800" fill="${C.green}" filter="url(#g)" opacity=".25" style="font-size:44px" letter-spacing="1">${esc(p.name)}</text><text x="${X}" y="{y}" font-weight="800" class="wh" style="font-size:44px" letter-spacing="1">${esc(p.name)}</text>`,
     null,
-    ...p.lines.map((l) => `<text x="${X}" y="{y}" class="fg"><tspan class="gr">&gt;&gt;</tspan> ${esc(l)}</text>`),
+    ...p.lines.map((l) => `<text x="${X}" y="{y}" class="fg"><tspan class="pu">&gt;&gt;</tspan> ${esc(l)}</text>`),
     null,
     `<text x="${X}" y="{y}" class="fg"><tspan class="gr">$</tspan> <tspan class="cursor gr">█</tspan></text>`,
   ], 100, 32);

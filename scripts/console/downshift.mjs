@@ -1,21 +1,25 @@
 // The Downshift hero: what it is, a before/after, the install line and the
 // honest numbers. One slice, linked to the site; the details live there.
-import { C, FR, FRAME, X, clip, esc, grid, heading, slice, stagger, wrap } from './frame.mjs';
+import { C, FR, FRAME, X, clip, dots, esc, grid, heading, slice, stagger, wrap } from './frame.mjs';
 
 const RIGHT = FR - 36;
 const WIDTH = RIGHT - X;
 
 function terminal(y, ds) {
   const [cmd, out] = ds.demo;
-  const h = 96;
+  const h = 124;
+  const b = 28; // window title bar
   const line = (yy, text, note, cls) => `<text x="${X + 16}" y="${yy}" class="${cls}" style="font-size:14px">${esc(text)}</text>`
     + `<text x="${RIGHT - 16}" y="${yy}" text-anchor="end" class="dim" style="font-size:13px">${esc(note)}</text>`;
   return [`<g class="ln" style="animation-delay:.5s">
-<rect x="${X}" y="${y}" width="${WIDTH}" height="${h}" fill="#000" fill-opacity=".45" stroke="${C.green}" stroke-opacity=".3"/>
-${line(y + 26, cmd[0], cmd[1], 'fg')}
-${line(y + 48, out[0], out[1], 'gr')}
-<line x1="${X + 16}" y1="${y + 62}" x2="${RIGHT - 16}" y2="${y + 62}" stroke="${C.green}" stroke-opacity=".15"/>
-<text x="${X + 16}" y="${y + 82}" style="font-size:13px"><tspan class="gr">$ </tspan><tspan class="wh">${esc(clip(ds.install, Math.floor((WIDTH - 32) / 7.8) - 2))}</tspan></text>
+<rect x="${X}" y="${y}" width="${WIDTH}" height="${h}" rx="6" fill="${C.bg}" stroke="${C.line}"/>
+<path d="M${X} ${y + b}H${RIGHT}" stroke="${C.line}"/>
+${dots(X + 16, y + 14)}
+<text x="${X + WIDTH / 2}" y="${y + 18}" text-anchor="middle" class="dim" style="font-size:12px">downshift — zsh</text>
+${line(y + b + 26, cmd[0], cmd[1], 'wh')}
+${line(y + b + 48, out[0], out[1], 'gr')}
+<line x1="${X + 16}" y1="${y + b + 62}" x2="${RIGHT - 16}" y2="${y + b + 62}" stroke="${C.line}"/>
+<text x="${X + 16}" y="${y + b + 82}" style="font-size:13px"><tspan class="gr">$ </tspan><tspan class="bl">${esc(clip(ds.install, Math.floor((WIDTH - 32) / 7.8) - 2))}</tspan></text>
 </g>`, y + h];
 }
 
