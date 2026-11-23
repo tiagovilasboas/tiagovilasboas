@@ -1,46 +1,46 @@
 {
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "login": "tiagovilasboas",
  "createdAt": "2012-07-19",
  "followers": 74,
  "prs": {
-  "total": 767,
-  "merged": 719
+  "total": 776,
+  "merged": 728
  },
  "repos": 28,
  "stars": 102,
  "forks": 22,
- "contributions": 8757,
- "activeDays": 219,
+ "contributions": 8722,
+ "activeDays": 221,
  "streak": {
-  "current": 6,
+  "current": 8,
   "longest": 85
  },
  "languages": [
   {
    "name": "Go",
-   "pct": 62.91805002251948
+   "pct": 62.87403652730546
   },
   {
    "name": "TypeScript",
-   "pct": 27.243260541276175
+   "pct": 27.075934297497213
   },
   {
    "name": "HTML",
-   "pct": 4.973520442525137
+   "pct": 4.942973419978229
   },
   {
    "name": "JavaScript",
-   "pct": 3.921951539202713
+   "pct": 3.8978631809702744
   },
   {
    "name": "Python",
-   "pct": 0.9432174544764953
+   "pct": 1.2091925742488159
   }
  ],
  "downshift": {
   "stars": 6,
-  "release": "v0.20.0"
+  "release": "v0.22.0"
  },
  "calendar": [
   [
@@ -1501,7 +1501,11 @@
   ],
   [
    "2026-11-22",
-   0
+   2
+  ],
+  [
+   "2026-11-23",
+   16
   ]
  ]
 }
