@@ -28,7 +28,7 @@ text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',mo
 <text x="52" y="44" font-weight="700" style="font-size:20px"><tspan class="gr">01.</tspan><tspan class="dim"> // </tspan><tspan class="wh">building/downshift</tspan><tspan class="pu">()</tspan></text>
 <rect class="cursor" x="384" y="28" width="10" height="20" fill="#39d353"/>
 <rect x="406" y="37" width="283.79999999999995" height="2" fill="url(#hl)"/>
-<text x="828" y="43" text-anchor="end" letter-spacing="2" class="dim" style="font-size:12px">★ 6 · v0.22.0</text>
+<text x="828" y="43" text-anchor="end" letter-spacing="2" class="dim" style="font-size:12px">★ 6 · v0.24.1</text>
 <g class="ln" style="animation-delay:.2s"><text x="52" y="92" font-weight="700" class="wh" style="font-size:16px">Protect your coding agent&#39;s context window and route subagents to the right</text></g>
 <g class="ln" style="animation-delay:.2s"><text x="52" y="116" font-weight="700" class="wh" style="font-size:16px">model tier. No LLM in the loop.</text></g>
 <g class="ln" style="animation-delay:.5s">
